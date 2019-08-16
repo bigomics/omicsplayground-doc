@@ -34,15 +34,6 @@
     :maxdepth: 2
     :caption: Examples
 
-    examples/igblast
-    examples/imgt
-    examples/10x
-    examples/filtering
-    examples/cloning
-    examples/germlines
-    examples/igphyml
-    examples/genbank
-
 .. toctree::
     :maxdepth: 1
     :caption: About
