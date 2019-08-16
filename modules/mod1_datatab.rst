@@ -4,12 +4,13 @@ Data table
 ================================================================================
 
 For the selected dataset, the data table module provides a descriptive 
-statistical analysis at a gene level with visualizations. 
+statistical analysis at a gene level with visualizations. It has four sections
+which are described below.
 
 
 Plots
 --------------------------------------------------------------------------------
-For a gene specified by the user, the `Plot` section displays 
+For a gene specified by the user, the plots section displays 
 figures related to the expression level of 
 the gene, correlation with other genes, and average expression ranking within the 
 dataset (\textbf{Supp. Fig. 5}). It also correlates the gene with other gene 
@@ -24,7 +25,7 @@ instead of a log2 level (logCPM).
 
 
 Counts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------
 The total number of counts (abundance) per sample and their distribution among 
 the samples are displayed in the \texttt{counts} section. For each sample, the 
 user can also see the percentage of counts for major gene types, such as CD 
@@ -32,7 +33,7 @@ molecules, kinases or RNA binding motifs (\textbf{Supp. Fig. 6}).
 
 
 Gene table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------
 Further correlation analysis across the samples can be performed under the 
 \texttt{gene table} section, where genes are ordered in the table according to 
 the correlations with the selected gene. The gene-wise average expression of samples 
@@ -41,7 +42,7 @@ about the samples is reported in the \texttt{sample table} (\textbf{Supp. Fig. 7
 
 
 Sample table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------------------------------------
 Further correlation analysis across the samples can be performed under the 
 \texttt{gene table} section, where genes are ordered in the table according to 
 the correlations with the selected gene. The gene-wise average expression of samples 
