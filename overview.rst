@@ -1,23 +1,10 @@
 Overview
 ================================================================================
 
-Change-O performs analyses of lymphocyte receptor sequences following alignment
-against the germline reference. It includes tools for standardizing the
-output of alignment software, clonal assignment, germline reconstruction, and
-basic database manipulation. Change-O was designed to be simple to use, but it
-does require some familiarity with commandline applications.
-To maximize flexibility, Change-O employs a simple tab-delimited database format
-with :ref:`standardized column names <Standard>`, allowing easy use of Change-O
-output with external environments and interoperability with the
-`Alakazam <http://alakazam.readthedocs.io>`_,
-`SHazaM <http://shazam.readthedocs.io>`_, and
-`TIgGER <http://tigger.readthedocs.io>`_ R packages.
-A brief description of each tool is shown in the table below.
+Increasingly powerful `omics approaches enable the interrogation of cellular phenotypes in great detail by generating vast amount of transcriptomics data. The advent of single-cell RNA-sequencing (scRNA-seq) has particularly contributed to the data growth and is providing previously unavailable insights into cellular mechanisms. Yet, the challenge is to efficiently analyze accumulated highthroughput data to obtain a comprehensive understanding of the molecular underpinnings of a cellular phenotype.
 
-.. _FeatureTable:
+Here we present Omics Playground, a user-friendly and interactive web-based platform for the analysis and visualization of transcriptomics and proteomics data. Omics Playground allows users to apply a multitude of state-of-the-art analysis tools to their own data to explore and discover interesting biology in a short time.
 
-.. csv-table::
-   :file: tools/tool_summary.tsv
-   :delim: tab
-   :header-rows: 1
-   :widths: 15, 5, 75
+.. figure:: figures/overview.png
+    :align: center
+    :width: 100%
