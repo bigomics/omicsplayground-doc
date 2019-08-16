@@ -8,6 +8,11 @@
 
     overview
     install
+    
+.. toctree::
+    :maxdepth: 2
+    :caption: Data preparation
+
     standard
     
 .. toctree::
