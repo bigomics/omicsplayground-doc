@@ -19,20 +19,24 @@
     :maxdepth: 2
     :caption: Functional Modules
 
-    modules/mod0_home.rst
-    modules/mod1_datatab.rst
-    modules/mod2_clustering.rst
-    modules/mod3_DEGs.rst
-    modules/mod4_DEGSs.rst
-    modules/mod5_Functional.rst
-    modules/mod6_Intersection.rst
-    modules/mod7_Signature.rst
-    modules/mod8_Biomarker.rst
-    modules/mod9_CellProfiling.rst
+    modules/mod0_home
+    modules/mod1_datatab
+    modules/mod2_clustering
+    modules/mod3_DEGs
+    modules/mod4_DEGSs
+    modules/mod5_Functional
+    modules/mod6_Intersection
+    modules/mod7_Signature
+    modules/mod8_Biomarker
+    modules/mod9_CellProfiling
     
 .. toctree::
     :maxdepth: 2
     :caption: Examples
+    
+    examples/cloning
+    examples/genbank
+    examples/igblast
 
 .. toctree::
     :maxdepth: 1
