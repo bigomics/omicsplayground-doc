@@ -17,9 +17,18 @@
     
 .. toctree::
     :maxdepth: 2
-    :caption: Functional Tabs
+    :caption: Functional Modules
 
-    usage
+    mod0_home.rst
+    mod1_datatab.rst
+    mod2_clustering.rst
+    mod3_DEGs.rst
+    mod4_DEGSs.rst
+    mod5_Functional.rst
+    mod6_Intersection.rst
+    mod7_Signature.rst
+    mod8_Biomarker.rst
+    mod9_CellProfiling.rst
     
 .. toctree::
     :maxdepth: 2
