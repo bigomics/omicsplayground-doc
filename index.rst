@@ -9,7 +9,13 @@
     overview
     install
     standard
+    
+.. toctree::
+    :maxdepth: 2
+    :caption: Functional Tabs
 
+    usage
+    
 .. toctree::
     :maxdepth: 2
     :caption: Examples
@@ -29,13 +35,6 @@
 
     methods/clustering
     methods/germlines    
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Usage Documentation
-
-    usage
-    api
 
 .. toctree::
     :maxdepth: 1
