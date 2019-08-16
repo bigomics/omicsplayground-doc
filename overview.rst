@@ -14,8 +14,7 @@ for the analysis and visualization of transcriptomics and proteomics data. Omics
 Playground allows users to apply a multitude of state-of-the-art analysis tools 
 to their own data to explore and discover interesting biology in a short time.
 
-The current version of our platform (0.99) is implemented in R using the Shiny 
-web application framework. The overview of the platform is shown in the figure 
+The overview of the platform is shown in the figure 
 below and consists of two main components. The first component address the data
 cleaning and preprocessing, which includes preparing the input data, filtering,
 normalising and precomputing of statistics for some analyses. The second part is

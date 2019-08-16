@@ -1,13 +1,17 @@
-.. _Install:
+.. _Installation:
 
-Install
+Installation
 ================================================================================
 
 Download
 --------------------------------------------------------------------------------
 
-The Omics Playground software is freely available on 
+The current version of our platform (0.99) is implemented in R using the Shiny 
+web application framework. The Omics Playground software is freely available on 
 `GitHub <https://github.com/IRB-Bioinformatics/OmicsPlayground>`__.
 
-Install
+Dependencies
 --------------------------------------------------------------------------------
+
+Omics Playground reqires the following R packages:
+
