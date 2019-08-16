@@ -228,8 +228,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'changeo.tex', 'Change-O Documentation',
-   'Jason Anthony Vander Heiden', 'manual'),
+  ('index', 'changeo.tex', 'Omics Playground Documentation',
+   'Murodzhon Akhmedov', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -258,8 +258,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'changeo', 'Change-O Documentation',
-     ['Jason Anthony Vander Heiden'], 1)
+    ('index', 'changeo', 'Omics Playground Documentation',
+     ['Murodzhon Akhmedov'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -272,8 +272,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'changeo', 'Change-O Documentation',
-   'Jason Anthony Vander Heiden', 'changeo', 'One line description of project.',
+  ('index', 'changeo', 'Omics Playground Documentation',
+   'Murodzhon Akhmedov', 'changeo', 'One line description of project.',
    'Miscellaneous'),
 ]
 
