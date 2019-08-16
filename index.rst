@@ -19,16 +19,16 @@
     :maxdepth: 2
     :caption: Functional Modules
 
-    mod0_home.rst
-    mod1_datatab.rst
-    mod2_clustering.rst
-    mod3_DEGs.rst
-    mod4_DEGSs.rst
-    mod5_Functional.rst
-    mod6_Intersection.rst
-    mod7_Signature.rst
-    mod8_Biomarker.rst
-    mod9_CellProfiling.rst
+    modules/mod0_home.rst
+    modules/mod1_datatab.rst
+    modules/mod2_clustering.rst
+    modules/mod3_DEGs.rst
+    modules/mod4_DEGSs.rst
+    modules/mod5_Functional.rst
+    modules/mod6_Intersection.rst
+    modules/mod7_Signature.rst
+    modules/mod8_Biomarker.rst
+    modules/mod9_CellProfiling.rst
     
 .. toctree::
     :maxdepth: 2
