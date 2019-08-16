@@ -13,7 +13,7 @@
     :maxdepth: 2
     :caption: Data preparation
 
-    standard
+    dataprep
     
 .. toctree::
     :maxdepth: 2
