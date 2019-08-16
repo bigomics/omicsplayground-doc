@@ -11,7 +11,7 @@ on GitHub using the
 Citation
 --------------------------------------------------------------------------------
 
-To cite Change-O in publications please use:
+To cite Omics Playground in publications please use:
 
 **Akhmedov M, Martinelli A, Geiger R and Kwee I.**
 Omics Playground\: A comprehensive self-service platform forvisualization, analytics and exploration of Big Omics Data.
