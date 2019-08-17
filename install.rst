@@ -16,9 +16,16 @@ download the latest release of the software (includes more data files) by clonin
 the repository. Below, we explain the steps required to set up the platform from
 the source code:
 
-1. Download or clone the GitHub repository. 
-2. Be sure you have installed all necessary R packges by running the files ``requirements.R`` and ``requirements2.R`` in the ``/scripts`` folder.
-3. Similarly, run ``run-all.R`` from the ``/scripts`` folder to build the datasets.
+1. Download or clone the GitHub repository to a location in your ``PATH``::
+
+    git clone https://github.com/bigomics/playground.git
+2. Be sure you have installed all necessary R packges by running the files in the ``/R`` folder::
+
+    R requirements.R
+    R requirements2.R
+3. Similarly, run the following command in the ``/scripts`` folder to build the datasets::
+
+    R run-all.R
 
 .. note::
 
