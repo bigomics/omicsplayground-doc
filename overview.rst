@@ -1,21 +1,15 @@
+.. _Overview:
+
 Overview
 ================================================================================
 
-Increasingly powerful `omics approaches enable the interrogation of cellular 
-phenotypes in great detail by generating vast amount of transcriptomics data. 
-The advent of single-cell RNA-sequencing (scRNA-seq) has particularly contributed 
-to the data growth and is providing previously unavailable insights into cellular 
-mechanisms. Yet, the challenge is to efficiently analyze accumulated highthroughput 
-data to obtain a comprehensive understanding of the molecular underpinnings of 
-a cellular phenotype.
-
-Here we present Omics Playground, a user-friendly and interactive web-based platform 
+The Omics Playground is a user-friendly and interactive web-based platform 
 for the analysis and visualization of transcriptomics and proteomics data. Omics 
 Playground allows users to apply a multitude of state-of-the-art analysis tools 
-to their own data to explore and discover interesting biology in a short time.
+to their own data to explore and discover underlying biology in a short time.
 
 The overview of the platform is shown in the figure 
-below and consists of two main components. The first component address the data
+below. It consists of two main components. The first component addresses the data
 cleaning and preprocessing, which includes preparing the input data, filtering,
 normalising and precomputing of statistics for some analyses. The second part is
 composed of the online interface, which supports the real-time visualisation and
