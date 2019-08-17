@@ -18,7 +18,7 @@ this repository. We explain the steps required to set up the platform below.
 1. Download or clone the repository. 
 2. Be sure you have installed all necessary R packges by running the files ``requirements.R`` and ``requirements2.R``.
 3. In the ``/scripts`` folder, run ``run-all.R`` to build the datasets. This can take a couple of hours.
-4. Change the current directory into the ``/shiny`` folder and run::
+4. Change the current directory into the ``/shiny`` folder and execute the following command to run the platform::
 
     R -e "rmarkdown::run()"
 
@@ -30,12 +30,12 @@ The docker file of the platform is availeble on `Docker hub
 Follow the steps below for setting up the running platform from the docker file.
 
 1. Pull the docker image using the command::
+
     docker pull bigomics/playground
+2. Then run the docker with::
 
-2. Then run the docker with::  
     docker run --rm -p 80:3838 bigomics/playground. 
-
-3. Then open `'localhost`` in your browser to run the platform.
+3. Open `'localhost`` in your browser to run the platform.
 
 .. warning::
 
