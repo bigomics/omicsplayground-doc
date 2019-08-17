@@ -3,6 +3,9 @@
 Biomarker analysis
 ================================================================================
 
+
+Importance
+--------------------------------------------------------------------------------
 This module performs the biomarker selection that can be used for classification
 or prediction purposes. To better understand which genes, mutations, or gene sets
 influence the final phenotype the most, Playground calculates a variable importance
