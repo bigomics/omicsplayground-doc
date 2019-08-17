@@ -5,9 +5,15 @@ Data Cleaning and Preprocessing
 
 The data cleaning and preprocessing includes preparing the input data, filtering, 
 normalising, and precomputing statistics for some analyses. The data cleaning and 
-preprocessing is performed offline using scripts to support real-time interaction 
-by minimizing user interface latency. The platform comes with the necessary scripts 
-for data cleaning and preprocessing.
+preprocessing is performed offline using scripts in order to support real-time 
+interaction and minimize user interface latency. The platform comes with the 
+necessary scripts under the ``/scripts`` folder for data cleaning and preprocessing.
+
+.. seealso::
+
+    See some data preparation example cases in :ref:`Data Cleaning Examples <Dataprep_example>`
+    
+
 
 Input data
 --------------------------------------------------------------------------------
