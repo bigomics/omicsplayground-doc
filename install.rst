@@ -19,7 +19,7 @@ the source code:
 1. Download or clone the GitHub repository to a location in your ``PATH``::
 
     git clone https://github.com/bigomics/playground.git
-2. Be sure you have installed all necessary R packges by running the files in the ``/R`` folder::
+2. Be sure you have installed all necessary R packages by running the files in the ``/R`` folder::
 
     R requirements.R
     R requirements2.R
