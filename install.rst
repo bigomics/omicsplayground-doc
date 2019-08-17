@@ -13,11 +13,12 @@ Run from source code
 The source code of the platform is available on 
 `GitHub <https://github.com/IRB-Bioinformatics/OmicsPlayground>`__. You can 
 download the latest release of the software (includes more data files) by cloning
-this repository. We explain the steps required to set up the platform below.
+this repository. We explain the steps required to set up the platform below:
 
 1. Download or clone the repository. 
 2. Be sure you have installed all necessary R packges by running the files ``requirements.R`` and ``requirements2.R`` in the ``/scripts`` folder.
 3. Similarly, run ``run-all.R`` from the ``/scripts`` folder to build the datasets.
+
 .. note::
 
     Building the datasets can vary from minutes to a couple of hours depending on their sizes.
@@ -30,7 +31,7 @@ Run using the Docker file
 --------------------------------------------------------------------------------
 The docker file of the platform is available on `Docker hub 
 <https://cloud.docker.com/u/bigomics/repository/docker/bigomics/playground>`__.
-Follow the steps below for setting up the running platform from the docker file.
+Follow the steps below to set up a running platform from the docker file:
 
 1. Pull the docker image using the command::
 
