@@ -3,9 +3,9 @@
 Installation
 ================================================================================
 
-The current version of the Omics Playground software (0.99) is implemented in R 
+The current version of the Omics Playground software is implemented in R 
 using the `Shiny <https://shiny.rstudio.com/>`__ web application framework. 
-You can either run the platform from the source code, or download our Docker image.
+You can either run the platform from the source code, or download the docker image.
 
 
 Run from source code
@@ -13,9 +13,10 @@ Run from source code
 The source code of the platform is available on 
 `GitHub <https://github.com/IRB-Bioinformatics/OmicsPlayground>`__. You can 
 download the latest release of the software (includes more data files) by cloning
-this repository. We explain the steps required to set up the platform below:
+the repository. Below, we explain the steps required to set up the platform from
+the source code:
 
-1. Download or clone the repository. 
+1. Download or clone the GitHub repository. 
 2. Be sure you have installed all necessary R packges by running the files ``requirements.R`` and ``requirements2.R`` in the ``/scripts`` folder.
 3. Similarly, run ``run-all.R`` from the ``/scripts`` folder to build the datasets.
 
