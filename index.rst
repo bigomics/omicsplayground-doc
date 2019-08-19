@@ -35,9 +35,6 @@
     :maxdepth: 2
     :caption: Examples
     
-    examples/cloning
-    examples/genbank
-    examples/igblast
 
 .. toctree::
     :maxdepth: 1
