@@ -10,7 +10,7 @@ interaction and minimize user interface latency.
 
 .. seealso::
 
-    See the :ref:`data preparation examples <Dataprep_example>` section for more information.
+    See :ref:`data preparation examples <Dataprep_example>` for more information.
     
 
 
@@ -20,10 +20,8 @@ The platform requires the table of gene counts as input. Users can provide their
 own gene counts or download the relevant data from repositories such as `GEO 
 <https://www.ncbi.nlm.nih.gov/geo/>`__. 
 If they have FASTQ files, we provide scripts to obtain gene counts through quality 
-control, trimming, quantification of gene abundance, and so on. Although the script 
-default choice is Salmon, users can modify it and use any other software, 
-including `Kallisto <https://pachterlab.github.io/kallisto/>`__ or 
-`Star <http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>`__.
+control, trimming, quantification of gene abundance, and so on.
+
 
 Filtering
 --------------------------------------------------------------------------------

@@ -24,10 +24,11 @@ and so on. Users can run the following script to obtain a gene counts table::
 
     R counts_from_FASTQ.R
 
-Although the script implements the Salmon, users can modify and use 
-any other software, including Kallisto or Star.
-Afterwards, users can continue with the instructions in the next 
-section to prepare their input data from the gene counts table.
+Although the script default choice is Salmon, users can modify it and use any 
+other software, including `Kallisto <https://pachterlab.github.io/kallisto/>`__
+or `Star <http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>`__.
+Afterwards, the user can continue with similar instructions like in the next 
+section to prepare an input data from the gene counts table.
 
 
 From gene counts table or GEO repository
