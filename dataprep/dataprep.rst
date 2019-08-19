@@ -1,6 +1,6 @@
 .. _Dataprep:
 
-Data Cleaning and Preprocessing
+Data cleaning and preprocessing
 ================================================================================
 
 The data cleaning and preprocessing includes preparing the input data, filtering, 

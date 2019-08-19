@@ -1,6 +1,6 @@
 .. _Dataprep_example:
 
-Data Cleaning Examples
+Data cleaning examples
 ================================================================================
 
 The data cleaning and preprocessing includes preparing the input data, filtering, 
