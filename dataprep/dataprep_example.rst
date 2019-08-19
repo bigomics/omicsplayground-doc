@@ -8,9 +8,9 @@ their input data and injecting it into the platform. Basically, the example case
 illustriate how to prepare an input data:
 
 1. from FASTQ files, 
-2. from gene counts table or GEO repository,
-3. from single-cell experiment,
-4. from  experiment.
+2. from gene counts table or GEO repository data,
+3. from single-cell data,
+4. from LC-MS/MS proteomics data.
 
 
 From FASTQ files
@@ -44,6 +44,14 @@ Users can run the following script to obtain a gene counts table::
 
     R input_prep_from_singlecell.R
 
+
+From LC-MS/MS proteomics data
+--------------------------------------------------------------------------------
+Similarly, users can provide their own gene counts or download the relevant data from 
+repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
+Users can run the following script to obtain a gene counts table::
+
+    R input_prep_from_singlecell.R
 
 
 
