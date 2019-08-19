@@ -18,17 +18,13 @@ found under the ``/scripts`` folder.
 
 From FASTQ files
 --------------------------------------------------------------------------------
-If users have FASTQ files, we provide a collection of scripts to obtain
+Given FASTQ files, users can employ a ``counts_from_FASTQ.R`` script to obtain
 gene counts through quality control, trimming, quantification of gene abundance,
-and so on. Users can run the following script to obtain a gene counts table::
-
-    R counts_from_FASTQ.R
-
-Although the script default choice is `Salmon <https://combine-lab.github.io/salmon/>`__,
-users can modify it and use any 
+and so on. Although the script default choice is `Salmon 
+<https://combine-lab.github.io/salmon/>`__, users can modify it and use any 
 other software, including `Kallisto <https://pachterlab.github.io/kallisto/>`__
 or `Star <http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>`__.
-Afterwards, the user can continue with similar instructions like in the next 
+Afterwards, they can refer to examples in the next 
 section to prepare an input data from the gene counts table.
 
 
@@ -51,9 +47,10 @@ Some examples are provided in the following scripts:
 
 From single-cell data
 --------------------------------------------------------------------------------
-Similarly, users can provide their own gene counts or download the relevant data from 
-repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
-Users can run the following script to obtain a gene counts table
+Single-cell RNA sequencing experiments have been valuable to provide insights into 
+complex biological systems, reveal complex and rare cell populations, uncover 
+relationships between genes, and track the trajectories of cell lineages.
+Below we provide some data preparation examples from single-cell experiments:
 
 * `GSE72056 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056>`__: ``pgx-GSE72056-scmelanoma.R``
 * `GSE92332 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92332>`__: ``pgx-GSE92332-scintestine.R``
@@ -65,9 +62,7 @@ Users can run the following script to obtain a gene counts table
 
 From LC-MS/MS proteomics data
 --------------------------------------------------------------------------------
-Similarly, users can provide their own gene counts or download the relevant data from 
-repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
-Users can run the following script to obtain a gene counts table
+Two examples are provided below for LC-MS/MS proteomics data preprocessing:
 
 * `Geiger et al. 2016 <https://www.ncbi.nlm.nih.gov/pubmed/27745970>`__: ``pgx-geiger2016-arginine.R``
 * `Rieckmann et al. 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__: ``pgx-rieckmann2017-immprot.R``
