@@ -1,16 +1,27 @@
 .. _Dataprep_example:
 
-Data cleaning examples
+Data preparation examples
 ================================================================================
 
-The data cleaning and preprocessing includes preparing the input data, filtering, 
-normalising, and precomputing statistics for some analyses. The data cleaning and 
-preprocessing is performed offline using scripts in order to support real-time 
-interaction and minimize user interface latency. The platform comes with the 
-necessary scripts under the ``/scripts`` folder for data cleaning and preprocessing.
+In this section we provide three example cases to guide the user over data 
+preparation and injection to the platform. Basically, example cases include
+the preparation of input data i) from gene counts table or GEO repository, 
+ii) from FASTQ files, iii) and from single-cell data.
 
 
-Offline computation
+From gene counts table or GEO repository
 --------------------------------------------------------------------------------
-Statistics for the differentially expressed genes (DEG) and gene set enrichment (GSE) 
-analyses are precomputed to accelerate the visualisation on the interface.
+Users can provide their own gene counts or download the relevant data from 
+repositories such as GEO. 
+
+
+From FASTQ files
+--------------------------------------------------------------------------------
+If users have FASTQ files, we provide scripts to obtain
+gene counts through quality control, trimming, quantification of gene abundance,
+and so on. Although the script implements the Salmon, users can modify and use 
+any other software, including Kallisto or Star.
+
+
+From single-cell data
+--------------------------------------------------------------------------------
