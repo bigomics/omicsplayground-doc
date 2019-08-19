@@ -37,14 +37,14 @@ relevant dataset from repositories such as `GEO <https://www.ncbi.nlm.nih.gov/ge
 Some examples case are provided in
 
 * `TCGA-BRCA <https://portal.gdc.cancer.gov/projects/TCGA-BRCA>`__: ``pgx-tcga-brca.R``
-* `TCGA-PRAD <https://www.cbioportal.org/study/summary?id=prad_tcga>`: ``pgx-tcga-prad.R``
-* GSE10846: pgx-GSE10846-dlbcl.R
-* GSE114716: pgx-GSE114716-ipilimumab.R
-* GSE22886: pgx-GSE22886-immune.R
-* GSE28492: pgx-GSE28492-roche.R
-* GSE32591: pgx-GSE32591-lupusnephritis.R
-* GSE53784: pgx-GSE53784-wnvjev.R
-* GSE88808: pgx-GSE88808-prostate.R
+* `TCGA-PRAD <https://www.cbioportal.org/study/summary?id=prad_tcga>`__: ``pgx-tcga-prad.R``
+* `GSE10846 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10846>`__: ``pgx-GSE10846-dlbcl.R``
+* `GSE114716 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114716>`__: ``pgx-GSE114716-ipilimumab.R``
+* `GSE22886 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22886>`__: ``pgx-GSE22886-immune.R``
+* `GSE28492 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28492>`__: ``pgx-GSE28492-roche.R``
+* `GSE32591 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32591>`__: ``pgx-GSE32591-lupusnephritis.R``
+* `GSE53784 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53784>`__: ``pgx-GSE53784-wnvjev.R``
+* `GSE88808 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE88808>`__: ``pgx-GSE88808-prostate.R``
 
 
 
@@ -54,11 +54,11 @@ Similarly, users can provide their own gene counts or download the relevant data
 repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
 Users can run the following script to obtain a gene counts table::
 
-* GSE72056: pgx-GSE72056-scmelanoma.R
-* GSE92332: pgx-GSE92332-scintestine.R
-* GSE98638: pgx-GSE98638-scliver.R
-* GSE99795: pgx-GSE99795-scprostate.R
-* pbmc1k_10X: pgx-tenx-pbmc1k.R
+* `GSE72056 <>`__: ``pgx-GSE72056-scmelanoma.R``
+* `GSE92332 <>`__: ``pgx-GSE92332-scintestine.R``
+* `GSE98638 <>`__: ``pgx-GSE98638-scliver.R``
+* `GSE99795 <>`__: ``pgx-GSE99795-scprostate.R``
+* `pbmc1k_10X <>`__: ``pgx-tenx-pbmc1k.R``
 
 
 
@@ -68,8 +68,8 @@ Similarly, users can provide their own gene counts or download the relevant data
 repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
 Users can run the following script to obtain a gene counts table::
 
-* Geiger et al. 2016: pgx-geiger2016-arginine.R
-* Rieckmann et al. 2017: pgx-rieckmann2017-immprot.R
+* `Geiger et al. 2016 <>`__: ``pgx-geiger2016-arginine.R``
+* `Rieckmann et al. 2017 <>`__: ``pgx-rieckmann2017-immprot.R``
 
 
 
