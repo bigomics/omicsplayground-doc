@@ -43,5 +43,5 @@ analysis in the sva package.
 
 Offline computation
 --------------------------------------------------------------------------------
-Statistics for the differentially expressed genes (DEG) and gene set enrichment (GSE) 
-analyses are precomputed to accelerate the visualisation on the interface.
+Statistics for the differentially expressed genes analysis and gene set enrichment
+analysis are precomputed to accelerate the visualisation on the interface.
