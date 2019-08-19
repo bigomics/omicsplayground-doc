@@ -15,6 +15,6 @@ normalising and precomputing of statistics for some analyses. The second part is
 composed of the online interface, which supports the real-time visualisation and
 interaction with users.
 
-.. figure:: figures/overview.png
+.. figure:: figures/overview001.png
     :align: center
     :width: 100%

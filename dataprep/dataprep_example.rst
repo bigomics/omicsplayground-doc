@@ -9,7 +9,8 @@ illustriate how to prepare an input data:
 
 1. from FASTQ files, 
 2. from gene counts table or GEO repository,
-3. from single-cell experiment.
+3. from single-cell experiment,
+4. from  experiment.
 
 
 From FASTQ files
