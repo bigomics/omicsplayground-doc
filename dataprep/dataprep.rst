@@ -11,7 +11,8 @@ necessary scripts under the ``/scripts`` folder for data cleaning and preprocess
 
 .. seealso::
 
-    See some data preparation example cases in :ref:`Data preparation examples <Dataprep_example>`
+    See some examples in the
+    :ref:`Data preparation examples <Dataprep_example>` section.
     
 
 
