@@ -52,7 +52,7 @@ From single-cell data
 --------------------------------------------------------------------------------
 Similarly, users can provide their own gene counts or download the relevant data from 
 repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
-Users can run the following script to obtain a gene counts table::
+Users can run the following script to obtain a gene counts table
 
 * `GSE72056 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056>`__: ``pgx-GSE72056-scmelanoma.R``
 * `GSE92332 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92332>`__: ``pgx-GSE92332-scintestine.R``
@@ -66,7 +66,7 @@ From LC-MS/MS proteomics data
 --------------------------------------------------------------------------------
 Similarly, users can provide their own gene counts or download the relevant data from 
 repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
-Users can run the following script to obtain a gene counts table::
+Users can run the following script to obtain a gene counts table
 
 * `Geiger et al. 2016 <https://www.ncbi.nlm.nih.gov/pubmed/27745970>`__: ``pgx-geiger2016-arginine.R``
 * `Rieckmann et al. 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__: ``pgx-rieckmann2017-immprot.R``
