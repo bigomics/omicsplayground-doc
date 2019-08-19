@@ -2,7 +2,8 @@ Omics Playground: A self-service platform
 ================================================================================
 
 
-:program:`A platform for visualization, analytics and exploration of Big Omics Data`
+for visualization, analytics and exploration of Big Omics Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 The Omics Playground is a user-friendly and interactive web-based platform 
