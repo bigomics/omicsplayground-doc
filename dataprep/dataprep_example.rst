@@ -54,10 +54,10 @@ Similarly, users can provide their own gene counts or download the relevant data
 repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
 Users can run the following script to obtain a gene counts table::
 
-* `GSE72056 <>`__: ``pgx-GSE72056-scmelanoma.R``
-* `GSE92332 <>`__: ``pgx-GSE92332-scintestine.R``
-* `GSE98638 <>`__: ``pgx-GSE98638-scliver.R``
-* `GSE99795 <>`__: ``pgx-GSE99795-scprostate.R``
+* `GSE72056 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056>`__: ``pgx-GSE72056-scmelanoma.R``
+* `GSE92332 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92332>`__: ``pgx-GSE92332-scintestine.R``
+* `GSE98638 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE98638>`__: ``pgx-GSE98638-scliver.R``
+* `GSE99795 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE99795>`__: ``pgx-GSE99795-scprostate.R``
 * `pbmc1k_10X <>`__: ``pgx-tenx-pbmc1k.R``
 
 
@@ -68,8 +68,8 @@ Similarly, users can provide their own gene counts or download the relevant data
 repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
 Users can run the following script to obtain a gene counts table::
 
-* `Geiger et al. 2016 <>`__: ``pgx-geiger2016-arginine.R``
-* `Rieckmann et al. 2017 <>`__: ``pgx-rieckmann2017-immprot.R``
+* `Geiger et al. 2016 <https://www.ncbi.nlm.nih.gov/pubmed/27745970>`__: ``pgx-geiger2016-arginine.R``
+* `Rieckmann et al. 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__: ``pgx-rieckmann2017-immprot.R``
 
 
 
