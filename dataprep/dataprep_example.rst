@@ -24,13 +24,13 @@ and so on. Although the script default choice is `Salmon
 <https://combine-lab.github.io/salmon/>`__, users can modify it and use any 
 other software, including `Kallisto <https://pachterlab.github.io/kallisto/>`__
 or `Star <http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>`__.
-Afterwards, they can refer to examples in the next 
-section to prepare an input data from the gene counts table.
+Afterwards, they can refer to the examples in the next 
+section for preparing an input data from the gene counts.
 
 
 From gene counts table or GEO repository
 --------------------------------------------------------------------------------
-Users can also prepare an input data from their own gene counts or download a
+Users can prepare an input data from their own gene counts or download a
 relevant dataset from repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
 Some examples are provided in the following scripts:
 
