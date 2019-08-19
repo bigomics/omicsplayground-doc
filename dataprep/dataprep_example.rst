@@ -36,9 +36,10 @@ Users can also prepare an input data from their own gene counts or download a
 relevant dataset from repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
 Some examples case are provided in
 
-    +TCGA-BRCA: pgx-tcga-brca.R
-    +TCGA-PRAD: pgx-tcga-prad.R
-    +GSE10846: pgx-GSE10846-dlbcl.R
+* TCGA-BRCA: pgx-tcga-brca.R
+* TCGA-PRAD: pgx-tcga-prad.R
+* GSE10846: pgx-GSE10846-dlbcl.R
+
     +GSE114716: pgx-GSE114716-ipilimumab.R
     +GSE22886: pgx-GSE22886-immune.R
     +GSE28492: pgx-GSE28492-roche.R
