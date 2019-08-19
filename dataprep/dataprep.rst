@@ -8,19 +8,20 @@ normalising, and precomputing statistics for some analyses. The data cleaning an
 preprocessing is performed offline using scripts in order to support real-time 
 interaction and minimize user interface latency.
 
-.. seealso::
-
-    See :ref:`data preparation examples <Dataprep_example>` for more information.
     
-
-
 Input data
 --------------------------------------------------------------------------------
-The platform requires the table of gene counts as input. Users can provide their 
-own gene counts or download the relevant data from repositories such as `GEO 
-<https://www.ncbi.nlm.nih.gov/geo/>`__. 
-If they have FASTQ files, we provide scripts to obtain gene counts through quality 
-control, trimming, quantification of gene abundance, and so on.
+The platform requires the transcriptomics and proteomics data to be in a 
+structured format as an input. Users can prepare an input data from
+their own FASTQ files, gene counts tables, or from a dataset of interest stored 
+in public repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
+Similarly, they can also prepare an input from LC-MS/MS proteomics data.
+For all of these cases, the platform comes with the necessary scripts for data 
+cleaning and preprocessing under the ``/scripts`` folder.
+
+.. seealso::
+
+    See :ref:`data preparation examples <Dataprep_example>` for more details.
 
 
 Filtering

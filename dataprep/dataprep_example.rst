@@ -24,7 +24,8 @@ and so on. Users can run the following script to obtain a gene counts table::
 
     R counts_from_FASTQ.R
 
-Although the script default choice is Salmon, users can modify it and use any 
+Although the script default choice is `Salmon <https://combine-lab.github.io/salmon/>`__,
+users can modify it and use any 
 other software, including `Kallisto <https://pachterlab.github.io/kallisto/>`__
 or `Star <http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>`__.
 Afterwards, the user can continue with similar instructions like in the next 
@@ -35,7 +36,7 @@ From gene counts table or GEO repository
 --------------------------------------------------------------------------------
 Users can also prepare an input data from their own gene counts or download a
 relevant dataset from repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
-Some examples case are provided in
+Some examples are provided in the following scripts:
 
 * `TCGA-BRCA <https://portal.gdc.cancer.gov/projects/TCGA-BRCA>`__: ``pgx-tcga-brca.R``
 * `TCGA-PRAD <https://www.cbioportal.org/study/summary?id=prad_tcga>`__: ``pgx-tcga-prad.R``
@@ -46,7 +47,6 @@ Some examples case are provided in
 * `GSE32591 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32591>`__: ``pgx-GSE32591-lupusnephritis.R``
 * `GSE53784 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53784>`__: ``pgx-GSE53784-wnvjev.R``
 * `GSE88808 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE88808>`__: ``pgx-GSE88808-prostate.R``
-
 
 
 From single-cell data
