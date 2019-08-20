@@ -30,7 +30,7 @@ Expression table
 :**E**: By clicking on a gene row in **D**, it is possible to see which genesets contain
         that gene from the geneset table located on the right. 
 
-.. figure:: figures/ug.010.png
+.. figure:: figures/ug.012.png
     :align: center
     :width: 100%
 
@@ -46,13 +46,18 @@ Plots
         row in **D**, it is possible to check the status of the differential 
         expression of that particular gene accross other comparisons.  
 
+.. figure:: figures/ug.012.png
+    :align: center
+    :width: 100%
+
+
 Top genes
 --------------------------------------------------------------------------------
 Furthermore, for the top 10 DEGs 
 within the selected comparison, average expression plots across the samples are 
 displayed in the ``top genes`` section. 
 
-.. figure:: figures/ug.011.png
+.. figure:: figures/ug.013.png
     :align: center
     :width: 100%
 
@@ -64,7 +69,7 @@ the user a statistical overview all comparisons at the same time, and the user
 can immediately see which comparison is statistically weak or strong.
 
 
-.. figure:: figures/ug.012.png
+.. figure:: figures/ug.014.png
     :align: center
     :width: 100%
     
