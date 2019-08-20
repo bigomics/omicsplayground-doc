@@ -11,10 +11,10 @@ general information about all available datasets (see the figure below).
     :width: 100%
     
     
-:**A**: For each dataset, this tab reports a brief description as well as the total
+:**A**  For each dataset, this tab reports a brief description as well as the total
         number of samples, genes, gene sets (or pathways), the corresponding phenotypes
         and the collection date.
         
         
-:**A**: Users can select and load the data of their interest and start the analysis 
+:**B**  Users can select and load the data of their interest and start the analysis 
         from here.
