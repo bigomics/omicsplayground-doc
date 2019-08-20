@@ -19,14 +19,17 @@ Plots
         information on a raw count level (CPM) instead of a log2 level (logCPM).
 
 :**C**: For further information from the literature, hyperlinks are provided to 
-        link the selected gene to databases like OMIM \cite{hamosh2005online}, 
-        KEGG \cite{kanehisa2000kegg}, and GO \cite {gene2004gene}.
+        link the selected gene to databases like `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
+        `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
+        and `GO <http://geneontology.org/>``__.
 
 :**D**: It also correlates the gene to the expressions of other genes across 
-        datasets such as ImmProt and HPA, and plots the cumulative correlation.
+        datasets such as `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
+        and `HPA <https://www.nature.com/articles/nbt1210-1248>`__, 
+        and plots the cumulative correlation.
 
 :**E**: Furthermore, tissue expression for a selected gene is displayed using
-        the GTEx database. 
+        the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
 
 .. figure:: figures/ug.006.png
     :align: center
