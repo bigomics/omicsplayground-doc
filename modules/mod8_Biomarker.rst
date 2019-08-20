@@ -42,3 +42,5 @@ boxplots by phenotype classes for features present in the tree.
 .. figure:: figures/ug.031.png
     :align: center
     :width: 100%
+
+

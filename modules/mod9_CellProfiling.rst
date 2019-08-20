@@ -12,9 +12,14 @@ sequencing data, it provides useful information about the proportion of differen
 cell types in samples obtained by the bulk sequencing method (\textbf{Supp. Fig. 31-32}).
 
 
+
+
 Cell type
 --------------------------------------------------------------------------------
-???
+
+.. figure:: figures/ug.032.png
+    :align: center
+    :width: 100%
 
 
 Markers
@@ -27,6 +32,10 @@ the marker analysis by selecting a particular functional group. There are in tot
 89 such functional groups, including chemokines, transcription factors, genes 
 involved in immune checkpoint inhibition, and so on (\textbf{Supp. Fig. 34}).
 
+.. figure:: figures/ug.035.png
+    :align: center
+    :width: 100%
+
 
 CNV
 --------------------------------------------------------------------------------
@@ -36,12 +45,22 @@ computing a moving average of the relative gene expression along the chromosomes
 A heatmap of samples versus chromosomes is generated, where samples can be 
 annotated further with a phenotype class provided in the data (\textbf{Supp. Fig. 35}).
 
+.. figure:: figures/ug.036.png
+    :align: center
+    :width: 100%
+
+
 
 Proportions
 --------------------------------------------------------------------------------
 Although this feature is very suitable for a single-cell sequencing data, it 
 provides useful information about the proportion of different cell types in 
 samples obtained by the bulk sequencing method.
+
+.. figure:: figures/ug.033.png
+    :align: center
+    :width: 100%
+
 
 
 Cytoplot
@@ -52,4 +71,9 @@ the distribution of samples in relation to the selected gene pairs. For instance
 when applied to single-cell sequencing data from immunological cells, it can mimic
 flow cytometry analysis and distinguish T helper cells from other T cells by 
 selecting the CD4 and CD8 gene combination (\textbf{Supp. Fig. 33}).
+
+.. figure:: figures/ug.034.png
+    :align: center
+    :width: 100%
+
 
