@@ -10,34 +10,43 @@ which are described below.
 
 Plots
 --------------------------------------------------------------------------------
-For a gene specified by the user, the plots section displays 
-figures related to the expression level of 
-the gene, correlation with other genes, and average expression ranking within the 
-dataset (\textbf{Supp. Fig. 5}). It also correlates the gene with other gene 
-expressions in datasets such as ImmProt \cite{rieckmann2017social} and HPA \cite{uhlen2010towards}, 
-and plots the cumulative correlation. Furthermore, tissue expression for a selected 
-gene is displayed using the GTEx database. For further information from the literature, 
-hyperlinks are provided to link the selected gene to databases like OMIM \cite{hamosh2005online}, 
-KEGG \cite{kanehisa2000kegg}, and GO \cite {gene2004gene}. In the visual analysis, 
-users can filter out some samples or collapse the samples by phenotype class. 
-It is also possible to visualize the information on a raw count level (CPM) 
-instead of a log2 level (logCPM).
+:**A**: For a gene specified by the user, the plots section displays figures 
+        related to the expression level of the gene, correlation with other genes,
+        and average expression ranking within the dataset. 
+
+:**B**: In the visual analysis, users can filter out some samples or collapse
+        the samples by phenotype class. It is also possible to visualize the 
+        information on a raw count level (CPM) instead of a log2 level (logCPM).
+
+:**C**: For further information from the literature, hyperlinks are provided to 
+        link the selected gene to databases like OMIM \cite{hamosh2005online}, 
+        KEGG \cite{kanehisa2000kegg}, and GO \cite {gene2004gene}.
+
+:**D**: It also correlates the gene to the expressions of other genes across 
+        datasets such as ImmProt and HPA, and plots the cumulative correlation.
+
+:**E**: Furthermore, tissue expression for a selected gene is displayed using
+        the GTEx database. 
 
 .. figure:: figures/ug.006.png
     :align: center
     :width: 100%
 
 
+
 Counts
 --------------------------------------------------------------------------------
-The total number of counts (abundance) per sample and their distribution among 
-the samples are displayed in the \texttt{counts} section. For each sample, the 
-user can also see the percentage of counts for major gene types, such as CD 
-molecules, kinases or RNA binding motifs (\textbf{Supp. Fig. 6}).
-
 .. figure:: figures/ug.007.png
     :align: center
     :width: 100%
+
+:**F**: The total number of counts (abundance) per sample and their distribution
+        among the samples are displayed in the ``counts`` section. 
+
+:**G**: For each sample, the user can also see the percentage of counts for major
+        gene types, such as CD molecules, kinases or RNA binding motifs.
+
+
 
 
 Gene table
