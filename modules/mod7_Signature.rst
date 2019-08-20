@@ -4,16 +4,22 @@ Signature analysis
 ================================================================================
 
 In this module, users can test gene signatures by calculating an enrichment score.
-They can use a sample list provided on the platform or upload their own gene list.
-Instead of a short list, a profile can also be selected, which is a complete gene
-list derived from one of the contrasts in the analysis.
 
 
 Markers
 --------------------------------------------------------------------------------
-After uploading a gene list, the \texttt{markers} section produces a t-SNE plot of 
-samples for each gene, coloured by expression levels (upregulation: red;  
-downregulation: blue) (\textbf{Supp. Fig. 25}). 
+:**A**: To test the signature enrichment, the user can use a sample list provided
+        on the platform or upload own gene list. Instead of a short list, a profile
+        can also be selected, which is a complete gene list derived from one of the
+        contrasts in the analysis.
+
+:**B**: After uploading a gene list, the markers section produces a t-SNE plot of 
+        samples for each gene, coloured by expression levels (upregulation: red; 
+        downregulation: blue). 
+
+.. figure:: figures/ug.026.png
+    :align: center
+    :width: 100%
 
 
 Phenotypes
@@ -23,9 +29,17 @@ Phenotypes
 
 Enrichment
 --------------------------------------------------------------------------------
-The \texttt{enrichment} tab performs
-the enrichment analysis of the gene list against all contrasts by running the GSEA
-algorithm \cite{sergushichev2016algorithm} and plots enrichment outputs. 
+
+:**D**: The enrichment tab performs the enrichment analysis of the gene list 
+        against all contrasts by running the 
+        `GSEA <https://www.biorxiv.org/content/10.1101/060012v1.full>`__ 
+        algorithm and plots enrichment outputs.
+
+:**E**: The enrichment statistics can be found in this table.
+
+.. figure:: figures/ug.027.png
+    :align: center
+    :width: 100%
 
 
 Signature c-map
