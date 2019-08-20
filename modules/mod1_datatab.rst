@@ -49,10 +49,10 @@ Counts
 
 Gene table
 --------------------------------------------------------------------------------
-:**H**: Further correlation analysis across the samples can be performed under 
-        the ``gene table`` section, where genes are ordered in the table according
-        to the correlations with the selected gene. The gene-wise average expression
-        of samples per phenotype classes is also presented in the table. 
+Further correlation analysis across the samples can be performed under 
+the ``gene table`` section, where genes are ordered in the table according
+to the correlations with the selected gene. The gene-wise average expression
+of samples per phenotype classes is also presented in the table. 
 
 .. figure:: figures/ug.008.png
     :align: center
@@ -61,7 +61,8 @@ Gene table
 
 Sample table
 --------------------------------------------------------------------------------
-More detailed information about the samples is reported in the ``sample table``.
+More detailed information about the samples and comparisons are reported under
+the ``sample table`` section.
 
 .. figure:: figures/ug.009.png
     :align: center
