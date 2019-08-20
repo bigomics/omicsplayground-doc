@@ -47,7 +47,7 @@ Enrichment table
 
 Top enriched
 --------------------------------------------------------------------------------
-For a selected comparison in ***A*, top ten differentially enriched geneses or pathways
+For a selected comparison in **A**, top ten differentially enriched geneses or pathways
 (five positive abd five negative) are displayed under top enriched section.
 
 .. figure:: figures/ug.015.png
@@ -61,12 +61,12 @@ Plots
         of its genes and barplots of expressions per phenotype class are displayed
         under the ``plots`` tab.
 
-:**E**: For a selected geneset from the enrichment table, it is also possible to 
+:**G**: For a selected geneset from the enrichment table in **C**, it is also possible to 
         see the expression barplots per sample group and a scatter plot of gene to
         geneset expressions.
 
-:**F**: Additionally, the gene list of the selected gene set in **C** is also
-        visualised in a separate table with further statistics. 
+:**F**: Additionally, For a selected geneset from the enrichment table in **C**,
+        its gene lists is also visualised in a separate table with further statistics. 
 
 .. figure:: figures/ug.016.png
     :align: center
