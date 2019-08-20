@@ -4,21 +4,32 @@ Differential expression analysis
 ================================================================================
 
 The expression module contains a differentially expressed genes (DEG) analysis 
-between contrasts (eg, tumor vs. control). The analysis begins with the selection 
-of a contrast. There are further options to filter out some genes by functional 
-families, logarithmic fold change (logFC) and false discovery rate (FDR).
+between contrasts (eg, tumor vs. control).
 
 
 Expression table
 --------------------------------------------------------------------------------
-DEG analysis is performed using four commonly accepted methods, namely: 
-t-test (standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), 
-and DESeq2 (Wald, LRT) \cite{ritchie2015limma, robinson2010edger, love2014moderated}.
-For each selected contrast, the results of these methods are combined and reported 
-under the \texttt{table} section, where meta.q for a gene represents the highest q 
-value among the methods and the number of starts indicates how many methods have 
-significant q values (q $<$ 0.05). Users can sort genes by logFC, meta.q, or average 
-expression in an interactive table. 
+
+:**A**: The DEG analysis begins with the selection of a contrast.
+
+:**B**: There are further options to filter out some genes by functional 
+        families, logarithmic fold change (logFC) and false discovery rate (FDR).
+
+:**C**: To increase the statistical reliability of the platform, the DEG analysis
+        is performed using four commonly accepted methods in the literature, namely: 
+        t-test (standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), 
+        and DESeq2 (Wald, LRT) \cite{ritchie2015limma, robinson2010edger, love2014moderated}.
+
+:**C**: For each selected contrast in **A**, the results of these methods are combined
+        and reported under the ``DEG table`` section, where :option:`meta.q` for a gene 
+        represents the highest :option:`q` value among the methods and the number of starts 
+        indicates how many methods have significant q values (:option:`q < 0.05`). Users 
+        can sort genes by logFC, meta.q, or average expression in an interactive table. 
+
+
+.. figure:: figures/ug.010.png
+    :align: center
+    :width: 100%
 
 
 Plots

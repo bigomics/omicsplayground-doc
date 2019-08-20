@@ -1,6 +1,6 @@
 .. _Clustering:
 
-Clustering
+Clustering analysis
 ================================================================================
 
 The clustering module performs a holistic clustering analysis of the samples. 

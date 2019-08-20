@@ -21,7 +21,7 @@ Plots
 :**C**: For further information from the literature, hyperlinks are provided to 
         link the selected gene to databases like `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
         `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
-        and `GO <http://geneontology.org/>``__.
+        and `GO <http://geneontology.org/>`__.
 
 :**D**: It also correlates the gene to the expressions of other genes across 
         datasets such as `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
