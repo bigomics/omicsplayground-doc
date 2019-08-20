@@ -56,17 +56,11 @@ Annotate clusters
 PCA/tSNE
 --------------------------------------------------------------------------------
 PCA and t-SNE plots can be found in the ``PCA}/tSNE`` tab, which shows 
-the relationship between samples in 2D as well as in 3D space for visual analytics. 
-Users can customise the PCA/tSNE plot using a phenotype class provided in 
-the data.
-
-The PCA/tSNE tab shows the similarity between samples in 2D space as well as in 3D 
-space for visual analytics. Similarity is visualized as proximity of the points. 
-Samples that are 'similar' will be placed close to each other. Groups of similar 
-samples will form 'clusters of points'. Users can color the samples or give 
-different shape to the samples by a phenotype class provided in the data. 
-By changing the color/shape of the points you can examine if the clustering 
-corresponds to certain phenotypes.
+the relationship (or similarity) between samples in 2D as well as in 3D space for 
+visual analytics. Similarity is visualized as proximity of the points. 
+Samples that are 'similar' will be placed close to each other. 
+Users can customise the PCA/tSNE plot, including colors and shapes of points
+using a phenotype class provided in the data.
 
 .. figure:: figures/ug.011.png
     :align: center
