@@ -22,7 +22,8 @@ of molecular interactions, reactions and relation networks as pathway maps.
 :**A**: The user selects the contrast of interest to perform the analysis and
         visualisation of KEGG pathways.
 
-:**B**: Each KEGG pathway is scored for the selected contrast profile and reported
+:**B**: Each KEGG pathway is scored according to the selected contrast profile
+        and reported
         in an interactive table. The scoring is performed by considering the total
         number of genes in the pathway (:option:`n`), the number of genes in the pathway 
         supported by the contrast profile (:option:`k`), the ratio of :option:`k/n`,
@@ -49,7 +50,8 @@ of molecular interactions, reactions and relation networks as pathway maps.
 
 GO graph
 --------------------------------------------------------------------------------
- `GO <http://geneontology.org/>`__ database provides a computational representation
+
+`GO <http://geneontology.org/>`__ database provides a computational representation
 of the current knowledge about roles of genes for many organisms in terms of 
 molecular functions, cellular components and biological processes. 
 
