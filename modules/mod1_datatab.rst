@@ -21,7 +21,11 @@ hyperlinks are provided to link the selected gene to databases like OMIM \cite{h
 KEGG \cite{kanehisa2000kegg}, and GO \cite {gene2004gene}. In the visual analysis, 
 users can filter out some samples or collapse the samples by phenotype class. 
 It is also possible to visualize the information on a raw count level (CPM) 
-instead of a log2 level (logCPM). 
+instead of a log2 level (logCPM).
+
+.. figure:: figures/ug.006.png
+    :align: center
+    :width: 100%
 
 
 Counts
@@ -30,6 +34,10 @@ The total number of counts (abundance) per sample and their distribution among
 the samples are displayed in the \texttt{counts} section. For each sample, the 
 user can also see the percentage of counts for major gene types, such as CD 
 molecules, kinases or RNA binding motifs (\textbf{Supp. Fig. 6}).
+
+.. figure:: figures/ug.007.png
+    :align: center
+    :width: 100%
 
 
 Gene table
@@ -40,6 +48,10 @@ the correlations with the selected gene. The gene-wise average expression of sam
 per phenotype classes is also presented in the table. More detailed information 
 about the samples is reported in the \texttt{sample table} (\textbf{Supp. Fig. 7-8}).
 
+.. figure:: figures/ug.008.png
+    :align: center
+    :width: 100%
+
 
 Sample table
 --------------------------------------------------------------------------------
@@ -48,3 +60,7 @@ Further correlation analysis across the samples can be performed under the
 the correlations with the selected gene. The gene-wise average expression of samples 
 per phenotype classes is also presented in the table. More detailed information 
 about the samples is reported in the \texttt{sample table} (\textbf{Supp. Fig. 7-8}).
+
+.. figure:: figures/ug.009.png
+    :align: center
+    :width: 100%
