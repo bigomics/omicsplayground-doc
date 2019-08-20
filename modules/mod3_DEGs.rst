@@ -10,15 +10,19 @@ between contrasts (eg, tumor vs. control).
 Expression table
 --------------------------------------------------------------------------------
 
-:**A**: The DEG analysis begins with the selection of a contrast.
+:**A**: The user starts the DEG analysis by selecting a desireable contrast form
+        the drop-down menu items.
 
 :**B**: There are further options to filter out some genes by functional 
         families, logarithmic fold change (logFC) and false discovery rate (FDR).
 
 :**C**: To increase the statistical reliability of the platform, the DEG analysis
         is performed using four commonly accepted methods in the literature, namely: 
-        t-test (standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), 
-        and DESeq2 (Wald, LRT) \cite{ritchie2015limma, robinson2010edger, love2014moderated}.
+        t-test (standard, Welch), 
+        `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (no trend, trend, voom), 
+        `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF, LRT), 
+        and 
+        `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald, LRT).
 
 :**D**: For each selected contrast in **A**, the results of these methods are combined
         and reported under the ``DEG table`` section, where :option:`meta.q` for a gene 

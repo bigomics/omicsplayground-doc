@@ -5,10 +5,15 @@ Gene set enrichment analysis
 
 This module visualises a differential expression analysis at a gene set level. 
 Expression analysis for each gene set (or pathway) is computed from gene expression 
-data using summary methods such as GSVA and ssGSEA \cite{hanzelmann2013gsva}. 
+data using summary methods such as 
+`GSVA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__
+and `ssGSEA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__. 
 The platform has more than 50,000 gene sets and pathways in total, which are divided 
-into 30 gene set collections such as Hallmark, MSigDB, KEGG and 
-GO \cite{liberzon2015molecular, kanehisa2000kegg, gene2004gene}. 
+into 30 gene set collections such as 
+`Hallmark <https://www.cell.com/abstract/S0092-8674(11)00127-9>`__, 
+`MSigDB <http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__,
+`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
+and `GO <http://geneontology.org/>`__.
 
 
 Enrichment table
@@ -19,9 +24,14 @@ Enrichment table
         :option:`FDR` thresholds before performing the analysis.
         
 :**B**: To ensure statistical reliability, the platform performs GSE analyses 
-        using seven different methods, including Spearman rank correlation, GSVA, 
-        ssGSEA, Fisher's exact test, GSEA, camera and fry \cite{kofler2012gowinda, 
-        hanzelmann2013gsva, fisher1922interpretation, sergushichev2016algorithm, kuhl2011camera}. 
+        using seven different methods, including Spearman rank correlation, 
+        `GSVA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__, 
+        `ssGSEA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__, 
+        `Fisher's exact test <https://www.jstor.org/stable/2340521?seq=1#metadata_info_tab_contents>`__, 
+        `GSEA <http://software.broadinstitute.org/gsea/index.jsp>`__, 
+        `camera <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3458527/>`__ 
+        and 
+        `fry <https://academic.oup.com/bioinformatics/article/26/17/2176/200022>`__. 
         
 :**C**: Then the combined result from multiple methods is displayed under the 
         ``enrichment table``, where for each geneset the :option:`meta.q` corresponds
@@ -65,12 +75,21 @@ Plots
 
 Compare
 --------------------------------------------------------------------------------
-Individual gene sets expression profiles can be visualised 
-against all available contrasts (\texttt{compare} tab) (\textbf{Supp. Fig. 16}).
+Under the ``compare`` section, expression profiles of individually selected gene sets
+from the enrichment table can be visualised against all available contrasts.
+
+.. figure:: figures/ug.017.png
+    :align: center
+    :width: 100%
 
 
 Volcano (all)
 --------------------------------------------------------------------------------
-Under the \texttt{volcano (all)} tab, volcano plots for all contrasts are 
-displayed (\textbf{Supp. Fig. 17}).
+Similarly, volcano plots of gene sets for all available contrasts are displayed
+under the ``volcano (all)`` tab. This allows users to have a simultaneous overview
+of all comparisons.
+
+.. figure:: figures/ug.018.png
+    :align: center
+    :width: 100%
 
