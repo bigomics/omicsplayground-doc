@@ -9,6 +9,6 @@ reports a brief description as well as the total number of samples, genes, gene
 sets (or pathways), the corresponding phenotypes and the collection date. Users 
 can select and load the data of their interest and start the analysis from here.
 
-.. figure:: figures/fig1_home.png
+.. figure:: figures/fig1_home001.png
     :align: center
     :width: 100%
