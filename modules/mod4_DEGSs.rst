@@ -13,36 +13,54 @@ GO \cite{liberzon2015molecular, kanehisa2000kegg, gene2004gene}.
 
 Enrichment table
 --------------------------------------------------------------------------------
-Users specify which contrast they want to visually analyze using a particular gene 
-set collection. To ensure statistical reliability, the platform performs GSE 
-analyses using seven different methods, including Spearman rank correlation, GSVA, 
-ssGSEA, Fisher's exact test, GSEA, camera and fry \cite{kofler2012gowinda, 
-hanzelmann2013gsva, fisher1922interpretation, sergushichev2016algorithm, kuhl2011camera}. 
-The results are combined and gene sets can be optionally filtered by logFC and 
-FDR thresholds before being visualised in an interactive and sortable table under
-the  \texttt{enrichment table} menu (\textbf{Supp. Fig. 14}). 
+:**A**: To perform the enrichment analysis, users have to first specify the 
+        contrast they want to visually analyze using a particular gene 
+        set collection. Gene sets can be optionally filtered by :option:`logFC` and 
+        :option:`FDR` thresholds before performing the analysis.
+        
+:**B**: To ensure statistical reliability, the platform performs GSE analyses 
+        using seven different methods, including Spearman rank correlation, GSVA, 
+        ssGSEA, Fisher's exact test, GSEA, camera and fry \cite{kofler2012gowinda, 
+        hanzelmann2013gsva, fisher1922interpretation, sergushichev2016algorithm, kuhl2011camera}. 
+        
+:**C**: Then the combined result from multiple methods is displayed under the 
+        ``enrichment table``, where for each geneset the :option:`meta.q` corresponds
+        to the highest :option:`q` value provided by the methods and the number of 
+        stars indicate how many methods identified the geneset as significant 
+        (:option:`q < 0.05`). The table is interactive; users can sort it by 
+        :option:`logFC`, :option:`meta.q` and :option:`starts`.
+
+.. figure:: figures/ug.015.png
+    :align: center
+    :width: 100%
 
 
 Top enriched
 --------------------------------------------------------------------------------
-For each gene set, 
-a meta.q value and stars qualifier are calculated as described previously and volcano 
-plots of its genes and barplots of expressions per phenotype class are displayed 
-(under \texttt{plots}) (\textbf{Supp. Fig. 15}). Additionally, the list of genes in 
-that gene set are visualised in a separate table and for every gene it is possible 
-to see the barplot of expressions per phenotype class and a scatter plot of gene to 
-gene set expressions. 
+For a selected comparison in ***A*, top ten differentially enriched geneses or pathways
+(five positive abd five negative) are displayed under top enriched section.
+
+.. figure:: figures/ug.015.png
+    :align: center
+    :width: 100%
 
 
 Plots
 --------------------------------------------------------------------------------
-For each gene set, 
-a meta.q value and stars qualifier are calculated as described previously and volcano 
-plots of its genes and barplots of expressions per phenotype class are displayed 
-(under \texttt{plots}) (\textbf{Supp. Fig. 15}). Additionally, the list of genes in 
-that gene set are visualised in a separate table and for every gene it is possible 
-to see the barplot of expressions per phenotype class and a scatter plot of gene to 
-gene set expressions. 
+:**E**: For a selected geneset from the enrichment table in **C**, a volcano plot
+        of its genes and barplots of expressions per phenotype class are displayed
+        under the ``plots`` tab.
+
+:**E**: For a selected geneset from the enrichment table, it is also possible to 
+        see the expression barplots per sample group and a scatter plot of gene to
+        geneset expressions.
+
+:**F**: Additionally, the gene list of the selected gene set in **C** is also
+        visualised in a separate table with further statistics. 
+
+.. figure:: figures/ug.016.png
+    :align: center
+    :width: 100%
 
 
 Compare

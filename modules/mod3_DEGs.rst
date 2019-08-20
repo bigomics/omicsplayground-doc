@@ -37,12 +37,12 @@ Expression table
 
 Plots
 --------------------------------------------------------------------------------
-:**F**: The ``plots`` section can provide volcano  and MA (an application 
+:**F**: The ``plots`` section provides volcano  and MA (an application 
         of a Bland-Altman) plots.  
         
 :**G**: This section shows the so-called 'signature', i.e. the top downregulated
         and overexpressed genes, for that contrast. The expression of the selected
-        gene across all contrasts is also summarized. By clicking on a gene table
+        gene across all contrasts is also summarized. By clicking on a gene 
         row in **D**, it is possible to check the status of the differential 
         expression of that particular gene accross other comparisons.  
 
