@@ -1,6 +1,6 @@
 .. _GSE72056:
 
-GSE72056: melanoma single-cell RNA-seq data set
+GSE72056: melanoma single-cell dataset
 ================================================================================
 
 Data set
