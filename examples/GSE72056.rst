@@ -1,0 +1,39 @@
+.. _GSE72056:
+
+GSE72056: melanoma single-cell RNA-seq data set
+================================================================================
+
+Data set
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To illustrate the use cases of the Omics Playground, we reanalyzed some publics
+data sets. For single-cell RNA-seq data, we downloaded the melanoma data set 
+`GSE72056 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056>`__ 
+of `Tirosh et al <https://www.ncbi.nlm.nih.gov/pubmed/27124452>`__. 
+
+t-SNE clustering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Our platform recapitulates well the original findings of the paper. 
+The t-SNE clustering separates the different cell types. 
+
+Volcano plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\textbf{Fig. \ref{results_figure2}b} and \textbf{\ref{results_figure2}c} show the 
+volcano plot, MA plot and most differentially expressed genes between malignant 
+and non-malignant cells. 
+
+CNV plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The CNV map (\textbf{Fig. \ref{results_figure2}d}) confirms the major chromosomal
+copy number variations found in the malignant cells. 
+
+Signature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\textbf{Fig. \ref{results_figure2}e} shows high enrichment of a immune checkpoint
+signature, particularly concentrated in the T cells. 
+
+Biomarker
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The biomarker heatmap (\textbf{Fig. \ref{results_figure2}f}) highlights the marker
+genes for each cell type. Each gene cluster is furthermore automatically annotated
+with the most correlated gene sets (\textbf{Fig. \ref{results_figure2}g}). 
+

@@ -35,9 +35,10 @@
     :maxdepth: 2
     :caption: Examples
     
-    examples/cloning
-    examples/genbank
-    examples/igblast
+    examples/GSE72056.rst
+    #examples/cloning
+    #examples/genbank
+    #examples/igblast
 
 .. toctree::
     :maxdepth: 1
