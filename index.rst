@@ -35,7 +35,10 @@
     :maxdepth: 2
     :caption: Examples
     
+    examples/GSE10846.rst
+    examples/GSE114716.rst
     examples/GSE72056.rst
+    examples/rieckmann2017.rst
     #examples/cloning
     #examples/genbank
     #examples/igblast
