@@ -1,6 +1,6 @@
 .. _GSE72056:
 
-GSE72056: melanoma single-cell data set
+GSE72056: Melanoma single-cell data set
 ================================================================================
 
 Data set

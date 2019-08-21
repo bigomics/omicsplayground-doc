@@ -1,6 +1,6 @@
 .. _GSE10846:
 
-GSE10846: diffuse large B-cell lymphoma
+GSE10846: Diffuse large B-cell lymphoma
 ================================================================================
 
 \textbf{Fig. \ref{results_figure3}a} shows the volcano plots corresponding to eight

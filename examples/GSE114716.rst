@@ -1,6 +1,6 @@
 .. _GSE114716:
 
-GSE114716: drug mechanism of action
+GSE114716: Drug mechanism of action
 ================================================================================
 
 To elucidate the mechanism of action of a new drug, or for the intention of drug 
