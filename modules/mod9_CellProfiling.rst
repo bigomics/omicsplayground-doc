@@ -54,7 +54,7 @@ annotated further with a phenotype class provided in the data.
 
 Proportions
 --------------------------------------------------------------------------------
-The ``proportions`` tab visualizes the interrelationships between two categorical
+The **proportions** tab visualizes the interrelationships between two categorical
 variables (so-called cross tabulation). Although this feature is very suitable
 for a single-cell sequencing data, it provides useful information about the
 proportion of different cell types in samples obtained by the bulk sequencing method.
@@ -68,7 +68,7 @@ proportion of different cell types in samples obtained by the bulk sequencing me
 Cytoplot
 --------------------------------------------------------------------------------
 For each gene pairs combination, the platform can generate a cytometry-like plot 
-of samples under the ``cytoplot`` tab. The aim of this feature is to observe
+of samples under the **cytoplot** tab. The aim of this feature is to observe
 the distribution of samples in relation to the selected gene pairs. For instance,
 when applied to single-cell sequencing data from immunological cells, it can mimic
 flow cytometry analysis and distinguish T helper cells from other T cells by 
