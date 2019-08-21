@@ -11,7 +11,7 @@ proportions across the cells.
 
 Cell type
 --------------------------------------------------------------------------------
-The ``cell type`` section is used to infer the types of immune cells in a sample
+The **cell type** section is used to infer the types of immune cells in a sample
 using prediction methods and reference datasets from the literature. 
 Currently, we have implemented
 a total of eight methods and nine reference datasets to predict immune cell types
@@ -25,7 +25,7 @@ cell types (one dataset).
 
 Markers
 --------------------------------------------------------------------------------
-The ``markers`` section provides potential marker genes, that is the 36 genes
+The **markers** section provides potential marker genes, that is the 36 genes
 with the highest standard deviation within the expression data across the samples.
 For every gene, it produces a t-SNE plot of samples, with samples colored in red 
 when the gene is overexpressed in corresponding samples. Users can also restrict 
@@ -41,7 +41,7 @@ involved in immune checkpoint inhibition, and so on.
 CNV
 --------------------------------------------------------------------------------
 It is also possible to perform a gene copy number variation (CNV) analysis under 
-the ``CNV`` tab. The copy number is estimated from gene expression data by 
+the **CNV** tab. The copy number is estimated from gene expression data by 
 computing a moving average of the relative gene expression along the chromosomes.
 A heatmap of samples versus chromosomes is generated, where samples can be 
 annotated further with a phenotype class provided in the data.

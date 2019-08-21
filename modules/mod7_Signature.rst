@@ -44,7 +44,7 @@ Enrichment
 
 Signature c-map
 --------------------------------------------------------------------------------
-The ``signature c-map`` section associates the provided signature list or contrast
+The **signature c-map** section associates the provided signature list or contrast
 profile with similar profiles of other experiments, obtained from ten published 
 datasets. 
 
@@ -55,7 +55,7 @@ datasets.
 
 Overlap/similarity
 --------------------------------------------------------------------------------
-Under the ``overlap/similarity`` tab, users can compare
+Under the **overlap/similarity** tab, users can compare
 their gene list with all the gene sets and pathways in the platform through statistics
 such as the total number of genes in the gene set (:option:`K`), the number of
 intersecting genes between the list and the gene set (:option:`k`), the overlapping

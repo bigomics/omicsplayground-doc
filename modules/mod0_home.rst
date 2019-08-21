@@ -3,7 +3,7 @@
 Home
 ================================================================================
 
-The platform starts running from the home page. Basically, this module contains 
+The platform starts running from the **home** page. Basically, this module contains 
 general information about all available datasets within the platform
 (see the figure below).
 

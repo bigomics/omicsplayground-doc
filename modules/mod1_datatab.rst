@@ -10,7 +10,7 @@ which are described below.
 
 Plots
 --------------------------------------------------------------------------------
-:**A**: For a gene specified by the user, the ``plots`` section displays figures 
+:**A**: For a gene specified by the user, the **plots** section displays figures 
         related to the expression level of the gene, correlation with other genes,
         and average expression ranking within the dataset. 
 
@@ -40,7 +40,7 @@ Plots
 Counts
 --------------------------------------------------------------------------------
 :**F**: The total number of counts (abundance) per sample and their distribution
-        among the samples are displayed in the ``counts`` section. 
+        among the samples are displayed in the **counts** section. 
 
 :**G**: For each sample, the user can also see the percentage of counts for major
         gene types, such as CD molecules, kinases or RNA binding motifs.
@@ -53,7 +53,7 @@ Counts
 Gene table
 --------------------------------------------------------------------------------
 Further correlation analysis across the samples can be performed under 
-the ``gene table`` section, where genes are ordered in the table according
+the **gene table** section, where genes are ordered in the table according
 to the correlations with the selected gene. The gene-wise average expression
 of samples per phenotype classes is also presented in the table. 
 
@@ -65,7 +65,7 @@ of samples per phenotype classes is also presented in the table.
 Sample table
 --------------------------------------------------------------------------------
 More detailed information about the samples and comparisons are reported under
-the ``sample table`` section.
+the **sample table** section.
 
 .. figure:: figures/ug.009.png
     :align: center

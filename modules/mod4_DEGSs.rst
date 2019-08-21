@@ -34,7 +34,7 @@ Enrichment table
         `fry <https://academic.oup.com/bioinformatics/article/26/17/2176/200022>`__. 
         
 :**C**: Then the combined result from multiple methods is displayed under the 
-        ``enrichment table``, where for each geneset the :option:`meta.q` corresponds
+        **enrichment table**, where for each geneset the :option:`meta.q` corresponds
         to the highest :option:`q` value provided by the methods and the number of 
         stars indicate how many methods identified the geneset as significant 
         (:option:`q < 0.05`). The table is interactive; users can sort it by 
@@ -59,7 +59,7 @@ Plots
 --------------------------------------------------------------------------------
 :**E**: For a selected geneset from the enrichment table in **C**, a volcano plot
         of its genes and barplots of expressions per phenotype class are displayed
-        under the ``plots`` tab.
+        under the **plots** tab.
 
 :**G**: For a selected geneset from the enrichment table in **C**, it is also possible to 
         see the expression barplots per sample group and a scatter plot of gene to
@@ -75,7 +75,7 @@ Plots
 
 Compare
 --------------------------------------------------------------------------------
-Under the ``compare`` section, expression profiles of individually selected gene sets
+Under the **compare** section, expression profiles of individually selected gene sets
 from the enrichment table can be visualised against all available contrasts.
 
 .. figure:: figures/ug.017.png
@@ -86,7 +86,7 @@ from the enrichment table can be visualised against all available contrasts.
 Volcano (all)
 --------------------------------------------------------------------------------
 Similarly, volcano plots of gene sets for all available contrasts are displayed
-under the ``volcano (all)`` tab. This allows users to have a simultaneous overview
+under the **volcano (all)** tab. This allows users to have a simultaneous overview
 of all comparisons.
 
 .. figure:: figures/ug.018.png

@@ -13,7 +13,7 @@ Pairs
 :**A**: Select the contrasts of interest for the analysis.
 
 :**B**: For the selected contrasts, the platform provides volcano plots and 
-        pairwise correlation plots between the profiles under the ``pairs`` tab. 
+        pairwise correlation plots between the profiles under the **pairs** tab. 
 
 .. figure:: figures/ug.022.png
     :align: center
@@ -23,7 +23,7 @@ Pairs
 Venn diagram
 --------------------------------------------------------------------------------
 :**C**: The platform simultaneously plots a Venn diagram with the number of 
-        intersecting genes between the selected profiles in the ``venn diagram``
+        intersecting genes between the selected profiles in the **venn diagram**
         section. 
          
          
@@ -38,14 +38,14 @@ Venn diagram
     
 Volcano
 --------------------------------------------------------------------------------
-A ``volcano`` tab provides the volcano plot of genes from the intersection analysis.
+A **volcano** tab provides the volcano plot of genes from the intersection analysis.
 
 
 Two-pairs
 --------------------------------------------------------------------------------
 
 It is possible to check a more detailed scatter plot of two profiles under the
-``two-pairs`` tabs. 
+**two-pairs** tabs. 
 
 .. figure:: figures/ug.023.png
     :align: center
@@ -55,7 +55,7 @@ It is possible to check a more detailed scatter plot of two profiles under the
 Correlation
 --------------------------------------------------------------------------------
 In addition, it is possible to check the correlation-heatmap of multiple profiles
-under the ``correlation`` tabs. 
+under the **correlation** tabs. 
 
 .. figure:: figures/ug.024.png
     :align: center
@@ -64,7 +64,7 @@ under the ``correlation`` tabs.
 
 Connectivity graph
 --------------------------------------------------------------------------------
-The ``connectivity`` graph tab 
+The **connectivity** graph tab 
 constructs a network, in which nodes represent contrasts and edges are obtained 
 from the pairwise-correlation of corresponding profiles. 
 The correlation-heatmap and the network of contrasts facilitate to quickly 

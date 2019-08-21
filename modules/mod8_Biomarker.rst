@@ -35,7 +35,7 @@ By combining several methods, the platform aims to select the best possible biom
     :align: center
     :width: 100%
 
-If the data set under the study has a survival data, the  ``biomarker`` tab can also 
+If the data set under the study has a survival data, the  **biomarker** tab can also 
 provide a survival tree analysis using top features. Furthermore, it provides expression
 boxplots by phenotype classes for features present in the tree.
 
