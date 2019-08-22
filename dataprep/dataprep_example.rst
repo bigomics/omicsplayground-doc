@@ -8,7 +8,7 @@ data and injecting it into the platform. Basically, the example cases
 illustriate how to prepare an input data:
 
 1. from FASTQ files, 
-2. from gene counts table or GEO repository data,
+2. from gene counts table or from the GEO repository,
 3. from single-cell data,
 4. from LC-MS/MS proteomics data.
 
@@ -20,7 +20,7 @@ From FASTQ files
 --------------------------------------------------------------------------------
 Given FASTQ files, users can employ a ``counts_from_FASTQ.R`` script to obtain
 gene counts through quality control, trimming, quantification of gene abundance,
-and so on. Although the script default choice is `Salmon 
+and so on. Although the script' default choice is `Salmon 
 <https://combine-lab.github.io/salmon/>`__, users can modify it and use any 
 other software, including `Kallisto <https://pachterlab.github.io/kallisto/>`__
 or `Star <http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STAR.posix/doc/STARmanual.pdf>`__.
