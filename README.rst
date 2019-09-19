@@ -1,4 +1,4 @@
-Omics Playground: Explore Omics Data Easily
+[Omics Playground: Explore Omics Data Easily] {long title}
 ================================================================================
 
 
