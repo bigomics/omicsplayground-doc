@@ -34,6 +34,7 @@ Heatmap
     :align: center
     :width: 100%
 
+
 Annotate clusters
 --------------------------------------------------------------------------------
 :**F**: The top features in the heatmap (figure **D**) are then divided 
