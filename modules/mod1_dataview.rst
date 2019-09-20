@@ -10,9 +10,7 @@ more detailed information for each panel.
 
 The **Plots** panel displays figures related to the expression level of the 
 selected gene, correlation, and average expression ranking within the dataset.
-More information about the gene and hyperlinks to external databases are provided. 
-Furthermore, it displays the correlation and tissue expression for a selected gene 
-in external reference datasets. In the **Counts** panel, the total number of counts 
+In the **Counts** panel, the total number of counts 
 (abundance) per sample and their distribution among the samples are displayed. 
 This is most useful to check the technical quality of the dataset, such as total 
 read counts or abundance of ribosomal genes. In **Gene Table** panel, the exact
