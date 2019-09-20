@@ -42,16 +42,16 @@ For each chart of the panel, a detailed explanation is provided below.
         gene selected in the ``Search gene`` dropdown menu. The red color 
         represents an over-expression of the selected gene across samples (or cells). 
 
-:**b**: Expression barplot of grouped samples (or cells) for the gene selected in 
-        the ``Search gene`` dropdown menu. Samples (or cells) in the barplot can 
+:**b**: Expression barplot of grouped samples (or cells) for the selected gene. 
+        Samples (or cells) in the barplot can 
         be ungrouped by setting the ``Group by`` under the main *Options*.
 
 :**c**: Barplot of the top N = {16} positively and negatively correlated genes 
-        with the gene selected in the ``Search gene``. Absolute expression levels 
+        with the selected gene. Absolute expression levels 
         of genes are colored in the barplot, where the low and high expressions 
         range between the light grey and dark black colors, respectively.
 
-:**d**: Ranking of the average expression of the selected gene in the ``Search gene``.
+:**d**: Ranking of the average expression of the selected gene.
 
 :**e**: To find out more information from the literature, hyperlinks are provide to 
         connect the selected gene in the ``Search gene`` to public databases, 
@@ -60,7 +60,7 @@ For each chart of the panel, a detailed explanation is provided below.
         and `GO <http://geneontology.org/>`__.
 
 :**f**: Top N = {20} cumulative positively and negatively correlated genes with the
-        gene selected in the ``Search gene``, across samples (or cells), 
+        selected gene, across samples (or cells), 
         in the current dataset as well as in public datasets such as 
         `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
         and `HPA <https://www.nature.com/articles/nbt1210-1248>`__. 
@@ -90,24 +90,16 @@ of the panel.
         setting uder the main *Options*.
 
 :**b**: A boxplot of the total number of counts (abundance) for each group.
-        The samples (or cells) can be grouped/ungrouped in the ``Group by``
-        setting uder the main *Options*.
 
 :**c**: A histogram of the total number of counts (abundance) for each group.
-        The samples (or cells) can be grouped/ungrouped in the ``Group by``
-        setting uder the main *Options*.
 
 :**d**: A barplot showing the percentage of counts in terms of major gene 
         types such as CD molecules, kinanses or RNA binding motifs for 
         each group. 
-        The samples (or cells) can be grouped/ungrouped in the ``Group by``
-        setting uder the main *Options*.
 
 :**e**: A barplot showing the average count levels of major gene types such
         as CD molecules, kinanses or RNA binding motifs for each group. 
-        The samples (or cells) can be grouped/ungrouped in the ``Group by``
-        setting uder the main *Options*.
-        
+
 .. figure:: figures/psc2.2.png
     :align: center
     :width: 100%
