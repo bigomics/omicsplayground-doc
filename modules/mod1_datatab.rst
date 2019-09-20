@@ -3,57 +3,68 @@
 Data table
 ================================================================================
 
-The *Data Table* module provides a descriptive statistical analysis on a gene level
+The **Data Table** module provides a descriptive statistical analysis on a gene level
 with visualisations. It has five panels, where each panel is explained below.
 
-Users can find more information by clicking the "Info" button in the input slider
+Users can find more information by clicking the ``Info`` button in the input slider
 on the left side of the panel. It also contains some useful settings for the analysis.
 The analysis can be started by selecting a gene of interest from the 
-'Search gene' settings. Under the _Options_, users can filter some samples in the
-'Filter samples' settings or collapse the samples by predetermined groups in the
-'Group by' settings. It is also possible to visualize 
+``Search gene`` settings. Under the *Options*, users can filter some samples in the
+``Filter samples`` settings or collapse the samples by predetermined groups in the
+``Group by`` settings. It is also possible to visualize 
 the information on a raw count level, count per million (CPM), or logarithmic expression 
 level (logCPM). 
 
 .. figure:: figures/psc2.0.png
     :align: center
-    :width: 100%
+    :width: 40%
 
 
 Plots
 --------------------------------------------------------------------------------
 
-The *Plots* panel displays figures related to the expression level of the selected
+The **Plots** panel displays figures related to the expression level of the selected
 gene, correlation to other genes, and average expression ranking within the dataset.
 To find out more information from the literature, hyperlinks are provide to connect
-the selected gene to OMIM, KEGG, and GO databases. 
+the selected gene to `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
+`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
+and `GO <http://geneontology.org/>`__ databases. 
 It also correlates the gene to the expressions of other genes across datasets such
-as ImmProt and HPA, and plots the cumulative correlation. Furthermore,
+as `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
+and `HPA <https://www.nature.com/articles/nbt1210-1248>`__,
+and plots the cumulative correlation. Furthermore,
 it displays the tissue expression for a selected gene using the genotype-tissue
-expression GTEx dataset. 
+expression `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ dataset.
+For each chart of the panel, a detailed explanation is provided below.
 
 
-:**A**: For a gene specified by the user, the **plots** section displays figures 
+:**a**: For a gene specified by the user, the **plots** section displays figures 
         related to the expression level of the gene, correlation with other genes,
         and average expression ranking within the dataset. 
 
-:**B**: In the visual analysis, users can filter out some samples or collapse
+:**b**: In the visual analysis, users can filter out some samples or collapse
         the samples by phenotype class. It is also possible to visualize the 
         information on a raw count level (CPM) instead of a log2 level (logCPM).
 
-:**C**: For further information from the literature, hyperlinks are provided to 
+:**c**: For further information from the literature, hyperlinks are provided to 
         link the selected gene to databases like `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
         `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
         and `GO <http://geneontology.org/>`__.
 
-:**D**: It also correlates the gene to the expressions of other genes across 
+:**d**: It also correlates the gene to the expressions of other genes across 
         datasets such as `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
         and `HPA <https://www.nature.com/articles/nbt1210-1248>`__, 
         and plots the cumulative correlation.
 
-:**E**: Furthermore, tissue expression for a selected gene is displayed using
+:**e**: Furthermore, tissue expression for a selected gene is displayed using
         the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
 
+:**f**: Furthermore, tissue expression for a selected gene is displayed using
+        the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
+        
+:**g**: Furthermore, tissue expression for a selected gene is displayed using
+        the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
+        
 .. figure:: figures/psc2.1.png
     :align: center
     :width: 100%
