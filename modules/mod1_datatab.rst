@@ -22,7 +22,7 @@ level (logCPM).
 Each figure or table on the platform is assigned the following interactive buttons, where:
 
 1. Info: Provides detailed information about the figure or table.
-2. Settings: Users can tune additional settings if applicable.
+2. Settings: Users can specify additional settings if applicable.
 3. Download: Downloads the figure as PDF or the table in CSV format.
 
 
