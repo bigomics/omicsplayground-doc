@@ -17,9 +17,11 @@ obtained by PCA or tSNE algorithms.
 The **Phenotypes** panel on the right, shows the phenotype distribution as colors
 on the t-SNE plot.
 
-EXPERT MODE ONLY: The **Feature ranking** panel computes a discriminant score for 
-gene (or geneset) families. This allows to investigate what family of genes 
-(or gene sets) can best discriminate the groups.
+.. info::
+
+    Expert mode only: The **Feature ranking** panel computes a discriminant 
+    score for gene (or geneset) families. This allows to investigate what 
+    family of genes (or gene sets) can best discriminate the groups.
 
 
 The clustering module performs a holistic clustering analysis of the samples. 
@@ -32,6 +34,8 @@ algorithms.
 
 Heatmap
 --------------------------------------------------------------------------------
+
+
 :**A**: The heatmap analysis can be performed on a gene level expression or gene
         set level expression in which, for each gene set (or pathway), an average
         expression is computed from the gene expression data using summary methods
