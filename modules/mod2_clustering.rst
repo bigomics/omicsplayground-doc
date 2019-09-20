@@ -19,39 +19,50 @@ on the t-SNE plot.
 
 .. note::
 
-    Expert mode only: The **Feature ranking** panel computes a discriminant 
+    EXPERT MODE ONLY: The **Feature ranking** panel computes a discriminant 
     score for gene (or geneset) families. This allows to investigate what 
     family of genes (or gene sets) can best discriminate the groups.
 
 
-The clustering module performs a holistic clustering analysis of the samples. 
-The main output of this feature is twofold: i) It generates a **heatmap** 
-of samples and ii) It also provides a **PCA/tSNE** plot of samples 
-obtained by `principal components analysis <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__
-or `t-distributed stochastic embedding <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__
-algorithms.
-
-
 Heatmap
 --------------------------------------------------------------------------------
+In the **Heatmap** panel hierarchical clustering can be performed on gene level
+or gene set level expression in which for the latter, for each gene set (or pathway),
+an average expression is computed from the gene expression data using summary methods
+such as `GSVA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__
+and `ssGSEA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__. 
 
+Users can find more information by clicking ``Info`` in the input slider. 
+It also contains settings for the analysis, where users can 
+specify the level analysis in the ``Level`` and select a family of features
+in the ``Features``. Furthermore, under the *Options*,
+it is possible to filter the relevant 
+samples in the ``Filter samples`` and group the samples by a predefined 
+phenotype class in the ``grouped``.
 
-:**A**: The heatmap analysis can be performed on a gene level expression or gene
-        set level expression in which, for each gene set (or pathway), an average
-        expression is computed from the gene expression data using summary methods
-        such as `GSVA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__
-        and `ssGSEA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__. 
+.. figure:: figures/psc3.0.png
+    :align: center
+    :width: 30%
+
+Under the plot configuration *Settings*, users can split the samples by a phenotype
+class (e.g., tissue, cell type, or gender) using the ``split`` by setting. 
+In addition, users can specify the top N = (50, 500) features to be used in the heatmap. 
+The ordering of top features is selected under ``top mode``. 
+The criteria to select the top features are:
+
+1. SD - features with the highest standard deviation across all the samples,
+2. specific - features that are overexpressed in each phenotype class compared to the rest, or by
+3. PCA - by principal components.
+
+Users can also choose between 'relative' or 'absolute' expression scale. 
+Under the ``CexCol`` and ``CexRow`` settings, it is also possible to adjust the cex 
+for the column and row labels.
+
+.. figure:: figures/psc3.1.0.png
+    :align: center
+    :width: 30%
         
-        
-:**B-D**: During the **heatmap** generation, users have various option that 
-          they can select, such as splitting the samples by a phenotype class 
-          provided in the data (eg, tissue, cell type, or gender). In addition,
-          users have to specify the top N = {50, 500} features to be used in the 
-          heatmap for hierarchical clustering. The criteria to select the top 
-          features are: 1) sd - features with the highest standard deviation across
-          all the samples, 2) biomarker - features that are overexpressed in each 
-          phenotype class compared to the rest, 3) pca - principal components 
-          computed by the `irlba <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__ package. 
+The complex heatmap below is generated after tuning the options and settings. 
 
 .. figure:: figures/psc3.1.png
     :align: center
@@ -85,6 +96,13 @@ visual analytics. Similarity is visualized as proximity of the points.
 Samples that are 'similar' will be placed close to each other. 
 Users can customise the PCA/tSNE plot, including colors and shapes of points
 using a phenotype class provided in the data.
+
+
+It also provides a **PCA/tSNE** plot of samples 
+obtained by `principal components analysis <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__
+or `t-distributed stochastic embedding <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__
+algorithms.
+
 
 .. figure:: figures/psc3.3.png
     :align: center
