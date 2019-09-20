@@ -82,32 +82,51 @@ Counts
 In the *Counts* panel, the total number of counts (abundance) per sample and their
 distribution among the samples are displayed. For each sample, users can also see
 the percentage of counts in terms of major gene types such as CD molecules, kinanses
-or RNA binding motifs.
+or RNA binding motifs. A detailed explanation is provided below for every chart 
+of the panel.
 
-:**F**: The total number of counts (abundance) per sample and their distribution
-        among the samples are displayed in the **counts** section. 
+:**a**: A barplot of the total number of counts (abundance) for each group. 
+        The samples (or cells) can be grouped/ungrouped in the ``Group by``
+        setting uder the main *Options*.
 
-:**G**: For each sample, the user can also see the percentage of counts for major
-        gene types, such as CD molecules, kinases or RNA binding motifs.
+:**b**: A boxplot of the total number of counts (abundance) for each group.
+        The samples (or cells) can be grouped/ungrouped in the ``Group by``
+        setting uder the main *Options*.
 
-.. figure:: figures/ug.007.png
+:**c**: A histogram of the total number of counts (abundance) for each group.
+        The samples (or cells) can be grouped/ungrouped in the ``Group by``
+        setting uder the main *Options*.
+
+:**d**: A barplot showing the percentage of counts in terms of major gene 
+        types such as CD molecules, kinanses or RNA binding motifs for 
+        each group. 
+        The samples (or cells) can be grouped/ungrouped in the ``Group by``
+        setting uder the main *Options*.
+
+:**e**: A barplot showing the average count levels of major gene types such
+        as CD molecules, kinanses or RNA binding motifs for each group. 
+        The samples (or cells) can be grouped/ungrouped in the ``Group by``
+        setting uder the main *Options*.
+        
+.. figure:: figures/psc2.2.png
     :align: center
     :width: 100%
 
 
 Gene table
 --------------------------------------------------------------------------------
-Under *Gene Table* panle, the exact expression values across the samples can be read,
+Under *Gene Table* panel, the exact expression values across the samples can be read,
 where genes are ordered by the correlation with respect to the first gene. 
 Gene-wise average expression of a phenotype sample grouping is also presented 
 in this table.
 
-Further correlation analysis across the samples can be performed under 
-the **gene table** section, where genes are ordered in the table according
-to the correlations with the selected gene. The gene-wise average expression
-of samples per phenotype classes is also presented in the table. 
+The samples (or cells) in the table can be ungrouped by setting the ``Group by``
+under the main *Options to see the exact expression values per sample (or cell).
+The genes in the table are ordered by the correlation (**rho** column) with 
+respect to the gene selected by users from the Search gene setting. 
+**SD** column reports the standard deviation of expression across samples (or cells).
 
-.. figure:: figures/ug.008.png
+.. figure:: figures/psc2.3.png
     :align: center
     :width: 100%
 
@@ -121,6 +140,6 @@ phenotype grouping can be found.
 More detailed information about the samples and comparisons are reported under
 the **sample table** section.
 
-.. figure:: figures/ug.009.png
+.. figure:: figures/psc2.4.png
     :align: center
     :width: 100%
