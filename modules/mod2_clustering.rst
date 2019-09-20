@@ -3,6 +3,25 @@
 Clustering analysis
 ================================================================================
 
+The **Cluster Analysis** module performs unsupervised clustering analysis of the data. 
+After having done the QC, it is probably the first way to explore your data. 
+The main purpose is to discover patterns and subgroups in the data, show correlation
+with known phenotypes, detect outliers, or investigate batch effects.
+
+In the **Heatmap** panel hierarchical clustering can be performed on gene level 
+or gene set level. During the heatmap generation, the platform provides a functional
+annotation for each feature cluster in **Annotate cluster** panel, where users can
+select from a variety of annotation databases from the literature. 
+The **PCA/tSNE** panel shows unsupervised clustering of the samples in 2D/3D as
+obtained by PCA or tSNE algorithms. 
+The **Phenotypes** panel on the right, shows the phenotype distribution as colors
+on the t-SNE plot.
+
+EXPERT MODE ONLY: The **Feature ranking** panel computes a discriminant score for 
+gene (or geneset) families. This allows to investigate what family of genes 
+(or gene sets) can best discriminate the groups.
+
+
 The clustering module performs a holistic clustering analysis of the samples. 
 The main output of this feature is twofold: i) It generates a **heatmap** 
 of samples and ii) It also provides a **PCA/tSNE** plot of samples 

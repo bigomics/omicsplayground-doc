@@ -1,6 +1,6 @@
 .. _DataView:
 
-DataView
+Data view
 ================================================================================
 
 The **DataView** module provides information and visualisations of the dataset to 
@@ -32,7 +32,7 @@ level (logCPM).
 
 .. figure:: figures/psc2.0.png
     :align: center
-    :width: 20%
+    :width: 30%
 
 
 Plots
