@@ -12,11 +12,12 @@ separation is to provide analysis features that are suitable for the
 background of users without overstraining them.
 
 
+
 Each figure or table on the platform is assigned the following interactive buttons, where:
 
-1. Info: Provides detailed information about the figure or table.
-2. Settings: Users can specify additional settings if applicable.
-3. Download: Downloads the figure as PDF or the table in CSV format.
+* Info: Provides detailed information about the figure or table.
+* Settings: Users can specify additional settings if applicable.
+* Download: Downloads the figure as PDF or the table in CSV format.
 
 
 .. figure:: figures/isd.png
