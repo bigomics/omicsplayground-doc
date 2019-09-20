@@ -30,7 +30,7 @@ Heatmap
           phenotype class compared to the rest, 3) pca - principal components 
           computed by the `irlba <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__ package. 
 
-.. figure:: figures/ug.010.png
+.. figure:: figures/psc3.1.png
     :align: center
     :width: 100%
 
@@ -49,7 +49,7 @@ Annotate clusters
 :**E**: Furthermore, users can see the enrichment scores for the reference set used 
         in annotating clusters
 
-.. figure:: figures/ug.010.png
+.. figure:: figures/psc3.2.png
     :align: center
     :width: 100%
 
@@ -63,7 +63,7 @@ Samples that are 'similar' will be placed close to each other.
 Users can customise the PCA/tSNE plot, including colors and shapes of points
 using a phenotype class provided in the data.
 
-.. figure:: figures/ug.011.png
+.. figure:: figures/psc3.3.png
     :align: center
     :width: 100%
     
