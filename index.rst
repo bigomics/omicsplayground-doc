@@ -20,6 +20,7 @@
     :maxdepth: 2
     :caption: Functional Modules
 
+    modules/outline
     modules/mod0_home
     modules/mod1_datatab
     modules/mod2_clustering

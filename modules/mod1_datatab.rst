@@ -19,16 +19,6 @@ level (logCPM).
     :align: center
     :width: 20%
 
-Each figure or table on the platform is assigned the following interactive buttons, where:
-
-1. Info: Provides detailed information about the figure or table.
-2. Settings: Users can specify additional settings if applicable.
-3. Download: Downloads the figure as PDF or the table in CSV format.
-
-
-.. figure:: figures/isd.png
-    :align: center
-    :width: 50%
 
 Plots
 --------------------------------------------------------------------------------
