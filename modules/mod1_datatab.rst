@@ -17,7 +17,7 @@ level (logCPM).
 
 .. figure:: figures/psc2.0.png
     :align: center
-    :width: 40%
+    :width: 20%
 
 
 Plots
@@ -38,33 +38,38 @@ expression `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ dataset.
 For each chart of the panel, a detailed explanation is provided below.
 
 
-:**a**: For a gene specified by the user, the **plots** section displays figures 
-        related to the expression level of the gene, correlation with other genes,
-        and average expression ranking within the dataset. 
+:**a**: T-SNE clustering of samples (or cells) colored by an expression of the 
+        gene selected in the ``Search gene`` dropdown menu. The red color 
+        represents an over-expression of the selected gene across samples (or cells). 
 
-:**b**: In the visual analysis, users can filter out some samples or collapse
-        the samples by phenotype class. It is also possible to visualize the 
-        information on a raw count level (CPM) instead of a log2 level (logCPM).
+:**b**: Expression barplot of grouped samples (or cells) for the gene selected in 
+        the ``Search gene`` dropdown menu. Samples (or cells) in the barplot can 
+        be ungrouped by setting the ``Group by`` under the main *Options*.
 
-:**c**: For further information from the literature, hyperlinks are provided to 
-        link the selected gene to databases like `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
+:**c**: Barplot of the top N = {16} positively and negatively correlated genes 
+        with the gene selected in the ``Search gene``. Absolute expression levels 
+        of genes are colored in the barplot, where the low and high expressions 
+        range between the light grey and dark black colors, respectively.
+
+:**d**: Ranking of the average expression of the selected gene in the ``Search gene``.
+
+:**e**: To find out more information from the literature, hyperlinks are provide to 
+        connect the selected gene in the ``Search gene`` to public databases, 
+        including `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
         `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
         and `GO <http://geneontology.org/>`__.
 
-:**d**: It also correlates the gene to the expressions of other genes across 
-        datasets such as `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
-        and `HPA <https://www.nature.com/articles/nbt1210-1248>`__, 
-        and plots the cumulative correlation.
-
-:**e**: Furthermore, tissue expression for a selected gene is displayed using
-        the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
-
-:**f**: Furthermore, tissue expression for a selected gene is displayed using
-        the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
+:**f**: Top N = {20} cumulative positively and negatively correlated genes with the
+        gene selected in the ``Search gene``, across samples (or cells), 
+        in the current dataset as well as in public datasets such as 
+        `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
+        and `HPA <https://www.nature.com/articles/nbt1210-1248>`__. 
+        The correlations of genes are colored by dataset. 
         
-:**g**: Furthermore, tissue expression for a selected gene is displayed using
-        the `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
-        
+:**g**: Tissue expression for the selected gene in the tissue expression 
+        `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
+        Colors corresponds to "tissue clusters" as computed by unsupervised clustering.
+
 .. figure:: figures/psc2.1.png
     :align: center
     :width: 100%
