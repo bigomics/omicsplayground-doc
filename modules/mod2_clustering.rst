@@ -63,27 +63,48 @@ for the column and row labels.
     :width: 30%
         
 The complex heatmap below is generated after tuning the options and settings. 
+It is a clustered heatmap showing gene expression sorted by 2-way hierarchical
+clustering. Red corresponds to overexpression, blue to underexpression of the gene.
+At the same time, gene clusters are functionally annotated in the **Annotate clusters**
+panel on the right.
 
 .. figure:: figures/psc3.1.png
     :align: center
     :width: 100%
 
 
-Annotate clusters
+iHeatmap
 --------------------------------------------------------------------------------
-:**F**: The top features in the heatmap (figure **D**) are then divided 
-        into five clusters based on their expression profiles. For each 
-        cluster, the platform provides a functional annotation under the
-        **annotate cluster** section using more than 42 published reference 
-        databases, including but not limited to well-known databases such as 
-        `MSigDB <http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__,
-        `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
-        and `GO <http://geneontology.org/>`__.
-        
-:**E**: Furthermore, users can see the enrichment scores for the reference set used 
-        in annotating clusters
+The **iHeatmap** is an interactive version of the **Heatmap** panel. 
+All figure configurations and settings are also controlled via 'Heatmap' panel.
+It has only one ``Show row labels`` local setting to display the row labels of 
+ an interactive heatmap.
 
 .. figure:: figures/psc3.2.png
+    :align: center
+    :width: 100%
+
+
+Annotate clusters
+--------------------------------------------------------------------------------
+The top features in the heatmap are then divided 
+into five clusters based on their expression profiles. For each 
+cluster, the platform provides a functional annotation under the
+**Annotate cluster** section using more than 42 published reference 
+databases, including but not limited to well-known databases such as 
+`MSigDB <http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__,
+`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
+and `GO <http://geneontology.org/>`__.
+
+.. figure:: figures/psc3.3.0.png
+    :align: center
+    :width: 100%
+
+        
+Furthermore, users can see the enrichment scores for the reference set used 
+        in annotating clusters
+
+.. figure:: figures/psc3.3.png
     :align: center
     :width: 100%
 
@@ -104,7 +125,7 @@ or `t-distributed stochastic embedding <http://jmlr.org/papers/volume15/vanderma
 algorithms.
 
 
-.. figure:: figures/psc3.3.png
+.. figure:: figures/psc3.4.png
     :align: center
     :width: 100%
     
