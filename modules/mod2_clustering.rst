@@ -17,7 +17,7 @@ obtained by PCA or tSNE algorithms.
 The **Phenotypes** panel on the right, shows the phenotype distribution as colors
 on the t-SNE plot.
 
-.. info::
+.. note::
 
     Expert mode only: The **Feature ranking** panel computes a discriminant 
     score for gene (or geneset) families. This allows to investigate what 
