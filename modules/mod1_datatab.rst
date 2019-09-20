@@ -79,7 +79,7 @@ For each chart of the panel, a detailed explanation is provided below.
 Counts
 --------------------------------------------------------------------------------
 
-In the *Counts* panel, the total number of counts (abundance) per sample and their
+In the **Counts** panel, the total number of counts (abundance) per sample and their
 distribution among the samples are displayed. For each sample, users can also see
 the percentage of counts in terms of major gene types such as CD molecules, kinanses
 or RNA binding motifs. A detailed explanation is provided below for every chart 
@@ -107,7 +107,7 @@ of the panel.
 
 Gene table
 --------------------------------------------------------------------------------
-Under *Gene Table* panel, the exact expression values across the samples can be read,
+Under **Gene Table** panel, the exact expression values across the samples can be read,
 where genes are ordered by the correlation with respect to the first gene. 
 Gene-wise average expression of a phenotype sample grouping is also presented 
 in this table.
@@ -115,7 +115,7 @@ in this table.
 The samples (or cells) in the table can be ungrouped by setting the ``Group by``
 under the main *Options* to see the exact expression values per sample (or cell).
 The genes in the table are ordered by the correlation (**rho** column) with 
-respect to the gene selected by users from the Search gene setting. 
+respect to the selected gene. 
 **SD** column reports the standard deviation of expression across samples (or cells).
 
 .. figure:: figures/psc2.3.png
@@ -126,7 +126,7 @@ respect to the gene selected by users from the Search gene setting.
 Sample table
 --------------------------------------------------------------------------------
 
-In the *Sample Table* panel, more complete information about samples and their 
+In the **Sample Table** panel, more complete information about samples and their 
 phenotype grouping can be found.
 
 .. figure:: figures/psc2.4.png
@@ -137,7 +137,7 @@ phenotype grouping can be found.
 Contrast table
 --------------------------------------------------------------------------------
 
-In the *Contrast Table* panel, more complete information about contrasts can be found.
+In the **Contrast Table** panel, more complete information about contrasts can be found.
 It summarizes the contrasts of all comparisons. Here, users can check which samples
 belong to which groups for the different comparisons. Non-zero entries '+1' and '-1' 
 correspond to the group of interest and control group, respectively. 
