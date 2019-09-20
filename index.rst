@@ -22,7 +22,7 @@
 
     modules/outline
     modules/mod0_home
-    modules/mod1_datatab
+    modules/mod1_dataview
     modules/mod2_clustering
     modules/mod3_DEGs
     modules/mod4_DEGSs
@@ -36,10 +36,10 @@
     :maxdepth: 2
     :caption: Examples
     
-    examples/GSE10846.rst
-    examples/GSE114716.rst
-    examples/GSE72056.rst
-    examples/rieckmann2017.rst
+    examples/GSE10846
+    examples/GSE114716
+    examples/GSE72056
+    examples/rieckmann2017
     #examples/cloning
     #examples/genbank
     #examples/igblast

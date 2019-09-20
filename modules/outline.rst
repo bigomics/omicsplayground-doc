@@ -4,7 +4,7 @@ Outline
 ================================================================================
 
 We subdivided the platform interface into Basic and Expert modes. 
-Basic mode includes fundamental analysis modules such as :ref:`Home`, :ref:`Datatab`, :ref:`Clustering`,
+Basic mode includes fundamental analysis modules such as :ref:`Home`, :ref:`DataView`, :ref:`Clustering`,
 :ref:`DEGs`, and :ref:`DESGs`, while Expert mode includes additional modules such 
 as :ref:`Functional`, :ref:`Intersect`, :ref:`Signature`, and :ref:`Biomarker` and :ref:`scProfiling`. 
 Users can choose the interface mode according to their experience. The main purpose of interface 

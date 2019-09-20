@@ -1,12 +1,29 @@
-.. _Datatab:
+.. _DataView:
 
-Data table
+DataView
 ================================================================================
 
-The **Data Table** module provides a descriptive statistical analysis on a gene level
-with visualisations. It has five panels, where each panel is explained below.
+The **DataView** module provides information and visualisations of the dataset to 
+quickly lookup a gene, check the counts, or view the data tables.
+It has five panels, which are briefly explained below, followed by
+more detailed information for each panel.
 
-Users can find more information by clicking the ``Info`` button in the input slider
+The **Plots** panel displays figures related to the expression level of the 
+selected gene, correlation, and average expression ranking within the dataset.
+More information about the gene and hyperlinks to external databases are provided. 
+Furthermore, it displays the correlation and tissue expression for a selected gene 
+in external reference datasets. In the **Counts** panel, the total number of counts 
+(abundance) per sample and their distribution among the samples are displayed. 
+This is most useful to check the technical quality of the dataset, such as total 
+read counts or abundance of ribosomal genes. In **Gene Table** panel, the exact
+expression values across the samples can be looked up, where genes are ordered
+by the correlation with respect to the first gene. Gene-wise average expression 
+of a phenotype sample grouping is also presented in this table. In the **Samples** 
+panel, more complete information about samples can be found. Finally, the 
+**Contrasts** panel, shows information about the phenotype comparisons.
+
+
+Users can find similar information by clicking the ``Info`` button in the input slider
 on the left side of the panel. It also contains some useful settings for the analysis.
 The analysis can be started by selecting a gene of interest from the 
 ``Search gene`` settings. Under the *Options*, users can filter some samples in the
