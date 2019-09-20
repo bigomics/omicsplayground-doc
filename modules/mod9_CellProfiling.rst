@@ -1,6 +1,6 @@
-.. _CellProfiling:
+.. _scProfiling:
 
-Cell profiling
+Single-cell profiling
 ================================================================================
 
 The cell profiling module is specifically developed for the analysis and visualization

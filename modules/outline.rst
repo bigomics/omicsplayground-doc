@@ -4,10 +4,10 @@ Outline
 ================================================================================
 
 We subdivided the platform interface into Basic and Expert modes. 
-Basic mode includes fundamental analysis modules such as Data Table, :ref:`Datatab`, Clustering,
-Expression, and Enrichment, while Expert mode includes additional modules such 
-as Functional, Intersect, Signature, and Biomarker and scProfiling. Users can choose 
-the interface mode according to their experience. The main purpose of interface 
+Basic mode includes fundamental analysis modules such as :ref:`Datatab`, :ref:`Clustering`,
+:ref:`Expression`, and :ref:`Enrichment`, while Expert mode includes additional modules such 
+as :ref:`Functional`, :ref:`Intersect`, :ref:`Signature`, and :ref:`Biomarker` and :ref:`scProfiling`. 
+Users can choose the interface mode according to their experience. The main purpose of interface 
 separation is to provide analysis features that are suitable for the 
 background of users without overstraining them.
 
