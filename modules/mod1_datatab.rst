@@ -54,7 +54,7 @@ For each chart of the panel, a detailed explanation is provided below.
 :**d**: Ranking of the average expression of the selected gene.
 
 :**e**: To find out more information from the literature, hyperlinks are provide to 
-        connect the selected gene in the ``Search gene`` to public databases, 
+        connect the selected gene to public databases, 
         including `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
         `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
         and `GO <http://geneontology.org/>`__.
@@ -113,7 +113,7 @@ Gene-wise average expression of a phenotype sample grouping is also presented
 in this table.
 
 The samples (or cells) in the table can be ungrouped by setting the ``Group by``
-under the main *Options to see the exact expression values per sample (or cell).
+under the main *Options* to see the exact expression values per sample (or cell).
 The genes in the table are ordered by the correlation (**rho** column) with 
 respect to the gene selected by users from the Search gene setting. 
 **SD** column reports the standard deviation of expression across samples (or cells).
@@ -129,9 +129,20 @@ Sample table
 In the *Sample Table* panel, more complete information about samples and their 
 phenotype grouping can be found.
 
-More detailed information about the samples and comparisons are reported under
-the **sample table** section.
-
 .. figure:: figures/psc2.4.png
+    :align: center
+    :width: 100%
+    
+
+Contrast table
+--------------------------------------------------------------------------------
+
+In the *Contrast Table* panel, more complete information about contrasts can be found.
+It summarizes the contrasts of all comparisons. Here, users can check which samples
+belong to which groups for the different comparisons. Non-zero entries '+1' and '-1' 
+correspond to the group of interest and control group, respectively. 
+Zero or empty entries denote samples not use for that comparison.
+
+.. figure:: figures/psc2.5.png
     :align: center
     :width: 100%
