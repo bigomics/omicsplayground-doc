@@ -10,7 +10,7 @@ and start the analysis.
 
 .. figure:: figures/psc1.0.png
     :align: center
-    :width: 20%
+    :width: 50%
 
 For each dataset in the platform, the table reports a brief description as well 
 as the total number of samples, genes, gene sets (or pathways), corresponding 
