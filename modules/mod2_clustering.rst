@@ -50,9 +50,9 @@ In addition, users can specify the top N = (50, 500) features to be used in the 
 The ordering of top features is selected under ``top mode``. 
 The criteria to select the top features are:
 
-1. SD - features with the highest standard deviation across all the samples,
-2. specific - features that are overexpressed in each phenotype class compared to the rest, or by
-3. PCA - by principal components.
+* SD - features with the highest standard deviation across all the samples,
+* specific - features that are overexpressed in each phenotype class compared to the rest, or by
+* PCA - by principal components.
 
 Users can also choose between 'relative' or 'absolute' expression scale. 
 Under the ``CexCol`` and ``CexRow`` settings, it is also possible to adjust the cex 
@@ -176,11 +176,11 @@ computing the discriminant score.
     :align: center
     :width: 30%
 
-*Correlation-based discriminative power is calculated as the average '(1-cor)' 
- between the groups. Thus, a feature set is highly discriminative if the 
- between-group correlation is low.
-*P-value based scoring is computed as the average negative log p-value from the ANOVA. 
-*The 'meta' method combines the score of the former methods in a multiplicative manner.
+* Correlation-based discriminative power is calculated as the average '(1-cor)' 
+  between the groups. Thus, a feature set is highly discriminative if the 
+  between-group correlation is low.
+* P-value based scoring is computed as the average negative log p-value from the ANOVA. 
+* The 'meta' method combines the score of the former methods in a multiplicative manner.
  
 
 The following plot represents the the resulting feature-set ranking.
