@@ -94,15 +94,21 @@ cluster, the platform provides a functional annotation under the
 databases, including but not limited to well-known databases such as 
 `MSigDB <http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__,
 `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
-and `GO <http://geneontology.org/>`__.
+and `GO <http://geneontology.org/>`__. 
+In the plot *Settings*, users can specify the level and reference 
+set to be used under the ``Reference level`` and ``Reference set``
+settings, respectively.
 
 .. figure:: figures/psc3.3.0.png
     :align: center
-    :width: 100%
+    :width: 30%
 
-        
-Furthermore, users can see the enrichment scores for the reference set used 
-        in annotating clusters
+The functional annotation for the clusters are displayed below, 
+with the highest ranking annotation features (by correlation) 
+displayed for each gene cluster. 
+Length of the bar corresponds to its average correlation.
+Furthermore, users can see the average correlation values of annotation
+features for each cluster.
 
 .. figure:: figures/psc3.3.png
     :align: center
@@ -111,19 +117,24 @@ Furthermore, users can see the enrichment scores for the reference set used
 
 PCA/tSNE
 --------------------------------------------------------------------------------
-PCA and t-SNE plots can be found in the **PCA/tSNE** tab, which shows 
-the relationship (or similarity) between samples in 2D as well as in 3D space for 
-visual analytics. Similarity is visualized as proximity of the points. 
-Samples that are 'similar' will be placed close to each other. 
-Users can customise the PCA/tSNE plot, including colors and shapes of points
-using a phenotype class provided in the data.
+The **PCA/tSNE** panel visualizes unsupervised clustering obtained by the principal
+components analysis (`PCA <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__) or 
+t-distributed stochastic embedding 
+(`tSENE <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__) algorithms. 
+This plot shows the relationship (or similarity) between the samples for visual 
+analytics, where similarity is visualized as proximity of the points. 
+Samples that are ???similar??? will be placed close to each other.
 
+Users can customise the PCA/tSNE plot in the *Settings*, 
+including the ``color`` and ``shape`` of points using a phenotype class,
+choose t-SNE or PCA ``layout``, label the points, or display 2D and 3D
+visualisation of the PCA/tSNE plot.
 
-It also provides a **PCA/tSNE** plot of samples 
-obtained by `principal components analysis <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__
-or `t-distributed stochastic embedding <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__
-algorithms.
+.. figure:: figures/psc3.4.0.png
+    :align: center
+    :width: 30%
 
+Based on their configuration settings, users will obtain similar PCA/tSNE plots below.
 
 .. figure:: figures/psc3.4.png
     :align: center
