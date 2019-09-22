@@ -1,6 +1,6 @@
 .. _DataView:
 
-Data view
+Data View
 ================================================================================
 
 The **DataView** module provides information and visualisations of the dataset to 

@@ -1,6 +1,6 @@
 .. _Clustering:
 
-Clustering analysis
+Clustering Analysis
 ================================================================================
 
 The **Cluster Analysis** module performs unsupervised clustering analysis of the data. 
@@ -123,7 +123,7 @@ t-distributed stochastic embedding
 (`tSENE <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__) algorithms. 
 This plot shows the relationship (or similarity) between the samples for visual 
 analytics, where similarity is visualized as proximity of the points. 
-Samples that are ???similar??? will be placed close to each other.
+Samples that are 'similar' will be placed close to each other.
 
 Users can customise the PCA/tSNE plot in the *Settings*, 
 including the ``color`` and ``shape`` of points using a phenotype class,
@@ -140,3 +140,50 @@ Based on their configuration settings, users will obtain similar PCA/tSNE plots 
     :align: center
     :width: 100%
     
+
+Phenotypes
+--------------------------------------------------------------------------------
+The **Phenotypes** panel visualizes the distribution of the available phenotype data. 
+It provides plots showing the distribution of the phenotypes superposed on the 
+tSNE clustering. Often, we can expect the t-SNE distribution to be driven by the
+particular phenotype that is controlled by the experimental condition or unwanted
+batch effects. Users can choose to put the group labels in the 
+figure or as separate legend in the ``Label`` setting, under the plot Settings.
+
+.. figure:: figures/psc3.5.0.png
+    :align: center
+    :width: 30%
+
+The output figure of the panel (phenotype distribution) is shown below. 
+    
+.. figure:: figures/psc3.5.png
+    :align: center
+    :width: 100%
+
+
+Feature ranking
+--------------------------------------------------------------------------------
+The **Feature ranking** provides the ranked discriminant score for top feature sets.
+It ranks the discriminitive power of the feature set (genes or gene sets) as a 
+cumulative discriminant score for all phenotype variables. 
+In this way, we can find which feature set (gene or gene family/set) can explain 
+the variance in the data the best.
+
+Under the plot configuration *Settings*, users can specify the ``Method`` for 
+computing the discriminant score.
+
+*Correlation-based discriminative power is calculated as the average '(1-cor)' 
+between the groups. Thus, a feature set is highly discriminative if the 
+between-group correlation is low. 
+*P-value based scoring is computed as the average negative log p-value from the ANOVA. 
+*The 'meta' method combines the score of the former methods in a multiplicative manner.
+
+.. figure:: figures/psc3.6.0.png
+    :align: center
+    :width: 30%
+
+The following plot represents the the resulting feature-set ranking.
+
+.. figure:: figures/psc3.6.png
+    :align: center
+    :width: 100%
