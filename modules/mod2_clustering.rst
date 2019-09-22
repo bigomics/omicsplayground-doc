@@ -172,15 +172,16 @@ the variance in the data the best.
 Under the plot configuration *Settings*, users can specify the ``Method`` for 
 computing the discriminant score.
 
-*Correlation-based discriminative power is calculated as the average '(1-cor)' 
-between the groups. Thus, a feature set is highly discriminative if the 
-between-group correlation is low. 
-*P-value based scoring is computed as the average negative log p-value from the ANOVA. 
-*The 'meta' method combines the score of the former methods in a multiplicative manner.
-
 .. figure:: figures/psc3.6.0.png
     :align: center
     :width: 30%
+
+*Correlation-based discriminative power is calculated as the average '(1-cor)' 
+ between the groups. Thus, a feature set is highly discriminative if the 
+ between-group correlation is low.
+*P-value based scoring is computed as the average negative log p-value from the ANOVA. 
+*The 'meta' method combines the score of the former methods in a multiplicative manner.
+ 
 
 The following plot represents the the resulting feature-set ranking.
 
