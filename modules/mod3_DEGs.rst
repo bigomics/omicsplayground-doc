@@ -18,12 +18,11 @@ users an overview of the statistics of all comparisons. The **Table** panel on t
 bottom shows the results of the statistical tests. The **Foldchange (all)** panel
 reports the gene fold changes for all contrasts.
 
-
 .. note::
 
-EXPERT MODE ONLY: To compare the different statistical methods, the **Volcano (methods)**
-panel shows volcano plots of all methods. The **FDR table** panel reports
-the number of significant genes at different FDR thresholds for all contrasts.
+    EXPERT MODE ONLY: To compare the different statistical methods, the **Volcano (methods)**
+    panel shows volcano plots of all methods. The **FDR table** panel reports
+    the number of significant genes at different FDR thresholds for all contrasts.
 
 
 Input slider
@@ -35,20 +34,17 @@ interest in the ``Contrast`` and specifying a relevent gene family in the ``Gene
 It is possible to set the false discovery rate (FDR) and the logarithmic fold change 
 (logFC) thresholds undr the ``FDR`` and ``logFC threshold`` settings, respectively.
 
-
 .. figure:: figures/psc4.0.png
     :align: center
     :width: 30%
 
-
 .. note::
 
-EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test. 
-To increase the statistical reliability of the Omics Playground, we perform the DE 
-analysis using commonly accepted methods in the literature, including t-test 
-(standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), and DESeq2
-(Wald, LRT), and merge the results.
-
+    EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test. 
+    To increase the statistical reliability of the Omics Playground, we perform the DE 
+    analysis using commonly accepted methods in the literature, including t-test 
+    (standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), and DESeq2
+    (Wald, LRT), and merge the results.
 
 
 Expression table

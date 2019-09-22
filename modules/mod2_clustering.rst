@@ -23,6 +23,9 @@ on the t-SNE plot.
     score for gene (or geneset) families. This allows to investigate what 
     family of genes (or gene sets) can best discriminate the groups.
 
+
+Input slider
+--------------------------------------------------------------------------------
 Users can find more information by clicking ``Info`` in the input slider. 
 It also contains settings for the analysis, where users can 
 specify the level analysis in the ``Level`` and select a family of features
