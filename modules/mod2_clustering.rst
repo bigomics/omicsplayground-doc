@@ -23,15 +23,6 @@ on the t-SNE plot.
     score for gene (or geneset) families. This allows to investigate what 
     family of genes (or gene sets) can best discriminate the groups.
 
-
-Heatmap
---------------------------------------------------------------------------------
-In the **Heatmap** panel hierarchical clustering can be performed on gene level
-or gene set level expression in which for the latter, for each gene set (or pathway),
-an average expression is computed from the gene expression data using summary methods
-such as `GSVA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__
-and `ssGSEA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__. 
-
 Users can find more information by clicking ``Info`` in the input slider. 
 It also contains settings for the analysis, where users can 
 specify the level analysis in the ``Level`` and select a family of features
@@ -43,6 +34,15 @@ phenotype class in the ``grouped``.
 .. figure:: figures/psc3.0.png
     :align: center
     :width: 30%
+
+
+Heatmap
+--------------------------------------------------------------------------------
+In the **Heatmap** panel hierarchical clustering can be performed on gene level
+or gene set level expression in which for the latter, for each gene set (or pathway),
+an average expression is computed from the gene expression data using summary methods
+such as `GSVA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__
+and `ssGSEA <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__. 
 
 Under the plot configuration *Settings*, users can split the samples by a phenotype
 class (e.g., tissue, cell type, or gender) using the ``split`` by setting. 
@@ -176,10 +176,10 @@ computing the discriminant score.
     :align: center
     :width: 30%
 
+* P-value based scoring is computed as the average negative log p-value from the ANOVA.
 * Correlation-based discriminative power is calculated as the average '(1-cor)' 
   between the groups. Thus, a feature set is highly discriminative if the 
   between-group correlation is low.
-* P-value based scoring is computed as the average negative log p-value from the ANOVA. 
 * The 'meta' method combines the score of the former methods in a multiplicative manner.
  
 

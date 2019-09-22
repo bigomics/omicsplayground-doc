@@ -1,10 +1,52 @@
 .. _DEGs:
 
-Differential expression analysis
+Differential Expression Analysis
 ================================================================================
+The **Differential Expression Analysis** module compares expression between two 
+conditions (i.e. tumor versus control), which is one of the fundamental analysis 
+in the transcriptomics data analytics workflow. For each comparison of two 
+conditions (also called 'contrast'), the analysis identifies which genes are 
+significantly downregulated or overexpressed in one of the groups.
 
-The expression module contains a differentially expressed genes (DEG) analysis 
-between contrasts (eg, tumor vs. control).
+The **Plots** panel shows volcano and MA plots for the chosen contrast. 
+It also shows the so-called 'signature', i.e. the top downregulated and overexpressed
+genes, for that contrast. The **Top genes** panel shows the average expression plots 
+across the samples for top differentially expressed genes within the selected 
+comparison. A very useful feature of the platform is that it can display volcano 
+plots for all comparisons simultaneously under the **Volcano (all)** panel. This provides
+users an overview of the statistics of all comparisons. The **Table** panel on the 
+bottom shows the results of the statistical tests. The **Foldchange (all)** panel
+reports the gene fold changes for all contrasts.
+
+.. note::
+
+EXPERT MODE ONLY: To compare the different statistical methods, the **Volcano (methods)**
+panel shows volcano plots of all methods. The **FDR table** panel reports
+the number of significant genes at different FDR thresholds for all contrasts.
+
+
+Input slider
+--------------------------------------------------------------------------------
+The input slider on the left contains the ``Info`` button for relevant information about
+the module as well as some settings for the analysis. 
+Users can start the differntial expression (DE) analysis by selecting a contrats of their 
+interest in the ``Contrast`` and specifying a relevent gene family in the ``Gene family``.
+It is possible to set the false discovery rate (FDR) and the logarithmic fold change 
+(logFC) thresholds undr the ``FDR`` and ``logFC threshold`` settings, respectively.
+
+
+.. figure:: figures/psc4.0.png
+    :align: center
+    :width: 30%
+
+.. note::
+
+EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test. 
+To increase the statistical reliability of the Omics Playground, we perform the DE 
+analysis using commonly accepted methods in the literature, including t-test 
+(standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), and DESeq2
+(Wald, LRT), and merge the results.
+
 
 
 Expression table
@@ -34,7 +76,7 @@ Expression table
 :**E**: By clicking on a gene row in **D**, it is possible to see which genesets contain
         that gene from the geneset table located on the right. 
 
-.. figure:: figures/ug.012.png
+.. figure:: figures/psc4.1.png
     :align: center
     :width: 100%
 
