@@ -43,12 +43,31 @@ It is possible to set the false discovery rate (FDR) and the logarithmic fold ch
     EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test. 
     To increase the statistical reliability of the Omics Playground, we perform the DE 
     analysis using commonly accepted methods in the literature, including t-test 
-    (standard, Welch), limma (no trend, trend, voom), edgeR (QLF, LRT), and DESeq2
-    (Wald, LRT), and merge the results.
+    `t-test <https://en.wikipedia.org/wiki/Student%27s_t-test>`__ (standard, Welch), 
+    `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (no trend, trend, voom), 
+    `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF, LRT), and 
+    `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald, LRT),
+    and merge the results.
 
 
 Expression table
 --------------------------------------------------------------------------------
+Table ``I`` shows the results of the statistical tests slected in the ``Statistical methods``.
+In the Basic mode, this table reports the meta (combined) results of 
+`DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald),
+`edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF), and 
+`limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend).
+
+For a selected comparison under the ``Contrast`` setting, the results of the selected 
+methods are combined and reported in the table, where ``meta.q`` for a gene 
+represents the highest ``q`` value among the methods and the number of stars for 
+a gene indicate how many methods identified significant ``q`` values (``q < 0.05``). 
+The table is interactive (scrollable, clickable); users can sort genes by ``logFC``, 
+``meta.q``, or average expression in either conditions.
+
+Users can filter top N = {10} differently expressed genes in the table by 
+clicking the top 10 genes from the table Settings.
+
 
 :**A**: The user starts the DEG analysis by selecting a desireable contrast form
         the drop-down menu items.
