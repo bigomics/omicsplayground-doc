@@ -18,6 +18,7 @@ users an overview of the statistics of all comparisons. The **Table** panel on t
 bottom shows the results of the statistical tests. The **Foldchange (all)** panel
 reports the gene fold changes for all contrasts.
 
+
 .. note::
 
 EXPERT MODE ONLY: To compare the different statistical methods, the **Volcano (methods)**
@@ -38,6 +39,7 @@ It is possible to set the false discovery rate (FDR) and the logarithmic fold ch
 .. figure:: figures/psc4.0.png
     :align: center
     :width: 30%
+
 
 .. note::
 
