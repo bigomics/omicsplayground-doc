@@ -97,7 +97,7 @@ of neighbours parameter in tSNE.
 
 .. figure:: figures/psc7.4.0.png
     :align: center
-    :width: 100%
+    :width: 30%
 
 The connectivity plot of two datasets is shown below, where the blue contarsts
 belong to the current dataset while the red ones are from the public dataset in 
@@ -121,7 +121,7 @@ diffrentially expressed without making any distinction.
 
 .. figure:: figures/psc7.5.0.png
     :align: center
-    :width: 100%
+    :width: 30%
     
 The resulting intersection Venn diagram with an interactive table is shown below.
 
