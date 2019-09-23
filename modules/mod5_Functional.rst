@@ -6,7 +6,7 @@ This module performs specialized pathway and drug enrichment analysis.
 It contains three panels where it provides higher level functional and 
 visual analysis of the contrast space using the 
 `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ graph structure
-in the **KEGG pathways** panel. Under the *GO* panel, very similar functional
+in the **KEGG pathways** panel. Under the **GO** panel, very similar functional
 analysis is done using the Gene Ontology (`GO <http://geneontology.org/>`__) 
 graph structure. 
 Given a particular contrast profile, it also searches for the closest 
@@ -87,16 +87,16 @@ Each output chart/table of the panel is describer below in detail.
 
 :**a**: The structure of GO can be described in terms of a graph, where each
         GO term is a node, and the relationships between the terms are edges 
-        between the nodes. GO is loosely hierarchical, with ???child??? terms being
-        more specialized than their ???parent??? terms. The graph is interactive. 
+        between the nodes. GO is loosely hierarchical, with 'child' terms being
+        more specialized than their 'parent' terms. The graph is interactive. 
         You can move the graph and zoom in using the mouse.
-        Under the GO graph *Settings*, users can select ``Prune tree`` to prune
+        Under the graph *Settings*, users can select ``Prune tree`` to prune
         the tree only with significant branches and ``color custers`` to 
         highlight clusters with different colors
 
-        .. figure:: figures/psc6.2.0.png
+        .. figure:: figures/psc6.2.a.png
             :align: center
-            :width: 30%
+            :width: 35%
 
 :**b**: GO score table. The scoring of a GO term is performed by considering
         the cumulative score of all terms from that term to the root node. 
@@ -117,27 +117,41 @@ Each output chart/table of the panel is describer below in detail.
     
 Drug C-Map
 --------------------------------------------------------------------------------
-In the *Drug Connectivity Map* panel, you can correlate your signature with more
-than 5000 known drug profiles from the L1000 database. An activation-heatmap 
-compares drug activation profiles across multiple contrasts. 
+In the **Drug Connectivity Map** panel, users can correlate their signature with
+more than 5000 known drug profiles from the 
+`L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database. 
+An activation-heatmap compares drug activation profiles across multiple contrasts. 
 This facilitates to quickly see and detect the similarities between contrasts
 for certain drugs.
 
-:**a**: 
+:**a**: The Drug Connectivity Map correlates your signature with more than 
+        5000 known drug profiles from the L1000 database, and shows the top
+        N=10 similar and opposite profiles by running the GSEA algorithm on 
+        the contrast-drug profile correlation space. Under the plots *Settings*,
+        users can select the type of drug enrichment analysis: ``mono`` or 
+        ``combo`` (if available).
 
+        .. figure:: figures/psc6.3.a.png
+            :align: center
+            :width: 35%
 
-:**H**: The drug connectivity map ``Drug C-Map`` section correlates the selected 
-        contrast profile with more than 5000 known drug profiles from the 
-        `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, and shows
-        the top 10 similar and opposite profiles by running the 
-        `GSEA <https://www.biorxiv.org/content/10.1101/060012v1.full>`__ 
-        algorithm on the contrast-drug profile correlation space. 
+:**b**: Drug profile enrichment table. Enrichment is calculated by correlating
+        your signature with more than 5000 known drug profiles from the L1000
+        database. Because the L1000 has multiple perturbation experiment for a
+        single drug, drugs are scored by running the GSEA algorithm on the 
+        contrast-drug profile correlation space. In this way, we obtain a 
+        single score for multiple profiles of a single drug.
 
+:**c**: This plot visualizes the mechanism of action (MOA) across the enriched
+        drug profiles. On the vertical axis, the number of drugs with the same
+        MOA are plotted. You can switch to visualize between MOA or target gene.
+        Under the plots *Settings*, users can select the plot type of MOA
+        analysis: by class description (``drug class``) or by target gene 
+        (``target gene``).
 
-:**I**: It also provides an activation-heatmap for drugs across
-        multiple contrast profiles. Users can perform the contrast-drug 
-        profile correlation analysis in mono (single drug) or combo 
-        (combination of two drugs) mode.
+        .. figure:: figures/psc6.3.c.png
+            :align: center
+            :width: 35%
 
 .. figure:: figures/psc6.3.png
     :align: center
