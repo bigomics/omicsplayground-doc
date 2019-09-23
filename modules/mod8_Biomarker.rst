@@ -46,11 +46,19 @@ paste a custom gene list to be used as features in the
     :align: center
     :width: 30%
 
-The panel provides the following output with an explanation for each figure.
+The panel provides the following output, followed by an explanation for each figure.
+
+.. figure:: figures/psc9.1.png
+    :align: center
+    :width: 100%
 
 :**a**: A variable importance score for each feature is calculated using multiple 
-        machine learning algorithms, including LASSO, elastic nets, random forests,
-        and extreme gradient boosting. By combining several methods, the platform 
+        machine learning algorithms, including 
+        `LASSO <https://www.ncbi.nlm.nih.gov/pubmed/20808728>`__, 
+        `elastic nets <https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf>`__, 
+        `random forests <https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__, and
+        `extreme gradient boosting <https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__.
+        By combining several methods, the platform 
         aims to select the best possible biomarkers. The top features are plotted 
         according to cumulative ranking by the algorithms.
         
@@ -61,10 +69,6 @@ The panel provides the following output with an explanation for each figure.
 :**c**: The decision tree shows a tree solution for classification based on the top most important features.
         
 :**d**: These boxplots shows the expression of genes/samples of the identified features.
-
-.. figure:: figures/psc9.1.png
-    :align: center
-    :width: 100%
 
 If the data set under the study has a survival data, the  **biomarker** panel can also 
 provide a survival tree analysis using top features. Furthermore, it provides expression
