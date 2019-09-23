@@ -32,7 +32,7 @@ the module as well as some settings for the analysis.
 Users can start the differntial expression (DE) analysis by selecting a contrats of their 
 interest in the ``Contrast`` and specifying a relevent gene family in the ``Gene family``.
 It is possible to set the false discovery rate (FDR) and the logarithmic fold change 
-(logFC) thresholds undr the ``FDR`` and ``logFC threshold`` settings, respectively.
+(logFC) thresholds under the ``FDR`` and ``logFC threshold`` settings, respectively.
 
 .. figure:: figures/psc4.0.png
     :align: center
@@ -57,9 +57,8 @@ In the Basic mode, this table reports the meta (combined) results of
 `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald),
 `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF), and 
 `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend) only.
-
 Users can filter top N = {10} differently expressed genes in the table by 
-clicking the top 10 genes from the table Settings.
+clicking the ``top 10 genes`` from the table *Settings*.
 
 .. figure:: figures/psc4.1.0.png
     :align: center
