@@ -40,7 +40,8 @@ It is possible to set the false discovery rate (FDR) and the logarithmic fold ch
 
 .. note::
 
-    EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test. 
+    EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test
+    under the main *Options*. 
     To increase the statistical reliability of the Omics Playground, we perform the DE 
     analysis using commonly accepted methods in the literature, including t-test 
     `t-test <https://en.wikipedia.org/wiki/Student%27s_t-test>`__ (standard, Welch), 
@@ -52,8 +53,9 @@ It is possible to set the false discovery rate (FDR) and the logarithmic fold ch
 
 Table
 --------------------------------------------------------------------------------
-Table ``I`` shows the results of the statistical tests slected in the ``Statistical methods``.
-In the Basic mode, this table reports the meta (combined) results of 
+Table ``I`` shows the results of the statistical tests slected in the 
+``Statistical methods``. In the Basic mode, this table reports 
+the meta (combined) results of 
 `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald),
 `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF), and 
 `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend) only.
@@ -71,20 +73,20 @@ a gene indicate how many methods identified significant ``q`` values (``q < 0.05
 The table is interactive (scrollable, clickable); users can sort genes by ``logFC``, 
 ``meta.q``, or average expression in either conditions.
 
+.. figure:: figures/psc4.1.png
+    :align: center
+    :width: 100%
+
 By clicking on a gene in the Table ``I``, it is possible to see the correlation
 and enrichment value of gene sets that contain the gene in Table ``II``.
 Additionally, it is possible to check the differential expression status
 in other comparisons from the ``Gene in contrasts`` plot under the **Plots** panel.
 
-.. figure:: figures/psc4.1.png
-    :align: center
-    :width: 100%
-
 
 Plots
 --------------------------------------------------------------------------------
 The **Plots** panel provides figures such as Volcano plot, MA plot and sorted 
-barplots associated with expression levels of the selected contrast.
+barplots associated with expression levels in the selected contrast.
 
 :**a**: Volcano-plot showing the significance versus fold-change on the y and x axes, 
         respectively, for the selected comparison under the ``Contrast`` settings.  
