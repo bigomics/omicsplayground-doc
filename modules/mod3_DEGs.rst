@@ -50,7 +50,7 @@ It is possible to set the false discovery rate (FDR) and the logarithmic fold ch
     and merge the results.
 
 
-Expression table
+Table
 --------------------------------------------------------------------------------
 Table ``I`` shows the results of the statistical tests slected in the ``Statistical methods``.
 In the Basic mode, this table reports the meta (combined) results of 
@@ -58,40 +58,24 @@ In the Basic mode, this table reports the meta (combined) results of
 `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF), and 
 `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend) only.
 
+Users can filter top N = {10} differently expressed genes in the table by 
+clicking the top 10 genes from the table Settings.
+
+.. figure:: figures/psc4.1.0.png
+    :align: center
+    :width: 30%
+    
 For a selected comparison under the ``Contrast`` setting, the results of the selected 
-methods are combined and reported in the table, where ``meta.q`` for a gene 
+methods are combined and reported in Table ``I``, where ``meta.q`` for a gene 
 represents the highest ``q`` value among the methods and the number of stars for 
 a gene indicate how many methods identified significant ``q`` values (``q < 0.05``). 
 The table is interactive (scrollable, clickable); users can sort genes by ``logFC``, 
 ``meta.q``, or average expression in either conditions.
 
-Users can filter top N = {10} differently expressed genes in the table by 
-clicking the top 10 genes from the table Settings.
-
-
-:**A**: The user starts the DEG analysis by selecting a desireable contrast form
-        the drop-down menu items.
-
-:**B**: There are further options to filter out some genes by functional 
-        families, logarithmic fold change (logFC) and false discovery rate (FDR).
-
-:**C**: To increase the statistical reliability of the platform, the DEG analysis
-        is performed using four commonly accepted methods in the literature, namely: 
-        t-test (standard, Welch), 
-        `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (no trend, trend, voom), 
-        `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF, LRT), 
-        and 
-        `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald, LRT).
-
-:**D**: For each selected contrast in **A**, the results of these methods are combined
-        and reported under the **DEG table** section, where :option:`meta.q` for a gene 
-        represents the highest :option:`q` value among the methods and the number of starts 
-        indicates how many methods have significant q values (:option:`q < 0.05`). Users 
-        can sort genes by :option:`logFC`, :option:`meta.q`, or average expression
-        in an interactive table. 
-
-:**E**: By clicking on a gene row in **D**, it is possible to see which genesets contain
-        that gene from the geneset table located on the right. 
+By clicking on a gene in the Table ``I``, it is possible to see the correlation
+and enrichment value of gene sets that contain the gene in Table ``II``.
+Additionally, it is possible to check the differential expression status
+in other comparisons from the ``Gene in contrasts`` plot under the **Plots** panel.
 
 .. figure:: figures/psc4.1.png
     :align: center
@@ -100,41 +84,96 @@ clicking the top 10 genes from the table Settings.
 
 Plots
 --------------------------------------------------------------------------------
-:**F**: The **plots** section provides volcano  and MA (an application 
-        of a Bland-Altman) plots.  
-        
-:**G**: This section shows the so-called 'signature', i.e. the top downregulated
-        and overexpressed genes, for that contrast. The expression of the selected
-        gene across all contrasts is also summarized. By clicking on a gene 
-        row in **D**, it is possible to check the status of the differential 
-        expression of that particular gene accross other comparisons.  
+The **Plots** panel provides figures such as Volcano plot, MA plot and sorted 
+barplots associated with expression levels of the selected contrast.
 
-.. figure:: figures/ug.012.png
+:**a**: Volcano-plot showing the significance versus fold-change on the y and x axes, 
+        respectively, for the selected comparison under the ``Contrast`` settings.  
+
+:**b**: Application of a Bland-Altman (MA) plot showing the
+        fold-change versus signal intensity on the y and x axes, respectively,
+        for the selected comparison.  
+
+:**c**: Sorted barplot of the top N = {12} differentially (both positively and negatively)
+        expressed genes with largest (absolute) fold-change for the selected contrast.
+
+:**d**: Sorted barplot of the differential expression of the selected gene under 
+        the **Table** panel across all contrasts.
+
+.. figure:: figures/psc4.2.png
     :align: center
     :width: 100%
 
 
 Top genes
 --------------------------------------------------------------------------------
-Furthermore, for the top 10 DEGs 
-within the selected comparison, average expression plots across the samples are 
-displayed in the ``top genes`` section. 
+The **Top genes** panel shows the average expression plots across the samples 
+for the top differentially (both positively and negatively) expressed genes
+for the selected comparison from the ``Contrast`` settings. Under the plot *Settings*,
+users can scale the abundance levels (counts) or ungroup the samples in the 
+plot from the ``log scale`` and ``ungroup samples`` settings, respectively.
 
-.. figure:: figures/ug.013.png
+.. figure:: figures/psc4.3.0.png
+    :align: center
+    :width: 30%
+
+Average expression barplots for the top genes are displayed below. 
+
+.. figure:: figures/psc4.3.png
     :align: center
     :width: 100%
+
 
 Volcano (all)
 --------------------------------------------------------------------------------
-Another important feature of this module is the simultaneous visualisation of volcano
-plots for all comparisons under the **volcano (all)** section. This can provide
-the user a statistical overview all comparisons at the same time, and the user
-can immediately see which comparison is statistically weak or strong.
 
+Under the **Volcano (all)** panel, the platform simultaneously displays multiple 
+volcano plots for genes across all contrasts. This provides users an overview 
+of the statistics for all comparisons. By comparing multiple volcano plots, 
+the user can immediately see which comparison is statistically weak or strong.
+Experimental contrasts with better statistical significance will show 
+volcano plots with 'higher' wings.
 
-.. figure:: figures/ug.014.png
+.. figure:: figures/psc4.4.png
+    :align: center
+    :width: 100%
+
+    
+Volcano (methods)
+--------------------------------------------------------------------------------    
+The **Volcano (methods)** panel displays the volcano plots provided 
+by multiple differential expression calculation methods for the selected contrast. 
+This provides users an overview of the statistics of all methods at the same time.
+Methods showing better statistical significance will show volcano 
+plots with 'higher' wings.
+
+.. figure:: figures/psc4.5.png
     :align: center
     :width: 100%
     
+
+Foldchange (all)
+-------------------------------------------------------------------------------- 
+The **Foldchange (all)** provides the differential expression (fold-change) of genes 
+across all contrasts. The column ``fc.var`` corresponds to the variance of 
+the fold-change across all contrasts.
+
+.. figure:: figures/psc4.6.png
+    :align: center
+    :width: 100%
+
+
+FDR table
+-------------------------------------------------------------------------------- 
+The **FDR table** panel reports the number of significant genes at different 
+FDR thresholds for all contrasts and methods. This enables to quickly see which 
+methods are more sensitive. The left part of the table (in blue) correspond 
+to the number of significant down-regulated genes, the right part (in red) 
+correspond to the number of significant overexpressed genes.
+
+.. figure:: figures/psc4.7.png
+    :align: center
+    :width: 100%
     
+
     
