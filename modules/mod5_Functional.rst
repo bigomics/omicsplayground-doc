@@ -1,74 +1,131 @@
 .. _Functional:
 
-Functional analysis
+Functional Analysis
 ================================================================================
+This module performs specialized pathway and drug enrichment analysis. 
+It contains three panels where it provides higher level functional and 
+visual analysis of the contrast space using the 
+`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ graph structure
+in the **KEGG pathways** panel. Under the *GO* panel, very similar functional
+analysis is done using the Gene Ontology (`GO <http://geneontology.org/>`__) 
+graph structure. 
+Given a particular contrast profile, it also searches for the closest 
+drug profiles from the `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__
+drug expression database under the **Drug Connectivity Map** panel.
 
-This module provides higher level functional and visual analysis of the contrast 
-space using the  
-`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ 
-and `GO <http://geneontology.org/>`__
-graph structures. Given the profile of a particular 
-contrast, it also searches for the closest drug profiles from the 
-`L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__
-drug expression database.
+.. note::
+
+    This module is supported in the EXPERT MODE ONLY.
 
 
-KEGG graph
+Input slider
 --------------------------------------------------------------------------------
-`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__
-is a collection of manually curated pathways representing the current knowledge
-of molecular interactions, reactions and relation networks as pathway maps.
+It is possible to more information about the module in the ``Info`` from the 
+input slider. Users can specify the contrast of their interest in 
+the ``Contrast`` settings. Under the main *Options*, users can select
+``normalize activation matrix`` to fine-tune the coloring of an activation 
+matrices and ``filter significant (tables)`` to filter the significant entries
+in the tables.
 
-:**A**: The user selects the contrast of interest to perform the analysis and
-        visualisation of KEGG pathways.
-
-:**B**: Each KEGG pathway is scored according to the selected contrast profile
-        and reported
-        in an interactive table. The scoring is performed by considering the total
-        number of genes in the pathway (:option:`n`), the number of genes in the pathway 
-        supported by the contrast profile (:option:`k`), the ratio of :option:`k/n`,
-        and the ratio of
-        :option:`|upregulated or downregulated genes|/k`. Additionally, the table contains
-        the list of the upregulated and downregulated genes for each pathway and a
-        :option:`q` value from the Fisher's test for the overlap. 
-        
-        
-:**C**: Pathway maps can be summoned from the interactive table, with individual
-        genes coloured according to their differential expression 
-        (upregulation: red;  downregulation: blue). 
+.. figure:: figures/psc6.0.png
+    :align: center
+    :width: 30%
 
 
-:**D**: Another important feature is an activation-heatmap including the comparison
-        of activation levels of pathways (or pathway keywords) across multiple 
-        contrast profiles. This facilitates to quickly see and detect the 
-        similarities between profiles in certain pathways.
+KEGG pathways
+--------------------------------------------------------------------------------
+`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ is a collection
+of manually curated pathways representing the current knowledge of molecular 
+interactions, reactions and relation networks as pathway maps. In the 
+**KEGG pathway** panel, each pathway is scored for the selected contrast profile
+and reported in the table. A unique feature of the platform is that it provides 
+an activation-heatmap comparing the activation levels of pathways across multiple
+contrast profiles. This facilitates to quickly see and detect the similarities 
+between profiles in certain pathways. More detailed explaination of each output
+is provided below.
 
-.. figure:: figures/ug.019.png
+:**a**: In the pathway map, genes are colored according to their upregulation 
+        (red) or downregulation (blue) in the contrast profile. Each pathway 
+        is scored for the selected contrast profile and reported in the table 
+        below.
+
+:**b**: Enrichment table. The table is interactive; enabling user to sort on 
+        different variables and select a pathway by clicking on the row in the 
+        table. The scoring is performed by considering the total number of genes
+        in the pathway (:option:`n`), the number of genes in the pathway supported by the 
+        contrast profile (:option:`k`), the ratio of :option:`k/n`, and the ratio of 
+        :option:`|upregulated or downregulated genes|/k`. Additionally, the table 
+        contains the list of the upregulated and downregulated genes for each
+        pathway and a :option:`q` value from the Fisher's test for the overlap.
+
+:**c**: The KEGG activation matrix visualizes the activation levels of pathways
+        (or pathway keywords) across multiple contrast profiles. This facilitates
+        to quickly see and detect the similarities of certain pathways between
+        contrasts. The size of the circles correspond to their relative activation,
+        and are colored according to their upregulation (red) or downregulation
+        (blue) in the contrast profile.
+
+.. figure:: figures/psc6.1.png
     :align: center
     :width: 100%
 
 
 GO graph
 --------------------------------------------------------------------------------
+In the **GO** panel, users can perform `GO <http://geneontology.org/>`__ analysis.
+GO defines functional concepts/classes and their relationships as a hierarchical
+graph. 
+The GO database provides a computational representation of the current knowledge 
+about roles of genes for many organisms in terms of molecular functions, cellular
+components and biological processes. All the features described under the 
+**KEGG pathway** panel, such as scoring the gene sets and drawing an 
+activation-heatmap,
+can be performed for the GO database under the GO graph tab. Instead of pathway
+maps, an annotated graph structure provided by the GO database is potted for
+every selected gene set. 
+Each output chart/table of the panel is describer below in detail.
 
-`GO <http://geneontology.org/>`__ database provides a computational representation
-of the current knowledge about roles of genes for many organisms in terms of 
-molecular functions, cellular components and biological processes. 
+:**a**: The structure of GO can be described in terms of a graph, where each
+        GO term is a node, and the relationships between the terms are edges 
+        between the nodes. GO is loosely hierarchical, with ???child??? terms being
+        more specialized than their ???parent??? terms. The graph is interactive. 
+        You can move the graph and zoom in using the mouse.
+        Under the GO graph *Settings*, users can select ``Prune tree`` to prune
+        the tree only with significant branches and ``color custers`` to 
+        highlight clusters with different colors
 
-:**E**: Instead of pathway maps, an annotated graph structure provided by the 
-        GO database is plotted for every selected gene set.
+        .. figure:: figures/psc6.2.0.png
+            :align: center
+            :width: 30%
 
-:**F,G**: All the features described under the ``KEGG graph`` tab, such as scoring 
-          the gene sets and drawing an activation-heatmap, can be performed for the
-          GO database under the ``GO graph`` tab.
+:**b**: GO score table. The scoring of a GO term is performed by considering
+        the cumulative score of all terms from that term to the root node. 
+        That means that GO terms that are supported by higher level terms
+        levels are preferentially scored.
 
-.. figure:: figures/ug.020.png
+:**c**: The GO activation matrix visualizes the activation of GO terms
+        across conditions. From this figure, you can easily detect GO terms
+        that are consistently up/down across conditions. The size of the circles
+        correspond to their relative activation, and are colored according to 
+        their upregulation (red) or downregulation (blue) in the contrast
+        profile.
+
+.. figure:: figures/psc6.2.png
     :align: center
     :width: 100%
 
-
+    
 Drug C-Map
 --------------------------------------------------------------------------------
+In the *Drug Connectivity Map* panel, you can correlate your signature with more
+than 5000 known drug profiles from the L1000 database. An activation-heatmap 
+compares drug activation profiles across multiple contrasts. 
+This facilitates to quickly see and detect the similarities between contrasts
+for certain drugs.
+
+:**a**: 
+
+
 :**H**: The drug connectivity map ``Drug C-Map`` section correlates the selected 
         contrast profile with more than 5000 known drug profiles from the 
         `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, and shows
@@ -82,7 +139,7 @@ Drug C-Map
         profile correlation analysis in mono (single drug) or combo 
         (combination of two drugs) mode.
 
-.. figure:: figures/ug.021.png
+.. figure:: figures/psc6.3.png
     :align: center
     :width: 100%
     
