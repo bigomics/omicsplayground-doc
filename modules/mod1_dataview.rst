@@ -21,6 +21,8 @@ panel, more complete information about samples can be found. Finally, the
 **Contrasts** panel, shows information about the phenotype comparisons.
 
 
+Input slider
+--------------------------------------------------------------------------------
 Users can find similar information by clicking the ``Info`` button in the input slider
 on the left side of the panel. It also contains some useful settings for the analysis.
 The analysis can be started by selecting a gene of interest from the 

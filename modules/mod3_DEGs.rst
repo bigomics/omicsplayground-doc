@@ -56,7 +56,7 @@ Table ``I`` shows the results of the statistical tests slected in the ``Statisti
 In the Basic mode, this table reports the meta (combined) results of 
 `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald),
 `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF), and 
-`limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend).
+`limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend) only.
 
 For a selected comparison under the ``Contrast`` setting, the results of the selected 
 methods are combined and reported in the table, where ``meta.q`` for a gene 
