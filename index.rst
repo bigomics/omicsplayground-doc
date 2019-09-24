@@ -36,10 +36,10 @@
     :maxdepth: 2
     :caption: Examples
     
-    examples/GSE10846
-    examples/GSE114716
-    examples/GSE72056
-    examples/rieckmann2017
+    examples/microarray_data
+    examples/RNAseq_data
+    examples/singlecell_data
+    examples/proteomic_data
     #examples/cloning
     #examples/genbank
     #examples/igblast

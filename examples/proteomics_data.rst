@@ -1,6 +1,6 @@
-.. _rieckmann2017:
+.. _proteomic_data:
 
-Rieckmann et al. 2017: Proteomics data set
+Proteomic data
 ================================================================================
 
 With larger data sets, often the number of contrasts increases and complicates 

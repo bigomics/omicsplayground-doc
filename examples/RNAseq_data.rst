@@ -1,6 +1,6 @@
-.. _GSE114716:
+.. _RNAseq_data:
 
-GSE114716: Drug mechanism of action
+RNA-sequencing data
 ================================================================================
 
 To elucidate the mechanism of action of a new drug, or for the intention of drug 
@@ -11,6 +11,9 @@ Data set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As an example, using data from GSE114716
 from \cite{Goswami2018Modulation}.
+
+GSE114716: Drug mechanism of action 
+
 
 Signature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
