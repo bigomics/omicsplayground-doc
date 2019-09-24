@@ -46,11 +46,7 @@ paste a custom gene list to be used as features in the
     :align: center
     :width: 30%
 
-The panel provides the following output, followed by an explanation for each figure.
-
-.. figure:: figures/psc9.1.png
-    :align: center
-    :width: 100%
+The panel provides the following output with an explanation for each figure.
 
 :**a**: A variable importance score for each feature is calculated using multiple 
         machine learning algorithms, including 
@@ -70,6 +66,10 @@ The panel provides the following output, followed by an explanation for each fig
         
 :**d**: These boxplots shows the expression of genes/samples of the identified features.
 
+.. figure:: figures/psc9.1.png
+    :align: center
+    :width: 100%
+    
 If the data set under the study has a survival data, the  **biomarker** panel can also 
 provide a survival tree analysis using top features. Furthermore, it provides expression
 boxplots by phenotype classes for features present in the tree.
