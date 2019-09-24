@@ -167,11 +167,15 @@ Phenotypes
 The **Phenotypes** panel demonstrates the distribution of the phenotypes 
 superposed on the t-SNE clustering. Often, we can expect the t-SNE distribution
 to be driven by the particular phenotype that is controlled by the experimental
-condition or unwanted batch effects.
+condition or unwanted batch effects. Users can select whether they want the
+group labels to be plotted inside the figures or in a seperate legend in the
+``Legend`` under the *Settings*.
 
 .. figure:: figures/psc10.5.0.png
     :align: center
     :width: 30%
+
+The phenotype figures superposed on the t-SNE clustering are shown below.
 
 .. figure:: figures/psc10.5.png
     :align: center
@@ -184,10 +188,17 @@ The **Proportions** panel visualizes the interrelationships between two categori
 variables (so-called cross tabulation). Although this feature is very suitable
 for a single-cell sequencing data, it provides useful information about the
 proportion of different cell types in samples obtained by the bulk sequencing method.
+In the plot *Settings*, it is possible to choose the predefined phenotype 
+groups on x and y axises in the ``x-axis`` and ``y-axis``, respectively.
+For a selected phenotype group on the x-axis, average counts (abundance) 
+barplot is provided at the top. In addition, users can visualize the 
+expression barplot of a gene by specifying the ``gene``.
 
 .. figure:: figures/psc10.6.0.png
     :align: center
     :width: 30%
+
+The following ptoportion plot is obtained as an output.
 
 .. figure:: figures/psc10.6.png
     :align: center
@@ -201,11 +212,15 @@ of samples under the **Cytoplot** panel. The aim of this feature is to observe
 the distribution of samples in relation to the selected gene pairs. For instance,
 when applied to single-cell sequencing data from immunological cells, it can mimic
 flow cytometry analysis and distinguish T helper cells from other T cells by 
-selecting the CD4 and CD8 gene combination.
+selecting the CD4 and CD8 gene combination. Under the plot *Settings*, 
+user can select their prefered genes on the x and y axises in the ``x-axis`` 
+and ``y-axis``, respectively.
 
 .. figure:: figures/psc10.7.0.png
     :align: center
     :width: 30%
+
+The cytometry-like plot for the selected genes are presented below.
 
 .. figure:: figures/psc10.7.png
     :align: center
