@@ -1,8 +1,7 @@
 Contact
 --------------------------------------------------------------------------------
-
-If you have questions you can email
-`BigOmics Analytics <mailto:info@bigomics.ch>`__.
+If you have questions you can email `us <mailto:murodzhon.akhmedov@irb.usi.ch>`__.
+#`BigOmics Analytics <mailto:info@bigomics.ch>`__.
 
 If you've discovered a bug or have a feature request, you can create an issue
 on GitHub using the
@@ -10,7 +9,6 @@ on GitHub using the
 
 Citation
 --------------------------------------------------------------------------------
-
 To cite Omics Playground in publications please use:
 
 **Akhmedov M, Martinelli A, Geiger R and Kwee I.**
@@ -19,8 +17,14 @@ Omics Playground\: A comprehensive self-service platform forvisualization, analy
 
 License
 --------------------------------------------------------------------------------
+The Omics Playground platform technology is freely available for academic purposes. 
+Users can download the source code on `Github <https://github.com/bigomics/playground>`__
+or the docker file on 
+`Docker hub <https://cloud.docker.com/u/bigomics/repository/docker/bigomics/playground>`__,
+and they have to maintain and run the program on their own 
+computers. For those that are not willing of capable to install and maintain
+our open source version, there is a cloud subscription edition as a 
+commercial service, where we offer to run the analysis and maintain the code. 
+Please contact `us <mailto:murodzhon.akhmedov@irb.usi.ch>`__.
 
-This work is licensed under the
-`Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) <https://creativecommons.org/licenses/by-sa/4.0/>`__
-license???
 
