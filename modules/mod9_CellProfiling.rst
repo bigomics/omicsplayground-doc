@@ -171,7 +171,7 @@ condition or unwanted batch effects.
 
 .. figure:: figures/psc10.5.0.png
     :align: center
-    :width: 100%
+    :width: 30%
 
 .. figure:: figures/psc10.5.png
     :align: center
@@ -187,7 +187,7 @@ proportion of different cell types in samples obtained by the bulk sequencing me
 
 .. figure:: figures/psc10.6.0.png
     :align: center
-    :width: 100%
+    :width: 30%
 
 .. figure:: figures/psc10.6.png
     :align: center
@@ -205,7 +205,7 @@ selecting the CD4 and CD8 gene combination.
 
 .. figure:: figures/psc10.7.0.png
     :align: center
-    :width: 100%
+    :width: 30%
 
 .. figure:: figures/psc10.7.png
     :align: center
