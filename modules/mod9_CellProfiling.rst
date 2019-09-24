@@ -1,39 +1,88 @@
 .. _scProfiling:
 
-Single-cell profiling
+Single-Cell Profiling
 ================================================================================
-
-The cell profiling module is specifically developed for the analysis and visualization
-of single-cell datasets. The main applications are identification of immuner cell
-types and visualisations of markers, copy number variations, phenotypes, and 
+The **Single-Cell Profiling** module is specifically developed for the analysis
+and visualization of single-cell datasets. The main applications are 
+identification of immuner cell types and visualisations of markers, copy number 
+variations, phenotypes, and 
 proportions across the cells.
+
+
+The **Cell type** panel infers the type of cells using computational deconvolution
+methods and reference datasets from the literature. 
+The **Markers** panel provides potential marker genes, which are the top genes 
+with the highest standard deviation within the expression data across the samples.
+It is also possible to perform a copy number variation analysis under the **CNV**
+panel. 
+The **iTALK** consists of a computational approach from the literature
+to characterize and illustrate intercellular communication signals in the 
+multicellular tumor ecosystem.
+Users can find figures visualizing the distribution of the phenotype information
+under the **Phenotypes** panel.
+The Proportions panel visualizes the interrelationships between two categorical 
+variables (so-called cross tabulation).
+Finally, for each combination of gene pairs, the platform can generate a 
+cytometry-like plot of samples under the **Cytoplot** panel.
+
+
+.. note::
+
+    This module is supported in the EXPERT MODE ONLY.
+
+
+Input slider
+--------------------------------------------------------------------------------
+Users can filter relevant samples in the ``Filter samples`` settings under the 
+the main ``Options``. They can also specify to use a ``tsne`` or ``pca`` layout
+for the figures, and group/ungroup the samples in the ``group`` settings.
+
+.. figure:: figures/psc10.0.png
+    :align: center
+    :width: 30%
 
 
 Cell type
 --------------------------------------------------------------------------------
-The **cell type** section is used to infer the types of immune cells in a sample
-using prediction methods and reference datasets from the literature. 
-Currently, we have implemented
-a total of eight methods and nine reference datasets to predict immune cell types
-(four datasets), tissue types (two datasets), cell lines (two datasets) and cancer
-cell types (one dataset).
+The **Cell type** profiling infers the type of cells using computational 
+deconvolution methods and reference datasets from the literature. 
+Currently, we have implemented a total of 8 methods and 9 reference datasets 
+to predict immune cell types (4 datasets), tissue types (2 datasets), 
+cell lines (2 datasets) and cancer types (1 dataset). However, we plan to expand 
+the collection of methods and databases and to infer other cell types.
+Under the plot *Settings*, users can specify the ``plot type``: distribution, dotmap,
+or heatmap. They can select the reference dataset and the method for 
+the cell type prediction in the ``reference`` and ``method`` settings, respectively.
 
-.. figure:: figures/ug.032.png
+.. figure:: figures/psc10.1.0.png
+    :align: center
+    :width: 30%
+
+Based on their configuration settings, user will get a similar cell type prediction
+plot below.
+
+.. figure:: figures/psc10.1.png
     :align: center
     :width: 100%
 
 
 Markers
 --------------------------------------------------------------------------------
-The **markers** section provides potential marker genes, that is the 36 genes
-with the highest standard deviation within the expression data across the samples.
-For every gene, it produces a t-SNE plot of samples, with samples colored in red 
-when the gene is overexpressed in corresponding samples. Users can also restrict 
-the marker analysis by selecting a particular functional group. There are in total
-89 such functional groups, including chemokines, transcription factors, genes 
-involved in immune checkpoint inhibition, and so on.
+The **Markers** panel produces for the top marker genes, a t-SNE with samples 
+colored in red when the gene is overexpressed in corresponding samples. 
+The top genes (N=36) with the highest standard deviation are plotted.
 
-.. figure:: figures/ug.035.png
+In the plotting *Settings*, users can also restrict the marker analysis by 
+selecting a particular functional group in which genes are divided into 89 groups,
+such as chemokines, transcription factors, genes involved in immune checkpoint 
+inhibition, and so on.
+
+.. figure:: figures/psc10.2.0.png
+    :align: center
+    :width: 30%
+
+    
+.. figure:: figures/psc10.2.png
     :align: center
     :width: 100%
 
