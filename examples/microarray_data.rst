@@ -3,12 +3,12 @@
 Microarray Data
 ================================================================================
 
-
-To illustrate the use cases of the Omics Playground, we reanalyzed some publics
-data sets.
-
-\ref{results_figure3}b} shows a microarray gene expression data set, GSE10846 
-\cite{Lenz2018Stromal}, of diffuse large B-cell lymphoma (DLBCL).
+We reanalyzed different types of publics datasets to illustrate the use case of 
+the Omics Playground. In this section, we perform the biomarker selection and 
+survival analysis using the 
+`GSE10846 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10846>`__
+microarray gene expression dataset of diffuse large B-cell lymphoma (DLBCL) 
+patients.
 
 
 Volcano plots
@@ -21,12 +21,12 @@ methods. The result from edgeR-QLF is close to those of the two limma based meth
 while edgeR-LRT is very similar to the results of DESeq2-Wald. \textbf{Fig.
 
 
-
 Biomarker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \textbf{Fig. \ref{results_figure3}c} and \textbf{\ref{results_figure3}d} show the 
 variable importance plot and a survival tree on the overall survival of the DLBCL 
 patients, respectively.
+
 
 Survival analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
