@@ -81,7 +81,7 @@ iHeatmap
 The **iHeatmap** is an interactive version of the **Heatmap** panel. 
 All figure configurations and settings are also controlled via 'Heatmap' panel.
 It has only one ``Show row labels`` local setting to display the row labels of 
- an interactive heatmap.
+an interactive heatmap.
 
 .. figure:: figures/psc3.2.png
     :align: center
@@ -151,7 +151,7 @@ It provides plots showing the distribution of the phenotypes superposed on the
 tSNE clustering. Often, we can expect the t-SNE distribution to be driven by the
 particular phenotype that is controlled by the experimental condition or unwanted
 batch effects. Users can choose to put the group labels in the 
-figure or as separate legend in the ``Label`` setting, under the plot Settings.
+figure or as separate legend in the ``Label`` setting, under the plot *Settings*.
 
 .. figure:: figures/psc3.5.0.png
     :align: center
@@ -186,7 +186,7 @@ computing the discriminant score.
 * The 'meta' method combines the score of the former methods in a multiplicative manner.
  
 
-The following plot represents the the resulting feature-set ranking.
+The following plot represents the resulting feature-set ranking.
 
 .. figure:: figures/psc3.6.png
     :align: center

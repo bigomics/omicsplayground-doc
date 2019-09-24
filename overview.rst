@@ -2,15 +2,12 @@
 
 Overview
 ================================================================================
-
-The Omics Playground platform offers a unique combination of features that 
-distinguishes it from the other analytics platforms currently available. 
-We believe that data preprocessing (primary analysis) and statistical 
-testing (secondary analysis) are now well established, and the most challenging 
-task is currently data interpretation (tertiary analysis) that often takes the 
-longest time but where actual insights can be gained. Therefore the Omics 
-Playground focuses strongly on tertiary analysis while providing good support 
-for secondary analysis.
+The Omics Playground is a user-friendly and interactive web-based platform 
+for the analysis and visualization of transcriptomics and proteomics data. 
+Currently the platform handles gene expression microarray, RNA-seq and 
+LC-MS/MS proteomics data, and supports two species, human and mouse. The Omics 
+Playground has been in particular devised to also support single cell RNA-seq 
+data, as well as traditional gene expression experiments. 
 
 The overview of the platform is shown in the figure below. It consists of
 two main components. The first component addresses the data
