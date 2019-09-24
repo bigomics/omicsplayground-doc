@@ -1,6 +1,6 @@
 .. _proteomic_data:
 
-Proteomic data
+Proteomic Data
 ================================================================================
 
 With larger data sets, often the number of contrasts increases and complicates 
@@ -10,8 +10,7 @@ For example, the proteomics data set of
 comprises 26 populations of seven major immune cell types, measured during resting and activated
 states. There are more than 300 possible comparisons to make.
 
-Data set
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 For example, the proteomics data set of 
 `Rieckmann et al. 2017 <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__
 comprises 26 

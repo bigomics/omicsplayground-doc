@@ -1,10 +1,10 @@
 .. _singlecell_data:
 
-Single-cell data
+Single-cell Data
 ================================================================================
 
-Data set
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 To illustrate the use cases of the Omics Playground, we reanalyzed some publics
 data sets. For single-cell RNA-seq data, we downloaded the melanoma data set 
 `GSE72056 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056>`__ 

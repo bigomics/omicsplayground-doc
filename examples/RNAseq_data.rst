@@ -1,14 +1,14 @@
 .. _RNAseq_data:
 
-RNA-sequencing data
+RNA-sequencing Data
 ================================================================================
 
 To elucidate the mechanism of action of a new drug, or for the intention of drug 
 repurposing, it is often useful to find other drugs that have similar or opposing
 signatures compared to some given fold change profile.
 
-Data set
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 As an example, using data from GSE114716
 from \cite{Goswami2018Modulation}.
 

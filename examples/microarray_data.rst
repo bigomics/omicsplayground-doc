@@ -1,11 +1,9 @@
 .. _microarray_data:
 
-Microarray data
+Microarray Data
 ================================================================================
 
 
-Data set
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To illustrate the use cases of the Omics Playground, we reanalyzed some publics
 data sets.
 

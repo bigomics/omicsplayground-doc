@@ -1,7 +1,6 @@
 Contact
 --------------------------------------------------------------------------------
-If you have questions you can email `us <mailto:murodzhon.akhmedov@irb.usi.ch>`__.
-#`BigOmics Analytics <mailto:info@bigomics.ch>`__.
+If you have questions you can email `us <mailto:info@bigomics.ch>`__.
 
 If you've discovered a bug or have a feature request, you can create an issue
 on GitHub using the
@@ -25,6 +24,6 @@ and they have to maintain and run the program on their own
 computers. For those that are not willing of capable to install and maintain
 our open source version, there is a cloud subscription edition as a 
 commercial service, where we offer to run the analysis and maintain the code. 
-Please contact `us <mailto:murodzhon.akhmedov@irb.usi.ch>`__.
+Please contact `us <mailto:info@bigomics.ch>`__.
 
 
