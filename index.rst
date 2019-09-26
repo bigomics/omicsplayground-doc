@@ -36,13 +36,11 @@
     :maxdepth: 2
     :caption: Examples
     
-    examples/microarray_data
-    examples/RNAseq_data
-    examples/singlecell_data
-    examples/proteomic_data
-    #examples/cloning
-    #examples/genbank
-    #examples/igblast
+    examples/examples
+    #examples/microarray_data
+    #examples/RNAseq_data
+    #examples/singlecell_data
+    #examples/proteomic_data
 
 .. toctree::
     :maxdepth: 1
