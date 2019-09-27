@@ -28,11 +28,35 @@ annotated with the most correlated gene sets (Fig. 2g).
     :width: 50%
     
 
-.. figure:: figures/fig2_bc.pdf
+.. figure:: figures/fig2_b.pdf
     :align: center
     :width: 100%    
+    
+.. figure:: figures/fig2_c.pdf
+    :align: center
+    :width: 100%     
 
+.. figure:: figures/fig2_d.pdf
+    :align: center
+    :width: 100% 
+    
+.. figure:: figures/fig2_e.png
+    :align: center
+    :width: 100%   
+    
+.. figure:: figures/fig2_f.pdf
+    :align: center
+    :width: 100% 
+    
+.. figure:: figures/fig2_g.pdf
+    :align: center
+    :width: 100%     
 
+.. figure:: figures/fig2_h.pdf
+    :align: center
+    :width: 100% 
+
+    
 Microarray Data
 --------------------------------------------------------------------------------
 
