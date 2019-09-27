@@ -23,6 +23,10 @@ The biomarker heatmap (Fig. 2f) highlights the marker genes for
 each cell type. Each gene cluster is furthermore automatically
 annotated with the most correlated gene sets (Fig7_).
 
+
+tSNE plot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. figure:: figures/fig2_a.png
     :align: center
     :width: 100%
