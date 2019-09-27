@@ -26,8 +26,8 @@ annotated with the most correlated gene sets (Fig. 2g).
 .. figure:: figures/fig2_a.png
     :align: center
     :width: 100%
+    :legend: tSNE plot
     
-
 .. figure:: figures/fig2_b.png
     :align: center
     :width: 100%    
