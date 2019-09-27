@@ -23,20 +23,20 @@ The biomarker heatmap (Fig. 2f) highlights the marker genes for
 each cell type. Each gene cluster is furthermore automatically
 annotated with the most correlated gene sets (Fig. 2g).
 
-.. figure:: figures/fig2_a.pdf 
+.. figure:: figures/fig2_a.png
     :align: center
-    :width: 50%
+    :width: 100%
     
 
-.. figure:: figures/fig2_b.pdf
+.. figure:: figures/fig2_b.png
     :align: center
     :width: 100%    
     
-.. figure:: figures/fig2_c.pdf
+.. figure:: figures/fig2_c.png
     :align: center
     :width: 100%     
 
-.. figure:: figures/fig2_d.pdf
+.. figure:: figures/fig2_d.png
     :align: center
     :width: 100% 
     
@@ -44,15 +44,15 @@ annotated with the most correlated gene sets (Fig. 2g).
     :align: center
     :width: 100%   
     
-.. figure:: figures/fig2_f.pdf
+.. figure:: figures/fig2_f.png
     :align: center
     :width: 100% 
     
-.. figure:: figures/fig2_g.pdf
+.. figure:: figures/fig2_g.png
     :align: center
     :width: 100%     
 
-.. figure:: figures/fig2_h.pdf
+.. figure:: figures/fig2_h.png
     :align: center
     :width: 100% 
 
