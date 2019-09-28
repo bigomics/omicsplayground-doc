@@ -25,7 +25,7 @@ annotated with the most correlated gene sets (`Figure 7`_).
 
 
 tSNE plot
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 1`:
 
@@ -33,15 +33,14 @@ tSNE plot
     :align: center
     :width: 100%
 
-    
-    **Figure 1**. The t-SNE clustering with cell type annotation. 
-    To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **PCA/tSNE** panel of the **Clustering** module. From the plot *Settings*, 
-    set the ``color``: group and ``layout``: tsne.
+**Figure 1**. The t-SNE clustering with cell type annotation. 
+To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+and go to the **PCA/tSNE** panel of the **Clustering** module. From the plot *Settings*, 
+set the ``color``: group and ``layout``: tsne.
 
 
 Volcano and MA plot
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 2`:
 
@@ -58,7 +57,7 @@ Volcano and MA plot
 
 
 Differentially expressed genes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 3`:
 
