@@ -36,36 +36,52 @@ annotated with the most correlated gene sets (`Figure 7`_).
 
 Figure 1. The t-SNE clustering.
 
-.. _`Figure 1`:
+
+.. _`Figure 2`:
 
 .. figure:: figures/fig2_b.png
     :align: center
     :width: 100%    
-    
+
+
+.. _`Figure 3`:
+
 .. figure:: figures/fig2_c.png
     :align: center
     :width: 100%     
 
+
+.. _`Figure 4`:
+
 .. figure:: figures/fig2_d.png
     :align: center
     :width: 100% 
-    
+
+
+.. _`Figure 5`:
+
 .. figure:: figures/fig2_e.png
     :align: center
     :width: 100%   
-    
+
+
+.. _`Figure 6`:
+
 .. figure:: figures/fig2_f.png
     :align: center
     :width: 100% 
-    
+
+
+.. _`Figure 7`:
+
 .. figure:: figures/fig2_g.png
     :align: center
     :width: 100%     
 
-.. _`Fig7`: 
+Figure 7. The t-SNE clustering.
 
-Figure 7. The t-SNE clustering. 
 
+.. _`Figure 8`: 
 
 .. figure:: figures/fig2_h.png
     :align: center
