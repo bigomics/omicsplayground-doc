@@ -24,8 +24,8 @@ each cell type. Each gene cluster is furthermore automatically
 annotated with the most correlated gene sets (`Figure 7`_).
 
 
-
-**tSNE plot**
+tSNE plot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _`Figure 1`:
 
@@ -40,7 +40,8 @@ annotated with the most correlated gene sets (`Figure 7`_).
     set the ``color``: group and ``layout``: tsne.
 
 
-**Volcano and MA plot**
+Volcano and MA plot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _`Figure 2`:
 
@@ -56,7 +57,8 @@ annotated with the most correlated gene sets (`Figure 7`_).
     ``logFC threshold``: 0.5.    
 
 
-**Differentially expressed genes**
+Differentially expressed genes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _`Figure 3`:
 
@@ -83,10 +85,10 @@ annotated with the most correlated gene sets (`Figure 7`_).
     **Figure 4**. Inferred copy number for sample Cy80.
     To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
     and go to the **CNV** panel of the **scProfiling** module. From the plot *Settings*, 
-    set the ``Annotate with``: malignant, and ``Order samples by``: clust.
+    set the ``Annotate with``: malignant and ``Order samples by``: clust.
     
     
-    
+**Immune checkpoint signature**   
 
 .. _`Figure 5`:
 
@@ -94,6 +96,15 @@ annotated with the most correlated gene sets (`Figure 7`_).
     :align: center
     :width: 100%   
 
+    **Figure 5**. Enrichment distribution for an immune checkpoint signature showing high
+    enrichment in T and B cells .
+    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    and go to the **Marker** panel in the **Signature** module. From the input slider, 
+    set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
+    
+
+
+**Biomarker heatmap**
 
 .. _`Figure 6`:
 
@@ -101,6 +112,13 @@ annotated with the most correlated gene sets (`Figure 7`_).
     :align: center
     :width: 100% 
 
+    **Figure 6**. Biomarker heatmap for non-malignant cells.
+    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    and go to the **Marker** panel in the **Signature** module. From the input slider, 
+    set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
+    
+
+**Annotate heatmap clusters**
 
 .. _`Figure 7`:
 
@@ -108,8 +126,19 @@ annotated with the most correlated gene sets (`Figure 7`_).
     :align: center
     :width: 100%     
 
-Figure 7. The t-SNE clustering.
+    **Figure 7**. Enrichment annotation of corresponding heatmap clusters from the `Figure 6`_.
+    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    and go to the **Marker** panel in the **Signature** module. From the input slider, 
+    set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
 
+
+
+
+RNA-seq Data
+--------------------------------------------------------------------------------
+
+To elucidate the mechanism of action of a new drug, or for the intention of drug repurposing,
+it is often useful to find other drugs that have similar or opposing signatures compared to some given fold change profile. As an example, using data from GSE114716 (40), Fig. 2f shows the top ranked drugs with most similar or most opposing signatures to Ipilimumab, a novel monoclonal antibody targeting CTLA-4 used in tumour therapy. The list contains several known anti- tumoral drugs, such as bortezomib and palbociclib, but also highlights relationships with other compounds not normally used in tumor therapy, such as emetine, an anti-protozoal drug with anti-tumoral properties (41, 43).
 
 .. _`Figure 8`: 
 
