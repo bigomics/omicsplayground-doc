@@ -13,27 +13,31 @@ For single-cell RNA-seq data, we downloaded the melanoma data set
 `GSE72056 <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056>`__ of
 `Tirosh et al. <https://www.ncbi.nlm.nih.gov/pubmed/27124452>`__.
 Our platform recapitulates well the original findings of the paper. 
-The t-SNE clustering (`Fig1`_) separates the different cell types. 
-Fig. 2 and 3 show the volcano plot, MA plot and most differentially
+The t-SNE clustering (`Figure 1`_) separates the different cell types. 
+`Figure 2`_ and `Figure 3`_ show the volcano plot, MA plot and most differentially
 expressed genes between malignant and non-malignant cells. 
-The CNV map (Fig. 2d) confirms the major chromosomal copy number 
-variations found in the malignant cells. Fig. 2e shows high enrichment
+The CNV map (`Figure 4`_) confirms the major chromosomal copy number 
+variations found in the malignant cells. `Figure 5`_ shows high enrichment
 of a immune checkpoint signature, particularly concentrated in the T cells.
-The biomarker heatmap (Fig. 2f) highlights the marker genes for
+The biomarker heatmap (`Figure 6`_) highlights the marker genes for
 each cell type. Each gene cluster is furthermore automatically
-annotated with the most correlated gene sets (`Fig7`_).
+annotated with the most correlated gene sets (`Figure 7`_).
 
-tSNE plot
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _`Figure 1`:
+
+.. centered::
+
+**tSNE plot**
 
 .. figure:: figures/fig2_a.png
     :align: center
     :width: 100%
 
-.. _`Fig1`: 
-
 Figure 1. The t-SNE clustering.
-    
+
+.. _`Figure 1`:
+
 .. figure:: figures/fig2_b.png
     :align: center
     :width: 100%    
