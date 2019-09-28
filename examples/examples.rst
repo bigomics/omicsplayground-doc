@@ -114,8 +114,11 @@ Differentially expressed genes
 
     **Figure 6**. Biomarker heatmap for non-malignant cells.
     To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **Marker** panel in the **Signature** module. From the input slider, 
-    set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
+    and go to the **Heatmap** panel in the **Clustering** module. From the input slider, 
+    set the ``Level``: gene, ``Features``: all, and ``Filter samples``: {cell.type=Bcell,
+    cell.type=CAF, cell.type=endothelial, cell.type=Macrophage, cell.type=NK, cell.type=Tcell}.
+    In the plot *Settings*, set ``Plot type``: ComplexHeatmap, ``split by``: cell.type,
+    ``top mode``: specific, ``top N``: 50 and ``scale``: relative.
     
 
 **Annotate heatmap clusters**
@@ -127,9 +130,9 @@ Differentially expressed genes
     :width: 100%     
 
     **Figure 7**. Enrichment annotation of corresponding heatmap clusters from the `Figure 6`_.
-    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **Marker** panel in the **Signature** module. From the input slider, 
-    set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
+    To reproduce the figure on the platform, generate the heatmap in `Figure 6`_ first, 
+    then go to the **Annotate clusters** panel. From the plot *Settings*, 
+    set the ``Reference level``: geneset and ``Reference set``: GOBP.
 
 
 
