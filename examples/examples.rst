@@ -24,13 +24,15 @@ each cell type. Each gene cluster is furthermore automatically
 annotated with the most correlated gene sets (`Figure 7`_).
 
 
-.. _`Figure 1`:
 
 **tSNE plot**
+
+.. _`Figure 1`:
 
 .. figure:: figures/fig2_a.png
     :align: center
     :width: 100%
+
     
     **Figure 1**. The t-SNE clustering with cell type annotation. 
     To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
@@ -38,25 +40,23 @@ annotated with the most correlated gene sets (`Figure 7`_).
     set the ``color``: group and ``layout``: tsne.
 
 
-.. _`Figure 2`:
-
 **Volcano and MA plot**
+
+.. _`Figure 2`:
 
 .. figure:: figures/fig2_b.png
     :align: center
     :width: 100%    
 
-    Figure 2. Volcano and MA plot for the malignant versus non-malignant contrast.
-    
+
+    **Figure 2**. Volcano and MA plot for the malignant versus non-malignant contrast.
     To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    
     and go to the **Plots** panel of the **Expression** module. From the input slider, 
-    
     set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
-    
     ``logFC threshold``: 0.5.    
 
 
+**Differentially expressed genes**
 
 .. _`Figure 3`:
 
@@ -65,12 +65,28 @@ annotated with the most correlated gene sets (`Figure 7`_).
     :width: 100%     
 
 
+    **Figure 3**. Barplot of corresponding differentially expressed genes.
+    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    and go to the **Top genes** panel of the **Expression** module. From the input slider, 
+    set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
+    ``logFC threshold``: 0.5.
+    
+
+**Inferred copy number**
+
 .. _`Figure 4`:
 
 .. figure:: figures/fig2_d.png
     :align: center
     :width: 100% 
 
+    **Figure 4**. Inferred copy number for sample Cy80.
+    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    and go to the **CNV** panel of the **scProfiling** module. From the plot *Settings*, 
+    set the ``Annotate with``: malignant, and ``Order samples by``: clust.
+    
+    
+    
 
 .. _`Figure 5`:
 
