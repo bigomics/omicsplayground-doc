@@ -32,8 +32,8 @@ annotated with the most correlated gene sets (`Figure 7`_).
     :align: center
     :width: 100%
     
-    Figure 1. The t-SNE clustering with cell type annotation. 
-    To reproduce the same image on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    **Figure 1**. The t-SNE clustering with cell type annotation. 
+    To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
     and go to the **PCA/tSNE** panel of the **Clustering** module. From the plot *Settings*, 
     set the ``color``: group and ``layout``: tsne.
 
@@ -46,7 +46,15 @@ annotated with the most correlated gene sets (`Figure 7`_).
     :align: center
     :width: 100%    
 
-    Figure 2. Volcano and MA plot for the malignant vs. non-malignant contrast.
+    Figure 2. Volcano and MA plot for the malignant versus non-malignant contrast.
+    
+    To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+    
+    and go to the **Plots** panel of the **Expression** module. From the input slider, 
+    
+    set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
+    
+    ``logFC threshold``: 0.5.    
 
 
 
