@@ -48,12 +48,11 @@ Volcano and MA plot
     :align: center
     :width: 100%    
 
-
-    **Figure 2**. Volcano and MA plot for the malignant versus non-malignant contrast.
-    To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **Plots** panel of the **Expression** module. From the input slider, 
-    set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
-    ``logFC threshold``: 0.5.    
+**Figure 2**. Volcano and MA plot for the malignant versus non-malignant contrast.
+To reproduce the same figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+and go to the **Plots** panel of the **Expression** module. From the input slider, 
+set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
+``logFC threshold``: 0.5.    
 
 
 Differentially expressed genes
@@ -65,15 +64,15 @@ Differentially expressed genes
     :align: center
     :width: 100%     
 
-
-    **Figure 3**. Barplot of corresponding differentially expressed genes.
-    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **Top genes** panel of the **Expression** module. From the input slider, 
-    set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
-    ``logFC threshold``: 0.5.
+**Figure 3**. Barplot of corresponding differentially expressed genes.
+To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+and go to the **Top genes** panel of the **Expression** module. From the input slider, 
+set the ``Contrast``: yes_vs_no, ``Gene family``: all, ``FDR``: 0.2, and 
+``logFC threshold``: 0.5.
     
 
-**Inferred copy number**
+Inferred copy number
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 4`:
 
@@ -81,13 +80,14 @@ Differentially expressed genes
     :align: center
     :width: 100% 
 
-    **Figure 4**. Inferred copy number for sample Cy80.
-    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **CNV** panel of the **scProfiling** module. From the plot *Settings*, 
-    set the ``Annotate with``: malignant and ``Order samples by``: clust.
+**Figure 4**. Inferred copy number for sample Cy80.
+To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+and go to the **CNV** panel of the **scProfiling** module. From the plot *Settings*, 
+set the ``Annotate with``: malignant and ``Order samples by``: clust.
     
     
-**Immune checkpoint signature**   
+Immune checkpoint signature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 5`:
 
@@ -95,15 +95,15 @@ Differentially expressed genes
     :align: center
     :width: 100%   
 
-    **Figure 5**. Enrichment distribution for an immune checkpoint signature showing high
-    enrichment in T and B cells .
-    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **Marker** panel in the **Signature** module. From the input slider, 
-    set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
+**Figure 5**. Enrichment distribution for an immune checkpoint signature showing high
+enrichment in T and B cells .
+To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+and go to the **Marker** panel in the **Signature** module. From the input slider, 
+set the ``Contrast``: custom and ``Signature``: immune_chkpt from the provided sample list.
     
 
-
-**Biomarker heatmap**
+Biomarker heatmap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 6`:
 
@@ -111,16 +111,17 @@ Differentially expressed genes
     :align: center
     :width: 100% 
 
-    **Figure 6**. Biomarker heatmap for non-malignant cells.
-    To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
-    and go to the **Heatmap** panel in the **Clustering** module. From the input slider, 
-    set the ``Level``: gene, ``Features``: all, and ``Filter samples``: {cell.type=Bcell,
-    cell.type=CAF, cell.type=endothelial, cell.type=Macrophage, cell.type=NK, cell.type=Tcell}.
-    In the plot *Settings*, set ``Plot type``: ComplexHeatmap, ``split by``: cell.type,
-    ``top mode``: specific, ``top N``: 50 and ``scale``: relative.
+**Figure 6**. Biomarker heatmap for non-malignant cells.
+To reproduce the figure on the platform, select and load ``GSE72056-scmelanoma`` dataset, 
+and go to the **Heatmap** panel in the **Clustering** module. From the input slider, 
+set the ``Level``: gene, ``Features``: all, and ``Filter samples``: {cell.type=Bcell,
+cell.type=CAF, cell.type=endothelial, cell.type=Macrophage, cell.type=NK, cell.type=Tcell}.
+In the plot *Settings*, set ``Plot type``: ComplexHeatmap, ``split by``: cell.type,
+``top mode``: specific, ``top N``: 50 and ``scale``: relative.
     
 
-**Annotate heatmap clusters**
+Annotate heatmap clusters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`Figure 7`:
 
@@ -128,10 +129,10 @@ Differentially expressed genes
     :align: center
     :width: 100%     
 
-    **Figure 7**. Enrichment annotation of corresponding heatmap clusters from the `Figure 6`_.
-    To reproduce the figure on the platform, generate the heatmap in `Figure 6`_ first, 
-    then go to the **Annotate clusters** panel. From the plot *Settings*, 
-    set the ``Reference level``: geneset and ``Reference set``: GOBP.
+**Figure 7**. Enrichment annotation of corresponding heatmap clusters from the `Figure 6`_.
+To reproduce the figure on the platform, generate the heatmap in `Figure 6`_ first, 
+then go to the **Annotate clusters** panel. From the plot *Settings*, 
+set the ``Reference level``: geneset and ``Reference set``: GOBP.
 
 
 
