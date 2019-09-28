@@ -30,7 +30,9 @@ tSNE plot
     :align: center
     :width: 100%
 
-.. _`Fig1`: The t-SNE clustering.   
+.. _`Fig1`: 
+
+Figure 1. The t-SNE clustering.
     
 .. figure:: figures/fig2_b.png
     :align: center
@@ -56,7 +58,9 @@ tSNE plot
     :align: center
     :width: 100%     
 
-.. _`Fig7`: The t-SNE clustering. 
+.. _`Fig7`: 
+
+Figure 7. The t-SNE clustering. 
 
 
 .. figure:: figures/fig2_h.png
