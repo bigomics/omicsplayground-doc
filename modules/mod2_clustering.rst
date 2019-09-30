@@ -123,7 +123,7 @@ PCA/tSNE
 The **PCA/tSNE** panel visualizes unsupervised clustering obtained by the principal
 components analysis (`PCA <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__) or 
 t-distributed stochastic embedding 
-(`tSENE <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__) algorithms. 
+(`tSNE <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__) algorithms. 
 This plot shows the relationship (or similarity) between the samples for visual 
 analytics, where similarity is visualized as proximity of the points. 
 Samples that are 'similar' will be placed close to each other.
