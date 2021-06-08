@@ -27,6 +27,8 @@ Follow the steps below to set up a running platform from the docker file:
     
 3. Open ``http://localhost:4000`` in your browser to run the platform.
 
+4. If you want to include your own pgx files into the platform Datasets tab, select the local folder in which you have stored your pgx files under "Host Path" in the optional settings in docker. Also type "/omicsplayground/data" in the "Container Path" box.
+
 .. note::
 
     Warning. The docker image requires about 8GB hard disk space. Note: if you want the exact version of the NAR/GAB publication, download version v1.0, otherwise docker will download the latest version by default.
