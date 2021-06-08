@@ -2,30 +2,29 @@
 
 Functional Analysis
 ================================================================================
-This module performs specialized pathway and drug enrichment analysis. 
-It contains three panels where it provides higher level functional and 
-visual analysis of the contrast space using the 
-`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ graph structure
-in the **KEGG pathways** panel. Under the **GO** panel, very similar functional
-analysis is done using the Gene Ontology (`GO <http://geneontology.org/>`__) 
-graph structure. 
-Given a particular contrast profile, it also searches for the closest 
-drug profiles from the `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__
-drug expression database under the **Drug Connectivity Map** panel.
+This module performs specialized pathway and enrichment analysis
+providing higher level functional and visual analysis
 
-.. note::
+The **KEGG pathways** panel maps the differential fold-changes onto
+the `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__
+pathway maps. Under the **GO** panel, a graph-based enrichment
+analysis is done using the Gene Ontology (`GO
+<http://geneontology.org/>`__) graph structure. The **Drug Connectivity
+Map** panel, for a given contrast, searches for the closest drug
+profiles from the `L1000
+<https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ drug expression
+database. Finally, a **Word cloud** panel provide keyword enrichment
+analysis on keywords in the geneset titles.
 
-    This module is supported in the EXPERT MODE ONLY.
 
-
-Input slider
+Input panel
 --------------------------------------------------------------------------------
-It is possible to more information about the module in the ``Info`` from the 
-input slider. Users can specify the contrast of their interest in 
-the ``Contrast`` settings. Under the main *Options*, users can select
-``normalize activation matrix`` to fine-tune the coloring of an activation 
-matrices and ``filter significant (tables)`` to filter the significant entries
-in the tables.
+It is possible to more information about the module in the ``Info``
+from the input panel. Users can specify the contrast of their interest
+in the ``Contrast`` settings. Under the main *Options*, users can
+select ``normalize activation matrix`` to fine-tune the coloring of an
+activation matrices and ``filter significant (tables)`` to filter the
+significant entries in the tables.
 
 .. figure:: figures/psc6.0.png
     :align: center
@@ -117,6 +116,11 @@ Each output chart/table of the panel is describer below in detail.
     
 Drug C-Map
 --------------------------------------------------------------------------------
+
+.. note::
+
+    This module is supported in the EXPERT MODE only.
+
 In the **Drug Connectivity Map** panel, users can correlate their signature with
 more than 5000 known drug profiles from the 
 `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database. 
@@ -157,5 +161,81 @@ for certain drugs.
     :align: center
     :width: 100%
     
-    
-    
+
+
+WordCloud
+--------------------------------------------------------------------------------
+
+.. note::
+
+    This module is supported in the EXPERT MODE only.
+
+The **WordCloud** panel performs "keyword enrichment analysis". It
+computes enrichment of a selected keyword across all contrasts. Select
+a keyword by clicking a word in the 'Enrichment table'. Keyword
+enrichment is computed by running GSEA on the enrichment score profile
+for all contrasts. We defined the test set as the collection of
+genesets that contain the keyword in the title/description.
+		      
+
+.. figure:: figures/psc6.4.png
+    :align: center
+    :width: 100%
+
+
+	    
+:**a**: The **Enrichment plots** visualize the enrichment of the
+	selected keyword in the contrasts.  Black vertical bars
+	indicate the position of gene sets that contains the *keyword*
+	in the ranked list of enrichment scores. The curve in green
+	corresponds to the 'running statistic' of the keyword
+	enrichment score. The more the green ES curve is shifted to
+	the upper left of the graph, the more the keyword is enriched
+	in the first group. Conversely, a shift of the green ES curve
+	to the lower right, corresponds to keyword enrichment in the
+	second group.
+
+:**b**: The **Word cloud plot** visualizes the frequency/enrichment of
+	keywords for the data set. Select a keyword in the 'Enrichment
+	table'. In the plot settings, users can exclude certain words
+	from the figure, or choose the color palette. The sizes of the
+	words are relative to the normalized enrichment score (NES)
+	from the GSEA computation. Keyword enrichment is computed by
+	running GSEA on the mean (squared) enrichment profile
+	(averaged over all contrasts). For each keyword, we defined
+	the 'keyword set' as the collection of genesets that contain
+	that keyword in the title/description.
+
+
+.. figure:: figures/psc6.4.1.png
+    :align: center
+    :width: 40%
+
+:**c**: The **Word t-SNE** plot visualizes the similarity of the
+	keywords that were found in the title/description of gene
+	sets. Keywords that are often found together in
+	title/descriptions are placed close together in the t-SNE. For
+	each keyword we computed enrichment using GSEA on the mean
+	(absolute) enrichment profiles (averaged over all
+	contrasts). Statistically significant gene sets (q<0.05) are
+	colored in red. The sizes of the nodes are proportional to the
+	normalized enrichment score (NES) of the keyword. In the plot
+	settings, the user can choose between t-SNE and "Uniform
+	Manifold Approximation and Projection" (UMAP).
+
+.. figure:: figures/psc6.4.2.png
+    :align: center
+    :width: 40%
+		 
+:**d**: The **Activation matrix** visualizes the activation of drug
+	activation enrichment across the conditions. The size of the
+	circles correspond to their relative activation, and are
+	colored according to their upregulation (red) or
+	downregulation (blue) in the contrast profile.
+
+:**e**: The **Enrichment table** summarizes the results from the
+	enrichment test for the tested keywords. The NES corresponds
+	to the normalized enrichment score from the GSEA analysis.
+
+:**f**: The **Leading-edge table** shows the geneset titles that have
+	contributed to the enrichment of the selected keyword.

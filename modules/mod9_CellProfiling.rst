@@ -1,11 +1,17 @@
 .. _scProfiling:
 
+
 Single-Cell Profiling
 ================================================================================
-The **Single-Cell Profiling** module is specifically developed for the analysis
-and visualization of single-cell datasets. The main applications are 
-identification of immuner cell types and visualisations of markers, copy number 
-variations, phenotypes, and 
+
+.. note::
+
+    This module is supported in the EXPERT MODE only.
+    
+The **Single-Cell Profiling** module is specifically developed for the
+analysis and visualization of single-cell datasets. The main
+applications are identification of immune cell types and
+visualisations of markers, copy number variations, phenotypes, and
 proportions across the cells.
 
 
@@ -26,16 +32,12 @@ Finally, for each combination of gene pairs, the platform can generate a
 cytometry-like plot of samples under the **Cytoplot** panel.
 
 
-.. note::
-
-    This module is supported in the EXPERT MODE ONLY.
-
-
-Input slider
+Input panel
 --------------------------------------------------------------------------------
-Users can filter relevant samples in the ``Filter samples`` settings under the 
-the main ``Options``. They can also specify to use a ``tsne`` or ``pca`` layout
-for the figures, and group/ungroup the samples in the ``group`` settings.
+Users can filter relevant samples in the ``Filter samples`` settings
+under the the main ``Options`` in the input panel. They can also
+specify to use a ``tsne`` or ``pca`` layout for the figures, and
+group/ungroup the samples in the ``group`` settings.
 
 .. figure:: figures/psc10.0.png
     :align: center
@@ -44,15 +46,20 @@ for the figures, and group/ungroup the samples in the ``group`` settings.
 
 Cell type
 --------------------------------------------------------------------------------
-The **Cell type** profiling infers the type of cells using computational 
-deconvolution methods and reference datasets from the literature. 
-Under the plot *Settings*, users can specify the ``plot type``: distribution, dotmap,
-or heatmap. They can select the reference dataset and the method for 
-the cell type prediction in the ``reference`` and ``method`` settings, respectively.
-Currently, we have implemented a total of 8 methods and 9 reference datasets 
-to predict immune cell types (4 datasets), tissue types (2 datasets), 
-cell lines (2 datasets) and cancer types (1 dataset). However, we plan to expand 
-the collection of methods and databases and to infer other cell types.
+The **Cell type** profiling panel infers the type of cells using
+computational deconvolution methods and reference datasets from the
+literature.  In the plot settings menu, users can specify the ``plot
+type``: distribution, dotmap, or heatmap. They can select the
+reference dataset and the method for the cell type prediction in the
+``reference`` and ``method`` settings, respectively. Currently, we
+have implemented a total of 7 methods (EPIC, DeconRNAseq, DCQ, I-NNLS,
+NNLM, correlation-based and a meta-method) and 9 reference datasets to
+predict immune cell types (4 datasets: LM22, ImmProt, DICE and
+ImmunoStates), tissue types (2 datasets: HPA and GTEx), cell lines (2
+datasets: HPA and CCLE) and cancer types (1 dataset: CCLE). Not all
+methods or databases may be available for a dataset, the availability
+depends on the pre-processing done.
+
 
 .. figure:: figures/psc10.1.0.png
     :align: center
@@ -92,7 +99,7 @@ The resulting top marker genes are displayed below.
 
 CNV
 --------------------------------------------------------------------------------
-The **CNV*8 panel performs the copy number variation (CNV) analysis. 
+The **CNV** panel performs the copy number variation (CNV) analysis. 
 The copy number is estimated from gene expression data by computing a moving
 average of the relative expression along the chromosomes. CNV generates a 
 heatmap of samples versus chromosomes, where samples can be annotated 

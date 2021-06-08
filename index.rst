@@ -1,6 +1,6 @@
 .. Omics Playground documentation master file
 
-.. include:: README.rst
+.. include:: general.rst
 
 .. toctree::
     :maxdepth: 2
@@ -18,7 +18,7 @@
     
 .. toctree::
     :maxdepth: 2
-    :caption: Functional Modules
+    :caption: Analysis Modules
 
     modules/outline
     modules/mod0_home
@@ -41,6 +41,18 @@
     #examples/RNAseq_data
     #examples/singlecell_data
     #examples/proteomic_data
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Methods
+
+    methods
+
+.. toctree::
+    :maxdepth: 2
+    :caption: FAQ
+
+    faq
 
 .. toctree::
     :maxdepth: 1
