@@ -9,10 +9,6 @@ importing it into the platform. The data cleaning and precomputation is
 performed offline to support real-time interaction by minimizing user interface
 latency.
 
-Data import Test
---------------------------------------------------------------------------------
-Test test
-    
 Data import
 --------------------------------------------------------------------------------
 Users can import their transcriptomics or proteomics data to the platform by 
