@@ -9,6 +9,10 @@ preprocessing is performed offline using scripts in order to support real-time
 interaction and minimize user interface latency.
 
     
+Test My Input
+--------------------------------------------------------------------------------
+This serves for testing purposes!!!!
+
 Input data
 --------------------------------------------------------------------------------
 The platform requires the transcriptomics and proteomics data to be in a 
