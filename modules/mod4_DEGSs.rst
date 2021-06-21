@@ -8,7 +8,7 @@ This panel is subdivided into four subpanels: **Geneset enrichment**,
 
 
 Geneset enrichment
-================================================================================
+--------------------------------------------------------------------------------
 Similar to the differential gene expression analysis, users can perform differential
 expression analysis on a geneset level in this page, which is also referred as 
 gene set enrichment (GSE) analysis. The platform has more than 50.000 genesets 
@@ -37,7 +37,7 @@ The **FDR table** panel reports the number of significant gene sets at different
 
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can find a tutorial about the module under ``Tutorial`` in the input panel.
 The enrichment analysis can be started by selecting a contrats of interest in 
 the ``Contrast`` and specifying a relevent gene set family in the ``Gene set collection``.
@@ -61,7 +61,7 @@ To ensure the statistical reliability, the platform performs enrichment analyses
 
 
 Table
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Table ``I`` shows the enrichment analysis results from the selected statistical methods.
 WIth default settings, this table reports the meta (combined) results of 
 `camera <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3458527/>`__,
@@ -94,7 +94,7 @@ in the ``Enrichment vs. expression`` correlation scatter plot.
 
 
 Top enriched
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Top enriched** panel shows two plots:
 
 :**a**: The enrichment plots of the top differentially 
@@ -121,7 +121,7 @@ top gene sets to be included and deselect weighting by fold change (FC) and gene
 
 
 Plots
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Plots** panel provide plots associated with the gene set 
 (selected in Table ``I``) and gene (selected in Table ``II``) under ``Table``.
 
@@ -139,7 +139,7 @@ The **Plots** panel provide plots associated with the gene set
 
 
 Compare
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Compare** panel, users can fin enrichment plots for the selected gene
 set (in Table ``I``) across multiple contrasts. The figure allows to quickly 
 compare the enrichment of a certain gene set across all other comparisons.
@@ -150,7 +150,7 @@ compare the enrichment of a certain gene set across all other comparisons.
 
 
 Volcano (all)
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Volcano (all)** panel simultaneously displays volcano plots of gene sets 
 enrichment across all contrasts, showing the enrichment score versus significance 
 on the x and y axes, respectively. This provides users an overview of the 
@@ -165,7 +165,7 @@ plots with 'higher' wings.
 
 
 Volcano (methods)
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Volcano (methods)** panel, users can see the simultaneous 
 visualisation of volcano plots of gene sets for different enrichment methods.
 This provides users an quick overview of the sensitivity of the statistical 
@@ -178,7 +178,7 @@ volcano plots with 'higher' wings.
 
 
 GeneMap
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **GeneMap** panel, users can view a co-activation heatmap of the top N = {25} 
 enriched gene sets and their common genes.
 
@@ -188,7 +188,7 @@ enriched gene sets and their common genes.
 
 
 Foldchange (all)
--------------------------------------------------------------------------------- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 The **Foldchange (all)** provides the enrichment analysis of gene sets 
 across all contrasts. The column ``fc.var`` corresponds to the variance of 
 the fold-change across all contrasts.
@@ -199,7 +199,7 @@ the fold-change across all contrasts.
 
 
 FDR table
--------------------------------------------------------------------------------- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 The **FDR table** panel reports the number of significant gene sets at different 
 FDR thresholds for all contrasts and methods. Using the table the user can
 determine which statistical methods perform better for a particular contrast.
@@ -213,7 +213,7 @@ correspond to the number of significant overexpressed gene sets.
 
 
 Pathway analysis
-================================================================================
+--------------------------------------------------------------------------------
 This module performs specialized pathway and enrichment analysis
 providing higher level functional and visual analysis
 
@@ -225,7 +225,7 @@ analysis is done using the Gene Ontology (`GO
 
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A tutorial about the module can be found under ``Youtube`` in the input panel.
 Users can specify the contrast of their interest
 in the ``Contrast`` settings. Under the main *Options*, users can
@@ -237,7 +237,7 @@ select ``filter significant (tables)``  to keep only significant entries in the 
 
 
 KEGG pathways
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ is a collection
 of manually curated pathways representing the current knowledge of molecular 
 interactions, reactions and relation networks as pathway maps. In the 
@@ -271,7 +271,7 @@ is provided below.
 
 
 GO graph
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In the **GO** panel, users can perform `GO <http://geneontology.org/>`__ analysis.
 GO defines functional concepts/classes and their relationships as a hierarchical
 graph. 
@@ -316,7 +316,7 @@ Each output chart/table of the panel is describer below in detail.
 
 
 Word Cloud
-================================================================================
+--------------------------------------------------------------------------------
 The **WordCloud** panel performs "keyword enrichment analysis". It
 computes enrichment of a selected keyword across all contrasts. Select
 a keyword by clicking a word in the 'Enrichment table'. Keyword
@@ -326,7 +326,7 @@ genesets that contain the keyword in the title/description.
 
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A tutorial about the module can be found under ``Youtube`` in the input panel.
 Users can specify the contrast of their interest
 in the ``Contrast`` settings. Under the main *Options*, users can
@@ -338,7 +338,7 @@ select ``normalize activation matrix``  to normalize the activation matrix.
               
 
 Main panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The main panel consists of six different outputs:
         
 :**a**: The **Enrichment plots** visualize the enrichment of the
@@ -403,7 +403,7 @@ The main panel consists of six different outputs:
 
 
 Drug connectivity
-================================================================================
+--------------------------------------------------------------------------------
 In the **Drug Connectivity Map** panel, users can correlate their signature with
 more than 5000 known drug profiles from the 
 `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, as well as with drug 
@@ -417,7 +417,7 @@ This facilitates to quickly see and detect the similarities between contrasts
 for certain drugs.
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 A tutorial about the module can be found under ``Youtube`` in the input panel.
 Users can specify the contrast of their interest
 in the ``Contrast`` settings. Under ``Analysis type`` users can select from four 
@@ -429,7 +429,7 @@ databases.
 
 
 Main panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The main panel consists of four outputs:    
 
 :**a**: The Drug Connectivity Map correlates your signature with profiles from the L1000 

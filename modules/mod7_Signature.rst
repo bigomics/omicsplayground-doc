@@ -14,7 +14,7 @@ users can select biomarkers that can be used for classification or prediction pu
 
 
 Compare Signature
-================================================================================
+--------------------------------------------------------------------------------
 
 The main goal of this panel is to identify contrasts showing similar profiles and 
 find genes that are commonly up/down regulated between two contrasts. The panel is 
@@ -22,7 +22,7 @@ divided into two subpanels: **Pairs** and **Contrast heatmap**.
     
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can select contrasts to compare from the ``Contrast`` settings
 in the input panel on the left. Under *Options*, users can set the ``Filter`` for
 filtering the features (i.e. genes or gene sets). The ``Level`` setting allows users 
@@ -34,7 +34,7 @@ to toggle between gene or gene set level analysis.
 
 
 Pairs
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Pairs** panel shows three outputs:
 
 :**a**: The Pairs plot provides interactive pairwise scatterplots for the differential expression 
@@ -74,7 +74,7 @@ A typical output can be seen below.
         
 
 Contrast heatmap
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Two plots are showed in this panel:
 
 :**a**: The Contrast heatmap shows the similarity of the contrasts visualized as 
@@ -108,7 +108,7 @@ A typical output can be seen below.
 
 
 Test Signature
-================================================================================
+--------------------------------------------------------------------------------
 
 With this panel, users can test their gene signature by calculating an enrichment 
 score. The panel consists of four separate tabs: **Enrichment**, **Volcano plots**, 
@@ -116,7 +116,7 @@ score. The panel consists of four separate tabs: **Enrichment**, **Volcano plots
 
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For a custom signature, users can upload their own
 gene list or use one of the example gene lists provided. 
@@ -133,7 +133,7 @@ of predefined gene sets to choose from.
 
 
 Enrichment
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After uploading a gene list, the **Enrichment** panel performs the
 enrichment analysis of the gene list against all contrasts by
 computing a correlation based enrichment or running the `GSEA
@@ -157,7 +157,7 @@ Furthermore, the enrichment statistics can be found in the tables on the right:
 
 
 Volcano Plots
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Volcano Plots** panel produces a visualization of the query signature 
 on the volcano plots of all constrasts. For positive enrichment, genes of the 
 query signature would fall on the upper right of the volcano plot, 
@@ -169,7 +169,7 @@ for negative enrichment, on the upper left.
 
 
 Overlap/similarity
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Overlap/similarity** panel, users can compare their gene
 list with all the gene sets and pathways in the platform through
 overlap analysis, or also known as over-representation analysis. 
@@ -198,7 +198,7 @@ list and the gene set (:option:`k`), the overlapping ratio of
 	   
 
 Markers
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Markers** panel produces a t-SNE plot of samples for each gene
 in the signature, where the samples are colored with respect to the
 upregulation (in red) or downregulation (in blue) of the gene. For
@@ -212,7 +212,7 @@ reduce the number of genes in your list.
 
 
 Find Biomarkers
-================================================================================
+--------------------------------------------------------------------------------
 
 The **Find Biomarkers** panel selects biomarkers that can be
 used for classification or prediction purposes. Biomarker analysis
@@ -239,7 +239,7 @@ tree.
 
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Users can select the target variable for biomarker selection in the
 ``Predicted target`` settings from the input panel. Under ``Feature filter``  
@@ -254,7 +254,7 @@ button will start the biomarker computation.
 
 
 Importance
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         
 This panel provides the output of the biomarker analysis in multiple
 figures. Below we provide an short explanation for each figure:

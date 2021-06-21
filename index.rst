@@ -24,8 +24,6 @@
     modules/mod0_home
     modules/mod1_dataview
     modules/mod2_clustering
-    #modules/mod31_DE
-    #modules/mod32_CA
     modules/mod3_DEGs
     modules/mod4_DEGSs
     modules/mod7_Signature
