@@ -14,10 +14,10 @@ coregulated modules.
 
 
 Differential expression
-================================================================================
+--------------------------------------------------------------------------------
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The input panel on the left contains a link to a tutorial for relevant, as well as some settings 
 for the analysis. Users can start the differntial expression (DE) analysis by selecting a contrast 
 of their interest in the ``Contrast`` setting and specifying a relevent gene family in the 
