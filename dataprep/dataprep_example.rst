@@ -24,7 +24,6 @@ while uploading.
 
 :**counts.csv**: 	  Count/expression file with gene on rows, samples as columns.
 :**samples.csv**: 	Samples file with samples on rows, phenotypes as columns.
-:**genes.csv**: 	  Gene information file with genes on rows, gene info as columns.
 :**contrasts.csv**: Contrast file with samples on rows, conditions as columns.
 
 .. figure:: ../modules/figures/psc1.3.png

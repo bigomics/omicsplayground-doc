@@ -6,20 +6,7 @@ Outline
 User interface
 --------------------------------------------------------------------------------
 
-We subdivided the platform interface into Basic and Expert modes. 
-Basic mode includes fundamental analysis modules such as :ref:`Home`, 
-:ref:`DataView`, :ref:`Clustering`, :ref:`DEGs`, :ref:`DESGs`,
-:ref:`Intersection` and :ref:`Functional`,  while Expert
-mode includes additional modules such as 
-:ref:`Signature`, :ref:`Biomarker` and :ref:`scProfiling`. 
-Users can choose the interface mode according to their level of expertise. 
-The main purpose of having two different modes is to provide a customisable 
-experience suited to each user’s background.
-
-.. figure:: figures/modes.png
-    :align: center
-    :width: 100%
-
+The platform contains up to eight diffenet analysis modules. By default, seven modules will always be present, namely  :ref:`Home`, :ref:`Help`, :ref:`DataView`, :ref:`Clustering`, :ref:`Expression`, :ref:`Enrichment` and :ref:`Signature`, while :ref:`CellProfiling` is an optional choice.
 
 Figure & table tags
 --------------------------------------------------------------------------------
@@ -28,10 +15,11 @@ Each figure or table on the platform is assigned the following interactive butto
 
 * Info: provides detailed information about the figure or table.
 * Settings: users can specify additional settings if applicable.
-* Download: downloads the figure as PDF or the table in CSV format.
+* Download: downloads a figure as a PNG or PDF file or a table in CSV format.
+* Maximize: shows a larger version of a figure in a separate window.
 
 
-.. figure:: figures/isd.png
+.. figure:: figures/isd2.png
     :align: center
     :width: 60%
 

@@ -10,11 +10,11 @@ more detailed information for each panel.
 
 The **Plots** panel displays figures related to the expression level
 of the selected gene, correlation, and average expression ranking
-within the dataset.  In the **Counts** panel, the total number of
+within the dataset. In the **QC** panel, the total number of
 counts (abundance) per sample and their distribution among the samples
 are displayed. This is most useful to check the technical quality of
 the dataset, such as total read counts or abundance of ribosomal
-genes. In **Gene rable** panel, the exact expression values across the
+genes. In **Counts** panel, the exact expression values across the
 samples can be looked up, where genes are ordered by the correlation
 with respect to the first gene. Gene-wise average expression of a
 phenotype sample grouping is also presented in this table. In the
@@ -28,12 +28,11 @@ Input panel
 Users can find more information about the module by clicking the
 ``Info`` button on the left side . The panel contains the main
 settings for the analysis. The analysis can be started by selecting a
-gene of interest from the ``Search gene`` settings. Under the
-*Options*, users can filter and select samples in the ``Filter
-samples`` settings, or collapse the samples by predetermined groups in
-the ``Group by`` settings. It is also possible to visualize the
-information on a raw count level, count per million (CPM), or
-logarithmic expression level (logCPM).
+gene of interest from the ``Search gene`` settings. Users can filter and 
+select samples in the ``Filter samples`` settings, or collapse the samples 
+by predetermined groups in the ``Group by`` settings. 
+Under *Options*, it is possible to visualize the information on a raw count level 
+or logarithmic expression level (logCPM).
 
 .. figure:: figures/psc2.0.png
     :align: center
@@ -59,35 +58,28 @@ for a selected gene using the genotype-tissue expression `GTEx
 chart of the panel, a detailed explanation is provided below.
 
 
-:**a**: T-SNE clustering of samples (or cells) colored by an expression of the 
-        gene selected in the ``Search gene`` dropdown menu. The red color 
-        represents an over-expression of the selected gene across samples (or cells). 
-
-:**b**: Expression barplot of grouped samples (or cells) for the selected gene. 
-        Samples (or cells) in the barplot can 
-        be ungrouped by setting the ``Group by`` under the main *Options*.
-
-:**c**: Barplot of the top positively and negatively correlated genes 
-        with the selected gene. Absolute expression levels 
-        of genes are colored in the barplot, where the low and high expressions 
-        range between the light grey and dark black colors, respectively.
-
-:**d**: Ranking of the average expression of the selected gene.
-
-:**e**: To find out more information from the literature, hyperlinks are provide to 
+:**a**: To find out more information from the literature, hyperlinks are provide to 
         connect the selected gene to public databases, 
         including `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
         `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
         and `GO <http://geneontology.org/>`__.
 
-:**f**: Top cumulative positively and negatively correlated genes with the
-        selected gene, across samples (or cells), 
-        in the current dataset as well as in public datasets such as 
-        `ImmProt <https://www.ncbi.nlm.nih.gov/pubmed/28263321>`__ 
-        and `HPA <https://www.nature.com/articles/nbt1210-1248>`__. 
-        The bars are colored by dataset. 
+:**b**: Expression barplot of grouped samples (or cells) for the selected gene. 
+        Samples (or cells) in the barplot can 
+        be ungrouped by setting the ``Group by`` under the main *Options*.
+
+:**c**: Ranking of the average expression of the selected gene.
+
+:**d**: T-SNE clustering of samples (or cells) colored by an expression of the 
+        gene selected in the ``Search gene`` dropdown menu. The red color 
+        represents an over-expression of the selected gene across samples (or cells). 
+
+:**e**: Barplot of the top positively and negatively correlated genes 
+        with the selected gene. Absolute expression levels 
+        of genes are colored in the barplot, where the low and high expressions 
+        range between the light blue and dark blue colors, respectively.
         
-:**g**: Tissue expression for the selected gene in the tissue expression 
+:**f**: Tissue expression for the selected gene in the tissue expression 
         `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
         Colors corresponds to "tissue clusters" as computed by unsupervised clustering.
 
@@ -97,10 +89,10 @@ chart of the panel, a detailed explanation is provided below.
 
 
 
-Counts
+QC
 --------------------------------------------------------------------------------
 
-In the **Counts** panel, the total number of counts (abundance) per
+In the **QC** panel, the total number of counts (abundance) per
 sample and their distribution among the samples are displayed. For
 each sample, users can also see the percentage of counts in terms of
 major gene types such as ribosomal genes, heatshock proteins, or
@@ -128,9 +120,9 @@ the panel.
     :width: 100%
 
 
-Gene table
+Counts
 --------------------------------------------------------------------------------
-Under the **Gene table** panel, the exact expression values across the
+Under the **Counts** panel, the exact expression values across the
 samples can be read, where genes are ordered by the correlation with
 respect to the first gene.  Gene-wise average expression of a
 phenotype sample grouping is also presented in this table.
@@ -151,7 +143,14 @@ Samples
 --------------------------------------------------------------------------------
 
 In the **Samples** panel, users can check information about samples
-and their phenotype grouping.
+and their phenotype grouping through three outputs:
+
+:**a**: A plot showing phenotype clustering. 
+        Phenotypes can be unclustered via the *Settings* icon
+
+:**b**: A phenotype association matrix showing correlation between phenotypes.
+
+:**c**: A table with sample information.
 
 .. figure:: figures/psc2.4.png
     :align: center

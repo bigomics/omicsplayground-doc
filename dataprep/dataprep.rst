@@ -14,14 +14,11 @@ Data import
 Users can import their transcriptomics or proteomics data to the platform by 
 either uploading the data through
 the interface or preparing an input object using scripts.
-For uploading, the platform requires the counts, samples information, genes 
-information and contrasts tables in CSV format. 
+For uploading, the platform requires the counts, samples information and optionally contrasts tables in CSV format. 
 On the other hand, an input object can be prepared using scripts from different 
 types and formats of data, including counts and FASTQ.
 With scripts it is also possible to do more detailed data 
 cleaning, filtering, normalisation and preprocessing. 
-The platform contains the required example cases for the preparation of input 
-objects under the ``scripts/`` folder.
 
 
 .. seealso::
@@ -32,7 +29,7 @@ objects under the ``scripts/`` folder.
     an input from different sources of experiments.
     
 
-Filtering
+Filtering (IVO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The data preprocessing includes some filtering criteria, such as filtering of 
 genes based on variance, the expression across the samples, and the number of 
@@ -40,7 +37,7 @@ missing values. Similarly, samples can also be filtered based on the read qualit
 total abundance, unrelated phenotype, or an outlier criterion.
 
 
-Normalisation
+Normalisation (IVO)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The raw counts are converted into counts per million (CPM) and log2. Depending on 
 the data set, a quantile normalization can be applied. Known batches in the data 

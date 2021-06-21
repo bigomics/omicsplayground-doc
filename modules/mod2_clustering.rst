@@ -1,32 +1,33 @@
 .. _Clustering:
 
-Clustering Analysis
+Clustering
 ================================================================================
 
-The **Cluster Analysis** module performs unsupervised clustering analysis of the data. 
+The **Clustering** module performs unsupervised clustering analysis of the data. 
 After having done the QC, it is probably the first way to explore your data. 
 The main purpose is to discover patterns and subgroups in the data, show correlation
 with known phenotypes, detect outliers, or investigate batch effects.
 
 In the **Heatmap** panel hierarchical clustering can be performed on gene level 
-or gene set level. During the heatmap generation, the platform provides a functional
-annotation for each feature cluster in **Annotate cluster** panel, where users can
-select from a variety of annotation databases from the literature. 
-The **PCA/tSNE** panel shows unsupervised clustering of the samples in 2D/3D as
-obtained by PCA or tSNE algorithms. 
-The **Phenotypes** panel on the right, shows the phenotype distribution as colors
-on the t-SNE plot.
+or gene set level. The **PCA/tSNE** panel shows unsupervised clustering of the samples 
+in 2D/3D as obtained by PCA or tSNE algorithms. The **Parallel** panel displays the 
+expression levels of selected genes across all conditions.
+On the right, the **Annotate cluster** panel provides a functional annotation for each 
+feature cluster in the heatmap. Users can select from a variety of annotation databases 
+from the literature. The **Phenotypes** panel shows the phenotype distribution as colors
+on the t-SNE plot. Finally, the **Feature ranking** panel  shows a plot that ranks 
+the discriminative power of feature sets (or gene sets) as the cumulative discriminant 
+score for all phenotype variables.
 
 
 Input panel
 --------------------------------------------------------------------------------
 Users can find more information by clicking ``Info`` in the input
-panel. It also contains main settings for the analysis, where users
-can specify the feature level (gene or geneset) for the analysis in
-the ``Level`` and select a family of features in the
-``Features``. Furthermore, under the *Options*, it is possible to
-filter and select the samples in the ``Filter samples``, or group the
-samples by its predefined phenotype in the ``grouped``.
+panel. It also contains main settings for the analysis, where users can select
+ a family of features in the ``Features`` scroll-down menu, group samples by phenotype
+ using ``Group by`` and filter and select samples with ``Filter samples``. 
+ Furthermore, under *Options*, users can choose the level of analysis (gene or geneset) 
+ and exclude genes in the X and Y chromosomes
 
 .. figure:: figures/psc3.0.png
     :align: center
@@ -43,20 +44,19 @@ the gene expression data using summary methods such as `GSVA
 and `ssGSEA
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__.
 
-Under the plot configuration settings, users can split the samples by a phenotype
-class (e.g., tissue, cell type, or gender) using the ``split`` by setting. 
-In addition, users can specify the top N = (50, 500) features to be used in the heatmap. 
-The ordering of top features is selected under ``top mode``. 
-The criteria to select the top features are:
+Under the plot configuration settings, usesrs can select to display a static or interactive hetmap.
+Users can also split the samples by a phenotype class (e.g., tissue, cell type, or gender) using the
+ ``split`` by setting. In addition, users can specify the top N = (50, 150, 500) features to be used 
+ in the heatmap.
+ The ordering of top features is selected under ``top mode``. The criteria to select the top features are:
 
 * SD - features with the highest standard deviation across all the samples,
 * specific - features that are overexpressed in each phenotype class compared to the rest, or by
 * PCA - by principal components.
 
+The number of gene clusters to be displayed can be selected under ``K``.
 Users can also choose between 'relative' or 'absolute' expression
-scale.  Labels for row and columsn can be shown or hidden by selecting
-``Show row labels`` and ``Show column labels``. Under the ``CexCol``
-and ``CexRow`` settings, it is also possible to adjust the font sizes
+scale. Under the ``CexCol`` and ``CexRow`` settings, it is also possible to adjust the font sizes
 for the column and row labels.
 
 .. figure:: figures/psc3.1.0.png
@@ -94,7 +94,8 @@ limited to well-known databases such as `MSigDB
 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, and `GO
 <http://geneontology.org/>`__.  In the plot settings, users can
 specify the level and reference set to be used under the ``Reference
-level`` and ``Reference set`` settings, respectively.
+level`` and ``Reference set`` settings, respectively. 
+Users can also select a Fisher test weighting for gene sets.
 
 .. figure:: figures/psc3.4.0.png
     :align: center
@@ -123,9 +124,10 @@ analytics, where similarity is visualized as proximity of the points.
 Samples that are 'similar' will be placed close to each other.
 
 Users can customise the PCA/tSNE plot in the plot settings, including
-the ``color`` and ``shape`` of points using a phenotype class, choose
-t-SNE or PCA ``layout``, label the points, or display 2D and 3D
-visualisation of the PCA/tSNE plot.
+the ``color`` and ``shape`` of points using a phenotype class, label the points, 
+display 2D and 3D visualisation of the PCA/tSNE plot, normalize the matrix and choose
+between a t-SNE, PCA or UMAP ``layout``. The number of genes to be considered for 
+dimensionality reduction can also be altered via ``Ntop``.
 
 .. figure:: figures/psc3.3.0.png
     :align: center
@@ -135,6 +137,20 @@ Based on their configuration settings, users will obtain a similar
 PCA/tSNE plot as below.
 
 .. figure:: figures/psc3.3.png
+    :align: center
+    :width: 100%
+
+
+Parallel
+--------------------------------------------------------------------------------
+The **Parallel** panel visualizes the expression levels of selected genes across all conditions.
+The expression values are scaled but scaling can be removed via the plot settings.
+This interactive plot is particularly useful to users working with time series experiments, 
+as samples can be grouped by condition (i.e. time) and ordered manually, as shown below.
+A table containing average expression levels of selected genes across conditions is also generated.
+
+
+.. figure:: figures/psc3.3B.png
     :align: center
     :width: 100%
     
@@ -161,14 +177,7 @@ The output figure of the panel (phenotype distribution) is shown below.
 
 Feature ranking
 --------------------------------------------------------------------------------
-
-.. note::
-
-    EXPERT MODE ONLY: The **Feature ranking** panel computes a discriminant 
-    score for gene (or geneset) families. This allows to investigate what 
-    family of genes (or gene sets) can best discriminate the groups.
-
-The **Feature ranking** provides the ranked discriminant score for top feature sets.
+The **Feature ranking** panel provides the ranked discriminant score for top feature sets.
 It ranks the discriminitive power of the feature set (genes or gene sets) as a 
 cumulative discriminant score for all phenotype variables. 
 In this way, we can find which feature set (gene or gene family/set) can explain 

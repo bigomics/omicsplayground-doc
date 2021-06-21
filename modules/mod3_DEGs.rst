@@ -1,66 +1,47 @@
-.. _DEGs:
+.. _Expression:
 
-Differential Expression Analysis
+Expression
 ================================================================================
-The **Differential Expression Analysis** module compares expression between two 
-conditions (i.e. tumor versus control), which is one of the fundamental analysis 
-in the transcriptomics data analytics workflow. For each comparison of two 
-conditions (also called 'contrast'), the analysis identifies which genes are 
-significantly downregulated or overexpressed in one of the groups.
 
-The **Plots** panel shows volcano and MA plots for the chosen contrast. 
-It also shows the so-called 'signature', i.e. the top downregulated and overexpressed
-genes, for that contrast. The **Top genes** panel shows the average expression plots 
-across the samples for top differentially expressed genes within the selected 
-comparison. A very useful feature of the platform is that it can display volcano 
-plots for all comparisons simultaneously under the **Volcano (all)** panel. This provides
-users an overview of the statistics of all comparisons. The **Table** panel on the 
-bottom shows the results of the statistical tests. The **Foldchange (all)** panel
-reports the gene fold changes for all contrasts.
+The **Expression** module is divided into two main panels. The **Differential Expression** 
+panel compares expression between two conditions (i.e. tumor versus control), 
+which is one of the fundamental analysis in the transcriptomics data analytics workflow. 
+For each comparison of two conditions (also called a 'contrast'), the analysis identifies 
+which genes are significantly downregulated or overexpressed in one of the groups.
 
-.. note::
-
-    EXPERT MODE ONLY: To compare the different statistical methods, the **Volcano (methods)**
-    panel shows volcano plots of all methods. The **FDR table** panel reports
-    the number of significant genes at different FDR thresholds for all contrasts.
+The **Correlation Analysis** panel computes the correlation between genes and finds 
+coregulated modules.
 
 
-Input panle
+Differential expression
+================================================================================
+
+Input panel
 --------------------------------------------------------------------------------
-The input panel on the left contains the ``Info`` button for relevant information about
-the module as well as some settings for the analysis. 
-Users can start the differntial expression (DE) analysis by selecting a contrats of their 
-interest in the ``Contrast`` and specifying a relevent gene family in the ``Gene family``.
-It is possible to set the false discovery rate (FDR) and the logarithmic fold change 
-(logFC) thresholds under the ``FDR`` and ``logFC threshold`` settings, respectively.
+The input panel on the left contains a link to a tutorial for relevant, as well as some settings 
+for the analysis. Users can start the differntial expression (DE) analysis by selecting a contrast 
+of their interest in the ``Contrast`` setting and specifying a relevent gene family in the 
+``Gene family`` setting. It is possible to set the false discovery rate (FDR) and the 
+logarithmic fold change (logFC) thresholds under the ``FDR`` and ``logFC threshold`` settings, respectively. 
+Under "Options", users can select to display all genes in the table (not only significant genes) 
+and also select different combinations of statistical methods for the analysis.
 
 .. figure:: figures/psc4.0.png
     :align: center
     :width: 30%
 
-.. note::
-
-    EXPERT MODE ONLY: We allow expert users to select a method for the DE statistical test
-    under the main *Options*. 
-    To increase the statistical reliability of the Omics Playground, we perform the DE 
-    analysis using commonly accepted methods in the literature, including t-test 
-    `t-test <https://en.wikipedia.org/wiki/Student%27s_t-test>`__ (standard, Welch), 
-    `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (no trend, trend, voom), 
-    `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF, LRT), and 
-    `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald, LRT),
-    and merge the results.
-
 
 Table
 --------------------------------------------------------------------------------
 Table ``I`` shows the results of the statistical tests slected in the 
-``Statistical methods``. In the Basic mode, this table reports 
+``Statistical methods``. By default, this table reports 
 the meta (combined) results of 
 `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald),
 `edgeR <https://www.ncbi.nlm.nih.gov/pubmed/19910308>`__ (QLF), and 
 `limma <https://www.ncbi.nlm.nih.gov/pubmed/25605792>`__ (trend) only.
 Users can filter top N = {10} differently expressed genes in the table by 
-clicking the ``top 10 genes`` from the table *Settings*.
+clicking the ``top 10 genes``  and also show the q-values from individual statistical methods 
+by ticking ``show individual q-values`` from the table *Settings*.
 
 .. figure:: figures/psc4.1.0.png
     :align: center
@@ -77,104 +58,170 @@ The table is interactive (scrollable, clickable); users can sort genes by ``logF
     :align: center
     :width: 100%
 
-By clicking on a gene in the Table ``I``, it is possible to see the correlation
-and enrichment value of gene sets that contain the gene in Table ``II``.
-Additionally, it is possible to check the differential expression status
-in other comparisons from the ``Gene in contrasts`` plot under the **Plots** panel.
+By clicking on a gene in the Table ``I`` (highlighted in purple in the figure), 
+it is possible to see the correlation and enrichment value of gene sets that 
+contain the gene in Table ``II``.
 
 
-Plots
+Foldchange (all)
 --------------------------------------------------------------------------------
-The **Plots** panel provides figures such as Volcano plot, MA plot and sorted 
-barplots associated with expression levels in the selected contrast.
+The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
+The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
 
-:**a**: Volcano-plot showing the significance versus fold-change on the y and x axes, 
-        respectively, for the selected comparison under the ``Contrast`` settings.  
 
-:**b**: Application of a Bland-Altman (MA) plot showing the
-        fold-change versus signal intensity on the y and x axes, respectively,
-        for the selected comparison.  
+.. figure:: figures/psc4.1.1.png
+    :align: center
+    :width: 100%
 
-:**c**: Sorted barplot of the top N = {12} differentially (both positively and negatively)
-        expressed genes with largest (absolute) fold-change for the selected contrast.
 
-:**d**: Sorted barplot of the differential expression of the selected gene under 
-        the **Table** panel across all contrasts.
+FDR table
+--------------------------------------------------------------------------------
+The **FDR table** tab reports the number of significant genes at different FDR thresholds for 
+all contrasts and methods within the dataset. This enables to quickly see which 
+methods are more sensitive. The left part of the table (in blue) correspond 
+to the number of significant down-regulated genes, the right part (in red) 
+correspond to the number of significant overexpressed genes.
 
-.. figure:: figures/psc4.2.png
+
+.. figure:: figures/psc4.1.2.png
+    :align: center
+    :width: 100%
+
+
+Plot
+--------------------------------------------------------------------------------
+The **Plot** panel shows the following plots:
+
+:**a**: An interactive volcano plot for the chosen contrast. Unless a specific gene is selected 
+        from the differential expression analysis table, all significant genes are highlighted in blue.
+
+:**b**: An interactive MA plot for the chosen contrast. Unless a specific gene is selected 
+        from the differential expression analysis table, all significant genes are highlighted in blue.
+
+:**c**: Differential expression boxplot for a gene that is selected from the 
+        differential expression analysis table. Users can customise the plot via the settings icon on top 
+        to ungroup samples and change the scale to counts per million (CPM).
+
+:**d**: Fold change summary barplot across all contrasts for a gene that is selected 
+        from the differential expression analysis table.
+
+.. figure:: figures/psc4.1.png
     :align: center
     :width: 100%
 
 
 Top genes
 --------------------------------------------------------------------------------
-The **Top genes** panel shows the average expression plots across the samples 
-for the top differentially (both positively and negatively) expressed genes
-for the selected comparison from the ``Contrast`` settings. Under the plot *Settings*,
-users can scale the abundance levels (counts) or ungroup the samples in the 
-plot from the ``log scale`` and ``ungroup samples`` settings, respectively.
+The **Top genes** section shows the average expression plots across the samples for the top differentially 
+(both positively and negatively) expressed genes for the selected comparison from the ``Contrast`` setting.
 
-.. figure:: figures/psc4.3.0.png
+
+.. figure:: figures/psc4.2.png
+    :align: center
+    :width: 100%
+
+The plot can be customised via the settings to remove the log scale, ungroup samples and show only samples 
+included in the selected contrast.
+
+
+.. figure:: figures/psc4.2.0.png
     :align: center
     :width: 30%
 
-Average expression barplots for the top genes are displayed below. 
+
+Volcano (all)
+--------------------------------------------------------------------------------
+Under the **Volcano (all)** tab, the platform simultaneously displays multiple volcano plots 
+for genes across all contrasts. By comparing multiple volcano plots, 
+the user can immediately see which comparison is statistically weak or strong.
+Experimental contrasts with better statistical significance will show 
+volcano plots with 'higher' wings.
+
 
 .. figure:: figures/psc4.3.png
     :align: center
     :width: 100%
 
-
-Volcano (all)
+Volcano (methods)
 --------------------------------------------------------------------------------
+Under the **Volcano (methods)** tab, the platform displays the volcano plots provided by 
+multiple differential expression calculation methods for the selected contrast. 
+Methods showing better statistical significance will show volcano 
+plots with 'higher' wings.
 
-Under the **Volcano (all)** panel, the platform simultaneously displays multiple 
-volcano plots for genes across all contrasts. This provides users an overview 
-of the statistics for all comparisons. By comparing multiple volcano plots, 
-the user can immediately see which comparison is statistically weak or strong.
-Experimental contrasts with better statistical significance will show 
-volcano plots with 'higher' wings.
 
 .. figure:: figures/psc4.4.png
     :align: center
     :width: 100%
 
-    
-Volcano (methods)
---------------------------------------------------------------------------------    
-The **Volcano (methods)** panel displays the volcano plots provided 
-by multiple differential expression calculation methods for the selected contrast. 
-This provides users an overview of the statistics of all methods at the same time.
-Methods showing better statistical significance will show volcano 
-plots with 'higher' wings.
+
+Correlation analysis
+================================================================================
+
+Input panel
+--------------------------------------------------------------------------------
+Users can find more information by clicking ``Info``. The panel contains the main settings for the analysis. 
+The analysis can be started by selecting a gene of interest from the ``Gene`` settings. 
+Under *Options*, users can filter for a specific gene family by using the ``Gene family`` setting.
+By using the ``Filter samples`` setting they con focus only on specific sample groups.
+
+
+.. figure:: figures/psc4.5.0.png
+    :align: center
+    :width: 30%
+
+
+Correllation
+--------------------------------------------------------------------------------
+Under the **Correlation** tab, the platform displays three different outputs:
+
+:**a**: A plot displaying the highest correlated genes in respect to the selected gene. 
+        The plot can be customised via the settings icon on top to include no partial correlection, 
+        a fast partial correlation calculation or a calculation with all methods. 
+
+
+.. figure:: figures/psc4.5.1.png
+    :align: center
+    :width: 30%
+
+
+:**b**: A correlation graph centered on selected gene with top most correlated features.
+        The plot can be customised via the settings icon on top. From it users can adjust the rho value 
+        via a sliding bar and change the graph layout via ``Layout``.
+
+
+.. figure:: figures/psc4.5.2.png
+    :align: center
+    :width: 30%
+
+
+:**c**: Pairwise scatter plots for the expression values of the gene pairs across the samples.
+
 
 .. figure:: figures/psc4.5.png
     :align: center
     :width: 100%
-    
 
-Foldchange (all)
--------------------------------------------------------------------------------- 
-The **Foldchange (all)** provides the differential expression (fold-change) of genes 
-across all contrasts. The column ``fc.var`` corresponds to the variance of 
-the fold-change across all contrasts.
+
+Functional
+--------------------------------------------------------------------------------
+Four outputs are generated under the **Functional** tab:
+
+:**a**: A series of gene set enrichment analysis (GSEA) plots using the correlation as rank metric.
+        The black bars denote the genes in the gene set and their position in the sorted rank metric.
+
+:**b**: A table containing the statistical results from the GSEA. The table displays 
+        normalised enrichment scores (NES), adjusted and non-adjusted p-values,size of the gene set 
+        and a link to gene set information.
+
+:**c**: A plot of the frequency of leading edge genes in top correlated genesets.
+
+:**d**: A table of the leading edge genes and rank statistics (rho) of the selected geneset.
+
 
 .. figure:: figures/psc4.6.png
     :align: center
     :width: 100%
 
-
-FDR table
--------------------------------------------------------------------------------- 
-The **FDR table** panel reports the number of significant genes at different 
-FDR thresholds for all contrasts and methods. This enables to quickly see which 
-methods are more sensitive. The left part of the table (in blue) correspond 
-to the number of significant down-regulated genes, the right part (in red) 
-correspond to the number of significant overexpressed genes.
-
-.. figure:: figures/psc4.7.png
-    :align: center
-    :width: 100%
-    
 
     

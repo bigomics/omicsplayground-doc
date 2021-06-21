@@ -24,12 +24,11 @@
     modules/mod0_home
     modules/mod1_dataview
     modules/mod2_clustering
+    #modules/mod31_DE
+    #modules/mod32_CA
     modules/mod3_DEGs
     modules/mod4_DEGSs
-    modules/mod5_Functional
-    modules/mod6_Intersection
     modules/mod7_Signature
-    modules/mod8_Biomarker
     modules/mod9_CellProfiling
     
 .. toctree::
