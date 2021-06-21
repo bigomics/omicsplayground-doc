@@ -30,9 +30,8 @@ and also select different combinations of statistical methods for the analysis.
     :align: center
     :width: 30%
 
-
 Table
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Table ``I`` shows the results of the statistical tests slected in the 
 ``Statistical methods``. By default, this table reports 
 the meta (combined) results of 
@@ -62,9 +61,8 @@ By clicking on a gene in the Table ``I`` (highlighted in purple in the figure),
 it is possible to see the correlation and enrichment value of gene sets that 
 contain the gene in Table ``II``.
 
-
 Foldchange (all)
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
 The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
 
@@ -73,9 +71,8 @@ The column ``fc.var`` corresponds to the variance of the fold-change across all 
     :align: center
     :width: 100%
 
-
 FDR table
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **FDR table** tab reports the number of significant genes at different FDR thresholds for 
 all contrasts and methods within the dataset. This enables to quickly see which 
 methods are more sensitive. The left part of the table (in blue) correspond 
@@ -87,9 +84,8 @@ correspond to the number of significant overexpressed genes.
     :align: center
     :width: 100%
 
-
 Plot
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Plot** panel shows the following plots:
 
 :**a**: An interactive volcano plot for the chosen contrast. Unless a specific gene is selected 
@@ -109,9 +105,8 @@ The **Plot** panel shows the following plots:
     :align: center
     :width: 100%
 
-
 Top genes
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Top genes** section shows the average expression plots across the samples for the top differentially 
 (both positively and negatively) expressed genes for the selected comparison from the ``Contrast`` setting.
 
@@ -128,9 +123,8 @@ included in the selected contrast.
     :align: center
     :width: 30%
 
-
 Volcano (all)
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Volcano (all)** tab, the platform simultaneously displays multiple volcano plots 
 for genes across all contrasts. By comparing multiple volcano plots, 
 the user can immediately see which comparison is statistically weak or strong.
@@ -143,7 +137,7 @@ volcano plots with 'higher' wings.
     :width: 100%
 
 Volcano (methods)
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Volcano (methods)** tab, the platform displays the volcano plots provided by 
 multiple differential expression calculation methods for the selected contrast. 
 Methods showing better statistical significance will show volcano 
@@ -159,7 +153,7 @@ Correlation analysis
 --------------------------------------------------------------------------------
 
 Input panel
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can find more information by clicking ``Info``. The panel contains the main settings for the analysis. 
 The analysis can be started by selecting a gene of interest from the ``Gene`` settings. 
 Under *Options*, users can filter for a specific gene family by using the ``Gene family`` setting.
@@ -170,9 +164,8 @@ By using the ``Filter samples`` setting they con focus only on specific sample g
     :align: center
     :width: 30%
 
-
 Correllation
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Correlation** tab, the platform displays three different outputs:
 
 :**a**: A plot displaying the highest correlated genes in respect to the selected gene. 
@@ -202,9 +195,8 @@ Under the **Correlation** tab, the platform displays three different outputs:
     :align: center
     :width: 100%
 
-
 Functional
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Four outputs are generated under the **Functional** tab:
 
 :**a**: A series of gene set enrichment analysis (GSEA) plots using the correlation as rank metric.
