@@ -17,7 +17,7 @@
     dataprep/dataprep_example
     
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Analysis Modules
 
     modules/outline
