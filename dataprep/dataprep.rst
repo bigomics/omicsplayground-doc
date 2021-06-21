@@ -29,7 +29,7 @@ cleaning, filtering, normalisation and preprocessing.
     an input from different sources of experiments.
     
 
-Filtering (IVO)
+Filtering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The data preprocessing includes some filtering criteria, such as filtering of 
 genes based on variance, the expression across the samples, and the number of 
@@ -37,7 +37,7 @@ missing values. Similarly, samples can also be filtered based on the read qualit
 total abundance, unrelated phenotype, or an outlier criterion.
 
 
-Normalisation (IVO)
+Normalisation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The raw counts are converted into counts per million (CPM) and log2. Depending on 
 the data set, a quantile normalization can be applied. Known batches in the data 
