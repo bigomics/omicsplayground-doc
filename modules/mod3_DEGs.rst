@@ -101,7 +101,7 @@ The **Plot** panel shows the following plots:
 :**d**: Fold change summary barplot across all contrasts for a gene that is selected 
         from the differential expression analysis table.
 
-.. figure:: figures/psc4.1.png
+.. figure:: figures/psc4.1.3.png
     :align: center
     :width: 100%
 

@@ -59,6 +59,12 @@ sort plots by either probability or name and change the layout.
     :align: center
     :width: 30%
 
+The cell type profiling plot is highlighted below.
+
+.. figure:: figures/psc10.1.png
+    :align: center
+    :width: 100%
+
 It also produces phenotypes plots showing the distribution of the 
 phenotypes superimposed on the t-SNE clustering. 
 Often, we can expect the t-SNE distribution to be driven by the particular 
@@ -67,8 +73,7 @@ batch effects. Users can select whether they want the group labels to be
 plotted inside the figures or in a seperate legend in the``Legend`` 
 under the *Settings*.
 
-
-.. figure:: figures/psc10.1.png
+.. figure:: figures/psc10.1.1.png
     :align: center
     :width: 100%
 
@@ -85,6 +90,12 @@ select the analysis ``method`` and use ``group by`` to group samples by phenotyp
     :align: center
     :width: 30%
 
+The cell type mapping plot is shown below.
+
+.. figure:: figures/psc10.2.png
+    :align: center
+    :width: 100% 
+
 To the left, a proportion plot visualizes the overlap between two categorical variables.
 This can be useful for bulk RNA datasets, as it provides useful information about 
 the proportion of different cell types in the samples. From the *Settings*, users 
@@ -97,9 +108,9 @@ By selecting a gene with ``gene`` they can also add an expression barplot for th
     :align: center
     :width: 30%
 
-The output including a gene barplot is shown below.
+The proportion plot (including a gene expression barplot) is shown below.
 
-.. figure:: figures/psc10.2.png
+.. figure:: figures/psc10.2.1.png
     :align: center
     :width: 100% 
 
@@ -121,7 +132,13 @@ and sort them by name or intensity.
     :align: center
     :width: 30%
 
-For each gene pairs combination, the panel also generates a cytometry-like plot 
+An example of the t-SNE plots are highlighted below.
+
+.. figure:: figures/psc10.3.png
+    :align: center
+    :width: 100%
+
+For each gene pairs combination, the panel also generates a cytometry-like plot (**Cyto plot**) 
 of samples. The aim of this feature is to observe the distribution of samples 
 in relation to the selected gene pairs. For instance, when applied to single-cell 
 sequencing data from immunological cells, it can mimic flow cytometry analysis and distinguish 
@@ -133,9 +150,9 @@ in the ``x-axis`` and ``y-axis``, respectively.
     :align: center
     :width: 30%
 
-An example output of the panel is shown below.
+The Cyto plot is highlighted below.
 
-.. figure:: figures/psc10.3.png
+.. figure:: figures/psc10.3.1.png
     :align: center
     :width: 100%
 

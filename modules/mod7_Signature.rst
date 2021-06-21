@@ -142,7 +142,15 @@ and plots enrichment outputs.
 The enrichment plots show the enrichment of the query 
 signature across all constrasts. Positive enrichment means that this particular
 contrast shows similar expression changes as the query signature.
-Furthermore, the enrichment statistics can be found in the tables on the right:
+
+.. figure:: figures/psc8.1.png
+    :align: center
+    :width: 100%
+
+
+Enrichment table
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enrichment statistics can be found in the tables on the right:
 
 :**Table a**: Enrichment scores across all contrasts for the selected
         query signature . The NES corresponds to the normalized
