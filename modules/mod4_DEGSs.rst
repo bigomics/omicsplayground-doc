@@ -437,10 +437,6 @@ The main panel consists of four outputs:
         It shows the top N=10 similar and opposite profiles by running 
         the GSEA algorithm on the contrast-drug profile correlation space. 
 
-        .. figure:: figures/psc6.3.a.png
-            :align: center
-            :width: 35%
-
 :**b**: Enrichment table. Enrichment is calculated by correlating
         your signature with the profiles from the chosen
         database. Because of multiple perturbation experiments for a

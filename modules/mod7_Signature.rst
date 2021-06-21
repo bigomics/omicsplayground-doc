@@ -49,8 +49,8 @@ The **Pairs** panel shows three outputs:
         disregulated genes jointly or separated by up- and down-regulation.
 
 .. figure:: figures/psc7.1.a.png
-:align: center
-:width: 30%
+    :align: center
+    :width: 30%
 
 :**c**: The Cumulative fold-change plot visualizes the cumulative fold-change of genes 
         shared between the profiles. Users can toggle between absolute and directional
@@ -62,8 +62,8 @@ The **Pairs** panel shows three outputs:
         as a csv file.
 
 .. figure:: figures/psc7.1.b.png
-:align: center
-:width: 100%
+    :align: center
+    :width: 100%
 
 A typical output can be seen below.
 
