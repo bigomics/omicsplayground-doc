@@ -27,7 +27,11 @@ Follow the steps below to set up a running platform from the docker file:
     
 3. Open ``http://localhost:4000`` in your browser to run the platform.
 
-4. If you want to include your own pgx files into the platform Datasets tab, select the local folder in which you have stored your pgx files under "Host Path" in the optional settings in docker. Also type "/omicsplayground/data" in the "Container Path" box.
+4. If you want to save or include your own PGX files into the platform, you need to mount a local folder into the docker data folder using::
+
+    docker run --rm -p 4000:3838 -v mypgxfolder:/omicsplayground/data bigomics/omicsplayground
+
+   If you are using Docker Desktop, select the local folder in which you have stored your pgx files under "Host Path" in the optional settings in docker. Also type "/omicsplayground/data" in the "Container Path" box.
 
 .. note::
 
