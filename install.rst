@@ -1,7 +1,3 @@
-.. _Installation:
-
-
-
 Installation
 ================================================================================
 
@@ -15,19 +11,32 @@ Run using the Docker file
 --------------------------------------------------------------------------------
 The docker file of the platform is available on `Docker Hub 
 <https://hub.docker.com/r/bigomics/omicsplayground>`__.
-Follow the steps below to set up a running platform from the docker file:
+In Linux OS and Mac OS, once Docker is installed, open a shell window. In Windows, once Docker Desktop is installed, go to “Type here Search” on the Windows taskbar and type: “Command Prompt”. Click on it to open it. Then follow these steps:
 
 1. Pull the docker image using the command::
 
     docker pull bigomics/omicsplayground
     
-2. Then run the docker with::
+2. In Linux and Mac OS, run the docker from a shell with::
 
     docker run --rm -p 4000:3838 bigomics/omicsplayground
-    
-3. Open ``http://localhost:4000`` in your browser to run the platform.
 
-4. If you want to include your own pgx files into the platform Datasets tab, select the local folder in which you have stored your pgx files under "Host Path" in the optional settings in docker. Also type "/omicsplayground/data" in the "Container Path" box.
+Alternatively, you can open the GUI and follow the same instructions as given for Windows. 
+
+3. In Windows, start Docker and then look under "Images" (as shown below). Once you have found the Omics Playground image, hover over it with your mouse until you see a blue "RUN" icon appear.
+
+.. figure:: figures/dsc.1.png
+    :align: center
+    :width: 100%
+
+Click on “RUN” and then on "Optional settings". Edit the optional settings as shown in the image below. Your “Volume host path” can be any folder where you want to store the PGX files produced locally by the platform. Also type "/omicsplayground/data" in the "Container Path" box. This step is necessary if you want to access your PGX files from the home page. 
+Set the port of the local host (“Local Host”) to 4000. You can optionally select a container name. 
+
+.. figure:: figures/dsc.2.png
+    :align: center
+    :width: 100%
+
+4. Open ``http://localhost:4000`` in your browser to run the platform.
 
 .. note::
 
