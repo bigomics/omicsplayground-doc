@@ -34,7 +34,7 @@ Set the port of the local host (“Local Host”) to 4000. You can optionally se
 
 .. figure:: figures/dsc.2.png
     :align: center
-    :width: 70%
+    :width: 50%
 
 4. Open ``http://localhost:4000`` in your browser to run the platform.
 
