@@ -34,7 +34,7 @@ Set the port of the local host (“Local Host”) to 4000. You can optionally se
 
 .. figure:: figures/dsc.2.png
     :align: center
-    :width: 100%
+    :width: 70%
 
 4. Open ``http://localhost:4000`` in your browser to run the platform.
 
@@ -75,7 +75,7 @@ the source code:
 4. Change the current directory into the ``shiny/`` folder and execute the following command
    to run the platform::
 
-    R -e "rmarkdown::run(shiny_args=list(launch.browser=TRUE))"
+    R -e "shiny::runApp(launch.browser=TRUE)"
 
    If you have Shiny Server installed you can create a link to the
    shiny folder in the system-wide shiny-server apps folder or in your
