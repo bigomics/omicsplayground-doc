@@ -98,6 +98,6 @@ You can test the latest features of the Omics Playground by switching to
 a more experimental software version. Omics Playground has three different 
 channel versions:
 
-    Stable channel: This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It's updated roughly every 2–3 months for minor changes, and every 6 months for major changes.
-    Beta channel: To view upcoming improvements and features with low risk, use the Beta channel. It's updated roughly every month, with updates before the Stable channel gets them.
-    Dev channel: The Dev channel gets updated once or twice weekly. While this build is tested, it might have serious bugs or highly experimental features. The Dev channel always usese the latest source code.
+    - Stable channel: This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It's updated roughly every 2–3 months for minor changes, and every 6 months for major changes.
+    - Beta channel: To view upcoming improvements and features with low risk, use the Beta channel. It's updated roughly every month, with updates before the Stable channel gets them.
+    - Dev channel: The Dev channel gets updated once or twice weekly. While this build is tested, it might have serious bugs or highly experimental features. The Dev channel always usese the latest source code.
