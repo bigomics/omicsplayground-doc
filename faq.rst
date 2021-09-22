@@ -90,8 +90,8 @@ docker versions:
 
 * Stable channel (latest): This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It's updated roughly every 2–3 months for minor changes, and every 6 months for major changes.
 * Beta channel (beta): To view upcoming improvements and features with low risk, use the Beta channel. It's updated roughly every month, with updates before the Stable channel gets them.
-* Testing channel (testing): The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. 
+* Testing channel (testing): The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. The Testing channel always uses the latest source code and is build irregularly whenever needed. 
 
-You can switch between versions by pulling the docker image corresponding to the version latest, beta or testing. Note that the Testing channel always uses the latest source code. 
+You can switch between versions by pulling the docker image corresponding to the version latest, beta or testing. 
 
 
