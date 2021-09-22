@@ -44,9 +44,9 @@ statistical analysis in proteomics.
 
 References:
 
-#. Kammers et al. Detecting significant changes in protein abundance. EuPA Open Proteomics Volume 7, June 2015.
-#. Langley SR, Mayr M. Comparative analysis of statistical methods used for detecting differential expression in label-free mass spectrometry proteomics. J Proteomics. 2015.
-#. Branson OE, Freitas MA. A multi-model statistical approach for proteomic spectral count quantitation. J Proteomics. 2016.
+#. Kammers et al. "Detecting significant changes in protein abundance". EuPA Open Proteomics Volume 7, June 2015.
+#. Langley SR, Mayr M. "Comparative analysis of statistical methods used for detecting differential expression in label-free mass spectrometry proteomics". J Proteomics. 2015.
+#. Branson OE, Freitas MA. "A multi-model statistical approach for proteomic spectral count quantitation". J Proteomics. 2016.
 #. Gregori et al. "msmsTests-package: LC-MS/MS Differential Expression Tests". R package.
 #. Gregori et al. "An Effect Size Filter Improves the Reproducibility in Spectral Counting-based Comparative Proteomics." Journal of Proteomics, 2013.
 #. Medo, M, Aebersold, DM and Medová, M "ProtRank: bypassing the imputation of missing values in differential expression analysis of proteomic data." BMC Bioinformatics 20, 563 (2019).
