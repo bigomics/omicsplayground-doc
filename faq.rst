@@ -81,13 +81,17 @@ impute your "missing" values differently, (currently) you must do that
 manually before uploading the CSV file.
 
 
-Switch between stable, beta & testing versions
------------------------------------------------
+How do I switch between stable, beta & testing docker versions?
+------------------------------------------------------------------
 
 You can test the latest features of the Omics Playground by switching to 
-a more experimental software version. Omics Playground has three different 
-channel versions:
+a more experimental docker version. Omics Playground has three different 
+docker versions:
 
-* Stable channel: This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It's updated roughly every 2–3 months for minor changes, and every 6 months for major changes.
-* Beta channel: To view upcoming improvements and features with low risk, use the Beta channel. It's updated roughly every month, with updates before the Stable channel gets them.
-* Testing channel: The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. The Testing channel always usese the latest source code.
+* Stable channel (latest): This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It's updated roughly every 2–3 months for minor changes, and every 6 months for major changes.
+* Beta channel (beta): To view upcoming improvements and features with low risk, use the Beta channel. It's updated roughly every month, with updates before the Stable channel gets them.
+* Testing channel (testing): The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. 
+
+You can switch between versions by pulling the docker image corresponding to the version latest, beta or testing. Note that the Testing channel always uses the latest source code. 
+
+
