@@ -40,18 +40,16 @@ proteomics intensity values may be far greater than those found in
 RNA-seq. Therefore Omics Playground scales proteomics data
 automatically to 'counts per million' (CPM). We have also seen that
 batch correction (e.g. using ComBat) may improve the downstream
-statistical analysis in proteomics:
+statistical analysis in proteomics. 
 
-#. Langley SR, Mayr M. "Comparative analysis of statistical methods used for detecting differential expression in label-free mass
-spectrometry proteomics." J Proteomics. 2015 Nov 3;129:83-92.
-#. Kammers et al. "Detecting significant changes in protein abundance." EuPA Open Proteomics Volume 7, June 2015.
+References:
+
+#. Kammers et al. Detecting significant changes in protein abundance. EuPA Open Proteomics Volume 7, June 2015.
+#. Langley SR, Mayr M. Comparative analysis of statistical methods used for detecting differential expression in label-free mass spectrometry proteomics. J Proteomics. 2015.
 #. Branson OE, Freitas MA. A multi-model statistical approach for proteomic spectral count quantitation. J Proteomics. 2016.
-#. Gregori et al. "msmsTests-package: LC-MS/MS Differential Expression
-Tests". R package.
-#. Gregori et al. "An Effect Size Filter Improves the Reproducibility in Spectral Counting-based Comparative Proteomics." Journal of
-Proteomics, 2013.
-#. Medo, M, Aebersold, DM and Medová, M "ProtRank: bypassing the imputation of missing values in differential expression analysis of
-proteomic data." BMC Bioinformatics 20, 563 (2019).
+#. Gregori et al. "msmsTests-package: LC-MS/MS Differential Expression Tests". R package.
+#. Gregori et al. "An Effect Size Filter Improves the Reproducibility in Spectral Counting-based Comparative Proteomics." Journal of Proteomics, 2013.
+#. Medo, M, Aebersold, DM and Medová, M "ProtRank: bypassing the imputation of missing values in differential expression analysis of proteomic data." BMC Bioinformatics 20, 563 (2019).
 #. Gatto L. "Bioconductor tools for mass spectrometry and proteomics", https://lgatto.github.io/bioc-ms-prot/lab.html#8_statistical_analysis
 #. Chen et al. "Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis." Int J Mol Sci. 2020;21(8):2873, 2020.
 
@@ -83,7 +81,7 @@ impute your "missing" values differently, (currently) you must do that
 manually before uploading the CSV file.
 
 
-Switch between stable, beta & dev versions
+Switch between stable, beta & testing versions
 -----------------------------------------------
 
 You can test the latest features of the Omics Playground by switching to 
@@ -92,4 +90,4 @@ channel versions:
 
 * Stable channel: This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It's updated roughly every 2–3 months for minor changes, and every 6 months for major changes.
 * Beta channel: To view upcoming improvements and features with low risk, use the Beta channel. It's updated roughly every month, with updates before the Stable channel gets them.
-* Dev channel: The Dev channel gets updated once or twice weekly. While this build is tested, it might have serious bugs or highly experimental features. The Dev channel always usese the latest source code.
+* Testing channel: The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. The Testing channel always usese the latest source code.
