@@ -236,9 +236,17 @@ nets
 <https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__, and
 `extreme gradient boosting
 <https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__,
-and provides the top 50 features according to cumulative ranking by
+and provides the top 40 features according to cumulative ranking by
 the algorithms.  By combining several methods, the platform aims to
 select the best possible biomarkers.
+
+Omics Playground calculates a variable importance score for each feature using multiple state-of-the-art machine learning algorithms, including `LASSO <https://www.ncbi.nlm.nih.gov/pubmed/20808728>`__, `elastic
+nets
+<https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf>`__,
+`random forests
+<https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__, and
+`extreme gradient boosting
+<https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__. Note that we do not use the machine learning algorithms for prediction but we use them just to compute the variable importances according to the different methods. An aggregated score is then calculated as the cumulative rank of the variable importances of the different algorithms. By combining several methods, the platform aims to select the best possible predictive features. The top features are determined as the features with the highest cumulative ranks. Finally, we create a decision tree using the top features using random forest.
 
 The module provides a heatmap of samples based on identified top features. 
 In addition, it generates a classification tree using top features and provides
