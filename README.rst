@@ -10,6 +10,6 @@ distinguishes it from the other analytics platforms currently available.
 We believe that data preprocessing (primary analysis) and statistical 
 testing (secondary analysis) are now well established, and the most challenging 
 task is currently data interpretation (tertiary analysis) that often takes the 
-longest time but where actual insights can be gained. Therefore the Omics 
+longest time but where actual insights can be gained. Therefore Omics 
 Playground focuses strongly on tertiary analysis while providing good support 
 for secondary analysis.
