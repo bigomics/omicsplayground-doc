@@ -1,7 +1,7 @@
 Omics Playground: Explore Omics Data Freely
 ================================================================================
 
-[Omics Playground](https://bigomics.ch/omics-playground/) is a comprehensive self-service platform platform 
+`Omics Playground <https://bigomics.ch/omics-playground>`_ is a comprehensive self-service platform platform 
 for visualization, analytics and exploration of Big Omics Data. 
 It allows users to apply a multitude of state-of-the-art analysis tools 
 to their own data to explore and discover underlying biology in a short time.
