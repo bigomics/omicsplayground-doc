@@ -34,7 +34,7 @@ and proteomics data to the platform. The platform requires three data
 files as listed below: a data file containing counts/expression
 (counts.csv), a sample information file (samples.csv) and an optional 
 file specifying the statistical comparisons as contrasts (contrasts.csv). 
-The file format must be comma-separated-values(CSV) text. 
+The file format must be comma-separated-values (CSV) text. 
 Be sure the gene names match for all files. On the left side of the panel, 
 users need to provide a unique name and brief description for the dataset 
 while uploading.
