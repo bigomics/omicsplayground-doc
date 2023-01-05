@@ -3,10 +3,24 @@
 Outline
 ================================================================================
 
-User interface
+Main menu
 --------------------------------------------------------------------------------
 
-The platform contains up to eight diffenet analysis modules. By default, seven modules will always be present, namely  :ref:`Home`, :ref:`Help`, :ref:`DataView`, :ref:`Clustering`, :ref:`Expression`, :ref:`Enrichment` and :ref:`Signature`, while :ref:`CellProfiling` is an optional choice.
+Using the main menu on top, you can navigate through the different
+analysis modules. Generally you want to start from the left to the
+right, from specific gene-wise to the more higher-level functional
+analysis modules. Some users prefer the other way around.
+
+By default, the following menu items be present, namely :ref:`Home`,
+:ref:`DataView`, :ref:`Clustering`, :ref:`Expression`,
+:ref:`Enrichment` and :ref:`Signature`, while :ref:`CellProfiling` is
+an optional choice. The last menu item :ref:`User` (with user icon)
+contains user setting, a help submenu and logout buttons.
+
+.. figure:: figures/topmenu.png
+    :align: center
+    :width: 60%
+
 
 Figure & table tags
 --------------------------------------------------------------------------------
@@ -26,10 +40,12 @@ Each figure or table on the platform is assigned the following interactive butto
 
 Glossary
 --------------------------------------------------------------------------------
-* Signature: a list of selected genes (e.g. by significance or fold change),
+* Signature: a list of selected genes (e.g. by significance or fold
+  change),
 * Condition: a specific phenotype group (e.g. tumor or control),
 * Contrast: a comparison between two conditions (e.g. tumor vs control),
 * Profile: a vector of fold changes corresponding to a certain comparison,
 * Hierarchical clustering: a method that groups similar samples into groups,
 * Q value: an FDR-adjusted p value,
-* Biomarker: a biological feature (gene, mutation or gene set) that characterises a specific physiological or pathological process.
+* Biomarker: a biological feature (gene, mutation or gene set) that
+  characterises a specific physiological or pathological process.

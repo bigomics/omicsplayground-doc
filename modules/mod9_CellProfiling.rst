@@ -1,4 +1,4 @@
-.. _scProfiling:
+.. _CellProfiling:
 
 
 Single-Cell Profiling
