@@ -15,7 +15,7 @@ By default, the following menu items be present, namely :ref:`Home`,
 :ref:`DataView`, :ref:`Clustering`, :ref:`Expression`,
 :ref:`Enrichment` and :ref:`Signature`, while :ref:`CellProfiling` is
 an optional choice. The last menu item :ref:`User` (with user icon)
-contains user setting, a help submenu and logout buttons.
+contains user settings, a help submenu and logout buttons.
 
 .. figure:: figures/topmenu.png
     :align: center
