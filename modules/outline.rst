@@ -19,7 +19,7 @@ contains user setting, a help submenu and logout buttons.
 
 .. figure:: figures/topmenu.png
     :align: center
-    :width: 60%
+    :width: 75%
 
 
 Figure & table tags
