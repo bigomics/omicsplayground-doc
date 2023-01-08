@@ -11,7 +11,7 @@ analysis modules. Generally you want to start from the left to the
 right, from specific gene-wise to the more higher-level functional
 analysis modules. Some users prefer the other way around.
 
-By default, the following menu items be present, namely :ref:`Home`,
+By default, the following menu items are present, namely :ref:`Home`,
 :ref:`DataView`, :ref:`Clustering`, :ref:`Expression`,
 :ref:`Enrichment` and :ref:`Signature`, while :ref:`CellProfiling` is
 an optional choice. The last menu item :ref:`User` (with user icon)
