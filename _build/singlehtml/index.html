@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omics Playground documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Omics Playground
+          </a>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-install">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-dataprep/dataprep">Data import and precomputation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-dataprep/dataprep_example">Data preparation examples</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/outline">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod0_home">Home Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod1_dataview">Data View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod2_clustering">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod3_DEGs">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod4_DEGSs">Enrichment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod7_Signature">Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-modules/mod9_CellProfiling">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-examples/examples">Reanalyzing Public Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-methods">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-faq">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-info">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Omics Playground  documentation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="omics-playground-explore-omics-data-freely">
+<h1>Omics Playground: Explore Omics Data Freely<a class="headerlink" href="#omics-playground-explore-omics-data-freely" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://bigomics.ch/omics-playground">Omics Playground</a> is a comprehensive self-service platform platform
+for visualization, analytics and exploration of Big Omics Data.
+It allows users to apply a multitude of state-of-the-art analysis tools
+to their own data to explore and discover underlying biology in a short time.</p>
+<p>The platform offers a unique combination of features that
+distinguishes it from the other analytics platforms currently
+available.  We believe that data preprocessing (primary analysis) and
+statistical testing (secondary analysis) are now well established, and
+the most challenging task is currently data interpretation (tertiary
+analysis) that often takes the longest time but where actual insights
+can be gained. Therefore Omics Playground focuses strongly on tertiary
+analysis while providing good support for secondary analysis.</p>
+<div class="toctree-wrapper compound">
+<span id="document-overview"></span><section id="overview">
+<span id="id1"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Omics Playground is a user-friendly and interactive web-based platform
+for the analysis and visualization of transcriptomics and proteomics
+data.  Currently the platform handles gene expression microarray,
+RNA-seq and LC-MS/MS proteomics data, and supports two species, human
+and mouse. Omics Playground has been in particular devised to also
+support single cell RNA-seq data, as well as traditional gene
+expression experiments.</p>
+<p>The overview of the platform is shown in the figure below. It consists of
+two main components. The first component addresses the data
+importing and preprocessing, which includes preparing the input data, filtering,
+normalising and precomputing of statistics for some analyses. The second part is
+composed of the online interface, which supports the real-time visualisation and
+interaction with users. The interface contains several optional settings in order to provide a customisable experience suited to each user’s background.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/overview.png"><img alt="_images/overview.png" src="_images/overview.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<span id="document-install"></span><section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You can either run the platform from the source code, or download the
+docker image. Running Omics Playground from the docker file is the
+easiest way.</p>
+<section id="run-using-the-docker-file">
+<h3>Run using the Docker file<a class="headerlink" href="#run-using-the-docker-file" title="Permalink to this headline">¶</a></h3>
+<p>The docker file of the platform is available on <a class="reference external" href="https://hub.docker.com/r/bigomics/omicsplayground">Docker Hub</a>.
+In Linux OS and Mac OS, once Docker is installed, open a shell window. In Windows, once Docker Desktop is installed, go to “Type here Search” on the Windows taskbar and type: “Command Prompt”. Click on it to open it. Then follow these steps:</p>
+<ol class="arabic">
+<li><p>Pull the docker image using the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">bigomics</span><span class="o">/</span><span class="n">omicsplayground</span>
+</pre></div>
+</div>
+</li>
+<li><p>In Linux and Mac OS, run the docker from a shell with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">p</span> <span class="mi">4000</span><span class="p">:</span><span class="mi">3838</span> <span class="n">bigomics</span><span class="o">/</span><span class="n">omicsplayground</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Alternatively, you can open the GUI and follow the same instructions as given for Windows.</p>
+<ol class="arabic simple" start="3">
+<li><p>In Windows, start Docker and then look under “Images” (as shown below). Once you have found the Omics Playground image, hover over it with your mouse until you see a blue “RUN” icon appear.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/dsc.1.png"><img alt="_images/dsc.1.png" src="_images/dsc.1.png" style="width: 100%;" /></a>
+</figure>
+<p>Click on “RUN” and then on “Optional settings”. Edit the optional settings as shown in the image below. Your “Volume host path” can be any folder where you want to store the PGX files produced locally by the platform. Also type “/omicsplayground/data” in the “Container Path” box. This step is necessary if you want to access your PGX files from the home page.
+Set the port of the local host (“Local Host”) to 4000. You can optionally select a container name.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/dsc.2.png"><img alt="_images/dsc.2.png" src="_images/dsc.2.png" style="width: 50%;" /></a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">http://localhost:4000</span></code> in your browser to run the platform.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Warning. The docker image requires about 8GB hard disk space. Note: if you want the exact version of the NAR/GAB publication, download version v1.0, otherwise docker will download the latest version by default.</p>
+</div>
+</section>
+<section id="run-from-source-code">
+<h3>Run from source code<a class="headerlink" href="#run-from-source-code" title="Permalink to this headline">¶</a></h3>
+<p>Omics Playground is implemented in R using the <a class="reference external" href="https://shiny.rstudio.com/">Shiny Server</a> web application framework. You will
+need R and Shiny Server installed to run Omics Playground.</p>
+<p>The source code of the platform is available on
+<a class="reference external" href="https://github.com/bigomics/omicsplayground">GitHub</a>. You can
+download the latest release of the software by cloning
+the repository. Below, we explain the steps required to set up the platform from
+the source code:</p>
+<ol class="arabic">
+<li><p>Clone the GitHub repository using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">bigomics</span><span class="o">/</span><span class="n">omicsplayground</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install all necessary R packages by running the script in the <code class="docutils literal notranslate"><span class="pre">R/</span></code> folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rscript</span> <span class="n">requirements</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run the following command in the <code class="docutils literal notranslate"><span class="pre">build/</span></code> folder to build the datasets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rscript</span> <span class="n">build</span><span class="o">-</span><span class="n">datasets</span><span class="o">.</span><span class="n">R</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Building the datasets can vary from minutes to a couple of hours depending on their sizes.</p>
+</div>
+<ol class="arabic" start="4">
+<li><p>Change the current directory into the <code class="docutils literal notranslate"><span class="pre">shiny/</span></code> folder and execute the following command
+to run the platform:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;shiny::runApp(launch.browser=TRUE)&quot;</span>
+</pre></div>
+</div>
+<p>If you have Shiny Server installed you can create a link to the
+shiny folder in the system-wide shiny-server apps folder or in your
+ShinyApps user folder.</p>
+</li>
+</ol>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-dataprep/dataprep"></span><section id="data-import-and-precomputation">
+<span id="dataprep"></span><h2>Data import and precomputation<a class="headerlink" href="#data-import-and-precomputation" title="Permalink to this headline">¶</a></h2>
+<p>The data import and precomputation involve preparing the input data through
+filtering, normalising and precomputing statistics for some analyses and
+importing it into the platform. The data cleaning and precomputation is
+performed offline to support real-time interaction by minimizing user interface
+latency.</p>
+<section id="data-import">
+<h3>Data import<a class="headerlink" href="#data-import" title="Permalink to this headline">¶</a></h3>
+<p>Users can import their transcriptomics or proteomics data to the platform by
+either uploading the data through
+the interface or preparing an input object using scripts.
+For uploading, the platform requires the counts, samples information and optionally contrasts tables in CSV format.
+On the other hand, an input object can be prepared using scripts from different
+types and formats of data, including counts and FASTQ.
+With scripts it is also possible to do more detailed data
+cleaning, filtering, normalisation and preprocessing.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See <a class="reference internal" href="index.html#dataprep-example"><span class="std std-ref">data preparation examples</span></a> how
+to prepare an input data for the platform. You can find more detailed
+information regarding the filtering and normalisation methods for preparing
+an input from different sources of experiments.</p>
+</div>
+<section id="filtering">
+<h4>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h4>
+<p>The data preprocessing includes some filtering criteria, such as filtering of
+genes based on variance, the expression across the samples, and the number of
+missing values. Similarly, samples can also be filtered based on the read quality,
+total abundance, unrelated phenotype, or an outlier criterion.</p>
+</section>
+<section id="normalisation">
+<h4>Normalisation<a class="headerlink" href="#normalisation" title="Permalink to this headline">¶</a></h4>
+<p>The raw counts are converted into counts per million (CPM) and log2. Depending on
+the data set, a quantile normalization can be applied. Known batches in the data
+can be corrected with limma or ComBat. Other unknown batch
+effects and unwanted variation can be further removed using surrogate variable
+analysis in the sva package.</p>
+</section>
+<section id="offline-computation">
+<h4>Offline computation<a class="headerlink" href="#offline-computation" title="Permalink to this headline">¶</a></h4>
+<p>Statistics for the differentially expressed genes analysis and gene set enrichment
+analysis are precomputed to accelerate the visualisation on the interface.</p>
+</section>
+</section>
+</section>
+<span id="document-dataprep/dataprep_example"></span><section id="data-preparation-examples">
+<span id="dataprep-example"></span><h2>Data preparation examples<a class="headerlink" href="#data-preparation-examples" title="Permalink to this headline">¶</a></h2>
+<p>The platform requires the transcriptomics and proteomics data to be in a
+structured format as an input. Users can inject their data to the platform by
+either <a class="reference internal" href="#uploading-through-the-interface">uploading through the interface</a> or
+<a class="reference internal" href="#id1">preparing an input object using scripts</a>.</p>
+<section id="uploading-data-through-the-interface">
+<h3>Uploading data through the interface<a class="headerlink" href="#uploading-data-through-the-interface" title="Permalink to this headline">¶</a></h3>
+<p id="uploading-through-the-interface">Users can import their data from the <strong>Upload data</strong> panel located under the
+<a class="reference internal" href="index.html#home"><span class="std std-ref">Home Panel</span></a> module. The platform requires the list of files as shown in the
+figure below.
+The format of files must be comma-separated-values (CSV) text.
+It is important to name the files exactly as shown.
+Be sure the dimensions, rownames and column names match for all files.
+It is required to provide a unique name and brief description for the data set
+while uploading.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>counts.csv</strong></dt>
+<dd class="field-odd"><p>Count/expression file with gene on rows, samples as columns.</p>
+</dd>
+<dt class="field-even"><strong>samples.csv</strong></dt>
+<dd class="field-even"><p>Samples file with samples on rows, phenotypes as columns.</p>
+</dd>
+<dt class="field-odd"><strong>contrasts.csv</strong></dt>
+<dd class="field-odd"><p>Contrast file with samples on rows, conditions as columns.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.3.png"><img alt="_images/psc1.3.png" src="_images/psc1.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="preparing-an-input-object-using-scripts">
+<h3>Preparing an input object using scripts<a class="headerlink" href="#preparing-an-input-object-using-scripts" title="Permalink to this headline">¶</a></h3>
+<p id="id1">Alternatively, an input object can be prepared by using scripts with more
+detailed data cleaning, filtering, normalisation and preprocessing.
+Users can prepare an input data from
+their own FASTQ files, gene counts tables, or from a dataset of interest stored
+in public repositories such as <a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a>.
+Similarly, they can also prepare an input from single-cell or LC-MS/MS proteomics
+datasets.
+We provide four types of example cases to guide users for preparing their input
+objects and injecting it into the platform. Basically, the example cases
+illustrate how to prepare an input data:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#id2">from FASTQ files</a>,</p></li>
+<li><p><a class="reference internal" href="#from-gene-counts-table-or-from-the-geo-repository">from gene counts table or from the GEO repository</a>,</p></li>
+<li><p><a class="reference internal" href="#id3">from single-cell data</a>,</p></li>
+<li><p><a class="reference internal" href="#id4">from LC-MS/MS proteomics data</a>.</p></li>
+</ol>
+<p>All the necessary scripts for data cleaning and preprocessing examples can be
+found under the <code class="docutils literal notranslate"><span class="pre">scripts/</span></code> folder.</p>
+<section id="from-fastq-files">
+<h4>From FASTQ files<a class="headerlink" href="#from-fastq-files" title="Permalink to this headline">¶</a></h4>
+<p id="id2">Starting from FASTQ files, we recommend using the <a class="reference external" href="https://www.rdocumentation.org/packages/GREP2/versions/1.0.2">GREP2</a>
+package to obtain gene counts through quality control, trimming,
+quantification of gene abundance, and so on.  Afterwards, the user can
+refer to the examples in the next section for preparing an input data
+from the gene counts.</p>
+</section>
+<section id="from-gene-counts-table-or-geo-repository">
+<h4>From gene counts table or GEO repository<a class="headerlink" href="#from-gene-counts-table-or-geo-repository" title="Permalink to this headline">¶</a></h4>
+<p id="from-gene-counts-table-or-from-the-geo-repository">Users can prepare an input data from their own gene counts or download a
+relevant dataset from repositories such as <a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a>.
+Some examples are provided in the following scripts:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://portal.gdc.cancer.gov/projects/TCGA-BRCA">TCGA-BRCA</a>: <code class="docutils literal notranslate"><span class="pre">pgx-tcga-brca.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.cbioportal.org/study/summary?id=prad_tcga">TCGA-PRAD</a>: <code class="docutils literal notranslate"><span class="pre">pgx-tcga-prad.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10846">GSE10846</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE10846-dlbcl.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114716">GSE114716</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE114716-ipilimumab.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE22886">GSE22886</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE22886-immune.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE28492">GSE28492</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE28492-roche.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE32591">GSE32591</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE32591-lupusnephritis.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE53784">GSE53784</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE53784-wnvjev.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE88808">GSE88808</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE88808-prostate.R</span></code></p></li>
+</ul>
+</section>
+<section id="from-single-cell-data">
+<h4>From single-cell data<a class="headerlink" href="#from-single-cell-data" title="Permalink to this headline">¶</a></h4>
+<p id="id3">Single-cell RNA sequencing experiments have been valuable to provide insights into
+complex biological systems, reveal complex and rare cell populations, uncover
+relationships between genes, and track the trajectories of cell lineages.
+Below we provide some data preparation examples from single-cell experiments:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056">GSE72056</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE72056-scmelanoma.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92332">GSE92332</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE92332-scintestine.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE98638">GSE98638</a>: <code class="docutils literal notranslate"><span class="pre">pgx-GSE98638-scliver.R</span></code></p></li>
+</ul>
+</section>
+<section id="from-lc-ms-ms-proteomics-data">
+<h4>From LC-MS/MS proteomics data<a class="headerlink" href="#from-lc-ms-ms-proteomics-data" title="Permalink to this headline">¶</a></h4>
+<p id="id4">Two examples are provided below for LC-MS/MS proteomics data preprocessing:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27745970">Geiger et al. 2016</a>: <code class="docutils literal notranslate"><span class="pre">pgx-geiger2016-arginine.R</span></code></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28263321">Rieckmann et al. 2017</a>: <code class="docutils literal notranslate"><span class="pre">pgx-rieckmann2017-immprot.R</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-modules/outline"></span><section id="outline">
+<span id="id1"></span><h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<section id="main-menu">
+<h3>Main menu<a class="headerlink" href="#main-menu" title="Permalink to this headline">¶</a></h3>
+<p>Using the main menu on top, you can navigate through the different
+analysis modules. Generally you want to start from the left to the
+right, from specific gene-wise to the more higher-level functional
+analysis modules. Some users prefer the other way around.</p>
+<p>By default, the following menu items are present, namely <a class="reference internal" href="index.html#home"><span class="std std-ref">Home Panel</span></a>,
+<a class="reference internal" href="index.html#dataview"><span class="std std-ref">Data View</span></a>, <a class="reference internal" href="index.html#clustering"><span class="std std-ref">Clustering</span></a>, <a class="reference internal" href="index.html#expression"><span class="std std-ref">Expression</span></a>,
+<a class="reference internal" href="index.html#enrichment"><span class="std std-ref">Enrichment</span></a> and <a class="reference internal" href="index.html#signature"><span class="std std-ref">Signature</span></a>, while <a class="reference internal" href="index.html#cellprofiling"><span class="std std-ref">Cell Profiling</span></a> is
+an optional choice. The last menu item <span class="xref std std-ref">User</span> (with user icon)
+contains user settings, a help submenu and logout buttons.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/topmenu.png"><img alt="_images/topmenu.png" src="_images/topmenu.png" style="width: 75%;" /></a>
+</figure>
+</section>
+<section id="figure-table-tags">
+<h3>Figure &amp; table tags<a class="headerlink" href="#figure-table-tags" title="Permalink to this headline">¶</a></h3>
+<p>Each figure or table on the platform is assigned the following interactive buttons, where:</p>
+<ul class="simple">
+<li><p>Info: provides detailed information about the figure or table.</p></li>
+<li><p>Settings: users can specify additional settings if applicable.</p></li>
+<li><p>Download: downloads a figure as a PNG or PDF file or a table in CSV format.</p></li>
+<li><p>Maximize: shows a larger version of a figure in a separate window.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/isd2.png"><img alt="_images/isd2.png" src="_images/isd2.png" style="width: 60%;" /></a>
+</figure>
+</section>
+<section id="glossary">
+<h3>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Signature: a list of selected genes (e.g. by significance or fold
+change),</p></li>
+<li><p>Condition: a specific phenotype group (e.g. tumor or control),</p></li>
+<li><p>Contrast: a comparison between two conditions (e.g. tumor vs control),</p></li>
+<li><p>Profile: a vector of fold changes corresponding to a certain comparison,</p></li>
+<li><p>Hierarchical clustering: a method that groups similar samples into groups,</p></li>
+<li><p>Q value: an FDR-adjusted p value,</p></li>
+<li><p>Biomarker: a biological feature (gene, mutation or gene set) that
+characterises a specific physiological or pathological process.</p></li>
+</ul>
+</section>
+</section>
+<span id="document-modules/mod0_home"></span><section id="home-panel">
+<span id="home"></span><h2>Home Panel<a class="headerlink" href="#home-panel" title="Permalink to this headline">¶</a></h2>
+<section id="selecting-the-dataset">
+<h3>Selecting the dataset<a class="headerlink" href="#selecting-the-dataset" title="Permalink to this headline">¶</a></h3>
+<p>The platform starts running from the <strong>Home</strong> panel. This panel shows
+the available datasets within the platform. The table reports a brief
+description as well as the total number of samples, genes, gene sets
+(or pathways), corresponding phenotypes and the collection date.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.2.png"><img alt="_images/psc1.2.png" src="_images/psc1.2.png" style="width: 100%;" /></a>
+</figure>
+<p>Users can select a dataset in the table. The <code class="docutils literal notranslate"><span class="pre">Dataset</span> <span class="pre">info</span></code> shows
+the information of the dataset of interest and users can load the data
+by clicking the <code class="docutils literal notranslate"><span class="pre">Load</span></code> button. There are three additional icons to
+dwonload pgx files, download csv files and delete an entry.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.0.png"><img alt="_images/psc1.0.png" src="_images/psc1.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="upload-data-upload">
+<h3>Upload data (Upload)<a class="headerlink" href="#upload-data-upload" title="Permalink to this headline">¶</a></h3>
+<p>Under the <strong>Upload</strong> subpanel of the <strong>Upload data</strong> panel users can upload their transcriptomics
+and proteomics data to the platform. The platform requires three data
+files as listed below: a data file containing counts/expression
+(counts.csv), a sample information file (samples.csv) and an optional
+file specifying the statistical comparisons as contrasts (contrasts.csv).
+The file format must be comma-separated-values (CSV) text.
+Be sure the gene names match for all files. On the left side of the panel,
+users need to provide a unique name and brief description for the dataset
+while uploading.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>counts.csv</strong></dt>
+<dd class="field-odd"><p>Count/expression file with gene on rows, samples as columns.</p>
+</dd>
+<dt class="field-even"><strong>samples.csv</strong></dt>
+<dd class="field-even"><p>Samples file with samples on rows, phenotypes as columns.</p>
+</dd>
+<dt class="field-odd"><strong>contrasts.csv</strong></dt>
+<dd class="field-odd"><p>Contrast file with conditions on rows, contrasts as columns.</p>
+</dd>
+</dl>
+<p>Once uploaded, the platform generates three separate plots showing some stastics
+and the structure of your input files.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.3.png"><img alt="_images/psc1.3.png" src="_images/psc1.3.png" style="width: 100%;" /></a>
+</figure>
+<p>The page also contains a <em>batch correction</em> option that allows users to perform batch correction
+on the data. Selecting it will open a new panel from which users can select the level of
+batch correction (low, medium or strong). Under <em>Advanced</em> users can fine-tune
+the process. This feature is still in beta and only recommended to users familiar with the
+batch correction precedure and parameters. More information can be found under <a class="reference internal" href="index.html#methods"><span class="std std-ref">Methods</span></a>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.3.a.png"><img alt="_images/psc1.3.a.png" src="_images/psc1.3.a.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="upload-data-contrasts">
+<h3>Upload data (Contrasts)<a class="headerlink" href="#upload-data-contrasts" title="Permalink to this headline">¶</a></h3>
+<p>Users can eschew adding a contrast file and instead generate contrasts via
+the <strong>Contrasts</strong> subpanel of the <strong>Upload data</strong> panel.
+Available phenotypes will appear in the “Phenotypes” box as a scrolldown menu.
+Selecting a phenotype will show the available conditions in the “Conditions” box.
+Users can then drag individual groups in the “Main group” or “Control Group” boxes.
+It is also possible to select individual samples from the “Conditions” box and phenotypes
+can be furthermore combined in the “Phenotypes” box. The platform automatically generates
+a contrast name in the “Comparison name” box that users can manually edit. Clicking the
+“add comparison” button will add the selected contrast in the contrast table below.
+Users can also task the platform to generate comparisons automatically by selecting a
+phenotype form the “Strata” box and clicking on “add auto-contrasts”. However, we recommend
+caution when using this function as it is error-prone.
+The panel also produces a PCA/tSNE plot that users can consult as a guide for generating
+comparisons.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.4.png"><img alt="_images/psc1.4.png" src="_images/psc1.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="upload-data-compute">
+<h3>Upload data (Compute)<a class="headerlink" href="#upload-data-compute" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Compute</strong> subpanel is where users can start the computation of their data.
+They need to provide a unique name for the dataset, indicate the type of data and
+provide a short description. Beginners can then click on the “Compute!” button and
+let the platform run the calculations. Advanced users can click on “Advanced” to
+access several customisation options. In particular they can de-select feature
+filtering options, select different gene tests and enrichment methods combinations,
+include or exclude analysis types and select developer-specific options.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc1.5.png"><img alt="_images/psc1.5.png" src="_images/psc1.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<span id="document-modules/mod1_dataview"></span><section id="data-view">
+<span id="dataview"></span><h2>Data View<a class="headerlink" href="#data-view" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>DataView</strong> module provides information and visualisations of the dataset to
+quickly lookup a gene, check the counts, or view the data tables.
+It has five panels, which are briefly explained below, followed by
+more detailed information for each panel.</p>
+<p>The <strong>Plots</strong> panel displays figures related to the expression level
+of the selected gene, correlation, and average expression ranking
+within the dataset. In the <strong>QC</strong> panel, the total number of
+counts (abundance) per sample and their distribution among the samples
+are displayed. This is most useful to check the technical quality of
+the dataset, such as total read counts or abundance of ribosomal
+genes. In <strong>Counts</strong> panel, the exact expression values across the
+samples can be looked up, where genes are ordered by the correlation
+with respect to the first gene. Gene-wise average expression of a
+phenotype sample grouping is also presented in this table. In the
+<strong>Samples</strong> panel, more complete information about samples can be
+found. Finally, the <strong>Contrasts</strong> panel, shows information about the
+phenotype comparisons.</p>
+<section id="input-panel">
+<h3>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h3>
+<p>Users can find more information about the module by clicking the
+<code class="docutils literal notranslate"><span class="pre">Info</span></code> button on the left side . The panel contains the main
+settings for the analysis. The analysis can be started by selecting a
+gene of interest from the <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">gene</span></code> settings. Users can filter and
+select samples in the <code class="docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples</span></code> settings, or collapse the samples
+by predetermined groups in the <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> settings.
+Under <em>Options</em>, it is possible to visualize the information on a raw count level
+or logarithmic expression level (logCPM).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc2.0.png"><img alt="_images/psc2.0.png" src="_images/psc2.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="plots">
+<h3>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Plots</strong> panel displays figures related to the expression level
+of the selected gene, correlation to other genes, and average
+expression ranking within the dataset.  To find out more information
+from the literature, hyperlinks are provide to connect the selected
+gene to <a class="reference external" href="https://www.ncbi.nlm.nih.gov/omim/">OMIM</a>, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>, and <a class="reference external" href="http://geneontology.org/">GO</a> databases.  It also shows the
+correlation of the gene in other datasets such as <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28263321">ImmProt</a> and <a class="reference external" href="https://www.nature.com/articles/nbt1210-1248">HPA</a>, and plots the
+cumulative correlation. Furthermore, it displays the tissue expression
+for a selected gene using the genotype-tissue expression <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23715323">GTEx</a> dataset.  For each
+chart of the panel, a detailed explanation is provided below.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>To find out more information from the literature, hyperlinks are provide to
+connect the selected gene to public databases,
+including <a class="reference external" href="https://www.ncbi.nlm.nih.gov/omim/">OMIM</a>,
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>,
+and <a class="reference external" href="http://geneontology.org/">GO</a>.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>Expression barplot of grouped samples (or cells) for the selected gene.
+Samples (or cells) in the barplot can
+be ungrouped by setting the <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> under the main <em>Options</em>.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>Ranking of the average expression of the selected gene.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>T-SNE clustering of samples (or cells) colored by an expression of the
+gene selected in the <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">gene</span></code> dropdown menu. The red color
+represents an over-expression of the selected gene across samples (or cells).</p>
+</dd>
+<dt class="field-odd"><strong>e</strong></dt>
+<dd class="field-odd"><p>Barplot of the top positively and negatively correlated genes
+with the selected gene. Absolute expression levels
+of genes are colored in the barplot, where the low and high expressions
+range between the light blue and dark blue colors, respectively.</p>
+</dd>
+<dt class="field-even"><strong>f</strong></dt>
+<dd class="field-even"><p>Tissue expression for the selected gene in the tissue expression
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23715323">GTEx</a> database.
+Colors corresponds to “tissue clusters” as computed by unsupervised clustering.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc2.1.png"><img alt="_images/psc2.1.png" src="_images/psc2.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="qc">
+<h3>QC<a class="headerlink" href="#qc" title="Permalink to this headline">¶</a></h3>
+<p>In the <strong>QC</strong> panel, the total number of counts (abundance) per
+sample and their distribution among the samples are displayed. For
+each sample, users can also see the percentage of counts in terms of
+major gene types such as ribosomal genes, heatshock proteins, or
+kinases. Abnormal abundance of certain genes may indicate technical
+problems. A detailed explanation is provided below for every chart of
+the panel.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>A barplot of the total number of counts (abundance) for each group.
+The samples (or cells) can be grouped/ungrouped in the <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code>
+setting uder the main <em>Options</em>.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>A boxplot of the total number of counts (abundance) for each group.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>A histogram of the total number of counts (abundance) for each group.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>A barplot showing the percentage of counts in terms of major gene
+types such as CD molecules, kinanses or RNA binding motifs for
+each group.</p>
+</dd>
+<dt class="field-odd"><strong>e</strong></dt>
+<dd class="field-odd"><p>A barplot showing the average count levels of major gene types such
+as CD molecules, kinanses or RNA binding motifs for each group.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc2.2.png"><img alt="_images/psc2.2.png" src="_images/psc2.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="counts">
+<h3>Counts<a class="headerlink" href="#counts" title="Permalink to this headline">¶</a></h3>
+<p>Under the <strong>Counts</strong> panel, the exact expression values across the
+samples can be read, where genes are ordered by the correlation with
+respect to the first gene.  Gene-wise average expression of a
+phenotype sample grouping is also presented in this table.</p>
+<p>The samples (or cells) in the table can be ungrouped by setting the
+<code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> under the main <em>Options</em> to see the exact expression
+values per sample (or cell).  The genes in the table are ordered by
+the correlation (<strong>rho</strong> column) with respect to the selected gene.
+<strong>SD</strong> column reports the standard deviation of expression across
+<em>all</em> samples (or cells).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc2.3.png"><img alt="_images/psc2.3.png" src="_images/psc2.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="samples">
+<h3>Samples<a class="headerlink" href="#samples" title="Permalink to this headline">¶</a></h3>
+<p>In the <strong>Samples</strong> panel, users can check information about samples
+and their phenotype grouping through three outputs:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>A plot showing phenotype clustering.
+Phenotypes can be unclustered via the <em>Settings</em> icon</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>A phenotype association matrix showing correlation between phenotypes.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>A table with sample information.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc2.4.png"><img alt="_images/psc2.4.png" src="_images/psc2.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="contrasts">
+<h3>Contrasts<a class="headerlink" href="#contrasts" title="Permalink to this headline">¶</a></h3>
+<p>In the <strong>Contrasts</strong> panel, more complete information about contrasts can be found.
+It summarizes the contrasts of all comparisons. Here, users can check which samples
+belong to which groups for the different comparisons. Non-zero entries ‘+1’ and ‘-1’
+correspond to the group of interest and control group, respectively.
+Zero or empty entries denote samples not use for that comparison.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc2.5.png"><img alt="_images/psc2.5.png" src="_images/psc2.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<span id="document-modules/mod2_clustering"></span><section id="clustering">
+<span id="id1"></span><h2>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Clustering</strong> module performs unsupervised clustering analysis of the data.
+After having done the QC, it is probably the first way to explore your data.
+The main purpose is to discover patterns and subgroups in the data, show correlation
+with known phenotypes, detect outliers, or investigate batch effects.</p>
+<p>In the <strong>Heatmap</strong> panel hierarchical clustering can be performed on gene level
+or gene set level. The <strong>PCA/tSNE</strong> panel shows unsupervised clustering of the samples
+in 2D/3D as obtained by PCA or tSNE algorithms. The <strong>Parallel</strong> panel displays the
+expression levels of selected genes across all conditions.
+On the right, the <strong>Annotate cluster</strong> panel provides a functional annotation for each
+feature cluster in the heatmap. Users can select from a variety of annotation databases
+from the literature. The <strong>Phenotypes</strong> panel shows the phenotype distribution as colors
+on the t-SNE plot. Finally, the <strong>Feature ranking</strong> panel  shows a plot that ranks
+the discriminative power of feature sets (or gene sets) as the cumulative discriminant
+score for all phenotype variables.</p>
+<section id="input-panel">
+<h3>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h3>
+<p>Users can find more information by clicking <code class="docutils literal notranslate"><span class="pre">Info</span></code> in the input
+panel. It also contains main settings for the analysis, where users can select</p>
+<blockquote>
+<div><p>a family of features in the <code class="docutils literal notranslate"><span class="pre">Features</span></code> scroll-down menu, group samples by phenotype
+using <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> and filter and select samples with <code class="docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples</span></code>.
+Furthermore, under <em>Options</em>, users can choose the level of analysis (gene or geneset)
+and exclude genes in the X and Y chromosomes</p>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.0.png"><img alt="_images/psc3.0.png" src="_images/psc3.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="heatmap">
+<h3>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this headline">¶</a></h3>
+<p>In the <strong>Heatmap</strong> panel hierarchical clustering can be performed on
+gene level or gene set level expression. For the latter, for each gene
+set (or pathway), a single-sample enrichment value is computed from
+the gene expression data using summary methods such as <a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7">GSVA</a>
+and <a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7">ssGSEA</a>.</p>
+<p>Under the plot configuration settings, usesrs can select to display a static or interactive hetmap.
+Users can also split the samples by a phenotype class (e.g., tissue, cell type, or gender) using the</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">split</span></code> by setting. In addition, users can specify the top N = (50, 150, 500) features to be used
+in the heatmap.
+The ordering of top features is selected under <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">mode</span></code>. The criteria to select the top features are:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>SD - features with the highest standard deviation across all the samples,</p></li>
+<li><p>specific - features that are overexpressed in each phenotype class compared to the rest, or by</p></li>
+<li><p>PCA - by principal components.</p></li>
+</ul>
+<p>The number of gene clusters to be displayed can be selected under <code class="docutils literal notranslate"><span class="pre">K</span></code>.
+Users can also choose between ‘relative’ or ‘absolute’ expression
+scale. Under the <code class="docutils literal notranslate"><span class="pre">CexCol</span></code> and <code class="docutils literal notranslate"><span class="pre">CexRow</span></code> settings, it is also possible to adjust the font sizes
+for the column and row labels.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.1.0.png"><img alt="_images/psc3.1.0.png" src="_images/psc3.1.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The complex heatmap below is generated after tuning the options and settings.
+It is a clustered heatmap showing gene expression sorted by 2-way hierarchical
+clustering. Red corresponds to overexpression, blue to underexpression of the gene.
+At the same time, gene clusters are functionally annotated in the <strong>Annotate clusters</strong>
+panel on the right.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.1.png"><img alt="_images/psc3.1.png" src="_images/psc3.1.png" style="width: 100%;" /></a>
+</figure>
+<p>The <strong>iHeatmap</strong> is an interactive version of the clustered heatmap
+and can be selected in the plot settings. Users are warned that for
+large datasets (such as single-cell RNA-seq data) this plot can become
+rather slow.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.2.png"><img alt="_images/psc3.2.png" src="_images/psc3.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="annotate-clusters">
+<h3>Annotate clusters<a class="headerlink" href="#annotate-clusters" title="Permalink to this headline">¶</a></h3>
+<p>The features in the heatmap are divided into clusters depending on the
+selected <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">mode</span></code> in the heatmap panel settings. For each cluster,
+the <strong>Annotate cluster</strong> section provides a functional annotation
+using more than 42 published reference databases, including but not
+limited to well-known databases such as <a class="reference external" href="http://software.broadinstitute.org/gsea/msigdb/index.jsp">MSigDB</a>, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>, and <a class="reference external" href="http://geneontology.org/">GO</a>.  In the plot settings, users can
+specify the level and reference set to be used under the <code class="docutils literal notranslate"><span class="pre">Reference</span>
+<span class="pre">level</span></code> and <code class="docutils literal notranslate"><span class="pre">Reference</span> <span class="pre">set</span></code> settings, respectively.
+Users can also select a Fisher test weighting for gene sets.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.4.0.png"><img alt="_images/psc3.4.0.png" src="_images/psc3.4.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The functional annotation for the clusters are displayed below, with
+the highest ranking annotation features (by correlation) displayed for
+each gene cluster. Length of the bars corresponds to the average
+correlation of the cluster with the annotation term. In the table
+below the barplots, users can view the correlation values of
+annotation features for each cluster.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.4.png"><img alt="_images/psc3.4.png" src="_images/psc3.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="pca-tsne">
+<h3>PCA/tSNE<a class="headerlink" href="#pca-tsne" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>PCA/tSNE</strong> panel visualizes unsupervised clustering obtained by the principal
+components analysis (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/19377034">PCA</a>) or
+t-distributed stochastic embedding
+(<a class="reference external" href="http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf">tSNE</a>) algorithms.
+This plot shows the relationship (or similarity) between the samples for visual
+analytics, where similarity is visualized as proximity of the points.
+Samples that are ‘similar’ will be placed close to each other.</p>
+<p>Users can customise the PCA/tSNE plot in the plot settings, including
+the <code class="docutils literal notranslate"><span class="pre">color</span></code> and <code class="docutils literal notranslate"><span class="pre">shape</span></code> of points using a phenotype class, label the points,
+display 2D and 3D visualisation of the PCA/tSNE plot, normalize the matrix and choose
+between a t-SNE, PCA or UMAP <code class="docutils literal notranslate"><span class="pre">layout</span></code>. The number of genes to be considered for
+dimensionality reduction can also be altered via <code class="docutils literal notranslate"><span class="pre">Ntop</span></code>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.3.0.png"><img alt="_images/psc3.3.0.png" src="_images/psc3.3.0.png" style="width: 30%;" /></a>
+</figure>
+<p>Based on their configuration settings, users will obtain a similar
+PCA/tSNE plot as below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.3.png"><img alt="_images/psc3.3.png" src="_images/psc3.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="parallel">
+<h3>Parallel<a class="headerlink" href="#parallel" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Parallel</strong> panel visualizes the expression levels of selected genes across all conditions.
+The expression values are scaled but scaling can be removed via the plot settings.
+This interactive plot is particularly useful to users working with time series experiments,
+as samples can be grouped by condition (i.e. time) and ordered manually, as shown below.
+A table containing average expression levels of selected genes across conditions is also generated.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.3B.png"><img alt="_images/psc3.3B.png" src="_images/psc3.3B.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="phenotypes">
+<h3>Phenotypes<a class="headerlink" href="#phenotypes" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Phenotypes</strong> panel visualizes the distribution of the available phenotype data.
+It provides plots showing the distribution of the phenotypes superposed on the
+tSNE clustering. Often, we can expect the t-SNE distribution to be driven by the
+particular phenotype that is controlled by the experimental condition or unwanted
+batch effects. Users can choose to put the group labels in the
+figure or as separate legend in the <code class="docutils literal notranslate"><span class="pre">Label</span></code> setting, under the plot <em>Settings</em>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.5.0.png"><img alt="_images/psc3.5.0.png" src="_images/psc3.5.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The output figure of the panel (phenotype distribution) is shown below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.5.png"><img alt="_images/psc3.5.png" src="_images/psc3.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="feature-ranking">
+<h3>Feature ranking<a class="headerlink" href="#feature-ranking" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Feature ranking</strong> panel provides the ranked discriminant score for top feature sets.
+It ranks the discriminitive power of the feature set (genes or gene sets) as a
+cumulative discriminant score for all phenotype variables.
+In this way, we can find which feature set (gene or gene family/set) can explain
+the variance in the data the best.</p>
+<p>Under the plot configuration <em>Settings</em>, users can specify the <code class="docutils literal notranslate"><span class="pre">Method</span></code> for
+computing the discriminant score.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.6.0.png"><img alt="_images/psc3.6.0.png" src="_images/psc3.6.0.png" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>P-value based scoring is computed as the average negative log p-value from the ANOVA.</p></li>
+<li><p>Correlation-based discriminative power is calculated as the average ‘(1-cor)’
+between the groups. Thus, a feature set is highly discriminative if the
+between-group correlation is low.</p></li>
+<li><p>The ‘meta’ method combines the score of the former methods in a multiplicative manner.</p></li>
+</ul>
+<p>The following plot represents the resulting feature-set ranking.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc3.6.png"><img alt="_images/psc3.6.png" src="_images/psc3.6.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<span id="document-modules/mod3_DEGs"></span><section id="expression">
+<span id="id1"></span><h2>Expression<a class="headerlink" href="#expression" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Expression</strong> module is divided into two main panels. The <strong>Differential Expression</strong>
+panel compares expression between two conditions (i.e. tumor versus control),
+which is one of the fundamental analysis in the transcriptomics data analytics workflow.
+For each comparison of two conditions (also called a ‘contrast’), the analysis identifies
+which genes are significantly downregulated or overexpressed in one of the groups.</p>
+<p>The <strong>Correlation Analysis</strong> panel computes the correlation between genes and finds
+coregulated modules.</p>
+<section id="differential-expression">
+<h3>Differential expression<a class="headerlink" href="#differential-expression" title="Permalink to this headline">¶</a></h3>
+<section id="input-panel">
+<h4>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h4>
+<p>The input panel on the left contains a link to a tutorial for relevant, as well as some settings
+for the analysis. Users can start the differntial expression (DE) analysis by selecting a contrast
+of their interest in the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> setting and specifying a relevent gene family in the
+<code class="docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">family</span></code> setting. It is possible to set the false discovery rate (FDR) and the
+logarithmic fold change (logFC) thresholds under the <code class="docutils literal notranslate"><span class="pre">FDR</span></code> and <code class="docutils literal notranslate"><span class="pre">logFC</span> <span class="pre">threshold</span></code> settings, respectively.
+Under “Options”, users can select to display all genes in the table (not only significant genes)
+and also select different combinations of statistical methods for the analysis.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.0.png"><img alt="_images/psc4.0.png" src="_images/psc4.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="table">
+<h4>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h4>
+<p>Table <code class="docutils literal notranslate"><span class="pre">I</span></code> shows the results of the statistical tests slected in the
+<code class="docutils literal notranslate"><span class="pre">Statistical</span> <span class="pre">methods</span></code>. By default, this table reports
+the meta (combined) results of
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/">DESeq2</a> (Wald),
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/19910308">edgeR</a> (QLF), and
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/25605792">limma</a> (trend) only.
+Users can filter top N = {10} differently expressed genes in the table by
+clicking the <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">10</span> <span class="pre">genes</span></code>  and also show the q-values from individual statistical methods
+by ticking <code class="docutils literal notranslate"><span class="pre">show</span> <span class="pre">individual</span> <span class="pre">q-values</span></code> from the table <em>Settings</em>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.1.0.png"><img alt="_images/psc4.1.0.png" src="_images/psc4.1.0.png" style="width: 30%;" /></a>
+</figure>
+<p>For a selected comparison under the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> setting, the results of the selected
+methods are combined and reported in Table <code class="docutils literal notranslate"><span class="pre">I</span></code>, where <code class="docutils literal notranslate"><span class="pre">meta.q</span></code> for a gene
+represents the highest <code class="docutils literal notranslate"><span class="pre">q</span></code> value among the methods and the number of stars for
+a gene indicate how many methods identified significant <code class="docutils literal notranslate"><span class="pre">q</span></code> values (<code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&lt;</span> <span class="pre">0.05</span></code>).
+The table is interactive (scrollable, clickable); users can sort genes by <code class="docutils literal notranslate"><span class="pre">logFC</span></code>,
+<code class="docutils literal notranslate"><span class="pre">meta.q</span></code>, or average expression in either conditions.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.1.png"><img alt="_images/psc4.1.png" src="_images/psc4.1.png" style="width: 100%;" /></a>
+</figure>
+<p>By clicking on a gene in the Table <code class="docutils literal notranslate"><span class="pre">I</span></code> (highlighted in purple in the figure),
+it is possible to see the correlation and enrichment value of gene sets that
+contain the gene in Table <code class="docutils literal notranslate"><span class="pre">II</span></code>.</p>
+</section>
+<section id="foldchange-all">
+<h4>Foldchange (all)<a class="headerlink" href="#foldchange-all" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Foldchange (all)</strong> tab reports the gene fold changes for all contrasts in the selected dataset.
+The column <code class="docutils literal notranslate"><span class="pre">fc.var</span></code> corresponds to the variance of the fold-change across all contrasts.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.1.1.png"><img alt="_images/psc4.1.1.png" src="_images/psc4.1.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="fdr-table">
+<h4>FDR table<a class="headerlink" href="#fdr-table" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>FDR table</strong> tab reports the number of significant genes at different FDR thresholds for
+all contrasts and methods within the dataset. This enables to quickly see which
+methods are more sensitive. The left part of the table (in blue) correspond
+to the number of significant down-regulated genes, the right part (in red)
+correspond to the number of significant overexpressed genes.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.1.2.png"><img alt="_images/psc4.1.2.png" src="_images/psc4.1.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="plot">
+<h4>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Plot</strong> panel shows the following plots:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>An interactive volcano plot for the chosen contrast. Unless a specific gene is selected
+from the differential expression analysis table, all significant genes are highlighted in blue.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>An interactive MA plot for the chosen contrast. Unless a specific gene is selected
+from the differential expression analysis table, all significant genes are highlighted in blue.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>Differential expression boxplot for a gene that is selected from the
+differential expression analysis table. Users can customise the plot via the settings icon on top
+to ungroup samples and change the scale to counts per million (CPM).</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>Fold change summary barplot across all contrasts for a gene that is selected
+from the differential expression analysis table.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.1.3.png"><img alt="_images/psc4.1.3.png" src="_images/psc4.1.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="top-genes">
+<h4>Top genes<a class="headerlink" href="#top-genes" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Top genes</strong> section shows the average expression plots across the samples for the top differentially
+(both positively and negatively) expressed genes for the selected comparison from the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> setting.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.2.png"><img alt="_images/psc4.2.png" src="_images/psc4.2.png" style="width: 100%;" /></a>
+</figure>
+<p>The plot can be customised via the settings to remove the log scale, ungroup samples and show only samples
+included in the selected contrast.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.2.0.png"><img alt="_images/psc4.2.0.png" src="_images/psc4.2.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="volcano-all">
+<h4>Volcano (all)<a class="headerlink" href="#volcano-all" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>Volcano (all)</strong> tab, the platform simultaneously displays multiple volcano plots
+for genes across all contrasts. By comparing multiple volcano plots,
+the user can immediately see which comparison is statistically weak or strong.
+Experimental contrasts with better statistical significance will show
+volcano plots with ‘higher’ wings.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.3.png"><img alt="_images/psc4.3.png" src="_images/psc4.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="volcano-methods">
+<h4>Volcano (methods)<a class="headerlink" href="#volcano-methods" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>Volcano (methods)</strong> tab, the platform displays the volcano plots provided by
+multiple differential expression calculation methods for the selected contrast.
+Methods showing better statistical significance will show volcano
+plots with ‘higher’ wings.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.4.png"><img alt="_images/psc4.4.png" src="_images/psc4.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="correlation-analysis">
+<h3>Correlation analysis<a class="headerlink" href="#correlation-analysis" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h4>Input panel<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Users can find more information by clicking <code class="docutils literal notranslate"><span class="pre">Info</span></code>. The panel contains the main settings for the analysis.
+The analysis can be started by selecting a gene of interest from the <code class="docutils literal notranslate"><span class="pre">Gene</span></code> settings.
+Under <em>Options</em>, users can filter for a specific gene family by using the <code class="docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">family</span></code> setting.
+By using the <code class="docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples</span></code> setting they con focus only on specific sample groups.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.5.0.png"><img alt="_images/psc4.5.0.png" src="_images/psc4.5.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="correllation">
+<h4>Correllation<a class="headerlink" href="#correllation" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>Correlation</strong> tab, the platform displays three different outputs:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>A plot displaying the highest correlated genes in respect to the selected gene.
+The plot can be customised via the settings icon on top to include no partial correlection,
+a fast partial correlation calculation or a calculation with all methods.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.5.1.png"><img alt="_images/psc4.5.1.png" src="_images/psc4.5.1.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>b</strong></dt>
+<dd class="field-odd"><p>A correlation graph centered on selected gene with top most correlated features.
+The plot can be customised via the settings icon on top. From it users can adjust the rho value
+via a sliding bar and change the graph layout via <code class="docutils literal notranslate"><span class="pre">Layout</span></code>.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.5.2.png"><img alt="_images/psc4.5.2.png" src="_images/psc4.5.2.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>Pairwise scatter plots for the expression values of the gene pairs across the samples.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.5.png"><img alt="_images/psc4.5.png" src="_images/psc4.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="functional">
+<h4>Functional<a class="headerlink" href="#functional" title="Permalink to this headline">¶</a></h4>
+<p>Four outputs are generated under the <strong>Functional</strong> tab:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>A series of gene set enrichment analysis (GSEA) plots using the correlation as rank metric.
+The black bars denote the genes in the gene set and their position in the sorted rank metric.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>A table containing the statistical results from the GSEA. The table displays
+normalised enrichment scores (NES), adjusted and non-adjusted p-values,size of the gene set
+and a link to gene set information.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>A plot of the frequency of leading edge genes in top correlated genesets.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>A table of the leading edge genes and rank statistics (rho) of the selected geneset.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc4.6.png"><img alt="_images/psc4.6.png" src="_images/psc4.6.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+</section>
+<span id="document-modules/mod4_DEGSs"></span><section id="enrichment">
+<span id="id1"></span><h2>Enrichment<a class="headerlink" href="#enrichment" title="Permalink to this headline">¶</a></h2>
+<p>This panel is subdivided into four subpanels: <strong>Geneset enrichment</strong>,
+<strong>Pathway analysis</strong>, <strong>Word cloud</strong> and <strong>Drug connectivity</strong>.</p>
+<section id="geneset-enrichment">
+<h3>Geneset enrichment<a class="headerlink" href="#geneset-enrichment" title="Permalink to this headline">¶</a></h3>
+<p>Similar to the differential gene expression analysis, users can perform differential
+expression analysis on a geneset level in this page, which is also referred as
+gene set enrichment (GSE) analysis. The platform has more than 50.000 genesets
+(or pathways) in total that are divided into 30 geneset collections such
+<a class="reference external" href="https://www.cell.com/abstract/S0092-8674(11)00127-9">Hallmark</a>,
+<a class="reference external" href="http://software.broadinstitute.org/gsea/msigdb/index.jsp">MSigDB</a>,
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>,
+and Gene Ontology (<a class="reference external" href="http://geneontology.org/">GO</a>).
+Users have to specify which comparison they want to visually analyze
+employing a certain geneset collection.</p>
+<p>The enrichment analyses results from the statistical methods are
+displayed in <strong>Table</strong> panel. In the <strong>Top enriched</strong> panel, the top
+differentially enriched geneses (pathways) are displayed. In the <strong>Plots</strong> panel,
+a volcano plot of genes contained in the selected geneset and a barplot of
+expressions per sample group are displayed. In the <strong>Compare</strong> panel, users can
+compare the differential expression status of that geneset for all other
+comparisons. Volcano plots of genesets for all comparisons are
+displayed under the <strong>Volcano (all)</strong> tab. This allows users to have an overall
+picture across comparisons at the same time. To compare the different statistical methods,
+the <strong>Volcano (methods)</strong> panel shows volcano plots of all methods. The <strong>GeneMap</strong> panel
+displays the co-activation heatmap of top N = {25} enriched gene sets and their common genes.
+The <strong>Foldchange (all)</strong> tab reports the gene fold changes for all contrasts in the selected dataset.
+The column <code class="docutils literal notranslate"><span class="pre">fc.var</span></code> corresponds to the variance of the fold-change across all contrasts.
+The <strong>FDR table</strong> panel reports the number of significant gene sets at different FDR thresholds for all contrasts.</p>
+<section id="input-panel">
+<h4>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h4>
+<p>Users can find a tutorial about the module under <code class="docutils literal notranslate"><span class="pre">Tutorial</span></code> in the input panel.
+The enrichment analysis can be started by selecting a contrats of interest in
+the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> and specifying a relevent gene set family in the <code class="docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">set</span> <span class="pre">collection</span></code>.
+It is possible to set the false discovery rate (FDR) and the logarithmic fold change
+(logFC) thresholds under the <code class="docutils literal notranslate"><span class="pre">FDR</span></code> and <code class="docutils literal notranslate"><span class="pre">logFC</span> <span class="pre">threshold</span></code> settings, respectively.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.0.png"><img alt="_images/psc5.0.png" src="_images/psc5.0.png" style="width: 30%;" /></a>
+</figure>
+<p>We allow users to show all gene sets in table <code class="docutils literal notranslate"><span class="pre">I</span></code> , rather than just the significant ones, under the <em>Options</em> menu.
+Users can also select statistical methods for the enrichment analysis from the same menu.
+To ensure the statistical reliability, the platform performs enrichment analyses using multiple methods, including
+<a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman rank correlation</a>,
+<a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7">GSVA</a>,
+<a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7">ssGSEA</a>,
+<a class="reference external" href="https://www.jstor.org/stable/2340521?seq=1#metadata_info_tab_contents">Fisher’s exact test</a>,
+<a class="reference external" href="http://software.broadinstitute.org/gsea/index.jsp">GSEA</a>,
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3458527/">camera</a> and
+<a class="reference external" href="https://academic.oup.com/bioinformatics/article/26/17/2176/200022">fry</a>.</p>
+</section>
+<section id="table">
+<h4>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h4>
+<p>Table <code class="docutils literal notranslate"><span class="pre">I</span></code> shows the enrichment analysis results from the selected statistical methods.
+WIth default settings, this table reports the meta (combined) results of
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3458527/">camera</a>,
+<a class="reference external" href="http://software.broadinstitute.org/gsea/index.jsp">fgsea</a>, and
+<a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman rank correlation</a> only.
+Users can filter top N = {10} differently enriched gene sets in the table by
+clicking the <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">10</span> <span class="pre">gene</span> <span class="pre">sets</span></code> from the table <em>Settings</em>. They can also select to display
+individual q-values.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.1.0.png"><img alt="_images/psc5.1.0.png" src="_images/psc5.1.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The combined enrichment analysis results from the methods are displayed in Table <code class="docutils literal notranslate"><span class="pre">I</span></code>,
+where for each geneset the <code class="docutils literal notranslate"><span class="pre">meta.q</span></code> corresponds to the highest <code class="docutils literal notranslate"><span class="pre">q</span></code> value provided
+by the methods and the number of <code class="docutils literal notranslate"><span class="pre">stars</span></code> indicate how many methods identified
+the geneset as significant (<code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&lt;</span> <span class="pre">0.05</span></code>). <code class="docutils literal notranslate"><span class="pre">AveExpr0</span></code> and <code class="docutils literal notranslate"><span class="pre">AveEprx1</span></code> refer to the average gene set expression
+in group 0 and group 1 of the selected pairwise comparison respectively.
+The table is interactive; users can sort it by <code class="docutils literal notranslate"><span class="pre">logFC</span></code>, <code class="docutils literal notranslate"><span class="pre">meta.q</span></code>, <code class="docutils literal notranslate"><span class="pre">AveExpr0</span></code>, <code class="docutils literal notranslate"><span class="pre">AveEprx1</span></code> and <code class="docutils literal notranslate"><span class="pre">stars</span></code>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.1.png"><img alt="_images/psc5.1.png" src="_images/psc5.1.png" style="width: 100%;" /></a>
+</figure>
+<p>By clicking on a gene set in Table <code class="docutils literal notranslate"><span class="pre">I</span></code>, it is possible to see the gene list of
+that gene set in Table <code class="docutils literal notranslate"><span class="pre">II</span></code>. It also reports the fold-change, statistics and
+correlation of the genes in the selected gene set. By clicking on a gene in
+Table <code class="docutils literal notranslate"><span class="pre">II</span></code>, under the <strong>Plots</strong> panel, users can check its correlation to the gene set
+in the <code class="docutils literal notranslate"><span class="pre">Enrichment</span> <span class="pre">vs.</span> <span class="pre">expression</span></code> correlation scatter plot.</p>
+</section>
+<section id="top-enriched">
+<h4>Top enriched<a class="headerlink" href="#top-enriched" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Top enriched</strong> panel shows two plots:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The enrichment plots of the top differentially
+enriched gene sets (up and down) for the selected contrast. Black vertical bars
+indicate the rank of genes in the gene set in the sorted list metric.
+The green curve corresponds to the enrichment score (ES). The more the green
+ES curve is shifted to the upper left of the graph, the more the gene set
+is enriched in the first group. Conversely, a shift of the ES curve to the
+lower right, corresponds to more enrichment in the second group.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>A gene frequency plot shows the number of times a gene is present in the top-N genesets
+sorted by frequency. Genes that are frequently shared among the top enriched gene sets
+may suggest driver genes.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.2.png"><img alt="_images/psc5.2.png" src="_images/psc5.2.png" style="width: 100%;" /></a>
+</figure>
+<p>The gene frequency plot can be customised via the <em>Settings</em>. Users can change the nuber of
+top gene sets to be included and deselect weighting by fold change (FC) and gene set size.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.2.0.png"><img alt="_images/psc5.2.0.png" src="_images/psc5.2.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="plots">
+<h4>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Plots</strong> panel provide plots associated with the gene set
+(selected in Table <code class="docutils literal notranslate"><span class="pre">I</span></code>) and gene (selected in Table <code class="docutils literal notranslate"><span class="pre">II</span></code>) under <code class="docutils literal notranslate"><span class="pre">Table</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>Enrichment plot associated with the gene set selected from Table <code class="docutils literal notranslate"><span class="pre">I</span></code>.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>Volcano-plot of genes showing the significance versus the fold-change on the y and x axes,
+respectively. Genes in the selected gene set are highlighted in blue.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>Barplot of the gene expression of the gene. Samples in the barplot
+can be ungrouped in the plot <em>Settings</em>.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>Scatter plot of the enrichment versus the expression of the selected
+geneset and gene, on the y and x axes, respectively.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.3.png"><img alt="_images/psc5.3.png" src="_images/psc5.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="compare">
+<h4>Compare<a class="headerlink" href="#compare" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>Compare</strong> panel, users can fin enrichment plots for the selected gene
+set (in Table <code class="docutils literal notranslate"><span class="pre">I</span></code>) across multiple contrasts. The figure allows to quickly
+compare the enrichment of a certain gene set across all other comparisons.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.4.png"><img alt="_images/psc5.4.png" src="_images/psc5.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="volcano-all">
+<h4>Volcano (all)<a class="headerlink" href="#volcano-all" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Volcano (all)</strong> panel simultaneously displays volcano plots of gene sets
+enrichment across all contrasts, showing the enrichment score versus significance
+on the x and y axes, respectively. This provides users an overview of the
+statistics across all comparisons. By comparing multiple volcano plots, the user
+can immediately see which comparison is statistically weak or strong.
+Experimental contrasts showing better statistical significance will show volcano
+plots with ‘higher’ wings.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.5.png"><img alt="_images/psc5.5.png" src="_images/psc5.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="volcano-methods">
+<h4>Volcano (methods)<a class="headerlink" href="#volcano-methods" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>Volcano (methods)</strong> panel, users can see the simultaneous
+visualisation of volcano plots of gene sets for different enrichment methods.
+This provides users an quick overview of the sensitivity of the statistical
+methods at once. Methods showing better statistical significance will show
+volcano plots with ‘higher’ wings.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.6.png"><img alt="_images/psc5.6.png" src="_images/psc5.6.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="genemap">
+<h4>GeneMap<a class="headerlink" href="#genemap" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>GeneMap</strong> panel, users can view a co-activation heatmap of the top N = {25}
+enriched gene sets and their common genes.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.9.png"><img alt="_images/psc5.9.png" src="_images/psc5.9.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="foldchange-all">
+<h4>Foldchange (all)<a class="headerlink" href="#foldchange-all" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Foldchange (all)</strong> provides the enrichment analysis of gene sets
+across all contrasts. The column <code class="docutils literal notranslate"><span class="pre">fc.var</span></code> corresponds to the variance of
+the fold-change across all contrasts.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.7.png"><img alt="_images/psc5.7.png" src="_images/psc5.7.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="fdr-table">
+<h4>FDR table<a class="headerlink" href="#fdr-table" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>FDR table</strong> panel reports the number of significant gene sets at different
+FDR thresholds for all contrasts and methods. Using the table the user can
+determine which statistical methods perform better for a particular contrast.
+The left part of the table (in blue) correspond
+to the number of significant down-regulated gene sets, the right part (in red)
+correspond to the number of significant overexpressed gene sets.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc5.8.png"><img alt="_images/psc5.8.png" src="_images/psc5.8.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="pathway-analysis">
+<h3>Pathway analysis<a class="headerlink" href="#pathway-analysis" title="Permalink to this headline">¶</a></h3>
+<p>This module performs specialized pathway and enrichment analysis
+providing higher level functional and visual analysis</p>
+<p>The <strong>KEGG pathways</strong> panel maps the differential fold-changes onto
+the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>
+pathway maps. Under the <strong>GO</strong> panel, a graph-based enrichment
+analysis is done using the Gene Ontology (<a class="reference external" href="http://geneontology.org/">GO</a>) graph structure.</p>
+<section id="id2">
+<h4>Input panel<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>A tutorial about the module can be found under <code class="docutils literal notranslate"><span class="pre">Youtube</span></code> in the input panel.
+Users can specify the contrast of their interest
+in the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> settings. Under the main <em>Options</em>, users can
+select <code class="docutils literal notranslate"><span class="pre">filter</span> <span class="pre">significant</span> <span class="pre">(tables)</span></code>  to keep only significant entries in the table.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.0.png"><img alt="_images/psc6.0.png" src="_images/psc6.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="kegg-pathways">
+<h4>KEGG pathways<a class="headerlink" href="#kegg-pathways" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a> is a collection
+of manually curated pathways representing the current knowledge of molecular
+interactions, reactions and relation networks as pathway maps. In the
+<strong>KEGG pathway</strong> panel, each pathway is scored for the selected contrast profile
+and reported in the table. A unique feature of the platform is that it provides
+an activation-heatmap comparing the activation levels of pathways across multiple
+contrast profiles. This facilitates to quickly see and detect the similarities
+between profiles in certain pathways. More detailed explaination of each output
+is provided below.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>In the pathway map, genes are colored according to their upregulation
+(red) or downregulation (blue) in the contrast profile. Each pathway
+is scored for the selected contrast profile and reported in the table
+below.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>Enrichment table. The table is interactive; enabling user to sort on
+different variables (kegg id, pathway, logFC and meta q-values)
+and select a pathway by clicking on the row in the table.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>The KEGG activation matrix visualizes the activation levels of pathways
+(or pathway keywords) across multiple contrast profiles. This facilitates
+to quickly see and detect the similarities of certain pathways between
+contrasts. The size of the circles correspond to their relative activation,
+and are colored according to their upregulation (red) or downregulation
+(blue) in the contrast profile. The matrix can be normalised from the
+<em>Settings</em>.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.1.png"><img alt="_images/psc6.1.png" src="_images/psc6.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="go-graph">
+<h4>GO graph<a class="headerlink" href="#go-graph" title="Permalink to this headline">¶</a></h4>
+<p>In the <strong>GO</strong> panel, users can perform <a class="reference external" href="http://geneontology.org/">GO</a> analysis.
+GO defines functional concepts/classes and their relationships as a hierarchical
+graph.
+The GO database provides a computational representation of the current knowledge
+about roles of genes for many organisms in terms of molecular functions, cellular
+components and biological processes. All the features described under the
+<strong>KEGG pathway</strong> panel, such as scoring the gene sets and drawing an
+activation-heatmap,
+can be performed for the GO database under the GO graph tab. Instead of pathway
+maps, an annotated graph structure provided by the GO database is potted for
+every selected gene set.
+Each output chart/table of the panel is describer below in detail.</p>
+<dl class="field-list">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The structure of GO can be described in terms of a graph, where each
+GO term is a node, and the relationships between the terms are edges
+between the nodes. GO is loosely hierarchical, with ‘child’ terms being
+more specialized than their ‘parent’ terms. The graph is interactive.
+You can move the graph and zoom in using the mouse.
+Under the graph <em>Settings</em>, users can select <code class="docutils literal notranslate"><span class="pre">Prune</span> <span class="pre">tree</span></code> to prune
+the tree only with significant branches and <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">custers</span></code> to
+highlight clusters with different colors</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.2.a.png"><img alt="_images/psc6.2.a.png" src="_images/psc6.2.a.png" style="width: 35%;" /></a>
+</figure>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>GO score table. The scoring of a GO term is performed by considering
+the cumulative score of all terms from that term to the root node.
+That means that GO terms that are supported by higher level terms
+levels are preferentially scored.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>The GO activation matrix visualizes the activation of GO terms
+across conditions. From this figure, you can easily detect GO terms
+that are consistently up/down across conditions. The size of the circles
+correspond to their relative activation, and are colored according to
+their upregulation (red) or downregulation (blue) in the contrast
+profile. The matrix can be normalised from the <em>Settings</em>.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.2.png"><img alt="_images/psc6.2.png" src="_images/psc6.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="word-cloud">
+<h3>Word Cloud<a class="headerlink" href="#word-cloud" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>WordCloud</strong> panel performs “keyword enrichment analysis”. It
+computes enrichment of a selected keyword across all contrasts. Select
+a keyword by clicking a word in the ‘Enrichment table’. Keyword
+enrichment is computed by running GSEA on the enrichment score profile
+for all contrasts. We defined the test set as the collection of
+genesets that contain the keyword in the title/description.</p>
+<section id="id3">
+<h4>Input panel<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>A tutorial about the module can be found under <code class="docutils literal notranslate"><span class="pre">Youtube</span></code> in the input panel.
+Users can specify the contrast of their interest
+in the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> settings. Under the main <em>Options</em>, users can
+select <code class="docutils literal notranslate"><span class="pre">normalize</span> <span class="pre">activation</span> <span class="pre">matrix</span></code>  to normalize the activation matrix.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.4.0.png"><img alt="_images/psc6.4.0.png" src="_images/psc6.4.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="main-panel">
+<h4>Main panel<a class="headerlink" href="#main-panel" title="Permalink to this headline">¶</a></h4>
+<p>The main panel consists of six different outputs:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The <strong>Enrichment plots</strong> visualize the enrichment of the
+selected keyword in the contrasts.  Black vertical bars
+indicate the position of gene sets that contains the <em>keyword</em>
+in the ranked list of enrichment scores. The curve in green
+corresponds to the ‘running statistic’ of the keyword
+enrichment score. The more the green ES curve is shifted to
+the upper left of the graph, the more the keyword is enriched
+in the first group. Conversely, a shift of the green ES curve
+to the lower right, corresponds to keyword enrichment in the
+second group.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>The <strong>Word cloud plot</strong> visualizes the frequency/enrichment of
+keywords for the data set. Select a keyword in the ‘Enrichment
+table’. In the plot settings, users can exclude certain words
+from the figure, or choose the color palette. The sizes of the
+words are relative to the normalized enrichment score (NES)
+from the GSEA computation. Keyword enrichment is computed by
+running GSEA on the mean (squared) enrichment profile
+(averaged over all contrasts). For each keyword, we defined
+the ‘keyword set’ as the collection of genesets that contain
+that keyword in the title/description.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.4.1.png"><img alt="_images/psc6.4.1.png" src="_images/psc6.4.1.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>The <strong>Word t-SNE</strong> plot visualizes the similarity of the
+keywords that were found in the title/description of gene
+sets. Keywords that are often found together in
+title/descriptions are placed close together in the t-SNE. For
+each keyword we computed enrichment using GSEA on the mean
+(absolute) enrichment profiles (averaged over all
+contrasts). Statistically significant gene sets (q&lt;0.05) are
+colored in red. The sizes of the nodes are proportional to the
+normalized enrichment score (NES) of the keyword. In the plot
+settings, the user can choose between t-SNE and “Uniform
+Manifold Approximation and Projection” (UMAP).</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.4.2.png"><img alt="_images/psc6.4.2.png" src="_images/psc6.4.2.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>d</strong></dt>
+<dd class="field-odd"><p>The <strong>Activation matrix</strong> visualizes the keywords enrichment
+across the conditions. The size of the circles correspond to
+their relative activation, and are colored according to their
+upregulation (red) or downregulation (blue) in the contrast profile.</p>
+</dd>
+<dt class="field-even"><strong>e</strong></dt>
+<dd class="field-even"><p>The <strong>Enrichment table</strong> summarizes the results from the
+enrichment test for the tested keywords. The NES corresponds
+to the normalized enrichment score from the GSEA analysis.</p>
+</dd>
+<dt class="field-odd"><strong>f</strong></dt>
+<dd class="field-odd"><p>The <strong>Leading-edge table</strong> shows the geneset titles that have
+contributed to the enrichment of the selected keyword.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.4.png"><img alt="_images/psc6.4.png" src="_images/psc6.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="drug-connectivity">
+<h3>Drug connectivity<a class="headerlink" href="#drug-connectivity" title="Permalink to this headline">¶</a></h3>
+<p>In the <strong>Drug Connectivity Map</strong> panel, users can correlate their signature with
+more than 5000 known drug profiles from the
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/29195078">L1000</a> database, as well as with drug
+sensitivity profiles from the <a class="reference external" href="https://portals.broadinstitute.org/ctrp.v2.1/">CTRP v2</a>
+and <a class="reference external" href="https://www.cancerrxgene.org/">GDSC</a> databases.
+Additionally, a separate list of shRNA- and cDNA-perturebed datasets from the L1000 database
+is also available (gene/L1000).</p>
+<p>An activation-heatmap compares drug activation profiles across multiple contrasts.
+This facilitates to quickly see and detect the similarities between contrasts
+for certain drugs.</p>
+<section id="id4">
+<h4>Input panel<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>A tutorial about the module can be found under <code class="docutils literal notranslate"><span class="pre">Youtube</span></code> in the input panel.
+Users can specify the contrast of their interest
+in the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> settings. Under <code class="docutils literal notranslate"><span class="pre">Analysis</span> <span class="pre">type</span></code> users can select from four
+databases.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.3.0.png"><img alt="_images/psc6.3.0.png" src="_images/psc6.3.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="id5">
+<h4>Main panel<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>The main panel consists of four outputs:</p>
+<dl class="field-list">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The Drug Connectivity Map correlates your signature with profiles from the L1000
+(activity/L1000 and gene/L1000), CTRP and GDSC databases.
+It shows the top N=10 similar and opposite profiles by running
+the GSEA algorithm on the contrast-drug profile correlation space.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>Enrichment table. Enrichment is calculated by correlating
+your signature with the profiles from the chosen
+database. Because of multiple perturbation experiments for a
+single small molecule, they are scored by running the GSEA algorithm on the
+contrast-small molecule profile correlation space. In this way, we obtain a
+single score for multiple profiles of a single small molecule. The table can be
+customised via the table <em>Settings</em> to only show annotated drugs.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>This plot visualizes the mechanism of action (MOA) across the enriched
+drug profiles. On the vertical axis, the number of drugs with the same
+MOA are plotted. You can switch to visualize between MOA or target gene.
+Under the plots <em>Settings</em>, users can select the plot type of MOA
+analysis: by class description (<code class="docutils literal notranslate"><span class="pre">drug</span> <span class="pre">class</span></code>) or by target gene
+(<code class="docutils literal notranslate"><span class="pre">target</span> <span class="pre">gene</span></code>).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.3.c.png"><img alt="_images/psc6.3.c.png" src="_images/psc6.3.c.png" style="width: 35%;" /></a>
+</figure>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>The <strong>Activation matrix</strong> visualizes the correlation of small molecule
+profiles with all available pairwise comparisons. The size of the
+circles correspond to the strength of their correlation, and are
+colored according to their positive (red) or
+negative (blue) correlation to the contrast profile.
+The matrix can be normalised from the <em>Settings</em>.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc6.3.png"><img alt="_images/psc6.3.png" src="_images/psc6.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+</section>
+<span id="document-modules/mod7_Signature"></span><section id="signature">
+<span id="id1"></span><h2>Signature<a class="headerlink" href="#signature" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Signature</strong> module consists of three panels: <strong>Compare signatures</strong>,
+<strong>Test signatures</strong> and <strong>Find biomarkers</strong>.</p>
+<p><strong>Compare signatures</strong> allows users to compare experiments by intersecting
+their signature genes. Under <strong>Test signatures</strong>, users can test their gene signature
+by calculating an enrichment score. Finally, with the <strong>Find biomarkers</strong> panel,
+users can select biomarkers that can be used for classification or prediction purposes.</p>
+<section id="compare-signature">
+<h3>Compare Signature<a class="headerlink" href="#compare-signature" title="Permalink to this headline">¶</a></h3>
+<p>The main goal of this panel is to identify contrasts showing similar profiles and
+find genes that are commonly up/down regulated between two contrasts. The panel is
+divided into two subpanels: <strong>Pairs</strong> and <strong>Contrast heatmap</strong>.</p>
+<section id="input-panel">
+<h4>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h4>
+<p>Users can select contrasts to compare from the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> settings
+in the input panel on the left. Under <em>Options</em>, users can set the <code class="docutils literal notranslate"><span class="pre">Filter</span></code> for
+filtering the features (i.e. genes or gene sets). The <code class="docutils literal notranslate"><span class="pre">Level</span></code> setting allows users
+to toggle between gene or gene set level analysis.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.0.png"><img alt="_images/psc7.0.png" src="_images/psc7.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="pairs">
+<h4>Pairs<a class="headerlink" href="#pairs" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Pairs</strong> panel shows three outputs:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The Pairs plot provides interactive pairwise scatterplots for the differential expression
+profiles corresponding to multiple contrasts. The main purpose of this panel is
+to identify similarity or dissimilarity between selected contrasts.
+When K&gt;=3 contrasts are selected, the figure shows a KxK scatterplot matrix.
+Via the <em>Settings</em>, users can disable the highlighting of genes on the plot.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>The Venn diagram visualizes the number of intersecting genes
+between the selected contrast profiles. The diagram can be customised via
+the <em>Settings</em> by altering logFC and FDR thresholds and by selecting whether to view
+disregulated genes jointly or separated by up- and down-regulation.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.1.a.png"><img alt="_images/psc7.1.a.png" src="_images/psc7.1.a.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>The Cumulative fold-change plot visualizes the cumulative fold-change of genes
+shared between the profiles. Users can toggle between absolute and directional
+fold change from the <em>Settings</em>. Ticking the letter boxes allows users to
+focus only on genes within a specific section of the Venn diagram. For example,
+ticking A will visualise all the genes in pairwise comparison A, while ticking A and B will
+show only the gene in the intersection between comparisons A and B. Users have then the
+option to download a list of the selected genes and their expression changes by comparison
+as a csv file.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.1.b.png"><img alt="_images/psc7.1.b.png" src="_images/psc7.1.b.png" style="width: 100%;" /></a>
+</figure>
+<p>A typical output can be seen below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.1.png"><img alt="_images/psc7.1.png" src="_images/psc7.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="contrast-heatmap">
+<h4>Contrast heatmap<a class="headerlink" href="#contrast-heatmap" title="Permalink to this headline">¶</a></h4>
+<p>Two plots are showed in this panel:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The Contrast heatmap shows the similarity of the contrasts visualized as
+a clustered heatmap The scale corresponds to the Pearson correlation coefficient
+between contrast profiles. Red corresponds to positive correlation and
+blue to negative correlation. The contrast heatmap quickly highlights
+the similarities and differences between multiple contrasts.
+The plot can be customised via the <em>Settings</em>. Users can select to show
+only the selected contrasts and alter the number of top genes for computation.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.2.a.png"><img alt="_images/psc7.2.a.png" src="_images/psc7.2.a.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>b</strong></dt>
+<dd class="field-odd"><p>The Connectivity map shows the similarity of the contrasts profiles
+as a t-SNE plot. Contrasts that are similar will be clustered close
+together, contrasts that are different are placed farther away.
+Under the plot settings, users can use <code class="docutils literal notranslate"><span class="pre">Layout</span></code> to set the plot layout
+and <code class="docutils literal notranslate"><span class="pre">Top</span> <span class="pre">genes</span></code> to specify the number of top genes for computations.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.2.b.png"><img alt="_images/psc7.2.b.png" src="_images/psc7.2.b.png" style="width: 30%;" /></a>
+</figure>
+<p>A typical output can be seen below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc7.2.png"><img alt="_images/psc7.2.png" src="_images/psc7.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="test-signature">
+<h3>Test Signature<a class="headerlink" href="#test-signature" title="Permalink to this headline">¶</a></h3>
+<p>With this panel, users can test their gene signature by calculating an enrichment
+score. The panel consists of four separate tabs: <strong>Enrichment</strong>, <strong>Volcano plots</strong>,
+<strong>Overlap/similarity</strong>, <strong>Markers</strong>.</p>
+<section id="id2">
+<h4>Input panel<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>For a custom signature, users can upload their own
+gene list or use one of the example gene lists provided.
+Alternatively, users can select signatures from <em>Options</em>.
+A contrast profile can be chosen by selecting <code class="xref std std-option docutils literal notranslate"><span class="pre">contrast</span></code>
+as <code class="docutils literal notranslate"><span class="pre">Signature</span> <span class="pre">type</span></code>, which then takes the top 100 most
+differentially expressed genes as the signature. When <code class="xref std std-option docutils literal notranslate"><span class="pre">Hallmark</span></code>
+or <code class="xref std std-option docutils literal notranslate"><span class="pre">KEGG</span></code> is selected, the user is presented with a list
+of predefined gene sets to choose from.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.0.png"><img alt="_images/psc8.0.png" src="_images/psc8.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="enrichment">
+<h4>Enrichment<a class="headerlink" href="#enrichment" title="Permalink to this headline">¶</a></h4>
+<p>After uploading a gene list, the <strong>Enrichment</strong> panel performs the
+enrichment analysis of the gene list against all contrasts by
+computing a correlation based enrichment or running the <a class="reference external" href="https://www.biorxiv.org/content/10.1101/060012v1.full">GSEA</a> algorithm
+and plots enrichment outputs.
+The enrichment plots show the enrichment of the query
+signature across all constrasts. Positive enrichment means that this particular
+contrast shows similar expression changes as the query signature.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.1.png"><img alt="_images/psc8.1.png" src="_images/psc8.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="enrichment-table">
+<h4>Enrichment table<a class="headerlink" href="#enrichment-table" title="Permalink to this headline">¶</a></h4>
+<p>Enrichment statistics can be found in the tables on the right:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>Table a</strong></dt>
+<dd class="field-odd"><p>Enrichment scores across all contrasts for the selected
+query signature . The NES corresponds to the normalized
+enrichment score of the GSEA analysis.</p>
+</dd>
+<dt class="field-even"><strong>Table b</strong></dt>
+<dd class="field-even"><p>Genes in the query signature sorted by decreasing
+(absolute) fold-change corresponding to the contrast selected
+in Table (a).</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.2.png"><img alt="_images/psc8.2.png" src="_images/psc8.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="volcano-plots">
+<h4>Volcano Plots<a class="headerlink" href="#volcano-plots" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Volcano Plots</strong> panel produces a visualization of the query signature
+on the volcano plots of all constrasts. For positive enrichment, genes of the
+query signature would fall on the upper right of the volcano plot,
+for negative enrichment, on the upper left.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.3.png"><img alt="_images/psc8.3.png" src="_images/psc8.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="overlap-similarity">
+<h4>Overlap/similarity<a class="headerlink" href="#overlap-similarity" title="Permalink to this headline">¶</a></h4>
+<p>Under the <strong>Overlap/similarity</strong> panel, users can compare their gene
+list with all the gene sets and pathways in the platform through
+overlap analysis, or also known as over-representation analysis.</p>
+<p>The top overlapping gene sets with selected signature are displyed in the plot.
+The vertical axis shows the overlap score of the gene set which is computed
+as the geometric mean of the absolute logarithm of the odds ratio
+and the q-value of the Fisher’s test.</p>
+<p>Under the plot settings, users can specify the number to top features
+to show, or users can select to hide/show the feature names in the plot.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.4.a.png"><img alt="_images/psc8.4.a.png" src="_images/psc8.4.a.png" style="width: 30%;" /></a>
+</figure>
+<p>The table reports the <code class="xref std std-option docutils literal notranslate"><span class="pre">score</span></code>, total number of genes in the
+gene set (<code class="xref std std-option docutils literal notranslate"><span class="pre">K</span></code>), the number of intersecting genes between the
+list and the gene set (<code class="xref std std-option docutils literal notranslate"><span class="pre">k</span></code>), the overlapping ratio of
+<code class="xref std std-option docutils literal notranslate"><span class="pre">k/K</span></code>, as well as the <code class="xref std std-option docutils literal notranslate"><span class="pre">odds.ratio</span></code> and
+<code class="xref std std-option docutils literal notranslate"><span class="pre">q.fisher</span></code> values by the Fisher’s test for the overlap test.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.4.png"><img alt="_images/psc8.4.png" src="_images/psc8.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="markers">
+<h4>Markers<a class="headerlink" href="#markers" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Markers</strong> panel produces a t-SNE plot of samples for each gene
+in the signature, where the samples are colored with respect to the
+upregulation (in red) or downregulation (in blue) of the gene. For
+larger signatures, only the top most variable genes in the signature
+are given. If you want to check a particular gene not shown, you must
+reduce the number of genes in your list.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc8.5.png"><img alt="_images/psc8.5.png" src="_images/psc8.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="find-biomarkers">
+<h3>Find Biomarkers<a class="headerlink" href="#find-biomarkers" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Find Biomarkers</strong> panel selects biomarkers that can be
+used for classification or prediction purposes. Biomarker analysis
+might also help to better understand which genes, mutations, or gene
+sets influence the final phenotype the most.</p>
+<p>Omics Playground calculates a variable importance score for each feature using multiple state-of-the-art machine learning algorithms, including <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/20808728">LASSO</a>, <a class="reference external" href="https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf">elastic nets</a>, <a class="reference external" href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">random forests</a>, and
+<a class="reference external" href="https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf">extreme gradient boosting</a>. Note that we do not use the machine learning algorithms for prediction but we use them just to compute the variable importances according to the different methods. An aggregated score is then calculated as the cumulative rank of the variable importances of the different algorithms. By combining several methods, the platform aims to select the best possible predictive features. The top features are determined as the features with the highest cumulative ranks.</p>
+<p>The module provides a heatmap of samples based on identified top features.
+In addition, it generates a classification tree using top features and provides
+expression boxplots by phenotype classes for features present in the
+tree.</p>
+<section id="id3">
+<h4>Input panel<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Users can select the target variable for biomarker selection in the
+<code class="docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target</span></code> settings from the input panel. Under <code class="docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">filter</span></code>
+users can pre-filter features by selecting specific gene families or sets.
+If the user selects <code class="xref std std-option docutils literal notranslate"><span class="pre">&lt;custom&gt;</span></code>, an input area appears and one can paste
+a custom gene list to be used as initial features. Hitting the <code class="docutils literal notranslate"><span class="pre">Run</span></code>
+button will start the biomarker computation.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc9.0.png"><img alt="_images/psc9.0.png" src="_images/psc9.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="importance">
+<h4>Importance<a class="headerlink" href="#importance" title="Permalink to this headline">¶</a></h4>
+<p>This panel provides the output of the biomarker analysis in multiple
+figures. Below we provide an short explanation for each figure:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p><strong>Variable importance plot.</strong> A variable importance score for
+each feature is calculated using multiple machine learning
+algorithms, including <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/20808728">LASSO</a>, <a class="reference external" href="https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf">elastic
+nets</a>,
+<a class="reference external" href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">random forests</a>,
+and <a class="reference external" href="https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf">extreme gradient boosting</a>.
+By combining several methods, the platform aims to select the
+best possible biomarkers. The top features are plotted
+according to cumulative ranking by the algorithms.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p><strong>Biomarker expression heatmap.</strong> The heatmap shows the expression
+distribution for the top most important features.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p><strong>Decision tree.</strong> The decision tree shows one (out of many
+possible) tree solution for classification based on the top
+most important features.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p><strong>Expression box plots.</strong> These boxplots shows the expression
+of genes/samples of the identified features.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc9.1.png"><img alt="_images/psc9.1.png" src="_images/psc9.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+</section>
+<span id="document-modules/mod9_CellProfiling"></span><section id="cell-profiling">
+<span id="cellprofiling"></span><h2>Cell Profiling<a class="headerlink" href="#cell-profiling" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Cell Profiling</strong> module is specifically developed for the
+analysis and visualization of single-cell datasets. The main
+applications are identification of immune cell types and
+visualisations of markers, phenotypes, and proportions across the cells.</p>
+<p>The <strong>Cell type</strong> panel infers the type of cells using computational deconvolution
+methods and reference datasets from the literature.</p>
+<p>The <strong>Mapping</strong> panel provides a visualization of the inferred cell types
+matched to the phenotype variable of the data set, as well as a proportion plot
+visualizing the interrelationships between two categorical variables
+(so-called cross tabulation). This can be used to study the composition
+of a sample by cell type, for example.</p>
+<p>The <strong>Markers</strong> panel provides potential marker genes, which are the top genes
+with the highest standard deviation within the expression data across the samples.
+It also generates a plot mimicking the scatter plots used for gating in
+flow cytometry analysis.</p>
+<p>The <strong>iTALK</strong> consists of a computational approach from the literature
+to characterize and illustrate intercellular communication signals in the
+multicellular tumor ecosystem.</p>
+<section id="input-panel">
+<h3>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h3>
+<p>Users can filter relevant samples in the <code class="docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples</span></code> settings
+under the the main <code class="docutils literal notranslate"><span class="pre">Options</span></code> in the input panel. They can also
+specify to use a <code class="docutils literal notranslate"><span class="pre">default</span></code>  (tSNE) or <code class="docutils literal notranslate"><span class="pre">pca</span></code> layout for the figures.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.0.png"><img alt="_images/psc10.0.png" src="_images/psc10.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="cell-type">
+<h3>Cell type<a class="headerlink" href="#cell-type" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Cell type</strong> profiling panel infers the type of cells using
+computational deconvolution methods and reference datasets from the
+literature.  In the plot settings menu, users can select the
+reference dataset and the method for the cell type prediction in the
+<code class="docutils literal notranslate"><span class="pre">reference</span></code> and <code class="docutils literal notranslate"><span class="pre">method</span></code> settings, respectively. Currently, we
+have implemented a total of 7 methods (EPIC, DeconRNAseq, DCQ, I-NNLS,
+NNLM, correlation-based and a meta-method) and 9 reference datasets to
+predict immune cell types (4 datasets: LM22, ImmProt, DICE and
+ImmunoStates), tissue types (2 datasets: HPA and GTEx), cell lines (2
+datasets: HPA and CCLE) and cancer types (1 dataset: CCLE). Not all
+methods or databases may be available for a dataset, the availability
+depends on the pre-processing done. From the settings, users can also
+sort plots by either probability or name and change the layout.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.1.0.png"><img alt="_images/psc10.1.0.png" src="_images/psc10.1.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The cell type profiling plot is highlighted below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.1.png"><img alt="_images/psc10.1.png" src="_images/psc10.1.png" style="width: 100%;" /></a>
+</figure>
+<p>It also produces phenotypes plots showing the distribution of the
+phenotypes superimposed on the t-SNE clustering.
+Often, we can expect the t-SNE distribution to be driven by the particular
+phenotype that is controlled by the experimental condition or unwanted
+batch effects. Users can select whether they want the group labels to be
+plotted inside the figures or in a seperate legend in the``Legend``
+under the <em>Settings</em>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.1.1.png"><img alt="_images/psc10.1.1.png" src="_images/psc10.1.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="mapping">
+<h3>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Mapping</strong> panel contains two plots.
+To the right there is a plot representing the cell type mapping across all samples.
+This plot can be customised via the <em>Settings</em> menu. Through it, users can change
+the <code class="docutils literal notranslate"><span class="pre">plot</span> <span class="pre">type</span></code> between a dotmap and a heatmap, select the <code class="docutils literal notranslate"><span class="pre">reference</span></code> dataset,
+select the analysis <code class="docutils literal notranslate"><span class="pre">method</span></code> and use <code class="docutils literal notranslate"><span class="pre">group</span> <span class="pre">by</span></code> to group samples by phenotypes.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.2.a.png"><img alt="_images/psc10.2.a.png" src="_images/psc10.2.a.png" style="width: 30%;" /></a>
+</figure>
+<p>The cell type mapping plot is shown below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.2.png"><img alt="_images/psc10.2.png" src="_images/psc10.2.png" style="width: 100%;" /></a>
+</figure>
+<p>To the left, a proportion plot visualizes the overlap between two categorical variables.
+This can be useful for bulk RNA datasets, as it provides useful information about
+the proportion of different cell types in the samples. From the <em>Settings</em>, users
+can select whwther to display the &lt;cell type&gt; (based on the chosen reference dataset)
+or select one of the available phenotypes on the x- and y-axes of the plot. The number
+of counts is also displayed on top.
+By selecting a gene with <code class="docutils literal notranslate"><span class="pre">gene</span></code> they can also add an expression barplot for the gene.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.2.b.png"><img alt="_images/psc10.2.b.png" src="_images/psc10.2.b.png" style="width: 30%;" /></a>
+</figure>
+<p>The proportion plot (including a gene expression barplot) is shown below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.2.1.png"><img alt="_images/psc10.2.1.png" src="_images/psc10.2.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="markers">
+<h3>Markers<a class="headerlink" href="#markers" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Markers</strong> panel produces two outputs. The first output consists of 36 t-SNE
+plots of the genes with the highest standard deviation that could represent
+potential biomarkers. The red color shading is proportional to the (absolute)
+expression of the gene in corresponding samples.</p>
+<p>In the plot <em>Settings</em>, users can specify the <code class="docutils literal notranslate"><span class="pre">Level</span></code> of the marker analysis:
+gene or gene set level. They can also restrict the analysis by selecting a particular
+functional group in the <code class="docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">set</span></code>, where genes are divided into 89 groups, such as
+chemokines, transcription factors, genes involved in immune checkpoint inhibition, and so on.
+In addition, it is possible to filter markers by a specific keywords in the <code class="docutils literal notranslate"><span class="pre">Filter</span></code> setting
+and sort them by name or intensity.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.3.a.png"><img alt="_images/psc10.3.a.png" src="_images/psc10.3.a.png" style="width: 30%;" /></a>
+</figure>
+<p>An example of the t-SNE plots are highlighted below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.3.png"><img alt="_images/psc10.3.png" src="_images/psc10.3.png" style="width: 100%;" /></a>
+</figure>
+<p>For each gene pairs combination, the panel also generates a cytometry-like plot (<strong>Cyto plot</strong>)
+of samples. The aim of this feature is to observe the distribution of samples
+in relation to the selected gene pairs. For instance, when applied to single-cell
+sequencing data from immunological cells, it can mimic flow cytometry analysis and distinguish
+T helper cells from other T cells by selecting the CD4 and CD8 gene combination.
+Under the plot <em>Settings</em>, user can select their prefered genes on the x- and y-axes
+in the <code class="docutils literal notranslate"><span class="pre">x-axis</span></code> and <code class="docutils literal notranslate"><span class="pre">y-axis</span></code>, respectively.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.3.b.png"><img alt="_images/psc10.3.b.png" src="_images/psc10.3.b.png" style="width: 30%;" /></a>
+</figure>
+<p>The Cyto plot is highlighted below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.3.1.png"><img alt="_images/psc10.3.1.png" src="_images/psc10.3.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="italk">
+<h3>iTALK<a class="headerlink" href="#italk" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>iTALK</strong> panel implements the
+<a class="reference external" href="https://www.biorxiv.org/content/10.1101/507871v1">iTALK</a>
+package from the literature. It is designed to profile and visualize the
+ligand-receptor mediated intercellular cross-talk signals from single-cell
+RNA sequencing data (scRNA-seq). iTALK uses a manually curated list of
+ligand-receptor gene pairs further classified into 4 categories based on
+the primary function of the ligand: cytokines/chemokines,
+immune checkpoint genes, growth factors, and others.
+Phenotype and ligand-receptor gene pairs can be selected from the
+scrolldown menus on top of the Ligand-Receptor plot.</p>
+<p>The panel produces three plots:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The Ligand-Receptor plot visualizes the communication structure of
+ligand-receptor genes as a circle plot. The width of the arrow represents
+the expression level/log fold change of the ligand; while the width of
+arrow head represents the expression level/log fold change of the
+receptor. Different color and the type of the arrow stands for whether
+the ligand and/or receptor are upregulated or downregulated.
+Under the <em>Settings</em>, it is possible to select the number of top pairs
+to be displayed in the <code class="docutils literal notranslate"><span class="pre">ntop</span> <span class="pre">pairs</span></code>.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>The heatmap visualizes the expression level/log fold change of the
+ligand/receptor genes. For further information, see
+<a class="reference external" href="https://www.biorxiv.org/content/10.1101/507871v1">iTALK</a> R package.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>The NetView plot visualizes the communication structure of ligand-receptor
+genes as a graph. The colors represent different types of cells as a
+structure and the width of edges represent the strength of the communication.
+Labels on the edges show exactly how many interactions exist between two
+types of cells. For further information, see
+<a class="reference external" href="https://www.biorxiv.org/content/10.1101/507871v1">iTALK</a> R package.
+Users can set the number of top genes to be plotted in the figure in the
+<code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">genes</span></code> under the <em>Settings</em>.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/psc10.4.png"><img alt="_images/psc10.4.png" src="_images/psc10.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-examples/examples"></span><section id="reanalyzing-public-datasets">
+<span id="examples"></span><h2>Reanalyzing Public Datasets<a class="headerlink" href="#reanalyzing-public-datasets" title="Permalink to this headline">¶</a></h2>
+<p>To illustrate the use case of the Omics Playground, we reanalyzed different types
+of publics datasets, including microarray, bulk RNA-seq, single-cell RNA-seq and
+proteomic datasets to recapitulate the results.</p>
+<section id="single-cell-rna-seq-data">
+<h3>Single-cell RNA-seq data<a class="headerlink" href="#single-cell-rna-seq-data" title="Permalink to this headline">¶</a></h3>
+<p>For single-cell RNA-seq data, we downloaded the melanoma data set
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056">GSE72056</a> of
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27124452">Tirosh et al.</a>.
+Our platform recapitulates well the original findings of the paper.
+The t-SNE clustering (<a class="reference internal" href="#figure-1">Figure 1</a>) separates the different cell types.
+<a class="reference internal" href="#figure-2">Figure 2</a> and <a class="reference internal" href="#figure-3">Figure 3</a> show the volcano plot, MA plot and most differentially
+expressed genes between malignant and non-malignant cells.
+The CNV map (<a class="reference internal" href="#figure-4">Figure 4</a>) confirms the major chromosomal copy number
+variations found in the malignant cells. <a class="reference internal" href="#figure-5">Figure 5</a> shows high enrichment
+of a immune checkpoint signature, particularly concentrated in the T cells.
+The biomarker heatmap (<a class="reference internal" href="#figure-6">Figure 6</a>) highlights the marker genes for
+each cell type. Each gene cluster is furthermore automatically
+annotated with the most correlated gene sets (<a class="reference internal" href="#figure-7">Figure 7</a>).</p>
+<section id="tsne-plot">
+<h4>tSNE plot<a class="headerlink" href="#tsne-plot" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-1">
+<a class="reference internal image-reference" href="_images/fig2_a.png"><img alt="_images/fig2_a.png" src="_images/fig2_a.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 1</strong>. The t-SNE clustering with cell type annotation for the
+<code class="xref std std-option docutils literal notranslate"><span class="pre">GSE72056-scmelanoma</span></code> dataset.
+To reproduce the figure on the platform, select and load
+<code class="xref std std-option docutils literal notranslate"><span class="pre">GSE72056-scmelanoma</span></code> dataset,
+and go to the <strong>PCA/tSNE</strong> panel of the <strong>Clustering</strong> module.
+From the plot <em>Settings</em>,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">color:</span> <span class="pre">group</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">layout:</span> <span class="pre">tsne</span></code>, and leave other settings
+as default.</p>
+</section>
+<section id="volcano-and-ma-plot">
+<h4>Volcano and MA plot<a class="headerlink" href="#volcano-and-ma-plot" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-2">
+<a class="reference internal image-reference" href="_images/fig2_b.png"><img alt="_images/fig2_b.png" src="_images/fig2_b.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 2</strong>. Volcano and MA plot for the malignant versus non-malignant contrast.
+To replicate the figure on the platform, go to the <strong>Plots</strong> panel of
+the <strong>Expression</strong> module. From the input slider,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">yes_vs_no</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">family:</span> <span class="pre">all</span></code>.</p>
+</section>
+<section id="differentially-expressed-genes">
+<h4>Differentially expressed genes<a class="headerlink" href="#differentially-expressed-genes" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-3">
+<a class="reference internal image-reference" href="_images/fig2_c.png"><img alt="_images/fig2_c.png" src="_images/fig2_c.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 3</strong>. Barplot of corresponding differentially expressed genes.
+To obtain the figure on the platform,
+go to the <strong>Top genes</strong> panel of the <strong>Expression</strong> module. From the input slider,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">yes_vs_no</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">family:</span> <span class="pre">all</span></code>.</p>
+</section>
+<section id="inferred-copy-number">
+<h4>Inferred copy number<a class="headerlink" href="#inferred-copy-number" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-4">
+<a class="reference internal image-reference" href="_images/fig2_d.png"><img alt="_images/fig2_d.png" src="_images/fig2_d.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 4</strong>. Inferred copy number for sample Cy80.
+To reproduce the figure on the platform, go to the <strong>CNV</strong> panel of the
+<strong>scProfiling</strong> module. From the plot <em>Settings</em>,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Annotate</span> <span class="pre">with:</span> <span class="pre">malignant</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Order</span> <span class="pre">samples</span> <span class="pre">by:</span> <span class="pre">clust</span></code>.</p>
+</section>
+<section id="immune-checkpoint-signature">
+<h4>Immune checkpoint signature<a class="headerlink" href="#immune-checkpoint-signature" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-5">
+<a class="reference internal image-reference" href="_images/fig2_e.png"><img alt="_images/fig2_e.png" src="_images/fig2_e.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 5</strong>. Enrichment distribution for an immune checkpoint signature showing high
+enrichment in T and B cells .
+To regenerate the figure on the platform, go to the <strong>Marker</strong> panel in
+the <strong>Signature</strong> module. From the input slider,
+select <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">custom</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Signature:</span> <span class="pre">immune_chkpt</span></code> as it is
+provided in the sample list.</p>
+</section>
+<section id="biomarker-heatmap">
+<h4>Biomarker heatmap<a class="headerlink" href="#biomarker-heatmap" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-6">
+<a class="reference internal image-reference" href="_images/fig2_f.png"><img alt="_images/fig2_f.png" src="_images/fig2_f.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 6</strong>. Biomarker heatmap for non-malignant cells.
+To reproduce the figure on the platform, go to the <strong>Heatmap</strong> panel in the
+<strong>Clustering</strong> module. From the input slider,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples:</span> <span class="pre">cell.type={Bcell,</span>
+<span class="pre">CAF,</span> <span class="pre">endothelial,</span> <span class="pre">Macrophage,</span> <span class="pre">NK,</span> <span class="pre">Tcell}</span></code>.
+In the plot <em>Settings</em>, set <code class="xref std std-option docutils literal notranslate"><span class="pre">Plot</span> <span class="pre">type:</span> <span class="pre">ComplexHeatmap</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">split</span> <span class="pre">by:</span>
+<span class="pre">cell.type</span></code>, and <code class="xref std std-option docutils literal notranslate"><span class="pre">top</span> <span class="pre">mode:</span> <span class="pre">specific</span></code>.</p>
+</section>
+<section id="annotate-heatmap-clusters">
+<h4>Annotate heatmap clusters<a class="headerlink" href="#annotate-heatmap-clusters" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-7">
+<a class="reference internal image-reference" href="_images/fig2_g.png"><img alt="_images/fig2_g.png" src="_images/fig2_g.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 7</strong>. Enrichment annotation of corresponding heatmap clusters from the <a class="reference internal" href="#figure-6">Figure 6</a>.
+To reproduce the figure on the platform, generate the heatmap in <a class="reference internal" href="#figure-6">Figure 6</a> first,
+then go to the <strong>Annotate clusters</strong> panel. From the plot <em>Settings</em>,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Reference</span> <span class="pre">set:</span> <span class="pre">GOBP</span></code>.</p>
+</section>
+</section>
+<section id="bulk-rna-seq-data">
+<h3>Bulk RNA-seq Data<a class="headerlink" href="#bulk-rna-seq-data" title="Permalink to this headline">¶</a></h3>
+<p>To elucidate the mechanism of action of a new drug, or for the intention of drug
+repurposing, it is often useful to find other drugs that have similar or opposing
+signatures compared to some given fold change profile.
+This example is illustriated using the RNA-sequencing dataset
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114716">GSE114716</a> from
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/29905573">Goswami et al.</a>,
+which contains CD4 T cells following ipilimumab therapy.
+<a class="reference internal" href="#figure-8">Figure 8</a> shows the top ranked drugs with most similar or most opposing signatures
+to ipilimumab, a novel monoclonal antibody targeting CTLA-4 used in tumour therapy
+to stimulate the immune system. The complete list contains several compounds that
+stimulate the immune system, such as alpha-tocopherol
+(<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0264410X11000399">Morel et al.</a>),
+but also highlights compounds that are not commonly associated with the modulation
+of immune responses, such as strophanthidin, an intropic drug that has recently
+been shown to display pro-inflammatory activities
+(<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0378427418314863">Karas et al.</a>).</p>
+<section id="drug-enrichment-profiles">
+<h4>Drug enrichment profiles<a class="headerlink" href="#drug-enrichment-profiles" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-8">
+<a class="reference internal image-reference" href="_images/fig2_h.png"><img alt="_images/fig2_h.png" src="_images/fig2_h.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 8</strong>. Drug enrichment profiles for most similar and opposing drugs
+compared to ipilimumab treatment.
+To reobtain the figure on the platform, select and load
+<code class="xref std std-option docutils literal notranslate"><span class="pre">GSE114716-ipilimumab</span></code> dataset, go to the <strong>Drug CMap</strong> panel
+under the <strong>Functional</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">Ipi_vs_baseline</span></code> from the plot <em>Settings</em>.</p>
+</section>
+</section>
+<section id="microarray-data">
+<h3>Microarray Data<a class="headerlink" href="#microarray-data" title="Permalink to this headline">¶</a></h3>
+<p>In this section, we perform the heatmap clustering, biomarker selection and
+survival analysis using
+the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10846">GSE10846</a>
+from <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/19038878">Lenz et al.</a>,
+which is the microarray gene expression dataset of diffuse large B-cell
+lymphoma (DLBCL) patients.
+<a class="reference internal" href="#figure-9">Figure 9</a> shows a hierarchical cluster heatmap of microarray gene
+expression data. <a class="reference internal" href="#figure-10">Figure 10</a> and <a class="reference internal" href="#figure-11">Figure 11</a> show the variable importance
+plot and a survival tree on the overall survival of the DLBCL patients,
+respectively.</p>
+<section id="hierarchical-cluster-heatmap">
+<h4>Hierarchical cluster heatmap<a class="headerlink" href="#hierarchical-cluster-heatmap" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-9">
+<a class="reference internal image-reference" href="_images/fig3_b.png"><img alt="_images/fig3_b.png" src="_images/fig3_b.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 9</strong>. Hierarchical cluster heatmap for <code class="xref std std-option docutils literal notranslate"><span class="pre">GSE10846-dlbcl</span></code> dataset.
+To replicate the figure, select and load <code class="xref std std-option docutils literal notranslate"><span class="pre">GSE10846-dlbcl</span></code>
+dataset on the platform. Go to the <strong>Heatmap</strong> panel of the <strong>Clustering</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Level:</span> <span class="pre">gene</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Features:</span> <span class="pre">all</span></code> from the input panel.
+In the plot <em>Settings</em>, set the <code class="xref std std-option docutils literal notranslate"><span class="pre">split</span> <span class="pre">by:</span> <span class="pre">none</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Top</span> <span class="pre">mode:</span> <span class="pre">pca</span></code>.</p>
+</section>
+<section id="variable-importance-plot">
+<h4>Variable importance plot<a class="headerlink" href="#variable-importance-plot" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-10">
+<a class="reference internal image-reference" href="_images/fig3_c.png"><img alt="_images/fig3_c.png" src="_images/fig3_c.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 10</strong>. Variable importance plot.
+To replicate the figure, go to the <strong>Biomarker</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target:</span> <span class="pre">dlbcl.type</span></code> from the input panel.</p>
+</section>
+<section id="survival-tree">
+<h4>Survival tree<a class="headerlink" href="#survival-tree" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-11">
+<a class="reference internal image-reference" href="_images/fig3_d1.png"><img alt="_images/fig3_d1.png" src="_images/fig3_d1.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/fig3_d2.png"><img alt="_images/fig3_d2.png" src="_images/fig3_d2.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 11</strong>. Survival tree analysis for <code class="xref std std-option docutils literal notranslate"><span class="pre">GSE10846-dlbcl</span></code> dataset.
+To redproduce similar figures, go to the <strong>Biomarker</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target:</span> <span class="pre">OS.survival</span></code> from the input panel.
+Note that the survival tree is stochastically built up with some of the top
+features shown in <a class="reference internal" href="#figure-10">Figure 10</a>; Therefore, users can get a slightly different survival
+tree every time.</p>
+</section>
+</section>
+<section id="proteomic-data">
+<h3>Proteomic Data<a class="headerlink" href="#proteomic-data" title="Permalink to this headline">¶</a></h3>
+<p>With larger data sets, often the number of contrasts increases and complicates
+the overall analysis. For example, the proteomics data set of
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28263321">Rieckmann et al. 2017</a>
+comprises 26 populations of seven major immune cell types, measured during resting
+and activated states. There are more than 300 possible comparisons to make.
+To gain a better overview, gene set activation matrix (<a class="reference internal" href="#figure-12">Figure 12</a>) help
+visualize the similarities between multiple contrasts on a functional level.
+Alternatively, similarities can be visualized as a connectivity graph (<a class="reference internal" href="#figure-13">Figure 13</a>).
+For the same data set, <a class="reference internal" href="#figure-14">Figure 14</a> shows a computed partition tree that classifies
+the major cell types.</p>
+<p>Another example dataset is from
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27745970">Geiger et al.</a>,
+where the proteome profiles
+of activated vs resting human naive T cells at different times were compared.
+<a class="reference internal" href="#figure-15">Figure 15</a> shows the volcano plots corresponding to eight different statistical tests
+comparing time-dependent activation of T cells at 48h vs. 12h. We see that
+both standard t-test and the Welch t-test show much less power to detect
+significant genes compared to the other methods. The result from edgeR-QLF
+is close to those of the two limma based methods, while edgeR-LRT is very
+similar to the results of DESeq2-Wald.</p>
+<section id="activation-matrix">
+<h4>Activation matrix<a class="headerlink" href="#activation-matrix" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-12">
+<a class="reference internal image-reference" href="_images/fig3_e.png"><img alt="_images/fig3_e.png" src="_images/fig3_e.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 12</strong>. Gene Ontology activation matrix.
+To replicate the figure, select and load the <code class="xref std std-option docutils literal notranslate"><span class="pre">rieckmann2017-immprot</span></code>
+dataset, and go to the <strong>GO graph</strong> panel of the <strong>Functional</strong> module
+with default settings.</p>
+</section>
+<section id="contrast-heatmap">
+<h4>Contrast heatmap<a class="headerlink" href="#contrast-heatmap" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-13">
+<a class="reference internal image-reference" href="_images/fig3_f.png"><img alt="_images/fig3_f.png" src="_images/fig3_f.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 13</strong>. Contrast heatmap for the <code class="xref std std-option docutils literal notranslate"><span class="pre">rieckmann2017-immprot</span></code> dataset.
+To generate the figure on the platform, go to the <strong>Contrast heatmap</strong> panel of
+the <strong>Intersection</strong> module with default settings.</p>
+</section>
+<section id="classification-tree">
+<h4>Classification tree<a class="headerlink" href="#classification-tree" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-14">
+<a class="reference internal image-reference" href="_images/fig3_g1.png"><img alt="_images/fig3_g1.png" src="_images/fig3_g1.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/fig3_g2.png"><img alt="_images/fig3_g2.png" src="_images/fig3_g2.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 14</strong>. Classification tree for the <code class="xref std std-option docutils literal notranslate"><span class="pre">rieckmann2017-immprot</span></code> dataset.
+To reproduce similar figures, go to the <strong>Biomarker</strong> module, and set the
+<code class="xref std std-option docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target:</span> <span class="pre">cell.type</span></code> from the input panel.
+Note that the classification tree is stochastically built up with some of the top
+features shown in <a class="reference internal" href="#figure-10">Figure 10</a>; Therefore, users can get a slightly different survival
+tree every time.</p>
+</section>
+<section id="volcano-plots-of-methods">
+<h4>Volcano plots of methods<a class="headerlink" href="#volcano-plots-of-methods" title="Permalink to this headline">¶</a></h4>
+<figure class="align-center" id="figure-15">
+<a class="reference internal image-reference" href="_images/fig3_a.png"><img alt="_images/fig3_a.png" src="_images/fig3_a.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 15</strong>. Volcano plots corresponding to eight different statistical
+methods comparing time-dependent expression of T cell activation at 48h vs. 12h.
+To regenerate the figure, select and load <code class="xref std std-option docutils literal notranslate"><span class="pre">geiger2016-arginine</span></code> dataset.
+Go to the <strong>Volcano (methods)</strong> panel under the
+<strong>Expression</strong> module, and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">act48h_vs_act12h</span></code>.</p>
+</section>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-methods"></span><section id="methods">
+<span id="id1"></span><h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p>Below are snippets that you can use to describe the methods when using
+the Omics Playground. These are just examples and you need to extract
+and modify the parts you used and need.</p>
+<section id="batch-correction">
+<h3>Batch correction<a class="headerlink" href="#batch-correction" title="Permalink to this headline">¶</a></h3>
+<p>Batch effects, or contamination by unwanted variables, was identified
+by an F-test for the first three principal components. Continuous
+variables were dichotomized into high/low before testing. Highly
+confounding variables would appear as having high relative
+contribution in the first or second principal component, often higher
+than the variable of interest. Batch effects were also visually
+assessed (before and after correction) using annotated heatmaps and
+t-SNE plots colored by variables.</p>
+<p>[Setting: ‘low’] Batch correction was performed for explicit batch
+variables or unwanted covariates. Parameters with a correlation r&gt;0.3
+with any of variables of interest (i.e. the model parameters) were
+omitted from the regression. Correction was performed by regressing
+out the covariate using the ‘removeBatchEffect’ function in the limma
+R/Bioconductor package.</p>
+<p>[Setting: ‘medium’] Additional batch correction was performed for for
+intrinsic technical parameters such as library size (i.e. total
+counts), mitochondrial and ribosomal proportions, cell cycle and
+gender. These parameters were estimated from the data. The cell cycle
+was estimated using the Seurat R/Bioconductor package. Gender (if not
+given) was estimated by checking the absence/presence of expression of
+gender specific genes on the X/Y chromosome. Parameters with a
+correlation r&gt;0.3 with any of the model parameters were omitted from
+the regression. Correction was performed by regressing out the
+covariate using the ‘removeBatchEffect’ function in the limma
+R/Bioconductor package.</p>
+<p>[Setting: ‘high’] Unsupervised batch correction was performed using
+‘surrogate variable analysis’ (SVA) (Leek 2007) by estimating the
+latent surrogate variables and regressing out using the
+‘removeBatchEffect’ function in the limma R/Bioconductor package.</p>
+</section>
+<section id="clustering">
+<h3>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h3>
+<p>Heatmaps were generated using the ComplexHeatmap R/Bioconductor
+package (Gu 2016) on scaled log-expression values (z-score) using
+euclidean distance and Ward linkage. The standard deviation was used
+to rank the genes for the reduced heatmaps.</p>
+<p>T-distributed stochastic neighbor embedding (t-SNE) was computed using
+the top 1000 most varying genes, then reduced to 50 PCA dimensions
+before computing the t-SNE embedding. The perplexity heuristically set
+to 25% of the sample size or 30 at maximum, and 2 at
+minimum. Calculation was performed using the <cite>Rtsne</cite> R package.</p>
+<p>Uniform Manifold Approximation and Projection (UMAP) was computed
+using the top 1000 most varying genes, then reduced to 50 PCA
+dimensions before computing the UMAP embedding. The number of
+neighbours was heuristically set to 25% of the sample size or 30 at
+maximum, and 2 at minimum. Calculation was performed using the <cite>uwot</cite>
+R package.</p>
+<p>Principal component analysis (PCA) was computed using the <cite>irlba</cite> R
+package.</p>
+</section>
+<section id="statistical-testing">
+<h3>Statistical testing<a class="headerlink" href="#statistical-testing" title="Permalink to this headline">¶</a></h3>
+<p>Multi-method statistical testing. For gene-level testing, statistical
+significance was assessed using three independent statistical methods:
+DESeq2 (Wald test), edgeR (QLF test) and limma-trend (Love 2014;
+Robinson 2010; Ritchie 2015). The maximum q-value of the three methods
+was taken as aggregate q-value, which corresponds to taking the
+intersection of significant genes from all three tests.</p>
+<p>Statistical testing of differential enrichment of genesets was
+performed using an aggregation of multiple statistical methods:
+Fisher’s exact test, fGSEA (Korotkevich 2019), Camera (Wu 2012) and
+GSVA/limma (Hanzelmann 2013, Ritchie 2015). The maximum q-value of the
+selected methods was taken as aggregate meta.q value, which
+corresponds to taking the intersection of significant genes from all
+tests. As each method uses different estimation parameters (NES for
+GSEA, odd-ratio for fisher, etc.) for the effect size, for
+consistency, we took the average log fold-change of the genes in the
+geneset as sentinel value. We used more than 50000 genesets from
+various public databases including: MSigDB (Subramanian 2005; Liberzon
+2015), Gene Ontology (Ashburner 2000), and Kyoto Encyclopedia of Genes
+and Genomes (KEGG) (Kanehisa 2000).</p>
+</section>
+<section id="functional-analysis">
+<h3>Functional analysis<a class="headerlink" href="#functional-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Graph-weighted GO analysis. The enrichment score of a GO term was
+defined as the sum of q-weighted average fold-changes, (1-q)*logFC, of
+the GO term and all its higher order terms along the shortest path to
+the root in the GO graph. The fold-change of a gene set was defined as
+the average of the fold-change values of its member genes. This
+graph-weighted enrichment score thus reflects the enrichment of a GO
+term with evidence that is corroborated by its parents in the GO graph
+and therefore provides a more robust estimate of enrichment. The
+activation map visualizes the scores of the top-ranked GO terms for
+multiple contrasts as a heatmap.</p>
+<p>KEGG pathway visualization was performed using the Pathview
+R/Bioconductor package using the foldchange as node color.</p>
+</section>
+<section id="scripting-and-visualization">
+<h3>Scripting and visualization<a class="headerlink" href="#scripting-and-visualization" title="Permalink to this headline">¶</a></h3>
+<p>Data preprocessing was performed using bespoke scripts using R (R Core
+Team 2013) and packages from Bioconductor (Huber 2015). Statistical
+computation and visualization have been performed using the Omics
+Playground version vX.X.X (Akhmedov 2020).</p>
+</section>
+<section id="references">
+<h3>REFERENCES<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<p>Akhmedov M, Martinelli A, Geiger R and Kwee I. Omics Playground: A
+comprehensive self-service platform forvisualization, analytics and
+exploration of Big Omics Data. NAR Genomics and Bioinformatics, Volume
+2, Issue 1, March 2020,</p>
+<p>Ashburner et al. Gene ontology: tool for the unification of
+biology. Nat Genet. May 2000;25(1):25-9.</p>
+<p>Huber W, et al. (2015) Orchestrating high-throughput genomic analysis
+with Bioconductor. Nature Methods 12:115-121; doi:10.1038/nmeth.3252</p>
+<p>Kanehisa, M. and Goto, S.; KEGG: Kyoto Encyclopedia of Genes and
+Genomes. Nucleic Acids Res. 28, 27-30 (2000).</p>
+<p>Leek J., Storey J. Capturing heterogeneity in gene expression studies
+by ‘surrogate variable analysis’ PLoS Genet. 2007</p>
+<p>Love MI, Huber W, Anders S (2014). “Moderated estimation of fold
+change and dispersion for RNA-seq data with DESeq2.” Genome Biology,
+15, 550.</p>
+<p>R Core Team (2013). R: A language and environment for statistical
+computing. R Foundation for Statistical Computing, Vienna, Austria.
+URL <a class="reference external" href="http://www.R-project.org/">http://www.R-project.org/</a>.</p>
+<p>Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W, Smyth GK
+(2015). “limma powers differential expression analyses for
+RNA-sequencing and microarray studies.” Nucleic Acids Research, 43(7)</p>
+<p>Robinson MD, McCarthy DJ, Smyth GK (2010). “edgeR: a Bioconductor
+package for differential expression analysis of digital gene
+expression data.” Bioinformatics, 26(1), 139-140.</p>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-faq"></span><section id="frequently-asked-questions-faq">
+<span id="faq"></span><h2>Frequently Asked Questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Permalink to this headline">¶</a></h2>
+<section id="can-i-use-limma-edger-and-deseq2-for-my-proteomics-data">
+<h3>Can I use LIMMA, EdgeR and DESeq2 for my proteomics data?<a class="headerlink" href="#can-i-use-limma-edger-and-deseq2-for-my-proteomics-data" title="Permalink to this headline">¶</a></h3>
+<p>EdgeR and DESeq2 are statistical methods based on the negative
+binomial model (an overdispersed Poisson model). Poisson and negative
+binomial models, naturally account for heteroscedasticity and zero
+values in the data. Also LIMMA is widely used in RNA-seq analysis, and
+is an emperical Bayesian method based on moderated t-test
+statistics. While these methods were originally conceived for the for
+differential expression analysis in RNA-seq data, there is
+increasingly more acceptance that these methods can also be used for
+proteomics data.</p>
+<p>Langley and Mayer (2015) assessed seven methods for differential
+expression analysis in proteomics, and showed that DESeq to outperform
+the more commonly used t-test. Kammers et al. (2015) show that LIMMA
+shows better results than the t-test. Branson and Fretais (2016) also
+highlighted the statistical analogy of proteomics label-free spectral
+count quantification with count data from RNA sequencing and propose
+to use edgeR, DESEq and baySeq for proteomics data. Gregori et
+al. (2013) uses EdgeR and Poisson based methods for their LC/MS-MS
+data. They also created the ‘msmsTests’ R package. Medo et al (2019)
+use EdgeR for their study on missing values in the differential
+analysis of proteomic and phosphoproteomics data. Gatto proposes both
+edgeR and LIMMA based methods for proteomics statistical
+analysis. Chen et al. (2020) reviewed bioinformatics methods for
+proteomics data analysis and reaffirmed that LIMMA can achieve more
+robust and accurate results than the traditional t-test.</p>
+<p>Notice that proper scaling/normalization of quantitative proteomics
+data is important before using RNA-seq based methods as sometimes the
+proteomics intensity values may be far greater than those found in
+RNA-seq. Therefore Omics Playground scales proteomics data
+automatically to ‘counts per million’ (CPM). We have also seen that
+batch correction (e.g. using ComBat) may improve the downstream
+statistical analysis in proteomics.</p>
+<p>References:</p>
+<ol class="arabic simple">
+<li><p>Kammers et al. “Detecting significant changes in protein abundance”. EuPA Open Proteomics Volume 7, June 2015.</p></li>
+<li><p>Langley SR, Mayr M. “Comparative analysis of statistical methods used for detecting differential expression in label-free mass spectrometry proteomics”. J Proteomics. 2015.</p></li>
+<li><p>Branson OE, Freitas MA. “A multi-model statistical approach for proteomic spectral count quantitation”. J Proteomics. 2016.</p></li>
+<li><p>Gregori et al. “msmsTests-package: LC-MS/MS Differential Expression Tests”. R package.</p></li>
+<li><p>Gregori et al. “An Effect Size Filter Improves the Reproducibility in Spectral Counting-based Comparative Proteomics.” Journal of Proteomics, 2013.</p></li>
+<li><p>Medo, M, Aebersold, DM and Medová, M “ProtRank: bypassing the imputation of missing values in differential expression analysis of proteomic data.” BMC Bioinformatics 20, 563 (2019).</p></li>
+<li><p>Gatto L. “Bioconductor tools for mass spectrometry and proteomics”, <a class="reference external" href="https://lgatto.github.io/bioc-ms-prot/lab.html#8_statistical_analysis">https://lgatto.github.io/bioc-ms-prot/lab.html#8_statistical_analysis</a></p></li>
+<li><p>Chen et al. “Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis.” Int J Mol Sci. 2020;21(8):2873, 2020.</p></li>
+</ol>
+</section>
+<section id="how-are-duplicated-gene-protein-names-handled-in-the-counts-file">
+<h3>How are duplicated gene/protein names handled in the counts file?<a class="headerlink" href="#how-are-duplicated-gene-protein-names-handled-in-the-counts-file" title="Permalink to this headline">¶</a></h3>
+<p>Duplicated row identifiers (genes/proteins with same name) are handled
+by summing up their linear intensities/counts. If the data was in
+logarithm, it will be (hopefully) automatically detected and
+exponentiated. The rational of summing up the counts (or linear
+intensities in proteomics) is that we don’t differentiate between
+possible gene/protein isoforms and sum them up as a group. If you want
+to retain the isoforms, you may keep the names as GENE.1 and GENE.2
+but you must turn off any gene filter. However as currently such
+gene/protein variants are not recognized in the gene sets, this will
+result in wrong enrichment test.</p>
+</section>
+<section id="how-are-missing-values-handled-in-the-counts-file">
+<h3>How are “missing values” handled in the counts file?<a class="headerlink" href="#how-are-missing-values-handled-in-the-counts-file" title="Permalink to this headline">¶</a></h3>
+<p>At the moment missing values are imputed to 0 (zero). The Omics
+Playground uses the function <cite>pgx.createPGX()</cite> in the file
+pgx-compute.R. Note that only real NA (or empty) values in the counts
+file are supposed to be “missing”. Zero values are assumed to be real
+zeros. If zero-value imputaton is not what you want, and you want to
+impute your “missing” values differently, (currently) you must do that
+manually before uploading the CSV file.</p>
+</section>
+<section id="how-do-i-switch-between-stable-beta-testing-docker-versions">
+<h3>How do I switch between stable, beta &amp; testing docker versions?<a class="headerlink" href="#how-do-i-switch-between-stable-beta-testing-docker-versions" title="Permalink to this headline">¶</a></h3>
+<p>You can test the latest features of the Omics Playground by switching to
+a more experimental docker version. Omics Playground has three different
+docker versions:</p>
+<ul class="simple">
+<li><p>Stable channel (latest): This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It’s updated roughly every 2–3 months for minor changes, and every 6 months for major changes.</p></li>
+<li><p>Beta channel (beta): To view upcoming improvements and features with low risk, use the Beta channel. It’s updated roughly every month, with updates before the Stable channel gets them.</p></li>
+<li><p>Testing channel (testing): The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. The Testing channel always uses the latest source code and is build irregularly whenever needed.</p></li>
+</ul>
+<p>You can switch between versions by pulling the docker image corresponding to the version latest, beta or testing.</p>
+</section>
+</section>
+</div>
+<div class="toctree-wrapper compound">
+<span id="document-info"></span><section id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>If you have further questions about how to use Omics Playground,
+please ask your question in our user forum at <a class="reference external" href="https://groups.google.com/d/forum/omicsplayground">Google Groups</a>.</p>
+<p>If you’ve discovered a bug, have a feature request, or want to
+contribute to the code, please go to our
+<a class="reference external" href="https://github.com/bigomics/omicsplayground">GitHub repository</a>.</p>
+<p>If you have other questions you can email <a class="reference external" href="mailto:info&#37;&#52;&#48;bigomics&#46;ch">us</a>.</p>
+</section>
+<section id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>To cite Omics Playground in publications please use:</p>
+<p><strong>Akhmedov M, Martinelli A, Geiger R and Kwee I.</strong> Omics Playground: A comprehensive self-service platform forvisualization, analytics and exploration of Big Omics Data. <em>NAR Genomics and Bioinformatics, Volume 2, Issue 1, March 2020, lqz019; doi:10.1093/nargab/lqz019</em></p>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Omics Playground is open source: you are allowed to download the
+source code and make your own edits. Although Omics Playground is open
+source, the software is distributed under a dual license: for
+either non-commerical or commercial use.</p>
+<section id="non-commercial">
+<h3>Non-commercial<a class="headerlink" href="#non-commercial" title="Permalink to this headline">¶</a></h3>
+<p>If you are a non-profit company, academic, or use our products for
+personal use, you may enjoy our software for free under a
+<a class="reference external" href="https://creativecommons.org">Creative Commons (CC) Attribution-NonCommercial licence</a>.</p>
+</section>
+<section id="commercial-governmental">
+<h3>Commercial/governmental<a class="headerlink" href="#commercial-governmental" title="Permalink to this headline">¶</a></h3>
+<p>If you are not entitled to the non-commercial license, or you are a
+governmental agency, you must purchase a commercial license. Buying
+such a license is mandatory as soon as you develop commercial
+activities involving Omics Playground software. These activities
+include: offering paid services to customers as an ASP, SaaS,
+professional consulting, or shipping Omics Playground with a closed
+source product.</p>
+</section>
+</section>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
