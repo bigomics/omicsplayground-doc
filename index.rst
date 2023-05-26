@@ -14,6 +14,7 @@
 
     dataprep/dataprep
     dataprep/dataprep_example
+    dataprep/dataprocess
     
 .. toctree::
     :maxdepth: 3

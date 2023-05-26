@@ -1,17 +1,18 @@
 .. _Dataprep_example:
 
-Preparing an input object using scripts
+Preparing input files from raw data formats
 --------------------------------------------------------------------------------
 
 .. _`preparing an input object using scripts`:
 
-Alternatively, an input object can be prepared by using scripts with more 
-detailed data cleaning, filtering, normalisation and preprocessing. 
-Users can prepare an input data from
-their own FASTQ files, gene counts tables, or from a dataset of interest stored 
-in public repositories such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
-Similarly, they can also prepare an input from single-cell or LC-MS/MS proteomics
-datasets.
+
+..
+    we need to add tutorials for all most common raw data formats.. needs to be updated
+If you have a raw data format (FASTQ, mzML, mzML, RAW, WIFF, etc..) 
+or want to perform additional pre-processing steps (normalization or filtering),
+in this section we show tutorials on how to perform such steps. We also show how to prepare data
+files from public databases such as `GEO <https://www.ncbi.nlm.nih.gov/geo/>`__.
+
 We provide four types of example cases to guide users for preparing their input 
 objects and injecting it into the platform. Basically, the example cases 
 illustrate how to prepare an input data:
@@ -21,6 +22,8 @@ illustrate how to prepare an input data:
 3. `from single-cell data`_,
 4. `from LC-MS/MS proteomics data`_.
 
+..
+    this needs to be updated, what and where are these script? playbase?
 All the necessary scripts for data cleaning and preprocessing examples can be
 found under the ``scripts/`` folder.
 
