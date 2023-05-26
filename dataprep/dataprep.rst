@@ -7,7 +7,8 @@ The platform requires the transcriptomics and proteomics data to be in a
 structured format as an input. The easiest way is to prepare three csv files: **counts.csv**, **samples.csv** and an optional **contrast.csv**. 
 When these files are ready, users can upload them direcly in Omics Playground.
 
-Requirements:
+**Input file requirements**
+--------------------------------------------------------------------------------
 
 1. :ref:`Counts file <counts>` Count/expression .csv file with gene on rows, samples as columns.
 2. :ref:`Samples file <samples>` Samples .csv file with samples on rows, phenotypes as columns.
@@ -25,14 +26,11 @@ Uploading data through the interface
 
 Users can import their data from the **Upload data** panel located under the 
 :ref:`Home` module. The platform requires the list of files as shown in the
-figure below. 
-The format of files must be comma-separated-values (CSV) text.
+figure below. The format of files must be comma-separated-values (CSV) text.
 It is important to name the files exactly as shown.
 Be sure the dimensions, rownames and column names match for all files. 
 It is required to provide a unique name and brief description for the data set
 while uploading.
-
-
 
 .. figure:: ../modules/figures/psc1.3.png
     :align: center
@@ -46,27 +44,7 @@ The data import and precomputation involve preparing the input data through
 filtering, normalising and precomputing statistics for some analyses and 
 importing it into the platform. The data cleaning and precomputation is 
 performed offline to support real-time interaction by minimizing user interface
-latency.
-
-Data import
---------------------------------------------------------------------------------
-Users can import their transcriptomics or proteomics data to the platform by 
-either uploading the data through
-the interface or preparing an input object using scripts.
-For uploading, the platform requires the counts, samples information and optionally contrasts tables in CSV format. 
-On the other hand, an input object can be prepared using scripts from different 
-types and formats of data, including counts and FASTQ.
-With scripts it is also possible to do more detailed data 
-cleaning, filtering, normalisation and preprocessing. 
-
-
-.. seealso::
-
-    See :ref:`data preparation examples <Dataprep_example>` how
-    to prepare an input data for the platform. You can find more detailed 
-    information regarding the filtering and normalisation methods for preparing
-    an input from different sources of experiments.
-    
+latency.    
 
 Filtering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
