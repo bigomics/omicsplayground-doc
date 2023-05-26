@@ -17,6 +17,8 @@ normalising and precomputing of statistics for some analyses. The second part is
 composed of the online interface, which supports the real-time visualisation and
 interaction with users. The interface contains several optional settings in order to provide a customisable experience suited to each user’s background.
 
+The platform can be accessed on the following link: https://bigomics.ch/omics-playground/
+
 .. figure:: figures/overview.png
     :align: center
     :width: 100%
