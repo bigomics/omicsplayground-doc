@@ -9,9 +9,9 @@ When these files are ready, users can upload them direcly in Omics Playground.
 
 Requirements:
 
-1. **:ref:`Counts file <counts>`**          Count/expression .csv file with gene on rows, samples as columns.
-2. **:ref:`Samples file <samples>`**        Samples .csv file with samples on rows, phenotypes as columns.
-3. **:ref:`Contrasts file <contrasts>`**    Contrast .csv file with samples on rows, conditions as columns. (optional)
+1. :ref:`Counts file <counts>` Count/expression .csv file with gene on rows, samples as columns.
+2. :ref:`Samples file <samples>` Samples .csv file with samples on rows, phenotypes as columns.
+3. :ref:`Contrasts file <contrasts>` Contrast .csv file with samples on rows, conditions as columns. (optional)
 
 .. seealso::
 
