@@ -13,17 +13,17 @@ method used to determine whether a particular gene set is
 significantly enriched in a given dataset of gene expression.
 
 In a GMT file, each line represents a gene set and consists
- of a gene set name, and the list of genes 
- belonging to that set. The gene names are typically represented 
- using gene symbols or other identifiers. 
+of a gene set name, and the list of genes 
+belonging to that set. The gene names are typically represented 
+using gene symbols or other identifiers. 
  
- In Omics playground, GMT files are the backbone of several modules, 
- where we aim to identify enriched gene sets associated with specific 
- biological processes, diseases, or experimental conditions.
+In Omics playground, GMT files are the backbone of several modules, 
+where we aim to identify enriched gene sets associated with specific 
+biological processes, diseases, or experimental conditions.
 
 You can find the geneset availables in omicsplayground with the R package playbase.
-First, install playbase with `devtools::install_github("omicsplayground/playdata")` 
-and then run the command `playdata::GSET_INFO`.
+First, install playbase with ``devtools::install_github("omicsplayground/playdata")`` 
+and then run the command ``playdata::GSET_INFO``.
 
 If you have your own geneset, or you want to include a GMT file from a database,
 you can upload directly in the Upload module under Options.
