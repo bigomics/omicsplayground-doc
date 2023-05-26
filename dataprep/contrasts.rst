@@ -1,6 +1,6 @@
 .. _contrasts:
 
-`contrasts.csv` file
+Contrasts file
 ================================================================================
 
 The contrasts are an optional input in Omics Playground.

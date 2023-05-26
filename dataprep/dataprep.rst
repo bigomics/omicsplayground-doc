@@ -1,6 +1,3 @@
-:ref:`samples.csv file <samples>`
-:ref:`counts.csv file <counts>`
-:ref:`contrasts.csv file <contrasts>`
 .. _Dataprep:
 
 
@@ -26,9 +23,12 @@ With scripts it is also possible to do more detailed data
 cleaning, filtering, normalisation and preprocessing. 
 
 Requirements:
-1. :ref:`samples.csv file <samples>`
-2. :ref:`counts.csv file <counts>`
-3. :ref:`contrasts.csv file <contrasts>` (optional)
+
+1. :ref:`Samples file <samples>`
+
+2. :ref:`Counts file <counts>`
+
+3. :ref:`Contrasts file <contrasts>` (optional)
 
 
 .. seealso::
