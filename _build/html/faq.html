@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions (FAQ) &mdash; Omics Playground  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contact" href="info.html" />
+    <link rel="prev" title="Methods" href="methods.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Omics Playground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprep.html">Data import and precomputation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprep_example.html">Data preparation examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/samples.html">Manual to prepare the <cite>samples.csv</cite> file</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules/outline.html">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod0_home.html">Home Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod1_dataview.html">Data View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod2_clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod3_DEGs.html">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod4_DEGSs.html">Enrichment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod7_Signature.html">Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod9_CellProfiling.html">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples.html">Reanalyzing Public Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently Asked Questions (FAQ)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#can-i-use-limma-edger-and-deseq2-for-my-proteomics-data">Can I use LIMMA, EdgeR and DESeq2 for my proteomics data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-are-duplicated-gene-protein-names-handled-in-the-counts-file">How are duplicated gene/protein names handled in the counts file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-are-missing-values-handled-in-the-counts-file">How are “missing values” handled in the counts file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-i-switch-between-stable-beta-testing-docker-versions">How do I switch between stable, beta &amp; testing docker versions?</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Frequently Asked Questions (FAQ)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/faq.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="frequently-asked-questions-faq">
+<span id="faq"></span><h1>Frequently Asked Questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Permalink to this headline">¶</a></h1>
+<section id="can-i-use-limma-edger-and-deseq2-for-my-proteomics-data">
+<h2>Can I use LIMMA, EdgeR and DESeq2 for my proteomics data?<a class="headerlink" href="#can-i-use-limma-edger-and-deseq2-for-my-proteomics-data" title="Permalink to this headline">¶</a></h2>
+<p>EdgeR and DESeq2 are statistical methods based on the negative
+binomial model (an overdispersed Poisson model). Poisson and negative
+binomial models, naturally account for heteroscedasticity and zero
+values in the data. Also LIMMA is widely used in RNA-seq analysis, and
+is an emperical Bayesian method based on moderated t-test
+statistics. While these methods were originally conceived for the for
+differential expression analysis in RNA-seq data, there is
+increasingly more acceptance that these methods can also be used for
+proteomics data.</p>
+<p>Langley and Mayer (2015) assessed seven methods for differential
+expression analysis in proteomics, and showed that DESeq to outperform
+the more commonly used t-test. Kammers et al. (2015) show that LIMMA
+shows better results than the t-test. Branson and Fretais (2016) also
+highlighted the statistical analogy of proteomics label-free spectral
+count quantification with count data from RNA sequencing and propose
+to use edgeR, DESEq and baySeq for proteomics data. Gregori et
+al. (2013) uses EdgeR and Poisson based methods for their LC/MS-MS
+data. They also created the ‘msmsTests’ R package. Medo et al (2019)
+use EdgeR for their study on missing values in the differential
+analysis of proteomic and phosphoproteomics data. Gatto proposes both
+edgeR and LIMMA based methods for proteomics statistical
+analysis. Chen et al. (2020) reviewed bioinformatics methods for
+proteomics data analysis and reaffirmed that LIMMA can achieve more
+robust and accurate results than the traditional t-test.</p>
+<p>Notice that proper scaling/normalization of quantitative proteomics
+data is important before using RNA-seq based methods as sometimes the
+proteomics intensity values may be far greater than those found in
+RNA-seq. Therefore Omics Playground scales proteomics data
+automatically to ‘counts per million’ (CPM). We have also seen that
+batch correction (e.g. using ComBat) may improve the downstream
+statistical analysis in proteomics.</p>
+<p>References:</p>
+<ol class="arabic simple">
+<li><p>Kammers et al. “Detecting significant changes in protein abundance”. EuPA Open Proteomics Volume 7, June 2015.</p></li>
+<li><p>Langley SR, Mayr M. “Comparative analysis of statistical methods used for detecting differential expression in label-free mass spectrometry proteomics”. J Proteomics. 2015.</p></li>
+<li><p>Branson OE, Freitas MA. “A multi-model statistical approach for proteomic spectral count quantitation”. J Proteomics. 2016.</p></li>
+<li><p>Gregori et al. “msmsTests-package: LC-MS/MS Differential Expression Tests”. R package.</p></li>
+<li><p>Gregori et al. “An Effect Size Filter Improves the Reproducibility in Spectral Counting-based Comparative Proteomics.” Journal of Proteomics, 2013.</p></li>
+<li><p>Medo, M, Aebersold, DM and Medová, M “ProtRank: bypassing the imputation of missing values in differential expression analysis of proteomic data.” BMC Bioinformatics 20, 563 (2019).</p></li>
+<li><p>Gatto L. “Bioconductor tools for mass spectrometry and proteomics”, <a class="reference external" href="https://lgatto.github.io/bioc-ms-prot/lab.html#8_statistical_analysis">https://lgatto.github.io/bioc-ms-prot/lab.html#8_statistical_analysis</a></p></li>
+<li><p>Chen et al. “Bioinformatics Methods for Mass Spectrometry-Based Proteomics Data Analysis.” Int J Mol Sci. 2020;21(8):2873, 2020.</p></li>
+</ol>
+</section>
+<section id="how-are-duplicated-gene-protein-names-handled-in-the-counts-file">
+<h2>How are duplicated gene/protein names handled in the counts file?<a class="headerlink" href="#how-are-duplicated-gene-protein-names-handled-in-the-counts-file" title="Permalink to this headline">¶</a></h2>
+<p>Duplicated row identifiers (genes/proteins with same name) are handled
+by summing up their linear intensities/counts. If the data was in
+logarithm, it will be (hopefully) automatically detected and
+exponentiated. The rational of summing up the counts (or linear
+intensities in proteomics) is that we don’t differentiate between
+possible gene/protein isoforms and sum them up as a group. If you want
+to retain the isoforms, you may keep the names as GENE.1 and GENE.2
+but you must turn off any gene filter. However as currently such
+gene/protein variants are not recognized in the gene sets, this will
+result in wrong enrichment test.</p>
+</section>
+<section id="how-are-missing-values-handled-in-the-counts-file">
+<h2>How are “missing values” handled in the counts file?<a class="headerlink" href="#how-are-missing-values-handled-in-the-counts-file" title="Permalink to this headline">¶</a></h2>
+<p>At the moment missing values are imputed to 0 (zero). The Omics
+Playground uses the function <cite>pgx.createPGX()</cite> in the file
+pgx-compute.R. Note that only real NA (or empty) values in the counts
+file are supposed to be “missing”. Zero values are assumed to be real
+zeros. If zero-value imputaton is not what you want, and you want to
+impute your “missing” values differently, (currently) you must do that
+manually before uploading the CSV file.</p>
+</section>
+<section id="how-do-i-switch-between-stable-beta-testing-docker-versions">
+<h2>How do I switch between stable, beta &amp; testing docker versions?<a class="headerlink" href="#how-do-i-switch-between-stable-beta-testing-docker-versions" title="Permalink to this headline">¶</a></h2>
+<p>You can test the latest features of the Omics Playground by switching to
+a more experimental docker version. Omics Playground has three different
+docker versions:</p>
+<ul class="simple">
+<li><p>Stable channel (latest): This channel is fully tested by the Omics Playground team, and is the best choice to avoid crashes and other problems. It’s updated roughly every 2–3 months for minor changes, and every 6 months for major changes.</p></li>
+<li><p>Beta channel (beta): To view upcoming improvements and features with low risk, use the Beta channel. It’s updated roughly every month, with updates before the Stable channel gets them.</p></li>
+<li><p>Testing channel (testing): The Testing channel gets updated once or twice weekly and is intended only for developers. This build might have serious bugs or highly experimental features. The Testing channel always uses the latest source code and is build irregularly whenever needed.</p></li>
+</ul>
+<p>You can switch between versions by pulling the docker image corresponding to the version latest, beta or testing.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="methods.html" class="btn btn-neutral float-left" title="Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="info.html" class="btn btn-neutral float-right" title="Contact" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
