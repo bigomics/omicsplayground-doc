@@ -1,37 +1,5 @@
 .. _Dataprep_example:
 
-Data preparation examples
-================================================================================
-The platform requires the transcriptomics and proteomics data to be in a 
-structured format as an input. Users can inject their data to the platform by
-either `uploading through the interface`_ or 
-`preparing an input object using scripts`_.
-
-
-Uploading data through the interface
---------------------------------------------------------------------------------
-
-.. _`uploading through the interface`:
-
-Users can import their data from the **Upload data** panel located under the 
-:ref:`Home` module. The platform requires the list of files as shown in the
-figure below. 
-The format of files must be comma-separated-values (CSV) text.
-It is important to name the files exactly as shown.
-Be sure the dimensions, rownames and column names match for all files. 
-It is required to provide a unique name and brief description for the data set
-while uploading.
-
-:**counts.csv**: 	  Count/expression file with gene on rows, samples as columns.
-:**samples.csv**: 	Samples file with samples on rows, phenotypes as columns.
-:**contrasts.csv**: Contrast file with samples on rows, conditions as columns.
-
-.. figure:: ../modules/figures/psc1.3.png
-    :align: center
-    :width: 100%
-
-
-
 Preparing an input object using scripts
 --------------------------------------------------------------------------------
 
