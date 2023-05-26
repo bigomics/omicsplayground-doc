@@ -1,4 +1,7 @@
+:ref:`Manual to prepare the contrasts.csv file <contrasts>`
 .. _Dataprep:
+
+
 
 Data import and precomputation
 ================================================================================
@@ -19,6 +22,11 @@ On the other hand, an input object can be prepared using scripts from different
 types and formats of data, including counts and FASTQ.
 With scripts it is also possible to do more detailed data 
 cleaning, filtering, normalisation and preprocessing. 
+
+Requirements:
+1.
+2.
+3. Contrasts (optional in Omics Playground): :ref:`Manual to prepare the contrasts.csv file <contrasts>`
 
 
 .. seealso::
