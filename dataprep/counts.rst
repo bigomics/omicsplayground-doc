@@ -1,6 +1,6 @@
 .. _counts:
 
-Manual to prepare the `counts.csv` file
+`counts.csv` file
 ================================================================================
 
 The 

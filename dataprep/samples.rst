@@ -1,6 +1,6 @@
 .. _samples:
 
-Manual to prepare the `samples.csv` file
+`samples.csv` file
 ================================================================================
 
 Here is a minimal example of sample

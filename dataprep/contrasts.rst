@@ -1,7 +1,9 @@
 .. _contrasts:
 
-Manual to prepare the `contrasts.csv` file
+`contrasts.csv` file
 ================================================================================
+
+The contrasts are an optional input in Omics Playground.
 
 Here is a minimal example of contrasts
 
@@ -18,7 +20,7 @@ Here is a minimal example of contrasts
 +---------+------------+-------------+--------+
 
 
-Example from the dataset GEO(?). If you are familiar with R, you can find the same table with playbase::contrasts.
+Example from the dataset GEO(?). If you are familiar with R, you can find the same table with playbase::CONTRASTS.
 
 +------------+--------+-----------+-------+
 |            | group  | activated | time  |

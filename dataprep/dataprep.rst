@@ -1,4 +1,6 @@
-:ref:`Manual to prepare the contrasts.csv file <contrasts>`
+:ref:`samples.csv file <samples>`
+:ref:`counts.csv file <counts>`
+:ref:`contrasts.csv file <contrasts>`
 .. _Dataprep:
 
 
@@ -24,9 +26,9 @@ With scripts it is also possible to do more detailed data
 cleaning, filtering, normalisation and preprocessing. 
 
 Requirements:
-1.
-2.
-3. Contrasts (optional in Omics Playground): :ref:`Manual to prepare the contrasts.csv file <contrasts>`
+1. :ref:`samples.csv file <samples>`
+2. :ref:`counts.csv file <counts>`
+3. :ref:`contrasts.csv file <contrasts>` (optional)
 
 
 .. seealso::
