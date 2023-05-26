@@ -3,9 +3,14 @@
 Contrasts file
 ================================================================================
 
-The contrasts are an optional input in Omics Playground.
+The contrasts are an optional input in Omics Playground. It contains 
+the groups (treatment versus controls, mutant versus wild-type, etc..) 
+that will be tested against each other. The contrasts are a list of 
+comparisons between groups. For example, if you have 3 groups (A, B, C), you 
+can test the following contrasts: A vs B, A vs C, B vs C.
 
-Here is a minimal example of contrasts
+Here is a minimal example of contrasts, in this case, the groups 
+will be hair color (blond vs. black) and country (Japan vs. Switzerland).
 
 +---------+------------+-------------+--------+
 |         | hair color |   country   | weight |
@@ -14,13 +19,12 @@ Here is a minimal example of contrasts
 +---------+------------+-------------+--------+
 | sample2 |   black    | Switzerland |   43   |
 +---------+------------+-------------+--------+
-| sample3 |   blond    |     USA     |   87   |
+| sample3 |   blond    |     Japan   |   87   |
 +---------+------------+-------------+--------+
 | sample4 |   black    | Switzerland |   65   |
 +---------+------------+-------------+--------+
 
-
-Example from the dataset GEO(?). If you are familiar with R, you can find the same table with playbase::CONTRASTS.
+Similarly, we can see the countrasts example from the dataset mentioned in the previous sections. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each column is ancontrast that will be compared.
 
 +------------+--------+-----------+-------+
 |            | group  | activated | time  |
@@ -45,7 +49,11 @@ Example from the dataset GEO(?). If you are familiar with R, you can find the sa
 +------------+--------+-----------+-------+
 
 
-Here is another option of contrasts
+In the platform, we will convert that to the contrasts table. The number 
+one representes the numerator of the contrast, and the number -1 represents the denominator.
+
+For example, the contrast `act12h_vs_notact` will be represented by the following table:
+
 
 +--------+------------------+------------------+------------------+------------------+-------------------+
 |        | act12h_vs_notact | act24h_vs_notact | act48h_vs_notact | act72h_vs_notact | act96h_vs_notact  |
@@ -63,13 +71,9 @@ Here is another option of contrasts
 | act96h |        0         |        0         |        0         |        0         |        1          |
 +--------+------------------+------------------+------------------+------------------+-------------------+
 
+The samples act12 will have 1 (numerator) and noact will have -1 (denominator). That means we are calculating fold changes in 1/-1 groups. 
 
-
-Requirements
---------------------------------------------------------------------------------
-Users 
-
+The number zero is simply ignored, it can be left empty.
 
 .. seealso::
-
-    See 
+    If you are familiar with R, you can think of the contrasts file as a data.frame object. The samples file from the study above can be accessed by installing playbase `devtools::install_github("bigomics/playbase")`` and running `playbase::CONTRASTS`.
