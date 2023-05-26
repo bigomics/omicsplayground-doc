@@ -3,7 +3,12 @@
 Samples file
 ================================================================================
 
-Here is a minimal example of sample
+The samples file describe the samples in the dataset. It is a tabular (csv) file with the samples in the rows and the metadata in the columns.
+
+Below is a simple example of sample file, where each row in the column should be a sample with a unique ID. If we have duplicate IDs (two rows with sample5), these will be merged as its considered a technical replicate.
+From the second column onwards, we have the metadata (also called phenotypes, descriptors, annotation, etc..). 
+
+If we are analyzing a human study (it can be applied to any study) as seen in the table below, the rows should be annonymized pacients, identifyied uniquely by the first column, and the other columns would be sample metadata (hair color, country, weight, age, etc.).
 
 +---------+------------+-------------+--------+
 |         | hair color |   country   | weight |
@@ -17,8 +22,7 @@ Here is a minimal example of sample
 | sample4 |   black    | Switzerland |   65   |
 +---------+------------+-------------+--------+
 
-
-Example from the dataset GEO(?). If you are familiar with R, you can find the same table with playbase::SAMPLES.
+Below is a slightly more complicated example from a real study. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen.
 
 +------------+---------------------+-----------+------+-----------+
 |            |       sample        | condition | time | activated |
@@ -60,12 +64,5 @@ Example from the dataset GEO(?). If you are familiar with R, you can find the sa
 | act96h_034 | q3_tcell_act96h_034 |  act96h   | 96h  |    act    |
 +------------+---------------------+-----------+------+-----------+
 
-
-Requirements
---------------------------------------------------------------------------------
-Users 
-
-
 .. seealso::
-
-    See 
+    If you are familiar with R, you can think of the samples file as a data.frame object. The samples file from the study above can be accessed by installing playbase (devtools::install_github("bigomics/playbase")) and running playbase::SAMPLES.
