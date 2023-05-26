@@ -3,7 +3,20 @@
 Manual to prepare the `contrasts.csv` file
 ================================================================================
 
-The 
+Here is a minimal example of contrasts
+
++---------+------------+-------------+--------+
+|         | hair color |   country   | weight |
++=========+============+=============+========+
+| sample1 |   blond    |    Japan    |   55   |
++---------+------------+-------------+--------+
+| sample2 |   black    | Switzerland |   43   |
++---------+------------+-------------+--------+
+| sample3 |   blond    |     USA     |   87   |
++---------+------------+-------------+--------+
+| sample4 |   black    | Switzerland |   65   |
++---------+------------+-------------+--------+
+
 
 Example from the dataset GEO(?). If you are familiar with R, you can find the same table with playbase::contrasts.
 
