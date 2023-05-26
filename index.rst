@@ -7,7 +7,6 @@
     :caption: Getting Started
 
     overview
-    install
     
 .. toctree::
     :maxdepth: 3
