@@ -1,7 +1,7 @@
 .. _Dataprep:
 
 
-Data preparation examples
+Preparing your data for Omics Playground
 ================================================================================
 The platform requires the transcriptomics and proteomics data to be in a 
 structured format as an input. The easiest way is to prepare three csv files: **counts.csv**, **samples.csv** and an optional **contrast.csv**. 
@@ -19,8 +19,8 @@ When these files are ready, users can upload them direcly in Omics Playground.
     If you have raw file formats, such as FASTQ files or LC-MS proteomics data (mzML, RAW, WIFF...), check our tutorials on how to prepare the counts matrix from these raw formats: :ref:`data preparation examples <Dataprep_example>`.
 
 
-Uploading data through the interface
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Where to upload data in Omics Playground
+--------------------------------------------------------------------------------
 
 .. _`uploading through the interface`:
 
