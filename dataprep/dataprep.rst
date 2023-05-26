@@ -20,7 +20,7 @@ When these files are ready, users can upload them direcly in Omics Playground.
 
 
 Uploading data through the interface
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _`uploading through the interface`:
 
