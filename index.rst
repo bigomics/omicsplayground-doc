@@ -14,6 +14,10 @@
 
     dataprep/dataprep
     dataprep/dataprep_example
+    dataprep/samples
+    dataprep/counts
+    dataprep/contrasts
+    dataprep/geneset
     dataprep/dataprocess
     
 .. toctree::
