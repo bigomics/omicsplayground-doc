@@ -3,7 +3,11 @@
 Counts file
 ================================================================================
 
-Here is a minimal example of counts
+The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
+like the samples, it is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
+and each column describes the samples.
+
+Below is a simple example of how a counts.csv file should look like.
 
 +-------+---------+----------+----------+---------+
 |       | sample1 | sample2  | sample3  | sample4 |
@@ -23,8 +27,10 @@ Here is a minimal example of counts
 | gene7 | 47648.8 | 0        | 32682.0  | 93873.2 |
 +-------+---------+----------+----------+---------+
 
+.. seealso::
+    The formats accepted as features (genes, proteins are ENSEMB, ENSEMBLTRAN, UNIGENE, REFSEQ,ACCNUM and UNIPROT and gene SYMBOL).
 
-Example from the dataset GEO(?). If you are familiar with R, you can find the same table with playbase::COUNTS.
+Below is a slightly more complicated counts example from a real in-vitro human study. The columns (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each row is an actual measurement of a gene from the study.
 
 +-------+------------+------------+------------+-------------+
 |       | notact_004 | notact_007 | notact_008 | notact_009  |
@@ -45,12 +51,5 @@ Example from the dataset GEO(?). If you are familiar with R, you can find the sa
 +-------+------------+------------+------------+-------------+
 
 
-
-Requirements
---------------------------------------------------------------------------------
-Users 
-
-
 .. seealso::
-
-    See 
+    If you are familiar with R, you can think of the counts file as a data.frame object. The samples file from the study above can be accessed by installing playbase `devtools::install_github("bigomics/playbase")`` and running `playbase::SAMPLES`.

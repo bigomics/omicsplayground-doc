@@ -22,7 +22,7 @@ If we are analyzing a human study (it can be applied to any study) as seen in th
 | sample4 |   black    | Switzerland |   65   |
 +---------+------------+-------------+--------+
 
-Below is a slightly more complicated example from a real study. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen.
+Below is a slightly more complicated samples example from a real in-vitro human study. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen.
 
 +------------+---------------------+-----------+------+-----------+
 |            |       sample        | condition | time | activated |
@@ -65,4 +65,4 @@ Below is a slightly more complicated example from a real study. The rows (notact
 +------------+---------------------+-----------+------+-----------+
 
 .. seealso::
-    If you are familiar with R, you can think of the samples file as a data.frame object. The samples file from the study above can be accessed by installing playbase (devtools::install_github("bigomics/playbase")) and running playbase::SAMPLES.
+    If you are familiar with R, you can think of the samples file as a data.frame object. The samples file from the study above can be accessed by installing playbase `devtools::install_github("bigomics/playbase")` and running `playbase::SAMPLES`.
