@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clustering &mdash; Omics Playground  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Expression" href="mod3_DEGs.html" />
+    <link rel="prev" title="Data View" href="mod1_dataview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Omics Playground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/samples.html">Samples file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/counts.html">Counts file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/uploadopg.html">Uploading your data in Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep_example.html">Preparing input files from raw data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/geneset.html">Loading custom geneset files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprocess.html">Data processing inside Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod0_home.html">Home Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod1_dataview.html">Data View</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Clustering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-panel">Input panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#heatmap">Heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annotate-clusters">Annotate clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pca-tsne">PCA/tSNE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parallel">Parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#phenotypes">Phenotypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feature-ranking">Feature ranking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod3_DEGs.html">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod4_DEGSs.html">Enrichment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod7_Signature.html">Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod9_CellProfiling.html">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Reanalyzing Public Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Clustering</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/mod2_clustering.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="clustering">
+<span id="id1"></span><h1>Clustering<a class="headerlink" href="#clustering" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Clustering</strong> module performs unsupervised clustering analysis of the data.
+After having done the QC, it is probably the first way to explore your data.
+The main purpose is to discover patterns and subgroups in the data, show correlation
+with known phenotypes, detect outliers, or investigate batch effects.</p>
+<p>In the <strong>Heatmap</strong> panel hierarchical clustering can be performed on gene level
+or gene set level. The <strong>PCA/tSNE</strong> panel shows unsupervised clustering of the samples
+in 2D/3D as obtained by PCA or tSNE algorithms. The <strong>Parallel</strong> panel displays the
+expression levels of selected genes across all conditions.
+On the right, the <strong>Annotate cluster</strong> panel provides a functional annotation for each
+feature cluster in the heatmap. Users can select from a variety of annotation databases
+from the literature. The <strong>Phenotypes</strong> panel shows the phenotype distribution as colors
+on the t-SNE plot. Finally, the <strong>Feature ranking</strong> panel  shows a plot that ranks
+the discriminative power of feature sets (or gene sets) as the cumulative discriminant
+score for all phenotype variables.</p>
+<section id="input-panel">
+<h2>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h2>
+<p>Users can find more information by clicking <code class="docutils literal notranslate"><span class="pre">Info</span></code> in the input
+panel. It also contains main settings for the analysis, where users can select</p>
+<blockquote>
+<div><p>a family of features in the <code class="docutils literal notranslate"><span class="pre">Features</span></code> scroll-down menu, group samples by phenotype
+using <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> and filter and select samples with <code class="docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples</span></code>.
+Furthermore, under <em>Options</em>, users can choose the level of analysis (gene or geneset)
+and exclude genes in the X and Y chromosomes</p>
+</div></blockquote>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.0.png"><img alt="../_images/psc3.0.png" src="../_images/psc3.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="heatmap">
+<h2>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this headline">¶</a></h2>
+<p>In the <strong>Heatmap</strong> panel hierarchical clustering can be performed on
+gene level or gene set level expression. For the latter, for each gene
+set (or pathway), a single-sample enrichment value is computed from
+the gene expression data using summary methods such as <a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7">GSVA</a>
+and <a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7">ssGSEA</a>.</p>
+<p>Under the plot configuration settings, usesrs can select to display a static or interactive hetmap.
+Users can also split the samples by a phenotype class (e.g., tissue, cell type, or gender) using the</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">split</span></code> by setting. In addition, users can specify the top N = (50, 150, 500) features to be used
+in the heatmap.
+The ordering of top features is selected under <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">mode</span></code>. The criteria to select the top features are:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>SD - features with the highest standard deviation across all the samples,</p></li>
+<li><p>specific - features that are overexpressed in each phenotype class compared to the rest, or by</p></li>
+<li><p>PCA - by principal components.</p></li>
+</ul>
+<p>The number of gene clusters to be displayed can be selected under <code class="docutils literal notranslate"><span class="pre">K</span></code>.
+Users can also choose between ‘relative’ or ‘absolute’ expression
+scale. Under the <code class="docutils literal notranslate"><span class="pre">CexCol</span></code> and <code class="docutils literal notranslate"><span class="pre">CexRow</span></code> settings, it is also possible to adjust the font sizes
+for the column and row labels.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.1.0.png"><img alt="../_images/psc3.1.0.png" src="../_images/psc3.1.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The complex heatmap below is generated after tuning the options and settings.
+It is a clustered heatmap showing gene expression sorted by 2-way hierarchical
+clustering. Red corresponds to overexpression, blue to underexpression of the gene.
+At the same time, gene clusters are functionally annotated in the <strong>Annotate clusters</strong>
+panel on the right.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.1.png"><img alt="../_images/psc3.1.png" src="../_images/psc3.1.png" style="width: 100%;" /></a>
+</figure>
+<p>The <strong>iHeatmap</strong> is an interactive version of the clustered heatmap
+and can be selected in the plot settings. Users are warned that for
+large datasets (such as single-cell RNA-seq data) this plot can become
+rather slow.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.2.png"><img alt="../_images/psc3.2.png" src="../_images/psc3.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="annotate-clusters">
+<h2>Annotate clusters<a class="headerlink" href="#annotate-clusters" title="Permalink to this headline">¶</a></h2>
+<p>The features in the heatmap are divided into clusters depending on the
+selected <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">mode</span></code> in the heatmap panel settings. For each cluster,
+the <strong>Annotate cluster</strong> section provides a functional annotation
+using more than 42 published reference databases, including but not
+limited to well-known databases such as <a class="reference external" href="http://software.broadinstitute.org/gsea/msigdb/index.jsp">MSigDB</a>, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>, and <a class="reference external" href="http://geneontology.org/">GO</a>.  In the plot settings, users can
+specify the level and reference set to be used under the <code class="docutils literal notranslate"><span class="pre">Reference</span>
+<span class="pre">level</span></code> and <code class="docutils literal notranslate"><span class="pre">Reference</span> <span class="pre">set</span></code> settings, respectively.
+Users can also select a Fisher test weighting for gene sets.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.4.0.png"><img alt="../_images/psc3.4.0.png" src="../_images/psc3.4.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The functional annotation for the clusters are displayed below, with
+the highest ranking annotation features (by correlation) displayed for
+each gene cluster. Length of the bars corresponds to the average
+correlation of the cluster with the annotation term. In the table
+below the barplots, users can view the correlation values of
+annotation features for each cluster.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.4.png"><img alt="../_images/psc3.4.png" src="../_images/psc3.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="pca-tsne">
+<h2>PCA/tSNE<a class="headerlink" href="#pca-tsne" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>PCA/tSNE</strong> panel visualizes unsupervised clustering obtained by the principal
+components analysis (<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/19377034">PCA</a>) or
+t-distributed stochastic embedding
+(<a class="reference external" href="http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf">tSNE</a>) algorithms.
+This plot shows the relationship (or similarity) between the samples for visual
+analytics, where similarity is visualized as proximity of the points.
+Samples that are ‘similar’ will be placed close to each other.</p>
+<p>Users can customise the PCA/tSNE plot in the plot settings, including
+the <code class="docutils literal notranslate"><span class="pre">color</span></code> and <code class="docutils literal notranslate"><span class="pre">shape</span></code> of points using a phenotype class, label the points,
+display 2D and 3D visualisation of the PCA/tSNE plot, normalize the matrix and choose
+between a t-SNE, PCA or UMAP <code class="docutils literal notranslate"><span class="pre">layout</span></code>. The number of genes to be considered for
+dimensionality reduction can also be altered via <code class="docutils literal notranslate"><span class="pre">Ntop</span></code>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.3.0.png"><img alt="../_images/psc3.3.0.png" src="../_images/psc3.3.0.png" style="width: 30%;" /></a>
+</figure>
+<p>Based on their configuration settings, users will obtain a similar
+PCA/tSNE plot as below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.3.png"><img alt="../_images/psc3.3.png" src="../_images/psc3.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="parallel">
+<h2>Parallel<a class="headerlink" href="#parallel" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Parallel</strong> panel visualizes the expression levels of selected genes across all conditions.
+The expression values are scaled but scaling can be removed via the plot settings.
+This interactive plot is particularly useful to users working with time series experiments,
+as samples can be grouped by condition (i.e. time) and ordered manually, as shown below.
+A table containing average expression levels of selected genes across conditions is also generated.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.3B.png"><img alt="../_images/psc3.3B.png" src="../_images/psc3.3B.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="phenotypes">
+<h2>Phenotypes<a class="headerlink" href="#phenotypes" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Phenotypes</strong> panel visualizes the distribution of the available phenotype data.
+It provides plots showing the distribution of the phenotypes superposed on the
+tSNE clustering. Often, we can expect the t-SNE distribution to be driven by the
+particular phenotype that is controlled by the experimental condition or unwanted
+batch effects. Users can choose to put the group labels in the
+figure or as separate legend in the <code class="docutils literal notranslate"><span class="pre">Label</span></code> setting, under the plot <em>Settings</em>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.5.0.png"><img alt="../_images/psc3.5.0.png" src="../_images/psc3.5.0.png" style="width: 30%;" /></a>
+</figure>
+<p>The output figure of the panel (phenotype distribution) is shown below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.5.png"><img alt="../_images/psc3.5.png" src="../_images/psc3.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="feature-ranking">
+<h2>Feature ranking<a class="headerlink" href="#feature-ranking" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Feature ranking</strong> panel provides the ranked discriminant score for top feature sets.
+It ranks the discriminitive power of the feature set (genes or gene sets) as a
+cumulative discriminant score for all phenotype variables.
+In this way, we can find which feature set (gene or gene family/set) can explain
+the variance in the data the best.</p>
+<p>Under the plot configuration <em>Settings</em>, users can specify the <code class="docutils literal notranslate"><span class="pre">Method</span></code> for
+computing the discriminant score.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.6.0.png"><img alt="../_images/psc3.6.0.png" src="../_images/psc3.6.0.png" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>P-value based scoring is computed as the average negative log p-value from the ANOVA.</p></li>
+<li><p>Correlation-based discriminative power is calculated as the average ‘(1-cor)’
+between the groups. Thus, a feature set is highly discriminative if the
+between-group correlation is low.</p></li>
+<li><p>The ‘meta’ method combines the score of the former methods in a multiplicative manner.</p></li>
+</ul>
+<p>The following plot represents the resulting feature-set ranking.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc3.6.png"><img alt="../_images/psc3.6.png" src="../_images/psc3.6.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mod1_dataview.html" class="btn btn-neutral float-left" title="Data View" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod3_DEGs.html" class="btn btn-neutral float-right" title="Expression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
