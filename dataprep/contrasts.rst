@@ -1,6 +1,6 @@
 .. _contrasts:
 
-Contrasts file
+Contrasts file (optional)
 ================================================================================
 
 The contrasts are an optional input in Omics Playground. It contains 
@@ -8,6 +8,9 @@ the groups (treatment versus controls, mutant versus wild-type, etc..)
 that will be tested against each other. The contrasts are a list of 
 comparisons between groups. For example, if you have 3 groups (A, B, C), you 
 can test the following contrasts: A vs B, A vs C, B vs C.
+
+The file ``contrasts.csv`` is optional because you can build 
+the contrasts inside Omics Playground from the samples file.
 
 Here is a minimal example of how the  ``contrasts.csv`` should look like. In this case, the groups 
 will be hair color (blond vs. black) and country (Japan vs. Switzerland).
