@@ -22,8 +22,8 @@
     :maxdepth: 3
     :caption: Advanced Data Preparation
 
-    dataprep/geneset
     dataprep/dataprep_example
+    dataprep/geneset
     dataprep/dataprocess
     
 .. toctree::
