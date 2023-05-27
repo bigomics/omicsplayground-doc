@@ -8,7 +8,9 @@ The samples file describe the samples in the dataset. It is a tabular (csv) file
 Below is a simple example of sample file, where each row in the column should be a sample with a unique ID. If we have duplicate IDs (two rows with sample5), these will be merged as its considered a technical replicate.
 From the second column onwards, we have the metadata (also called phenotypes, descriptors, annotation, etc..). 
 
-If we are analyzing a human study (it can be applied to any study) as seen in the table below, the rows should be annonymized pacients, identifyied uniquely by the first column, and the other columns would be sample metadata (hair color, country, weight, age, etc.).
+If we are analyzing a human study (it can be applied to any study) as 
+seen in the ``samples.csv`` table below, the rows should be annonymized pacients, identifyied 
+uniquely by the first column, and the other columns would be sample metadata (hair color, country, weight, age, etc.).
 
 +---------+------------+-------------+--------+
 |         | hair color |   country   | weight |
@@ -65,4 +67,4 @@ Below is a slightly more complicated samples example from a real in-vitro human 
 +------------+---------------------+-----------+------+-----------+
 
 .. seealso::
-    If you are familiar with R, you can think of the samples file as a data.frame object. The samples file from the study above can be accessed by installing playbase `devtools::install_github("bigomics/playbase")` and running `playbase::SAMPLES`.
+    If you are familiar with R, you can think of the samples file as a data.frame object. The samples file from the study above can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::SAMPLES``.

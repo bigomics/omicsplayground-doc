@@ -1,7 +1,7 @@
 .. _Dataprep:
 
 
-Preparing your data for Omics Playground
+Introduction
 ================================================================================
 The platform requires the transcriptomics and proteomics data to be in a 
 structured format as an input. The easiest way is to prepare three csv files: **counts.csv**, **samples.csv** and an optional **contrast.csv**. 

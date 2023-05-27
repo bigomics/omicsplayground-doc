@@ -9,7 +9,7 @@ that will be tested against each other. The contrasts are a list of
 comparisons between groups. For example, if you have 3 groups (A, B, C), you 
 can test the following contrasts: A vs B, A vs C, B vs C.
 
-Here is a minimal example of contrasts, in this case, the groups 
+Here is a minimal example of how the  ``contrasts.csv`` should look like. In this case, the groups 
 will be hair color (blond vs. black) and country (Japan vs. Switzerland).
 
 +---------+------------+-------------+--------+
@@ -52,7 +52,7 @@ Similarly, we can see the countrasts example from the dataset mentioned in the p
 In the platform, we will convert that to the contrasts table. The number 
 one representes the numerator of the contrast, and the number -1 represents the denominator.
 
-For example, the contrast `act12h_vs_notact` will be represented by the following table:
+For example, the contrast ``act12h_vs_notact`` will be represented by the following table:
 
 
 +--------+------------------+------------------+------------------+------------------+-------------------+
@@ -75,5 +75,8 @@ The samples act12 will have 1 (numerator) and noact will have -1 (denominator). 
 
 The number zero is simply ignored, it can be left empty.
 
+..
+    There is one more input contrast, a short version with -1, 1, but I cannot find any example anywhere
+
 .. seealso::
-    If you are familiar with R, you can think of the contrasts file as a data.frame object. The samples file from the study above can be accessed by installing playbase `devtools::install_github("bigomics/playbase")`` and running `playbase::CONTRASTS`.
+    If you are familiar with R, you can think of the contrasts file as a data.frame object. The samples file from the study above can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::CONTRASTS``.

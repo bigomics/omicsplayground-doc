@@ -4,10 +4,10 @@ Counts file
 ================================================================================
 
 The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
-like the samples, it is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
+like the samples, the ``counts.csv`` file is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
 and each column describes the samples.
 
-Below is a simple example of how a counts.csv file should look like.
+Below is a simple example of how a ``counts.csv`` file should look like.
 
 +-------+---------+----------+----------+---------+
 |       | sample1 | sample2  | sample3  | sample4 |
@@ -52,4 +52,4 @@ Below is a slightly more complicated counts example from a real in-vitro human s
 
 
 .. seealso::
-    If you are familiar with R, you can think of the counts file as a data.frame object. The samples file from the study above can be accessed by installing playbase `devtools::install_github("bigomics/playbase")`` and running `playbase::SAMPLES`.
+    If you are familiar with R, you can think of the counts file as a data.frame object. The samples file from the study above can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::SAMPLES``.
