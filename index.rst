@@ -10,12 +10,18 @@
     
 .. toctree::
     :maxdepth: 3
-    :caption: Data Preparation
+    :caption: Basic Data Preparation
 
     dataprep/dataprep
     dataprep/samples
     dataprep/counts
     dataprep/contrasts
+    dataprep/uploadopg
+
+.. toctree::
+    :maxdepth: 3
+    :caption: Advanced Data Preparation
+
     dataprep/geneset
     dataprep/dataprep_example
     dataprep/dataprocess
