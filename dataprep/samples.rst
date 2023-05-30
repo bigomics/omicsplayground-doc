@@ -3,26 +3,35 @@
 Samples file
 ================================================================================
 
-The samples file describe the samples in the dataset. It is a tabular (csv) file with the samples in the rows and the metadata in the columns.
+The samples file contains the phenotypic information of each sample. The first column contains the sample name, which must exactly match the name given in the read counts file.  Note that the first cell is again kept empty.  
+
+It is a tabular (csv) file with the samples in the rows and the phenotypic data (metadata) in the columns. Note that the platform will not accept purely numerical values.
 
 Below is a simple example of sample file, where each row in the column should be a sample with a unique ID. If we have duplicate IDs (two rows with sample5), these will be merged as its considered a technical replicate.
 From the second column onwards, we have the metadata (also called phenotypes, descriptors, annotation, etc..). 
 
+.. note::
+    All phenotypes must contain at least one alphabet letter. This is done to avoid continuous values (as in the case of weight), as the platform expects discrete ranges. Having excessive numbers of phenotypic groups may also result in errors.
+
+
 If we are analyzing a human study (it can be applied to any study) as 
-seen in the ``samples.csv`` table below, the rows should be annonymized pacients, identifyied 
-uniquely by the first column, and the other columns would be sample metadata (hair color, country, weight, age, etc.).
+seen in the ``samples.csv`` table below, the rows should be annonymized patients, identifyied 
+uniquely by the first column (sample1, sample2...), and the other columns would be sample metadata (hair color, country, weight, age, etc.).
 
 +---------+------------+-------------+--------+
-|         | hair color |   country   | weight |
+|         | hair color |   country   |  age   |
 +=========+============+=============+========+
-| sample1 |   blond    |    Japan    |   55   |
+| sample1 |   blond    |    Japan    |  old   |
 +---------+------------+-------------+--------+
-| sample2 |   black    | Switzerland |   43   |
+| sample2 |   black    | Switzerland | young  |
 +---------+------------+-------------+--------+
-| sample3 |   blond    |     USA     |   87   |
+| sample3 |   blond    |     USA     | young  |
 +---------+------------+-------------+--------+
-| sample4 |   black    | Switzerland |   65   |
+| sample4 |   black    | Switzerland |  old   |
 +---------+------------+-------------+--------+
+
+As mentioned above, the age was converted from numeric (12, 52, 87) to young and old, so we can have a discrete range acceted in the platform.
+
 
 Below is a slightly more complicated samples example from a real in-vitro human study. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen.
 

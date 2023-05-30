@@ -16,7 +16,9 @@
     dataprep/samples
     dataprep/counts
     dataprep/contrasts
+    dataprep/datachecks
     dataprep/uploadopg
+
 
 .. toctree::
     :maxdepth: 3
