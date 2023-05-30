@@ -7,25 +7,49 @@ The contrasts are an optional input in Omics Playground. It contains
 the groups (treatment versus controls, mutant versus wild-type, etc..) 
 that will be tested against each other. The contrasts are a list of 
 comparisons between groups. For example, if you have 3 groups (A, B, C), you 
-can test the following contrasts: A vs B, A vs C, B vs C.
+can test the following contrasts: A_vs_B, A_vs_C, B_vs_C.
+
+The first column contains the phenotypes, which must exactly match the names given in the “samples.csv” file. The first cell is again empty. 
+
+The first row contains the name of the pairwise comparisons. All pairwise contrasts names must follow the format shown above with the groups joined together by  “_vs_” (e.g. piperaquine_vs_control).
 
 The file ``contrasts.csv`` is optional because you can build 
-the contrasts inside Omics Playground from the samples file.
+the contrasts inside Omics Playground from the samples file. However, if you have a particularly complex datasets with multiple phenotypes and a large number of pairwise comparisons, you might want to generate this file through a script.
 
 Here is a minimal example of how the  ``contrasts.csv`` should look like. In this case, the groups 
-will be hair color (blond vs. black) and country (Japan vs. Switzerland).
+will be hair color (blond vs. black) and country (Japan vs. Switzerland), and derive from the samples file.
+
+Samples file:
 
 +---------+------------+-------------+--------+
-|         | hair color |   country   | weight |
+|         | hair color |   country   |  age   |
 +=========+============+=============+========+
-| sample1 |   blond    |    Japan    |   55   |
+| sample1 |   blond    |    Japan    |  old   |
 +---------+------------+-------------+--------+
-| sample2 |   black    | Switzerland |   43   |
+| sample2 |   black    | Switzerland | young  |
 +---------+------------+-------------+--------+
-| sample3 |   blond    |     Japan   |   87   |
+| sample3 |   blond    |     USA     | young  |
 +---------+------------+-------------+--------+
-| sample4 |   black    | Switzerland |   65   |
+| sample4 |   black    | Switzerland |  old   |
 +---------+------------+-------------+--------+
+
+Converting the samples above into contrasts, we get the following table.
+
+Contrasts file:
+
++---------+----------------+----------------------+
+|         | black_vs_blond | japan_vs_switzerland |
++=========+================+======================+
+| sample1 |       -1       |          1           |
++---------+----------------+----------------------+
+| sample2 |       1        |          -1          |
++---------+----------------+----------------------+
+| sample3 |       -1       |          0           |
++---------+----------------+----------------------+
+| sample4 |       1        |          -1          |
++---------+----------------+----------------------+
+
+
 
 Similarly, we can see the countrasts example from the dataset mentioned in the previous sections. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each column is ancontrast that will be compared.
 

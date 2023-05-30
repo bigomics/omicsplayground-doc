@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data processing inside Omics Playground &mdash; Omics Playground  documentation</title>
+  <title>Checks before uploading &mdash; Omics Playground  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/bigomics-logo-white-48px.png"/>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Outline" href="../modules/outline.html" />
-    <link rel="prev" title="Loading custom geneset files" href="geneset.html" /> 
+    <link rel="next" title="Uploading your data in Omics Playground" href="uploadopg.html" />
+    <link rel="prev" title="Contrasts file (optional)" href="contrasts.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,25 +47,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dataprep.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="samples.html">Samples file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counts.html">Counts file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contrasts.html">Contrasts file (optional)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datachecks.html">Checks before uploading</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Checks before uploading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uploadopg.html">Uploading your data in Omics Playground</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="computepgx.html">What if I have many datasets?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprep_example.html">Preparing input files from raw data formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geneset.html">Loading custom geneset files</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data processing inside Omics Playground</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#filtering-of-features-genes-and-samples">Filtering of features (genes) and samples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#normalisation">Normalisation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#offline-computation">Offline computation</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="dataprocess.html">Data processing inside Omics Playground</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
 <ul>
@@ -111,9 +106,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Data processing inside Omics Playground</li>
+      <li class="breadcrumb-item active">Checks before uploading</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/dataprep/dataprocess.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/dataprep/datachecks.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -121,36 +116,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="data-processing-inside-omics-playground">
-<span id="dataprocess"></span><h1>Data processing inside Omics Playground<a class="headerlink" href="#data-processing-inside-omics-playground" title="Permalink to this headline">¶</a></h1>
-<section id="filtering-of-features-genes-and-samples">
-<h2>Filtering of features (genes) and samples<a class="headerlink" href="#filtering-of-features-genes-and-samples" title="Permalink to this headline">¶</a></h2>
-<p>The data preprocessing includes some filtering criteria, such as filtering of
-genes based on variance, the expression across the samples, and the number of
-missing values. Similarly, samples can also be filtered based on the read quality,
-total abundance, unrelated phenotype, or an outlier criterion.</p>
-</section>
-<section id="normalisation">
-<h2>Normalisation<a class="headerlink" href="#normalisation" title="Permalink to this headline">¶</a></h2>
-<p>The raw counts are converted into counts per million (CPM) and log2. Depending on
-the data set, a quantile normalization can be applied. Known batches in the data
-can be corrected with limma or ComBat. Other unknown batch
-effects and unwanted variation can be further removed using surrogate variable
-analysis in the sva package.</p>
-</section>
-<section id="offline-computation">
-<h2>Offline computation<a class="headerlink" href="#offline-computation" title="Permalink to this headline">¶</a></h2>
-<p>Statistics for the differentially expressed genes analysis and gene set enrichment
-analysis are precomputed to accelerate the visualisation on the interface.</p>
-</section>
+  <section id="checks-before-uploading">
+<span id="datachecks"></span><h1>Checks before uploading<a class="headerlink" href="#checks-before-uploading" title="Permalink to this headline">¶</a></h1>
+<p><strong>Check #1</strong>. Leave the header of the first column empty.
+When preparing the input files, do not name the first column with the samples names or IDs, but leave it empty. Here’s an example:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/p1.png"><img alt="../_images/p1.png" src="../_images/p1.png" style="width: 65%;" /></a>
+</figure>
+<p><strong>Check #2</strong>. Avoid regular expressions when naming your samples or phenotypes.
+The platform is based on the R programming language, which makes heavy use of a feature called “regular expressions”.</p>
+<p>These are symbols that have a programming function beyond its common usage. Thus the full stop symbol ”.” usually indicates any alphanumeric character in a piece of code. Other regular expressions include “/”, “+”, “*”, etc…</p>
+<p>As a good code of practice, never use any of these symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/p2.png"><img alt="../_images/p2.png" src="../_images/p2.png" style="width: 65%;" /></a>
+</figure>
+<p><strong>Check #3</strong>. Don’t use spaces in your sample or phenotype names.
+Empty spaces in the names of samples or phenotypes will cause the platform to throw an error message. If you need to create complex names, connect them via an underscore. Here’s an example:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/p3.png"><img alt="../_images/p3.png" src="../_images/p3.png" style="width: 65%;" /></a>
+</figure>
+<p><strong>Check #4</strong>. Define intervals instead of using numeric phenotypes.
+The platform does not cope with continuous numeric variables for phenotypes yet. To avoid that, our coders added a filter that flags phenotypes names “Time” or “Age” as unacceptable. The same applies for other continuous variables, such as height, weight, length, etc.</p>
+<p>Instead, you should cluster the various numeric values into definite intervals and then name them accordingly (e.g. “Age_groups”, “Time_intervals”, etc…)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/p4.png"><img alt="../_images/p4.png" src="../_images/p4.png" style="width: 65%;" /></a>
+</figure>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="geneset.html" class="btn btn-neutral float-left" title="Loading custom geneset files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../modules/outline.html" class="btn btn-neutral float-right" title="Outline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="contrasts.html" class="btn btn-neutral float-left" title="Contrasts file (optional)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="uploadopg.html" class="btn btn-neutral float-right" title="Uploading your data in Omics Playground" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -52,10 +52,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Samples file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counts.html">Counts file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datachecks.html">Checks before uploading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uploadopg.html">Uploading your data in Omics Playground</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="computepgx.html">What if I have many datasets?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprep_example.html">Preparing input files from raw data formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geneset.html">Loading custom geneset files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprocess.html">Data processing inside Omics Playground</a></li>
@@ -116,12 +118,17 @@
              
   <section id="samples-file">
 <span id="samples"></span><h1>Samples file<a class="headerlink" href="#samples-file" title="Permalink to this headline">¶</a></h1>
-<p>The samples file describe the samples in the dataset. It is a tabular (csv) file with the samples in the rows and the metadata in the columns.</p>
+<p>The samples file contains the phenotypic information of each sample. The first column contains the sample name, which must exactly match the name given in the read counts file.  Note that the first cell is again kept empty.</p>
+<p>It is a tabular (csv) file with the samples in the rows and the phenotypic data (metadata) in the columns. Note that the platform will not accept purely numerical values.</p>
 <p>Below is a simple example of sample file, where each row in the column should be a sample with a unique ID. If we have duplicate IDs (two rows with sample5), these will be merged as its considered a technical replicate.
 From the second column onwards, we have the metadata (also called phenotypes, descriptors, annotation, etc..).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All phenotypes must contain at least one alphabet letter. This is done to avoid continuous values (as in the case of weight), as the platform expects discrete ranges. Having excessive numbers of phenotypic groups may also result in errors.</p>
+</div>
 <p>If we are analyzing a human study (it can be applied to any study) as
-seen in the <code class="docutils literal notranslate"><span class="pre">samples.csv</span></code> table below, the rows should be annonymized pacients, identifyied
-uniquely by the first column, and the other columns would be sample metadata (hair color, country, weight, age, etc.).</p>
+seen in the <code class="docutils literal notranslate"><span class="pre">samples.csv</span></code> table below, the rows should be annonymized patients, identifyied
+uniquely by the first column (sample1, sample2…), and the other columns would be sample metadata (hair color, country, weight, age, etc.).</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
@@ -133,32 +140,33 @@ uniquely by the first column, and the other columns would be sample metadata (ha
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>hair color</p></th>
 <th class="head"><p>country</p></th>
-<th class="head"><p>weight</p></th>
+<th class="head"><p>age</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>sample1</p></td>
 <td><p>blond</p></td>
 <td><p>Japan</p></td>
-<td><p>55</p></td>
+<td><p>old</p></td>
 </tr>
 <tr class="row-odd"><td><p>sample2</p></td>
 <td><p>black</p></td>
 <td><p>Switzerland</p></td>
-<td><p>43</p></td>
+<td><p>young</p></td>
 </tr>
 <tr class="row-even"><td><p>sample3</p></td>
 <td><p>blond</p></td>
 <td><p>USA</p></td>
-<td><p>87</p></td>
+<td><p>young</p></td>
 </tr>
 <tr class="row-odd"><td><p>sample4</p></td>
 <td><p>black</p></td>
 <td><p>Switzerland</p></td>
-<td><p>65</p></td>
+<td><p>old</p></td>
 </tr>
 </tbody>
 </table>
+<p>As mentioned above, the age was converted from numeric (12, 52, 87) to young and old, so we can have a discrete range acceted in the platform.</p>
 <p>Below is a slightly more complicated samples example from a real in-vitro human study. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen.</p>
 <table class="docutils align-default">
 <colgroup>

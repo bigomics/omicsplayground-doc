@@ -18,7 +18,9 @@
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Preparing input files from raw data formats" href="dataprep_example.html" />
+    <link rel="prev" title="Uploading your data in Omics Playground" href="uploadopg.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,10 +52,12 @@
 <li class="toctree-l1"><a class="reference internal" href="samples.html">Samples file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counts.html">Counts file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datachecks.html">Checks before uploading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uploadopg.html">Uploading your data in Omics Playground</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
-<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What if I have many datasets?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprep_example.html">Preparing input files from raw data formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geneset.html">Loading custom geneset files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprocess.html">Data processing inside Omics Playground</a></li>
@@ -113,31 +117,35 @@
            <div itemprop="articleBody">
              
   <section id="what-if-i-have-many-datasets">
-<h1>What if I have many datasets?<a class="headerlink" href="#what-if-i-have-many-datasets" title="Permalink to this headline">¶</a></h1>
+<span id="computepgx"></span><h1>What if I have many datasets?<a class="headerlink" href="#what-if-i-have-many-datasets" title="Permalink to this headline">¶</a></h1>
 <p>The first step in any OmicsPlayground analysis is to upload data which can be used to create a pgx object.
 The pgx object is basically the core data structure in the OmicsPlayground upon which most analysis and plotting functions operate.</p>
+<p>If you have many datasets (tens to hundreds), it might make sense to create the pgx object with an R script.</p>
 <p>We made it very easy to create a pgx object from your own data. With a few R functions, you can convert several datasets into pgx objects
 that can be uploaded in Omics Playground.</p>
-<p>In R, you can install the development version of playbase from GitHub with:</p>
-<p>install.packages(“devtools”)
-devtools::install_github(“bigomics/playbase”)</p>
-<p>library(playbase)</p>
-<p># Here we create a pgx object that can be used in Omics Playground.</p>
-<p># Step 1. create a pgx object
-pgx &lt;- playbase::pgx.createPGX(</p>
-<blockquote>
-<div><p>counts = playbase::COUNTS,
-samples = playbase::SAMPLES,
-contrasts = playbase::CONTRASTS</p>
-</div></blockquote>
-<p>)
-# Step 2. Populate pgx object with results
-pgx &lt;- playbase::pgx.computePGX(</p>
-<blockquote>
-<div><p>pgx = pgx</p>
-</div></blockquote>
-<p>)</p>
-<p>All you have to do is substitute playbase::COUNTS, playbase::SAMPLES, and playbase::CONTRASTS with your own data.</p>
+<p>Here we create a pgx object that can be used in Omics Playground:</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="c1"># step 0: install necessary packages</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span>
+<span class="n">devtools</span><span class="o">::</span><span class="nf">install_github</span><span class="p">(</span><span class="s">&quot;bigomics/playbase&quot;</span><span class="p">)</span>
+
+<span class="c1"># step 1: create a pgx object with your samples, counts and contrasts</span>
+<span class="n">pgx</span> <span class="o">&lt;-</span> <span class="n">playbase</span><span class="o">::</span><span class="nf">pgx.createPGX</span><span class="p">(</span>
+  <span class="n">counts</span> <span class="o">=</span> <span class="n">playbase</span><span class="o">::</span><span class="n">COUNTS</span><span class="p">,</span>
+  <span class="n">samples</span> <span class="o">=</span> <span class="n">playbase</span><span class="o">::</span><span class="n">SAMPLES</span><span class="p">,</span>
+  <span class="n">contrasts</span> <span class="o">=</span> <span class="n">playbase</span><span class="o">::</span><span class="n">CONTRASTS</span>
+<span class="p">)</span>
+
+<span class="c1"># step 2: compute the pgx object</span>
+
+<span class="n">pgx</span> <span class="o">&lt;-</span> <span class="n">playbase</span><span class="o">::</span><span class="nf">pgx.computePGX</span><span class="p">(</span>
+  <span class="n">pgx</span> <span class="o">=</span> <span class="n">pgx</span>
+<span class="p">)</span>
+
+<span class="c1"># save the pgx object to your computer</span>
+<span class="nf">save</span><span class="p">(</span><span class="n">pgx</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;choose_a_name.pgx.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All you have to do is substitute playbase::COUNTS, playbase::SAMPLES, and playbase::CONTRASTS with your own data. You can then import the pgx object into Omics Playground.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>In reality, there is a lot happening behing the <cite>pgx.createPGX</cite> and <cite>pgx.computePGX</cite>. If you are interested in learning more,
@@ -149,7 +157,10 @@ Wiki. You can find it <a class="reference external" href="https://github.com/big
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="uploadopg.html" class="btn btn-neutral float-left" title="Uploading your data in Omics Playground" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dataprep_example.html" class="btn btn-neutral float-right" title="Preparing input files from raw data formats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

@@ -52,10 +52,12 @@
 <li class="toctree-l1"><a class="reference internal" href="samples.html">Samples file</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Counts file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datachecks.html">Checks before uploading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uploadopg.html">Uploading your data in Omics Playground</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="computepgx.html">What if I have many datasets?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprep_example.html">Preparing input files from raw data formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geneset.html">Loading custom geneset files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprocess.html">Data processing inside Omics Playground</a></li>
@@ -118,7 +120,10 @@
 <span id="counts"></span><h1>Counts file<a class="headerlink" href="#counts-file" title="Permalink to this headline">¶</a></h1>
 <p>The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
 like the samples, the <code class="docutils literal notranslate"><span class="pre">counts.csv</span></code> file is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
-and each column describes the samples.</p>
+and each column describes the samples. The first cell of the first row should be left empty.</p>
+<p>The rows contains gene IDs, which can be in most formats (such as HGCN or Ensembl), but not in the
+Entrez number format. If you are using the latter, it will need to be converted through tools such as <a class="reference external" href="https://www.syngoportal.org/convert">Syngo</a>.</p>
+<p>The individual cells in the other columns contain the raw or normalised read counts for the dataset. The values should always be numerical, with the exception of “NA” in case of a lack of data.</p>
 <p>Below is a simple example of how a <code class="docutils literal notranslate"><span class="pre">counts.csv</span></code> file should look like.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -152,7 +157,7 @@ and each column describes the samples.</p>
 <tr class="row-even"><td><p>gene3</p></td>
 <td><p>10.4</p></td>
 <td><p>763.5</p></td>
-<td><p>0</p></td>
+<td><p>NA</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-odd"><td><p>gene4</p></td>
@@ -169,7 +174,7 @@ and each column describes the samples.</p>
 </tr>
 <tr class="row-odd"><td><p>gene6</p></td>
 <td><p>0</p></td>
-<td><p>0</p></td>
+<td><p>NA</p></td>
 <td><p>14.9</p></td>
 <td><p>0</p></td>
 </tr>
@@ -181,9 +186,10 @@ and each column describes the samples.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>The formats accepted as features (genes, proteins are ENSEMB, ENSEMBLTRAN, UNIGENE, REFSEQ,ACCNUM and UNIPROT and gene SYMBOL).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The formats accepted as features (genes, proteins are ENSEMB, ENSEMBLTRAN, UNIGENE, REFSEQ, ACCNUM and UNIPROT and gene SYMBOL).
+Also note that the platform will not accept transcript IDs. You will need to convert them to Gene IDs. This will result in multiple gene entries that the platform will merge.</p>
 </div>
 <p>Below is a slightly more complicated counts example from a real in-vitro human study. The columns (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each row is an actual measurement of a gene from the study.</p>
 <table class="docutils align-default">

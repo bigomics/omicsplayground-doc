@@ -1,4 +1,4 @@
-.. computepgx:
+.. _computepgx:
 
 What if I have many datasets?
 ================================================================================
@@ -6,30 +6,36 @@ What if I have many datasets?
 The first step in any OmicsPlayground analysis is to upload data which can be used to create a pgx object. 
 The pgx object is basically the core data structure in the OmicsPlayground upon which most analysis and plotting functions operate.
 
+If you have many datasets (tens to hundreds), it might make sense to create the pgx object with an R script.
+
 We made it very easy to create a pgx object from your own data. With a few R functions, you can convert several datasets into pgx objects 
 that can be uploaded in Omics Playground.
 
-In R, you can install the development version of playbase from GitHub with:
+Here we create a pgx object that can be used in Omics Playground:
 
-install.packages("devtools")
-devtools::install_github("bigomics/playbase")
+.. code-block:: R
 
-library(playbase)
+            # step 0: install necessary packages
+            install.packages("devtools")
+            devtools::install_github("bigomics/playbase")
+            
+            # step 1: create a pgx object with your samples, counts and contrasts
+            pgx <- playbase::pgx.createPGX(
+              counts = playbase::COUNTS,
+              samples = playbase::SAMPLES,
+              contrasts = playbase::CONTRASTS
+            )
 
-# Here we create a pgx object that can be used in Omics Playground.
+            # step 2: compute the pgx object
 
-# Step 1. create a pgx object
-pgx <- playbase::pgx.createPGX(
- counts = playbase::COUNTS,
- samples = playbase::SAMPLES,
- contrasts = playbase::CONTRASTS
-)
-# Step 2. Populate pgx object with results
-pgx <- playbase::pgx.computePGX(
-  pgx = pgx
-)
+            pgx <- playbase::pgx.computePGX(
+              pgx = pgx
+            )
 
-All you have to do is substitute playbase::COUNTS, playbase::SAMPLES, and playbase::CONTRASTS with your own data.
+            # save the pgx object to your computer
+            save(pgx, file = "choose_a_name.pgx.")
+            
+All you have to do is substitute playbase::COUNTS, playbase::SAMPLES, and playbase::CONTRASTS with your own data. You can then import the pgx object into Omics Playground.
 
 .. seealso::
     In reality, there is a lot happening behing the `pgx.createPGX` and `pgx.computePGX`. If you are interested in learning more,

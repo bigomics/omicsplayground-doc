@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Uploading your data in Omics Playground" href="uploadopg.html" />
+    <link rel="next" title="Checks before uploading" href="datachecks.html" />
     <link rel="prev" title="Counts file" href="counts.html" /> 
 </head>
 
@@ -52,10 +52,12 @@
 <li class="toctree-l1"><a class="reference internal" href="samples.html">Samples file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counts.html">Counts file</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datachecks.html">Checks before uploading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uploadopg.html">Uploading your data in Omics Playground</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="computepgx.html">What if I have many datasets?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprep_example.html">Preparing input files from raw data formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geneset.html">Loading custom geneset files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dataprocess.html">Data processing inside Omics Playground</a></li>
@@ -120,11 +122,14 @@
 the groups (treatment versus controls, mutant versus wild-type, etc..)
 that will be tested against each other. The contrasts are a list of
 comparisons between groups. For example, if you have 3 groups (A, B, C), you
-can test the following contrasts: A vs B, A vs C, B vs C.</p>
+can test the following contrasts: A_vs_B, A_vs_C, B_vs_C.</p>
+<p>The first column contains the phenotypes, which must exactly match the names given in the “samples.csv” file. The first cell is again empty.</p>
+<p>The first row contains the name of the pairwise comparisons. All pairwise contrasts names must follow the format shown above with the groups joined together by  “_vs_” (e.g. piperaquine_vs_control).</p>
 <p>The file <code class="docutils literal notranslate"><span class="pre">contrasts.csv</span></code> is optional because you can build
-the contrasts inside Omics Playground from the samples file.</p>
+the contrasts inside Omics Playground from the samples file. However, if you have a particularly complex datasets with multiple phenotypes and a large number of pairwise comparisons, you might want to generate this file through a script.</p>
 <p>Here is a minimal example of how the  <code class="docutils literal notranslate"><span class="pre">contrasts.csv</span></code> should look like. In this case, the groups
-will be hair color (blond vs. black) and country (Japan vs. Switzerland).</p>
+will be hair color (blond vs. black) and country (Japan vs. Switzerland), and derive from the samples file.</p>
+<p>Samples file:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
@@ -136,29 +141,62 @@ will be hair color (blond vs. black) and country (Japan vs. Switzerland).</p>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>hair color</p></th>
 <th class="head"><p>country</p></th>
-<th class="head"><p>weight</p></th>
+<th class="head"><p>age</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>sample1</p></td>
 <td><p>blond</p></td>
 <td><p>Japan</p></td>
-<td><p>55</p></td>
+<td><p>old</p></td>
 </tr>
 <tr class="row-odd"><td><p>sample2</p></td>
 <td><p>black</p></td>
 <td><p>Switzerland</p></td>
-<td><p>43</p></td>
+<td><p>young</p></td>
 </tr>
 <tr class="row-even"><td><p>sample3</p></td>
 <td><p>blond</p></td>
-<td><p>Japan</p></td>
-<td><p>87</p></td>
+<td><p>USA</p></td>
+<td><p>young</p></td>
 </tr>
 <tr class="row-odd"><td><p>sample4</p></td>
 <td><p>black</p></td>
 <td><p>Switzerland</p></td>
-<td><p>65</p></td>
+<td><p>old</p></td>
+</tr>
+</tbody>
+</table>
+<p>Converting the samples above into contrasts, we get the following table.</p>
+<p>Contrasts file:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 34%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>black_vs_blond</p></th>
+<th class="head"><p>japan_vs_switzerland</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sample1</p></td>
+<td><p>-1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample2</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-even"><td><p>sample3</p></td>
+<td><p>-1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample4</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
 </tr>
 </tbody>
 </table>
@@ -304,7 +342,7 @@ one representes the numerator of the contrast, and the number -1 represents the 
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="counts.html" class="btn btn-neutral float-left" title="Counts file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="uploadopg.html" class="btn btn-neutral float-right" title="Uploading your data in Omics Playground" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="datachecks.html" class="btn btn-neutral float-right" title="Checks before uploading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
