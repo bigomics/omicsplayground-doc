@@ -22,6 +22,7 @@
     :maxdepth: 3
     :caption: Advanced Data Preparation
 
+    dataprep/computepgx
     dataprep/dataprep_example
     dataprep/geneset
     dataprep/dataprocess
