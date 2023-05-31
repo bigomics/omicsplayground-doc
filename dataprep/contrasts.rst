@@ -58,8 +58,27 @@ Inside the platform, we will transpare the contrasts table to the following tabl
 
 Any of the tables above can be provided to the platform.
 
-..
-    There is one more input contrast, a short version with -1, 1, but I cannot find any example anywhere
+Group-based contrasts (short form)
+--------------------------------------------------------------------------------
+
+The group-based contrast is especially useful in datasets with large number of samples, as assigning the contrasts to each sample can be cumbersome.
+
+Following the example above, if we would like to create a contrast between the two countries, 
+we will need to create a column called **group** in the sample file, which 
+will contain the phenotypes (in this case country). To simplify, we could simply 
+change the name of the column **country** to **group**.
+
+Once we have the group column in the sample file, we can assign the contrasts as in the table below.
+
++-------------+----------------------+
+|             | japan_vs_switzerland |
++=============+======================+
+|    japan    |          1           |
++-------------+----------------------+
+| switzerland |          -1          |
++-------------+----------------------+
+
+We will search for the group column in the samples file, and we will create the contrasts based on the groups. Samples with japan in the group column will be the numerator, and samples with switzerland in the group column will be the denominator.
 
 .. seealso::
     If you are familiar with R, you can think of the contrasts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::CONTRASTS``.
