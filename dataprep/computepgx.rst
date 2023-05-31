@@ -35,9 +35,9 @@ Here we create a pgx object that can be used in Omics Playground:
             # save the pgx object to your computer
             save(pgx, file = "choose_a_name.pgx.")
             
-All you have to do is substitute playbase::COUNTS, playbase::SAMPLES, and playbase::CONTRASTS with your own data. You can then import the pgx object into Omics Playground.
+All you have to do is substitute ``playbase::COUNTS``, ``playbase::SAMPLES``, and ``playbase::CONTRASTS`` with your own data. You can then import the pgx object into Omics Playground.
 
 .. seealso::
-    In reality, there is a lot happening behing the `pgx.createPGX` and `pgx.computePGX`. If you are interested in learning more,
+    In reality, there is a lot more happening behing the `pgx.createPGX` and `pgx.computePGX`. If you are interested in learning more,
     please see our Github Wiki with more details on the statistics, normalization and filtering steps that are performed.
     Wiki. You can find it `here <https://github.com/bigomics/omicsplayground/wiki>`_.
