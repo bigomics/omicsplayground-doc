@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omics Playground: Explore Omics Data Freely &mdash; Omics Playground  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Omics Playground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprep.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/samples.html">Samples file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/counts.html">Counts file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/datachecks.html">Checks before uploading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/uploadopg.html">Uploading your data in Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/computepgx.html">What if I have many datasets?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprep_example.html">Preparing input files from raw data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/geneset.html">Loading custom geneset files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprocess.html">Data processing inside Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules/outline.html">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod0_home.html">Home Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod1_dataview.html">Data View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod2_clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod3_DEGs.html">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod4_DEGSs.html">Enrichment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod7_Signature.html">Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod9_CellProfiling.html">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples.html">Reanalyzing Public Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Omics Playground: Explore Omics Data Freely</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="omics-playground-explore-omics-data-freely">
+<h1>Omics Playground: Explore Omics Data Freely<a class="headerlink" href="#omics-playground-explore-omics-data-freely" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://bigomics.ch/omics-playground">Omics Playground</a> is a comprehensive self-service platform platform
+for visualization, analytics and exploration of Big Omics Data.
+It allows users to apply a multitude of state-of-the-art analysis tools
+to their own data to explore and discover underlying biology in a short time.</p>
+<p>The platform offers a unique combination of features that
+distinguishes it from the other analytics platforms currently
+available.  We believe that data preprocessing (primary analysis) and
+statistical testing (secondary analysis) are now well established, and
+the most challenging task is currently data interpretation (tertiary
+analysis) that often takes the longest time but where actual insights
+can be gained. Therefore Omics Playground focuses strongly on tertiary
+analysis while providing good support for secondary analysis.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprep.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprep.html#input-file-requirements"><strong>Input file requirements</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/samples.html">Samples file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/counts.html">Counts file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/datachecks.html">Checks before uploading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/uploadopg.html">Uploading your data in Omics Playground</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/computepgx.html">What if I have many datasets?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprep_example.html">Preparing input files from raw data formats</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprep_example.html#from-fastq-files">From FASTQ files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprep_example.html#from-gene-counts-table-or-geo-repository">From gene counts table or GEO repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprep_example.html#from-single-cell-data">From single-cell data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprep_example.html#from-lc-ms-ms-proteomics-data">From LC-MS/MS proteomics data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/geneset.html">Loading custom geneset files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataprep/dataprocess.html">Data processing inside Omics Playground</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprocess.html#filtering-of-features-genes-and-samples">Filtering of features (genes) and samples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprocess.html#normalisation">Normalisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataprep/dataprocess.html#offline-computation">Offline computation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules/outline.html">Outline</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/outline.html#main-menu">Main menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/outline.html#figure-table-tags">Figure &amp; table tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/outline.html#glossary">Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod0_home.html">Home Panel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod0_home.html#selecting-the-dataset">Selecting the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod0_home.html#upload-data-upload">Upload data (Upload)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod0_home.html#upload-data-contrasts">Upload data (Contrasts)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod0_home.html#upload-data-compute">Upload data (Compute)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod1_dataview.html">Data View</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod1_dataview.html#input-panel">Input panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod1_dataview.html#plots">Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod1_dataview.html#qc">QC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod1_dataview.html#counts">Counts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod1_dataview.html#samples">Samples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod1_dataview.html#contrasts">Contrasts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod2_clustering.html">Clustering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#input-panel">Input panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#heatmap">Heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#annotate-clusters">Annotate clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#pca-tsne">PCA/tSNE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#parallel">Parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#phenotypes">Phenotypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod2_clustering.html#feature-ranking">Feature ranking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod3_DEGs.html">Expression</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod3_DEGs.html#differential-expression">Differential expression</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#input-panel">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#table">Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#foldchange-all">Foldchange (all)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#fdr-table">FDR table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#plot">Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#top-genes">Top genes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#volcano-all">Volcano (all)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#volcano-methods">Volcano (methods)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod3_DEGs.html#correlation-analysis">Correlation analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#id2">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#correllation">Correllation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod3_DEGs.html#functional">Functional</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod4_DEGSs.html">Enrichment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod4_DEGSs.html#geneset-enrichment">Geneset enrichment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#input-panel">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#table">Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#top-enriched">Top enriched</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#plots">Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#compare">Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#volcano-all">Volcano (all)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#volcano-methods">Volcano (methods)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#genemap">GeneMap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#foldchange-all">Foldchange (all)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#fdr-table">FDR table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod4_DEGSs.html#pathway-analysis">Pathway analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#id2">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#kegg-pathways">KEGG pathways</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#go-graph">GO graph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod4_DEGSs.html#word-cloud">Word Cloud</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#id3">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#main-panel">Main panel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod4_DEGSs.html#drug-connectivity">Drug connectivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#id4">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod4_DEGSs.html#id5">Main panel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod7_Signature.html">Signature</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod7_Signature.html#compare-signature">Compare Signature</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#input-panel">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#pairs">Pairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#contrast-heatmap">Contrast heatmap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod7_Signature.html#test-signature">Test Signature</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#id2">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#enrichment">Enrichment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#enrichment-table">Enrichment table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#volcano-plots">Volcano Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#overlap-similarity">Overlap/similarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#markers">Markers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod7_Signature.html#find-biomarkers">Find Biomarkers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#id3">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/mod7_Signature.html#importance">Importance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/mod9_CellProfiling.html">Cell Profiling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod9_CellProfiling.html#input-panel">Input panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod9_CellProfiling.html#cell-type">Cell type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod9_CellProfiling.html#mapping">Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod9_CellProfiling.html#markers">Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/mod9_CellProfiling.html#italk">iTALK</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/examples.html">Reanalyzing Public Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/examples.html#single-cell-rna-seq-data">Single-cell RNA-seq data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/examples.html#bulk-rna-seq-data">Bulk RNA-seq Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/examples.html#microarray-data">Microarray Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/examples.html#proteomic-data">Proteomic Data</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#batch-correction">Batch correction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#clustering">Clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#statistical-testing">Statistical testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#functional-analysis">Functional analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#scripting-and-visualization">Scripting and visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods.html#references">REFERENCES</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#can-i-use-limma-edger-and-deseq2-for-my-proteomics-data">Can I use LIMMA, EdgeR and DESeq2 for my proteomics data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-are-duplicated-gene-protein-names-handled-in-the-counts-file">How are duplicated gene/protein names handled in the counts file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-are-missing-values-handled-in-the-counts-file">How are “missing values” handled in the counts file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-i-switch-between-stable-beta-testing-docker-versions">How do I switch between stable, beta &amp; testing docker versions?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="info.html#license">License</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

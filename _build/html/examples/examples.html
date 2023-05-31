@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reanalyzing Public Datasets &mdash; Omics Playground  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Methods" href="../methods.html" />
+    <link rel="prev" title="Cell Profiling" href="../modules/mod9_CellProfiling.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Omics Playground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/samples.html">Samples file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/counts.html">Counts file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/datachecks.html">Checks before uploading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/uploadopg.html">Uploading your data in Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/computepgx.html">What if I have many datasets?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep_example.html">Preparing input files from raw data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/geneset.html">Loading custom geneset files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprocess.html">Data processing inside Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/outline.html">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod0_home.html">Home Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod1_dataview.html">Data View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod2_clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod3_DEGs.html">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod4_DEGSs.html">Enrichment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod7_Signature.html">Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/mod9_CellProfiling.html">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reanalyzing Public Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#single-cell-rna-seq-data">Single-cell RNA-seq data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tsne-plot">tSNE plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#volcano-and-ma-plot">Volcano and MA plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#differentially-expressed-genes">Differentially expressed genes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inferred-copy-number">Inferred copy number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#immune-checkpoint-signature">Immune checkpoint signature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#biomarker-heatmap">Biomarker heatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#annotate-heatmap-clusters">Annotate heatmap clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bulk-rna-seq-data">Bulk RNA-seq Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#drug-enrichment-profiles">Drug enrichment profiles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#microarray-data">Microarray Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hierarchical-cluster-heatmap">Hierarchical cluster heatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-importance-plot">Variable importance plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#survival-tree">Survival tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#proteomic-data">Proteomic Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#activation-matrix">Activation matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contrast-heatmap">Contrast heatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classification-tree">Classification tree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#volcano-plots-of-methods">Volcano plots of methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Reanalyzing Public Datasets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/examples/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reanalyzing-public-datasets">
+<span id="examples"></span><h1>Reanalyzing Public Datasets<a class="headerlink" href="#reanalyzing-public-datasets" title="Permalink to this headline">¶</a></h1>
+<p>To illustrate the use case of the Omics Playground, we reanalyzed different types
+of publics datasets, including microarray, bulk RNA-seq, single-cell RNA-seq and
+proteomic datasets to recapitulate the results.</p>
+<section id="single-cell-rna-seq-data">
+<h2>Single-cell RNA-seq data<a class="headerlink" href="#single-cell-rna-seq-data" title="Permalink to this headline">¶</a></h2>
+<p>For single-cell RNA-seq data, we downloaded the melanoma data set
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE72056">GSE72056</a> of
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27124452">Tirosh et al.</a>.
+Our platform recapitulates well the original findings of the paper.
+The t-SNE clustering (<a class="reference internal" href="#figure-1">Figure 1</a>) separates the different cell types.
+<a class="reference internal" href="#figure-2">Figure 2</a> and <a class="reference internal" href="#figure-3">Figure 3</a> show the volcano plot, MA plot and most differentially
+expressed genes between malignant and non-malignant cells.
+The CNV map (<a class="reference internal" href="#figure-4">Figure 4</a>) confirms the major chromosomal copy number
+variations found in the malignant cells. <a class="reference internal" href="#figure-5">Figure 5</a> shows high enrichment
+of a immune checkpoint signature, particularly concentrated in the T cells.
+The biomarker heatmap (<a class="reference internal" href="#figure-6">Figure 6</a>) highlights the marker genes for
+each cell type. Each gene cluster is furthermore automatically
+annotated with the most correlated gene sets (<a class="reference internal" href="#figure-7">Figure 7</a>).</p>
+<section id="tsne-plot">
+<h3>tSNE plot<a class="headerlink" href="#tsne-plot" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-1">
+<a class="reference internal image-reference" href="../_images/fig2_a.png"><img alt="../_images/fig2_a.png" src="../_images/fig2_a.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 1</strong>. The t-SNE clustering with cell type annotation for the
+<code class="xref std std-option docutils literal notranslate"><span class="pre">GSE72056-scmelanoma</span></code> dataset.
+To reproduce the figure on the platform, select and load
+<code class="xref std std-option docutils literal notranslate"><span class="pre">GSE72056-scmelanoma</span></code> dataset,
+and go to the <strong>PCA/tSNE</strong> panel of the <strong>Clustering</strong> module.
+From the plot <em>Settings</em>,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">color:</span> <span class="pre">group</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">layout:</span> <span class="pre">tsne</span></code>, and leave other settings
+as default.</p>
+</section>
+<section id="volcano-and-ma-plot">
+<h3>Volcano and MA plot<a class="headerlink" href="#volcano-and-ma-plot" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-2">
+<a class="reference internal image-reference" href="../_images/fig2_b.png"><img alt="../_images/fig2_b.png" src="../_images/fig2_b.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 2</strong>. Volcano and MA plot for the malignant versus non-malignant contrast.
+To replicate the figure on the platform, go to the <strong>Plots</strong> panel of
+the <strong>Expression</strong> module. From the input slider,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">yes_vs_no</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">family:</span> <span class="pre">all</span></code>.</p>
+</section>
+<section id="differentially-expressed-genes">
+<h3>Differentially expressed genes<a class="headerlink" href="#differentially-expressed-genes" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-3">
+<a class="reference internal image-reference" href="../_images/fig2_c.png"><img alt="../_images/fig2_c.png" src="../_images/fig2_c.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 3</strong>. Barplot of corresponding differentially expressed genes.
+To obtain the figure on the platform,
+go to the <strong>Top genes</strong> panel of the <strong>Expression</strong> module. From the input slider,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">yes_vs_no</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Gene</span> <span class="pre">family:</span> <span class="pre">all</span></code>.</p>
+</section>
+<section id="inferred-copy-number">
+<h3>Inferred copy number<a class="headerlink" href="#inferred-copy-number" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-4">
+<a class="reference internal image-reference" href="../_images/fig2_d.png"><img alt="../_images/fig2_d.png" src="../_images/fig2_d.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 4</strong>. Inferred copy number for sample Cy80.
+To reproduce the figure on the platform, go to the <strong>CNV</strong> panel of the
+<strong>scProfiling</strong> module. From the plot <em>Settings</em>,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Annotate</span> <span class="pre">with:</span> <span class="pre">malignant</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Order</span> <span class="pre">samples</span> <span class="pre">by:</span> <span class="pre">clust</span></code>.</p>
+</section>
+<section id="immune-checkpoint-signature">
+<h3>Immune checkpoint signature<a class="headerlink" href="#immune-checkpoint-signature" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-5">
+<a class="reference internal image-reference" href="../_images/fig2_e.png"><img alt="../_images/fig2_e.png" src="../_images/fig2_e.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 5</strong>. Enrichment distribution for an immune checkpoint signature showing high
+enrichment in T and B cells .
+To regenerate the figure on the platform, go to the <strong>Marker</strong> panel in
+the <strong>Signature</strong> module. From the input slider,
+select <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">custom</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Signature:</span> <span class="pre">immune_chkpt</span></code> as it is
+provided in the sample list.</p>
+</section>
+<section id="biomarker-heatmap">
+<h3>Biomarker heatmap<a class="headerlink" href="#biomarker-heatmap" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-6">
+<a class="reference internal image-reference" href="../_images/fig2_f.png"><img alt="../_images/fig2_f.png" src="../_images/fig2_f.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 6</strong>. Biomarker heatmap for non-malignant cells.
+To reproduce the figure on the platform, go to the <strong>Heatmap</strong> panel in the
+<strong>Clustering</strong> module. From the input slider,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples:</span> <span class="pre">cell.type={Bcell,</span>
+<span class="pre">CAF,</span> <span class="pre">endothelial,</span> <span class="pre">Macrophage,</span> <span class="pre">NK,</span> <span class="pre">Tcell}</span></code>.
+In the plot <em>Settings</em>, set <code class="xref std std-option docutils literal notranslate"><span class="pre">Plot</span> <span class="pre">type:</span> <span class="pre">ComplexHeatmap</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">split</span> <span class="pre">by:</span>
+<span class="pre">cell.type</span></code>, and <code class="xref std std-option docutils literal notranslate"><span class="pre">top</span> <span class="pre">mode:</span> <span class="pre">specific</span></code>.</p>
+</section>
+<section id="annotate-heatmap-clusters">
+<h3>Annotate heatmap clusters<a class="headerlink" href="#annotate-heatmap-clusters" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-7">
+<a class="reference internal image-reference" href="../_images/fig2_g.png"><img alt="../_images/fig2_g.png" src="../_images/fig2_g.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 7</strong>. Enrichment annotation of corresponding heatmap clusters from the <a class="reference internal" href="#figure-6">Figure 6</a>.
+To reproduce the figure on the platform, generate the heatmap in <a class="reference internal" href="#figure-6">Figure 6</a> first,
+then go to the <strong>Annotate clusters</strong> panel. From the plot <em>Settings</em>,
+set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Reference</span> <span class="pre">set:</span> <span class="pre">GOBP</span></code>.</p>
+</section>
+</section>
+<section id="bulk-rna-seq-data">
+<h2>Bulk RNA-seq Data<a class="headerlink" href="#bulk-rna-seq-data" title="Permalink to this headline">¶</a></h2>
+<p>To elucidate the mechanism of action of a new drug, or for the intention of drug
+repurposing, it is often useful to find other drugs that have similar or opposing
+signatures compared to some given fold change profile.
+This example is illustriated using the RNA-sequencing dataset
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114716">GSE114716</a> from
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/29905573">Goswami et al.</a>,
+which contains CD4 T cells following ipilimumab therapy.
+<a class="reference internal" href="#figure-8">Figure 8</a> shows the top ranked drugs with most similar or most opposing signatures
+to ipilimumab, a novel monoclonal antibody targeting CTLA-4 used in tumour therapy
+to stimulate the immune system. The complete list contains several compounds that
+stimulate the immune system, such as alpha-tocopherol
+(<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0264410X11000399">Morel et al.</a>),
+but also highlights compounds that are not commonly associated with the modulation
+of immune responses, such as strophanthidin, an intropic drug that has recently
+been shown to display pro-inflammatory activities
+(<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0378427418314863">Karas et al.</a>).</p>
+<section id="drug-enrichment-profiles">
+<h3>Drug enrichment profiles<a class="headerlink" href="#drug-enrichment-profiles" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-8">
+<a class="reference internal image-reference" href="../_images/fig2_h.png"><img alt="../_images/fig2_h.png" src="../_images/fig2_h.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 8</strong>. Drug enrichment profiles for most similar and opposing drugs
+compared to ipilimumab treatment.
+To reobtain the figure on the platform, select and load
+<code class="xref std std-option docutils literal notranslate"><span class="pre">GSE114716-ipilimumab</span></code> dataset, go to the <strong>Drug CMap</strong> panel
+under the <strong>Functional</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">Ipi_vs_baseline</span></code> from the plot <em>Settings</em>.</p>
+</section>
+</section>
+<section id="microarray-data">
+<h2>Microarray Data<a class="headerlink" href="#microarray-data" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we perform the heatmap clustering, biomarker selection and
+survival analysis using
+the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE10846">GSE10846</a>
+from <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/19038878">Lenz et al.</a>,
+which is the microarray gene expression dataset of diffuse large B-cell
+lymphoma (DLBCL) patients.
+<a class="reference internal" href="#figure-9">Figure 9</a> shows a hierarchical cluster heatmap of microarray gene
+expression data. <a class="reference internal" href="#figure-10">Figure 10</a> and <a class="reference internal" href="#figure-11">Figure 11</a> show the variable importance
+plot and a survival tree on the overall survival of the DLBCL patients,
+respectively.</p>
+<section id="hierarchical-cluster-heatmap">
+<h3>Hierarchical cluster heatmap<a class="headerlink" href="#hierarchical-cluster-heatmap" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-9">
+<a class="reference internal image-reference" href="../_images/fig3_b.png"><img alt="../_images/fig3_b.png" src="../_images/fig3_b.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 9</strong>. Hierarchical cluster heatmap for <code class="xref std std-option docutils literal notranslate"><span class="pre">GSE10846-dlbcl</span></code> dataset.
+To replicate the figure, select and load <code class="xref std std-option docutils literal notranslate"><span class="pre">GSE10846-dlbcl</span></code>
+dataset on the platform. Go to the <strong>Heatmap</strong> panel of the <strong>Clustering</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Level:</span> <span class="pre">gene</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Features:</span> <span class="pre">all</span></code> from the input panel.
+In the plot <em>Settings</em>, set the <code class="xref std std-option docutils literal notranslate"><span class="pre">split</span> <span class="pre">by:</span> <span class="pre">none</span></code> and <code class="xref std std-option docutils literal notranslate"><span class="pre">Top</span> <span class="pre">mode:</span> <span class="pre">pca</span></code>.</p>
+</section>
+<section id="variable-importance-plot">
+<h3>Variable importance plot<a class="headerlink" href="#variable-importance-plot" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-10">
+<a class="reference internal image-reference" href="../_images/fig3_c.png"><img alt="../_images/fig3_c.png" src="../_images/fig3_c.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 10</strong>. Variable importance plot.
+To replicate the figure, go to the <strong>Biomarker</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target:</span> <span class="pre">dlbcl.type</span></code> from the input panel.</p>
+</section>
+<section id="survival-tree">
+<h3>Survival tree<a class="headerlink" href="#survival-tree" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-11">
+<a class="reference internal image-reference" href="../_images/fig3_d1.png"><img alt="../_images/fig3_d1.png" src="../_images/fig3_d1.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fig3_d2.png"><img alt="../_images/fig3_d2.png" src="../_images/fig3_d2.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 11</strong>. Survival tree analysis for <code class="xref std std-option docutils literal notranslate"><span class="pre">GSE10846-dlbcl</span></code> dataset.
+To redproduce similar figures, go to the <strong>Biomarker</strong> module,
+and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target:</span> <span class="pre">OS.survival</span></code> from the input panel.
+Note that the survival tree is stochastically built up with some of the top
+features shown in <a class="reference internal" href="#figure-10">Figure 10</a>; Therefore, users can get a slightly different survival
+tree every time.</p>
+</section>
+</section>
+<section id="proteomic-data">
+<h2>Proteomic Data<a class="headerlink" href="#proteomic-data" title="Permalink to this headline">¶</a></h2>
+<p>With larger data sets, often the number of contrasts increases and complicates
+the overall analysis. For example, the proteomics data set of
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28263321">Rieckmann et al. 2017</a>
+comprises 26 populations of seven major immune cell types, measured during resting
+and activated states. There are more than 300 possible comparisons to make.
+To gain a better overview, gene set activation matrix (<a class="reference internal" href="#figure-12">Figure 12</a>) help
+visualize the similarities between multiple contrasts on a functional level.
+Alternatively, similarities can be visualized as a connectivity graph (<a class="reference internal" href="#figure-13">Figure 13</a>).
+For the same data set, <a class="reference internal" href="#figure-14">Figure 14</a> shows a computed partition tree that classifies
+the major cell types.</p>
+<p>Another example dataset is from
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/27745970">Geiger et al.</a>,
+where the proteome profiles
+of activated vs resting human naive T cells at different times were compared.
+<a class="reference internal" href="#figure-15">Figure 15</a> shows the volcano plots corresponding to eight different statistical tests
+comparing time-dependent activation of T cells at 48h vs. 12h. We see that
+both standard t-test and the Welch t-test show much less power to detect
+significant genes compared to the other methods. The result from edgeR-QLF
+is close to those of the two limma based methods, while edgeR-LRT is very
+similar to the results of DESeq2-Wald.</p>
+<section id="activation-matrix">
+<h3>Activation matrix<a class="headerlink" href="#activation-matrix" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-12">
+<a class="reference internal image-reference" href="../_images/fig3_e.png"><img alt="../_images/fig3_e.png" src="../_images/fig3_e.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 12</strong>. Gene Ontology activation matrix.
+To replicate the figure, select and load the <code class="xref std std-option docutils literal notranslate"><span class="pre">rieckmann2017-immprot</span></code>
+dataset, and go to the <strong>GO graph</strong> panel of the <strong>Functional</strong> module
+with default settings.</p>
+</section>
+<section id="contrast-heatmap">
+<h3>Contrast heatmap<a class="headerlink" href="#contrast-heatmap" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-13">
+<a class="reference internal image-reference" href="../_images/fig3_f.png"><img alt="../_images/fig3_f.png" src="../_images/fig3_f.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 13</strong>. Contrast heatmap for the <code class="xref std std-option docutils literal notranslate"><span class="pre">rieckmann2017-immprot</span></code> dataset.
+To generate the figure on the platform, go to the <strong>Contrast heatmap</strong> panel of
+the <strong>Intersection</strong> module with default settings.</p>
+</section>
+<section id="classification-tree">
+<h3>Classification tree<a class="headerlink" href="#classification-tree" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-14">
+<a class="reference internal image-reference" href="../_images/fig3_g1.png"><img alt="../_images/fig3_g1.png" src="../_images/fig3_g1.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fig3_g2.png"><img alt="../_images/fig3_g2.png" src="../_images/fig3_g2.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 14</strong>. Classification tree for the <code class="xref std std-option docutils literal notranslate"><span class="pre">rieckmann2017-immprot</span></code> dataset.
+To reproduce similar figures, go to the <strong>Biomarker</strong> module, and set the
+<code class="xref std std-option docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target:</span> <span class="pre">cell.type</span></code> from the input panel.
+Note that the classification tree is stochastically built up with some of the top
+features shown in <a class="reference internal" href="#figure-10">Figure 10</a>; Therefore, users can get a slightly different survival
+tree every time.</p>
+</section>
+<section id="volcano-plots-of-methods">
+<h3>Volcano plots of methods<a class="headerlink" href="#volcano-plots-of-methods" title="Permalink to this headline">¶</a></h3>
+<figure class="align-center" id="figure-15">
+<a class="reference internal image-reference" href="../_images/fig3_a.png"><img alt="../_images/fig3_a.png" src="../_images/fig3_a.png" style="width: 100%;" /></a>
+</figure>
+<p><strong>Figure 15</strong>. Volcano plots corresponding to eight different statistical
+methods comparing time-dependent expression of T cell activation at 48h vs. 12h.
+To regenerate the figure, select and load <code class="xref std std-option docutils literal notranslate"><span class="pre">geiger2016-arginine</span></code> dataset.
+Go to the <strong>Volcano (methods)</strong> panel under the
+<strong>Expression</strong> module, and set the <code class="xref std std-option docutils literal notranslate"><span class="pre">Contrast:</span> <span class="pre">act48h_vs_act12h</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../modules/mod9_CellProfiling.html" class="btn btn-neutral float-left" title="Cell Profiling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../methods.html" class="btn btn-neutral float-right" title="Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

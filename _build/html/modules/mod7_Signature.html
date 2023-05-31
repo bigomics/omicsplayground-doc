@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signature &mdash; Omics Playground  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Cell Profiling" href="mod9_CellProfiling.html" />
+    <link rel="prev" title="Enrichment" href="mod4_DEGSs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Omics Playground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/samples.html">Samples file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/counts.html">Counts file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/datachecks.html">Checks before uploading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/uploadopg.html">Uploading your data in Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/computepgx.html">What if I have many datasets?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep_example.html">Preparing input files from raw data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/geneset.html">Loading custom geneset files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprocess.html">Data processing inside Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod0_home.html">Home Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod1_dataview.html">Data View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod2_clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod3_DEGs.html">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod4_DEGSs.html">Enrichment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Signature</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compare-signature">Compare Signature</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#input-panel">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pairs">Pairs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contrast-heatmap">Contrast heatmap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-signature">Test Signature</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enrichment">Enrichment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enrichment-table">Enrichment table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#volcano-plots">Volcano Plots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overlap-similarity">Overlap/similarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#markers">Markers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#find-biomarkers">Find Biomarkers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Input panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importance">Importance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod9_CellProfiling.html">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Reanalyzing Public Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Signature</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/mod7_Signature.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="signature">
+<span id="id1"></span><h1>Signature<a class="headerlink" href="#signature" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Signature</strong> module consists of three panels: <strong>Compare signatures</strong>,
+<strong>Test signatures</strong> and <strong>Find biomarkers</strong>.</p>
+<p><strong>Compare signatures</strong> allows users to compare experiments by intersecting
+their signature genes. Under <strong>Test signatures</strong>, users can test their gene signature
+by calculating an enrichment score. Finally, with the <strong>Find biomarkers</strong> panel,
+users can select biomarkers that can be used for classification or prediction purposes.</p>
+<section id="compare-signature">
+<h2>Compare Signature<a class="headerlink" href="#compare-signature" title="Permalink to this headline">¶</a></h2>
+<p>The main goal of this panel is to identify contrasts showing similar profiles and
+find genes that are commonly up/down regulated between two contrasts. The panel is
+divided into two subpanels: <strong>Pairs</strong> and <strong>Contrast heatmap</strong>.</p>
+<section id="input-panel">
+<h3>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h3>
+<p>Users can select contrasts to compare from the <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> settings
+in the input panel on the left. Under <em>Options</em>, users can set the <code class="docutils literal notranslate"><span class="pre">Filter</span></code> for
+filtering the features (i.e. genes or gene sets). The <code class="docutils literal notranslate"><span class="pre">Level</span></code> setting allows users
+to toggle between gene or gene set level analysis.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.0.png"><img alt="../_images/psc7.0.png" src="../_images/psc7.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="pairs">
+<h3>Pairs<a class="headerlink" href="#pairs" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Pairs</strong> panel shows three outputs:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The Pairs plot provides interactive pairwise scatterplots for the differential expression
+profiles corresponding to multiple contrasts. The main purpose of this panel is
+to identify similarity or dissimilarity between selected contrasts.
+When K&gt;=3 contrasts are selected, the figure shows a KxK scatterplot matrix.
+Via the <em>Settings</em>, users can disable the highlighting of genes on the plot.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>The Venn diagram visualizes the number of intersecting genes
+between the selected contrast profiles. The diagram can be customised via
+the <em>Settings</em> by altering logFC and FDR thresholds and by selecting whether to view
+disregulated genes jointly or separated by up- and down-regulation.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.1.a.png"><img alt="../_images/psc7.1.a.png" src="../_images/psc7.1.a.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>The Cumulative fold-change plot visualizes the cumulative fold-change of genes
+shared between the profiles. Users can toggle between absolute and directional
+fold change from the <em>Settings</em>. Ticking the letter boxes allows users to
+focus only on genes within a specific section of the Venn diagram. For example,
+ticking A will visualise all the genes in pairwise comparison A, while ticking A and B will
+show only the gene in the intersection between comparisons A and B. Users have then the
+option to download a list of the selected genes and their expression changes by comparison
+as a csv file.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.1.b.png"><img alt="../_images/psc7.1.b.png" src="../_images/psc7.1.b.png" style="width: 100%;" /></a>
+</figure>
+<p>A typical output can be seen below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.1.png"><img alt="../_images/psc7.1.png" src="../_images/psc7.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="contrast-heatmap">
+<h3>Contrast heatmap<a class="headerlink" href="#contrast-heatmap" title="Permalink to this headline">¶</a></h3>
+<p>Two plots are showed in this panel:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>The Contrast heatmap shows the similarity of the contrasts visualized as
+a clustered heatmap The scale corresponds to the Pearson correlation coefficient
+between contrast profiles. Red corresponds to positive correlation and
+blue to negative correlation. The contrast heatmap quickly highlights
+the similarities and differences between multiple contrasts.
+The plot can be customised via the <em>Settings</em>. Users can select to show
+only the selected contrasts and alter the number of top genes for computation.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.2.a.png"><img alt="../_images/psc7.2.a.png" src="../_images/psc7.2.a.png" style="width: 30%;" /></a>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>b</strong></dt>
+<dd class="field-odd"><p>The Connectivity map shows the similarity of the contrasts profiles
+as a t-SNE plot. Contrasts that are similar will be clustered close
+together, contrasts that are different are placed farther away.
+Under the plot settings, users can use <code class="docutils literal notranslate"><span class="pre">Layout</span></code> to set the plot layout
+and <code class="docutils literal notranslate"><span class="pre">Top</span> <span class="pre">genes</span></code> to specify the number of top genes for computations.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.2.b.png"><img alt="../_images/psc7.2.b.png" src="../_images/psc7.2.b.png" style="width: 30%;" /></a>
+</figure>
+<p>A typical output can be seen below.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc7.2.png"><img alt="../_images/psc7.2.png" src="../_images/psc7.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="test-signature">
+<h2>Test Signature<a class="headerlink" href="#test-signature" title="Permalink to this headline">¶</a></h2>
+<p>With this panel, users can test their gene signature by calculating an enrichment
+score. The panel consists of four separate tabs: <strong>Enrichment</strong>, <strong>Volcano plots</strong>,
+<strong>Overlap/similarity</strong>, <strong>Markers</strong>.</p>
+<section id="id2">
+<h3>Input panel<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>For a custom signature, users can upload their own
+gene list or use one of the example gene lists provided.
+Alternatively, users can select signatures from <em>Options</em>.
+A contrast profile can be chosen by selecting <code class="xref std std-option docutils literal notranslate"><span class="pre">contrast</span></code>
+as <code class="docutils literal notranslate"><span class="pre">Signature</span> <span class="pre">type</span></code>, which then takes the top 100 most
+differentially expressed genes as the signature. When <code class="xref std std-option docutils literal notranslate"><span class="pre">Hallmark</span></code>
+or <code class="xref std std-option docutils literal notranslate"><span class="pre">KEGG</span></code> is selected, the user is presented with a list
+of predefined gene sets to choose from.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.0.png"><img alt="../_images/psc8.0.png" src="../_images/psc8.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="enrichment">
+<h3>Enrichment<a class="headerlink" href="#enrichment" title="Permalink to this headline">¶</a></h3>
+<p>After uploading a gene list, the <strong>Enrichment</strong> panel performs the
+enrichment analysis of the gene list against all contrasts by
+computing a correlation based enrichment or running the <a class="reference external" href="https://www.biorxiv.org/content/10.1101/060012v1.full">GSEA</a> algorithm
+and plots enrichment outputs.
+The enrichment plots show the enrichment of the query
+signature across all constrasts. Positive enrichment means that this particular
+contrast shows similar expression changes as the query signature.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.1.png"><img alt="../_images/psc8.1.png" src="../_images/psc8.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="enrichment-table">
+<h3>Enrichment table<a class="headerlink" href="#enrichment-table" title="Permalink to this headline">¶</a></h3>
+<p>Enrichment statistics can be found in the tables on the right:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>Table a</strong></dt>
+<dd class="field-odd"><p>Enrichment scores across all contrasts for the selected
+query signature . The NES corresponds to the normalized
+enrichment score of the GSEA analysis.</p>
+</dd>
+<dt class="field-even"><strong>Table b</strong></dt>
+<dd class="field-even"><p>Genes in the query signature sorted by decreasing
+(absolute) fold-change corresponding to the contrast selected
+in Table (a).</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.2.png"><img alt="../_images/psc8.2.png" src="../_images/psc8.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="volcano-plots">
+<h3>Volcano Plots<a class="headerlink" href="#volcano-plots" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Volcano Plots</strong> panel produces a visualization of the query signature
+on the volcano plots of all constrasts. For positive enrichment, genes of the
+query signature would fall on the upper right of the volcano plot,
+for negative enrichment, on the upper left.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.3.png"><img alt="../_images/psc8.3.png" src="../_images/psc8.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="overlap-similarity">
+<h3>Overlap/similarity<a class="headerlink" href="#overlap-similarity" title="Permalink to this headline">¶</a></h3>
+<p>Under the <strong>Overlap/similarity</strong> panel, users can compare their gene
+list with all the gene sets and pathways in the platform through
+overlap analysis, or also known as over-representation analysis.</p>
+<p>The top overlapping gene sets with selected signature are displyed in the plot.
+The vertical axis shows the overlap score of the gene set which is computed
+as the geometric mean of the absolute logarithm of the odds ratio
+and the q-value of the Fisher’s test.</p>
+<p>Under the plot settings, users can specify the number to top features
+to show, or users can select to hide/show the feature names in the plot.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.4.a.png"><img alt="../_images/psc8.4.a.png" src="../_images/psc8.4.a.png" style="width: 30%;" /></a>
+</figure>
+<p>The table reports the <code class="xref std std-option docutils literal notranslate"><span class="pre">score</span></code>, total number of genes in the
+gene set (<code class="xref std std-option docutils literal notranslate"><span class="pre">K</span></code>), the number of intersecting genes between the
+list and the gene set (<code class="xref std std-option docutils literal notranslate"><span class="pre">k</span></code>), the overlapping ratio of
+<code class="xref std std-option docutils literal notranslate"><span class="pre">k/K</span></code>, as well as the <code class="xref std std-option docutils literal notranslate"><span class="pre">odds.ratio</span></code> and
+<code class="xref std std-option docutils literal notranslate"><span class="pre">q.fisher</span></code> values by the Fisher’s test for the overlap test.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.4.png"><img alt="../_images/psc8.4.png" src="../_images/psc8.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="markers">
+<h3>Markers<a class="headerlink" href="#markers" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Markers</strong> panel produces a t-SNE plot of samples for each gene
+in the signature, where the samples are colored with respect to the
+upregulation (in red) or downregulation (in blue) of the gene. For
+larger signatures, only the top most variable genes in the signature
+are given. If you want to check a particular gene not shown, you must
+reduce the number of genes in your list.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc8.5.png"><img alt="../_images/psc8.5.png" src="../_images/psc8.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+<section id="find-biomarkers">
+<h2>Find Biomarkers<a class="headerlink" href="#find-biomarkers" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Find Biomarkers</strong> panel selects biomarkers that can be
+used for classification or prediction purposes. Biomarker analysis
+might also help to better understand which genes, mutations, or gene
+sets influence the final phenotype the most.</p>
+<p>Omics Playground calculates a variable importance score for each feature using multiple state-of-the-art machine learning algorithms, including <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/20808728">LASSO</a>, <a class="reference external" href="https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf">elastic nets</a>, <a class="reference external" href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">random forests</a>, and
+<a class="reference external" href="https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf">extreme gradient boosting</a>. Note that we do not use the machine learning algorithms for prediction but we use them just to compute the variable importances according to the different methods. An aggregated score is then calculated as the cumulative rank of the variable importances of the different algorithms. By combining several methods, the platform aims to select the best possible predictive features. The top features are determined as the features with the highest cumulative ranks.</p>
+<p>The module provides a heatmap of samples based on identified top features.
+In addition, it generates a classification tree using top features and provides
+expression boxplots by phenotype classes for features present in the
+tree.</p>
+<section id="id3">
+<h3>Input panel<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Users can select the target variable for biomarker selection in the
+<code class="docutils literal notranslate"><span class="pre">Predicted</span> <span class="pre">target</span></code> settings from the input panel. Under <code class="docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">filter</span></code>
+users can pre-filter features by selecting specific gene families or sets.
+If the user selects <code class="xref std std-option docutils literal notranslate"><span class="pre">&lt;custom&gt;</span></code>, an input area appears and one can paste
+a custom gene list to be used as initial features. Hitting the <code class="docutils literal notranslate"><span class="pre">Run</span></code>
+button will start the biomarker computation.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc9.0.png"><img alt="../_images/psc9.0.png" src="../_images/psc9.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="importance">
+<h3>Importance<a class="headerlink" href="#importance" title="Permalink to this headline">¶</a></h3>
+<p>This panel provides the output of the biomarker analysis in multiple
+figures. Below we provide an short explanation for each figure:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p><strong>Variable importance plot.</strong> A variable importance score for
+each feature is calculated using multiple machine learning
+algorithms, including <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/20808728">LASSO</a>, <a class="reference external" href="https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf">elastic
+nets</a>,
+<a class="reference external" href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">random forests</a>,
+and <a class="reference external" href="https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf">extreme gradient boosting</a>.
+By combining several methods, the platform aims to select the
+best possible biomarkers. The top features are plotted
+according to cumulative ranking by the algorithms.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p><strong>Biomarker expression heatmap.</strong> The heatmap shows the expression
+distribution for the top most important features.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p><strong>Decision tree.</strong> The decision tree shows one (out of many
+possible) tree solution for classification based on the top
+most important features.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p><strong>Expression box plots.</strong> These boxplots shows the expression
+of genes/samples of the identified features.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc9.1.png"><img alt="../_images/psc9.1.png" src="../_images/psc9.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mod4_DEGSs.html" class="btn btn-neutral float-left" title="Enrichment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod9_CellProfiling.html" class="btn btn-neutral float-right" title="Cell Profiling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

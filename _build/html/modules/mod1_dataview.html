@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data View &mdash; Omics Playground  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/bigomics-logo-white-48px.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Clustering" href="mod2_clustering.html" />
+    <link rel="prev" title="Home Panel" href="mod0_home.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Omics Playground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/samples.html">Samples file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/counts.html">Counts file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/contrasts.html">Contrasts file (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/datachecks.html">Checks before uploading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/uploadopg.html">Uploading your data in Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Data Preparation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/computepgx.html">What if I have many datasets?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprep_example.html">Preparing input files from raw data formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/geneset.html">Loading custom geneset files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataprep/dataprocess.html">Data processing inside Omics Playground</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Analysis Modules</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="outline.html">Outline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod0_home.html">Home Panel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data View</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-panel">Input panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plots">Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#qc">QC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#counts">Counts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samples">Samples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contrasts">Contrasts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mod2_clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod3_DEGs.html">Expression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod4_DEGSs.html">Enrichment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod7_Signature.html">Signature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod9_CellProfiling.html">Cell Profiling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Reanalyzing Public Datasets</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Methods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#citation">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../info.html#license">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Omics Playground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data View</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/mod1_dataview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-view">
+<span id="dataview"></span><h1>Data View<a class="headerlink" href="#data-view" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>DataView</strong> module provides information and visualisations of the dataset to
+quickly lookup a gene, check the counts, or view the data tables.
+It has five panels, which are briefly explained below, followed by
+more detailed information for each panel.</p>
+<p>The <strong>Plots</strong> panel displays figures related to the expression level
+of the selected gene, correlation, and average expression ranking
+within the dataset. In the <strong>QC</strong> panel, the total number of
+counts (abundance) per sample and their distribution among the samples
+are displayed. This is most useful to check the technical quality of
+the dataset, such as total read counts or abundance of ribosomal
+genes. In <strong>Counts</strong> panel, the exact expression values across the
+samples can be looked up, where genes are ordered by the correlation
+with respect to the first gene. Gene-wise average expression of a
+phenotype sample grouping is also presented in this table. In the
+<strong>Samples</strong> panel, more complete information about samples can be
+found. Finally, the <strong>Contrasts</strong> panel, shows information about the
+phenotype comparisons.</p>
+<section id="input-panel">
+<h2>Input panel<a class="headerlink" href="#input-panel" title="Permalink to this headline">¶</a></h2>
+<p>Users can find more information about the module by clicking the
+<code class="docutils literal notranslate"><span class="pre">Info</span></code> button on the left side . The panel contains the main
+settings for the analysis. The analysis can be started by selecting a
+gene of interest from the <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">gene</span></code> settings. Users can filter and
+select samples in the <code class="docutils literal notranslate"><span class="pre">Filter</span> <span class="pre">samples</span></code> settings, or collapse the samples
+by predetermined groups in the <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> settings.
+Under <em>Options</em>, it is possible to visualize the information on a raw count level
+or logarithmic expression level (logCPM).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc2.0.png"><img alt="../_images/psc2.0.png" src="../_images/psc2.0.png" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="plots">
+<h2>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Plots</strong> panel displays figures related to the expression level
+of the selected gene, correlation to other genes, and average
+expression ranking within the dataset.  To find out more information
+from the literature, hyperlinks are provide to connect the selected
+gene to <a class="reference external" href="https://www.ncbi.nlm.nih.gov/omim/">OMIM</a>, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>, and <a class="reference external" href="http://geneontology.org/">GO</a> databases.  It also shows the
+correlation of the gene in other datasets such as <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/28263321">ImmProt</a> and <a class="reference external" href="https://www.nature.com/articles/nbt1210-1248">HPA</a>, and plots the
+cumulative correlation. Furthermore, it displays the tissue expression
+for a selected gene using the genotype-tissue expression <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23715323">GTEx</a> dataset.  For each
+chart of the panel, a detailed explanation is provided below.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>To find out more information from the literature, hyperlinks are provide to
+connect the selected gene to public databases,
+including <a class="reference external" href="https://www.ncbi.nlm.nih.gov/omim/">OMIM</a>,
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/">KEGG</a>,
+and <a class="reference external" href="http://geneontology.org/">GO</a>.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>Expression barplot of grouped samples (or cells) for the selected gene.
+Samples (or cells) in the barplot can
+be ungrouped by setting the <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> under the main <em>Options</em>.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>Ranking of the average expression of the selected gene.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>T-SNE clustering of samples (or cells) colored by an expression of the
+gene selected in the <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">gene</span></code> dropdown menu. The red color
+represents an over-expression of the selected gene across samples (or cells).</p>
+</dd>
+<dt class="field-odd"><strong>e</strong></dt>
+<dd class="field-odd"><p>Barplot of the top positively and negatively correlated genes
+with the selected gene. Absolute expression levels
+of genes are colored in the barplot, where the low and high expressions
+range between the light blue and dark blue colors, respectively.</p>
+</dd>
+<dt class="field-even"><strong>f</strong></dt>
+<dd class="field-even"><p>Tissue expression for the selected gene in the tissue expression
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/23715323">GTEx</a> database.
+Colors corresponds to “tissue clusters” as computed by unsupervised clustering.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc2.1.png"><img alt="../_images/psc2.1.png" src="../_images/psc2.1.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="qc">
+<h2>QC<a class="headerlink" href="#qc" title="Permalink to this headline">¶</a></h2>
+<p>In the <strong>QC</strong> panel, the total number of counts (abundance) per
+sample and their distribution among the samples are displayed. For
+each sample, users can also see the percentage of counts in terms of
+major gene types such as ribosomal genes, heatshock proteins, or
+kinases. Abnormal abundance of certain genes may indicate technical
+problems. A detailed explanation is provided below for every chart of
+the panel.</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>A barplot of the total number of counts (abundance) for each group.
+The samples (or cells) can be grouped/ungrouped in the <code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code>
+setting uder the main <em>Options</em>.</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>A boxplot of the total number of counts (abundance) for each group.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>A histogram of the total number of counts (abundance) for each group.</p>
+</dd>
+<dt class="field-even"><strong>d</strong></dt>
+<dd class="field-even"><p>A barplot showing the percentage of counts in terms of major gene
+types such as CD molecules, kinanses or RNA binding motifs for
+each group.</p>
+</dd>
+<dt class="field-odd"><strong>e</strong></dt>
+<dd class="field-odd"><p>A barplot showing the average count levels of major gene types such
+as CD molecules, kinanses or RNA binding motifs for each group.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc2.2.png"><img alt="../_images/psc2.2.png" src="../_images/psc2.2.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="counts">
+<h2>Counts<a class="headerlink" href="#counts" title="Permalink to this headline">¶</a></h2>
+<p>Under the <strong>Counts</strong> panel, the exact expression values across the
+samples can be read, where genes are ordered by the correlation with
+respect to the first gene.  Gene-wise average expression of a
+phenotype sample grouping is also presented in this table.</p>
+<p>The samples (or cells) in the table can be ungrouped by setting the
+<code class="docutils literal notranslate"><span class="pre">Group</span> <span class="pre">by</span></code> under the main <em>Options</em> to see the exact expression
+values per sample (or cell).  The genes in the table are ordered by
+the correlation (<strong>rho</strong> column) with respect to the selected gene.
+<strong>SD</strong> column reports the standard deviation of expression across
+<em>all</em> samples (or cells).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc2.3.png"><img alt="../_images/psc2.3.png" src="../_images/psc2.3.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="samples">
+<h2>Samples<a class="headerlink" href="#samples" title="Permalink to this headline">¶</a></h2>
+<p>In the <strong>Samples</strong> panel, users can check information about samples
+and their phenotype grouping through three outputs:</p>
+<dl class="field-list simple">
+<dt class="field-odd"><strong>a</strong></dt>
+<dd class="field-odd"><p>A plot showing phenotype clustering.
+Phenotypes can be unclustered via the <em>Settings</em> icon</p>
+</dd>
+<dt class="field-even"><strong>b</strong></dt>
+<dd class="field-even"><p>A phenotype association matrix showing correlation between phenotypes.</p>
+</dd>
+<dt class="field-odd"><strong>c</strong></dt>
+<dd class="field-odd"><p>A table with sample information.</p>
+</dd>
+</dl>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc2.4.png"><img alt="../_images/psc2.4.png" src="../_images/psc2.4.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="contrasts">
+<h2>Contrasts<a class="headerlink" href="#contrasts" title="Permalink to this headline">¶</a></h2>
+<p>In the <strong>Contrasts</strong> panel, more complete information about contrasts can be found.
+It summarizes the contrasts of all comparisons. Here, users can check which samples
+belong to which groups for the different comparisons. Non-zero entries ‘+1’ and ‘-1’
+correspond to the group of interest and control group, respectively.
+Zero or empty entries denote samples not use for that comparison.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/psc2.5.png"><img alt="../_images/psc2.5.png" src="../_images/psc2.5.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mod0_home.html" class="btn btn-neutral float-left" title="Home Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mod2_clustering.html" class="btn btn-neutral float-right" title="Clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
