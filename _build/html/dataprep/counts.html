@@ -191,71 +191,9 @@ Entrez number format. If you are using the latter, it will need to be converted 
 <p>The formats accepted as features (genes, proteins are ENSEMB, ENSEMBLTRAN, UNIGENE, REFSEQ, ACCNUM and UNIPROT and gene SYMBOL).
 Also note that the platform will not accept transcript IDs. You will need to convert them to Gene IDs. This will result in multiple gene entries that the platform will merge.</p>
 </div>
-<p>Below is a slightly more complicated counts example from a real in-vitro human study. The columns (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each row is an actual measurement of a gene from the study.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 21%" />
-<col style="width: 21%" />
-<col style="width: 21%" />
-<col style="width: 23%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>notact_004</p></th>
-<th class="head"><p>notact_007</p></th>
-<th class="head"><p>notact_008</p></th>
-<th class="head"><p>notact_009</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>A1BG</p></td>
-<td><p>37.54</p></td>
-<td><p>100.8</p></td>
-<td><p>47.78</p></td>
-<td><p>132.62</p></td>
-</tr>
-<tr class="row-odd"><td><p>A2M</p></td>
-<td><p>1457.92</p></td>
-<td><p>1321.71</p></td>
-<td><p>1422.19</p></td>
-<td><p>1726.83</p></td>
-</tr>
-<tr class="row-even"><td><p>AAAS</p></td>
-<td><p>16.96</p></td>
-<td><p>47.5</p></td>
-<td><p>15.96</p></td>
-<td><p>50.96</p></td>
-</tr>
-<tr class="row-odd"><td><p>AACS</p></td>
-<td><p>3.3</p></td>
-<td><p>6.78</p></td>
-<td><p>3.82</p></td>
-<td><p>8.87</p></td>
-</tr>
-<tr class="row-even"><td><p>AAGAB</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>AAK1</p></td>
-<td><p>574.67</p></td>
-<td><p>859.61</p></td>
-<td><p>627.89</p></td>
-<td><p>763.84</p></td>
-</tr>
-<tr class="row-even"><td><p>AAMDC</p></td>
-<td><p>5.86</p></td>
-<td><p>24.88</p></td>
-<td><p>11.56</p></td>
-<td><p>11.13</p></td>
-</tr>
-</tbody>
-</table>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>If you are familiar with R, you can think of the counts file as a data.frame object. The samples file from the study above can be accessed by installing playbase <code class="docutils literal notranslate"><span class="pre">devtools::install_github(&quot;bigomics/playbase&quot;)</span></code> and running <code class="docutils literal notranslate"><span class="pre">playbase::SAMPLES</span></code>.</p>
+<p>If you are familiar with R, you can think of the counts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase <code class="docutils literal notranslate"><span class="pre">devtools::install_github(&quot;bigomics/playbase&quot;)</span></code> and running <code class="docutils literal notranslate"><span class="pre">playbase::COUNTS</span></code>.</p>
 </div>
 </section>
 
