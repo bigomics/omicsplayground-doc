@@ -37,7 +37,7 @@ The column names (black_vs_blond) will be used to name the comparisons. the firs
 +---------+----------------+----------------------+
 | sample2 |     black      |     switzerland      |
 +---------+----------------+----------------------+
-| sample3 |     blond      |                      |
+| sample3 |     blond      |        japan         |
 +---------+----------------+----------------------+
 | sample4 |     black      |     switzerland      |
 +---------+----------------+----------------------+
