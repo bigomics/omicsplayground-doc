@@ -15,11 +15,21 @@ As a good code of practice, never use any of these symbols when naming a sample 
     :align: center
     :width: 65%
 
-Characters not allowed: 
+Characters not allowed in the input matrices: 
 
-prepend_header_contrast:        @
-sample_contrast_phenotype:      :@ emptySpace
-general:                        / ,
++--------------+--------------+-----------------------+
+| Matrix       | Part         | Not allowed           |
++==============+==============+=======================+
+| sample.csv   | columns      | @ , : empty spaces, + |
++--------------+--------------+-----------------------+
+| sample.csv   | phenotypes   | @ , : empty spaces    |
++--------------+--------------+-----------------------+
+| sample.csv   | rows (names) | @ , : empty spaces    |
++--------------+--------------+-----------------------+
+| contrast.csv | columns      | @ , : empty spaces +  |
++--------------+--------------+-----------------------+
+| contrast.csv | contrasts    | @ , : empty spaces    |
++--------------+--------------+-----------------------+
 
 filenames:
 should have counts, contrasts and samples in the name.
