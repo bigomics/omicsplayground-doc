@@ -15,6 +15,13 @@ As a good code of practice, never use any of these symbols when naming a sample 
     :align: center
     :width: 65%
 
+Characters not allowed: 
+
+prepend_header_contrast:        , @
+sample_contrast_phenotype:      ,:@ emptySpace
+sample_names                    ,
+
+
 
 
 **Check #3**. Don't use spaces in your sample or phenotype names.
