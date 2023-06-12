@@ -3,7 +3,7 @@
 Samples file
 ================================================================================
 
-The samples file contains the phenotypic information of each sample. The first column contains the sample name, which must exactly match the name given in the read counts file.  Note that the first cell is again kept empty.  
+The samples file contains the phenotypic information of each sample. The first column contains the sample name, which must exactly match the name given in the read counts file. 
 
 It is a tabular (csv) file with the samples in the rows and the phenotypic data (metadata) in the columns. Note that the platform will not accept purely numerical values.
 
