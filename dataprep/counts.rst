@@ -5,7 +5,7 @@ Counts file
 
 The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
 like the samples, the ``counts.csv`` file is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
-and each column describes the samples. The first cell of the first row should be left empty.
+and each column describes the samples.
 
 The rows contains gene IDs, which can be in most formats (such as HGCN or Ensembl), but not in the 
 Entrez number format. If you are using the latter, it will need to be converted through tools such as `Syngo <https://www.syngoportal.org/convert>`_.
