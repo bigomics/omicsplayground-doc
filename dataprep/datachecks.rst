@@ -17,10 +17,13 @@ As a good code of practice, never use any of these symbols when naming a sample 
 
 Characters not allowed: 
 
-prepend_header_contrast:        , @
-sample_contrast_phenotype:      ,:@ emptySpace
-sample_names                    ,
+prepend_header_contrast:        @
+sample_contrast_phenotype:      :@ emptySpace
+general:                        / ,
 
+filenames:
+should have counts, contrasts and samples in the name.
+Can have prepend or append in the name.
 
 
 
