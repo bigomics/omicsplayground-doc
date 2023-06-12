@@ -4,10 +4,8 @@
 Checks before uploading
 ================================================================================
 
-**Check #2**. Avoid regular expressions when naming your samples or phenotypes.
-The platform is based on the R programming language, which makes heavy use of a feature called “regular expressions”. 
-
-These are symbols that have a programming function beyond its common usage. Thus the full stop symbol ”.” usually indicates any alphanumeric character in a piece of code. Other regular expressions include “/”, “+”, “*”, etc…
+**Check #2**. Avoid special characters when naming your samples or phenotypes.
+The platform is based on the R programming language, so certain characters are reserved for programming purposes.
 
 As a good code of practice, never use any of these symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:
 
@@ -15,7 +13,7 @@ As a good code of practice, never use any of these symbols when naming a sample 
     :align: center
     :width: 65%
 
-Characters not allowed in the input matrices: 
+We test regularly which characters are allowed or not, we will update this list accordingly. Here is the current list of characters that are not allowed:
 
 +--------------+--------------+-----------------------+
 | Matrix       | Part         | Not allowed           |
