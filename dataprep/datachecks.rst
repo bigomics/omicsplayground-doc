@@ -29,13 +29,7 @@ We test regularly which characters are allowed or not, we will update this list 
 | contrast.csv | contrasts    | @ , : empty spaces     | Always start the name with a letter from A to Z (recommended) |
 +--------------+--------------+------------------------+---------------------------------------------------------------+
 
-**Check #3** Make sure you have samples, counts and contrasts in your filenames. 
-
-
-filenames:
-should have counts, contrasts and samples in the name.
-Can have prepend or append in the name.
-
+**Check #3** Make sure you have samples, counts and contrasts in your filenames.  For example, we accept experiment23_samples.csv, samples_experiment23.csv, but not experiment23.csv as sample input.
 
 
 **Check #4**. Define intervals instead of using numeric phenotypes.
