@@ -4,16 +4,6 @@
 Checks before uploading
 ================================================================================
 
-
-**Check #1**. Leave the header of the first column empty.
-When preparing the input files, do not name the first column with the samples names or IDs, but leave it empty. Here’s an example:
-
-.. figure:: ../dataprep/data_checks/p1.png
-    :align: center
-    :width: 65%
-
-
-
 **Check #2**. Avoid regular expressions when naming your samples or phenotypes.
 The platform is based on the R programming language, which makes heavy use of a feature called “regular expressions”. 
 
