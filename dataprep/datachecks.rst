@@ -4,17 +4,9 @@
 Checks before uploading
 ================================================================================
 
-**Check #1**. Avoid special characters and empty spaces when naming your samples or phenotypes.
-The platform is based on the R programming language, so certain characters are reserved for programming purposes.
-
-As good practice, avoid using symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:
-
-.. figure:: ../dataprep/data_checks/p2.png
-    :align: center
-    :width: 65%
+**Check #1**. Never use the special characters in the table below. The platform is based on the R programming language, so certain characters are reserved for programming purposes. As good practice, avoid using symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:
 
 We test regularly which characters are allowed or not, we will update this list accordingly. Here is the current list of characters that are not allowed:
-
 +--------------+--------------+------------------------+
 | Matrix       | Part         | Characters not allowed |
 +==============+==============+========================+
