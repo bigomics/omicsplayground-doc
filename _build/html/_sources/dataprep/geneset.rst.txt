@@ -43,13 +43,33 @@ you can upload directly in the Upload module under Options.
     
     .. code-block:: R
 
+            filePath <- getwd() # path to gmt file
+            
+            custom.geneset <- list()
+
+            custom.geneset$gmt <- playbase::read.gmt(filePath)
+            
+            # perform some basic checks
+            gmt.length <- length(custom.geneset$gmt)
+            gmt.is.list <- is.list(custom.geneset$gmt)
+
+            # clean genesets
+
+            custom.geneset$gmt <- list(CUSTOM = custom.geneset$gmt)
+
+            # convert gmt to OPG standard
+            custom.geneset$gmt <- playbase::clean_gmt(custom.geneset$gmt,"CUSTOM")
+
+            # compute custom geneset stats
+            custom.geneset$gmt <- custom.geneset$gmt[!duplicated(names(custom.geneset$gmt))]
+            custom.geneset$info$GSET_SIZE <- sapply(custom.geneset$gmt,length)
+
+            # pass the custom.geneset as argument to pgx.computePGX
             pgx <- playbase::pgx.computePGX(
-            pgx = pgx,
-            genesets = list(
-                gmt = playbase::EXAMPLE_GMT,
-                info = "MyGeneset"
-                )
+                pgx = pgx,
+                custom.geneset = custom.geneset
             )
+
     Currently, we are supporting only 1 gmt file in the list, but we may implement multiple gmt files in the future.
 
     

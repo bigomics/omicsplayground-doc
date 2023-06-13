@@ -5,7 +5,7 @@ Counts file
 
 The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
 like the samples, the ``counts.csv`` file is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
-and each column describes the samples. The first cell of the first row should be left empty.
+and each column describes the samples.
 
 The rows contains gene IDs, which can be in most formats (such as HGCN or Ensembl), but not in the 
 Entrez number format. If you are using the latter, it will need to be converted through tools such as `Syngo <https://www.syngoportal.org/convert>`_.
@@ -40,26 +40,6 @@ Below is a simple example of how a ``counts.csv`` file should look like.
     Also note that the platform will not accept transcript IDs. You will need to convert them to Gene IDs. This will result in multiple gene entries that the platform will merge.
 
 
-Below is a slightly more complicated counts example from a real in-vitro human study. The columns (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each row is an actual measurement of a gene from the study.
-
-+-------+------------+------------+------------+-------------+
-|       | notact_004 | notact_007 | notact_008 | notact_009  |
-+=======+============+============+============+=============+
-| A1BG  | 37.54      | 100.8      | 47.78      | 132.62      |
-+-------+------------+------------+------------+-------------+
-| A2M   | 1457.92    | 1321.71    | 1422.19    | 1726.83     |
-+-------+------------+------------+------------+-------------+
-| AAAS  | 16.96      | 47.5       | 15.96      | 50.96       |
-+-------+------------+------------+------------+-------------+
-| AACS  | 3.3        | 6.78       | 3.82       | 8.87        |
-+-------+------------+------------+------------+-------------+
-| AAGAB | 0          | 0          | 0          | 0           |
-+-------+------------+------------+------------+-------------+
-| AAK1  | 574.67     | 859.61     | 627.89     | 763.84      |
-+-------+------------+------------+------------+-------------+
-| AAMDC | 5.86       | 24.88      | 11.56      | 11.13       |
-+-------+------------+------------+------------+-------------+
-
 
 .. seealso::
-    If you are familiar with R, you can think of the counts file as a data.frame object. The samples file from the study above can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::SAMPLES``.
+    If you are familiar with R, you can think of the counts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::COUNTS``.

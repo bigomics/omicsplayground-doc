@@ -51,7 +51,11 @@
 <li class="toctree-l1"><a class="reference internal" href="dataprep.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="samples.html">Samples file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="counts.html">Counts file</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Contrasts file (optional)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contrasts file (optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#long-contrast-form">Long contrast form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#group-based-contrasts-short-form">Group-based contrasts (short form)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="datachecks.html">Checks before uploading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uploadopg.html">Uploading your data in Omics Playground</a></li>
 </ul>
@@ -121,54 +125,52 @@
 <p>The contrasts are an optional input in Omics Playground. It contains
 the groups (treatment versus controls, mutant versus wild-type, etc..)
 that will be tested against each other. The contrasts are a list of
-comparisons between groups. For example, if you have 3 groups (A, B, C), you
-can test the following contrasts: A_vs_B, A_vs_C, B_vs_C.</p>
-<p>The first column contains the phenotypes, which must exactly match the names given in the “samples.csv” file. The first cell is again empty.</p>
+comparisons between groups.</p>
+<p>There are two ways to define the contrasts: the long contrast form and the short contrast form.</p>
+<section id="long-contrast-form">
+<h2>Long contrast form<a class="headerlink" href="#long-contrast-form" title="Permalink to this headline">¶</a></h2>
+<p>The long contrast form has the same number of rows of the samples file. That means the first column is the sample names (matching samples file), and the second column (onwards) contains the phenotypes.</p>
 <p>The first row contains the name of the pairwise comparisons. All pairwise contrasts names must follow the format shown above with the groups joined together by  “_vs_” (e.g. piperaquine_vs_control).</p>
+<p>For example, if you have 3 groups (A, B, C), you
+can test the following contrasts: A_vs_B, A_vs_C, B_vs_C.</p>
 <p>The file <code class="docutils literal notranslate"><span class="pre">contrasts.csv</span></code> is optional because you can build
 the contrasts inside Omics Playground from the samples file. However, if you have a particularly complex datasets with multiple phenotypes and a large number of pairwise comparisons, you might want to generate this file through a script.</p>
 <p>Here is a minimal example of how the  <code class="docutils literal notranslate"><span class="pre">contrasts.csv</span></code> should look like. In this case, the groups
 will be hair color (blond vs. black) and country (Japan vs. Switzerland), and derive from the samples file.</p>
-<p>Samples file:</p>
+<p>Here is a minimal example of contrasts, we can compare the countries (japan versus switzerland), or the hair color (blond versus black) as in the contrast table below.</p>
+<p>The column names (black_vs_blond) will be used to name the comparisons. the first name (black) will be used as the numerator of the contrast, and the second name (blond) will be used as the denominator of the contrast.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 21%" />
-<col style="width: 29%" />
-<col style="width: 31%" />
 <col style="width: 19%" />
+<col style="width: 34%" />
+<col style="width: 47%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
-<th class="head"><p>hair color</p></th>
-<th class="head"><p>country</p></th>
-<th class="head"><p>age</p></th>
+<th class="head"><p>black_vs_blond</p></th>
+<th class="head"><p>japan_vs_switzerland</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>sample1</p></td>
 <td><p>blond</p></td>
-<td><p>Japan</p></td>
-<td><p>old</p></td>
+<td><p>japan</p></td>
 </tr>
 <tr class="row-odd"><td><p>sample2</p></td>
 <td><p>black</p></td>
-<td><p>Switzerland</p></td>
-<td><p>young</p></td>
+<td><p>switzerland</p></td>
 </tr>
 <tr class="row-even"><td><p>sample3</p></td>
 <td><p>blond</p></td>
-<td><p>USA</p></td>
-<td><p>young</p></td>
+<td><p>japan</p></td>
 </tr>
 <tr class="row-odd"><td><p>sample4</p></td>
 <td><p>black</p></td>
-<td><p>Switzerland</p></td>
-<td><p>old</p></td>
+<td><p>switzerland</p></td>
 </tr>
 </tbody>
 </table>
-<p>Converting the samples above into contrasts, we get the following table.</p>
-<p>Contrasts file:</p>
+<p>Inside the platform, we will transpare the contrasts table to the following table:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 19%" />
@@ -200,141 +202,41 @@ will be hair color (blond vs. black) and country (Japan vs. Switzerland), and de
 </tr>
 </tbody>
 </table>
-<p>Similarly, we can see the countrasts example from the dataset mentioned in the previous sections. The rows (notact_004,  notact_007) are samples from T lymphocytes activated or not by an antigen, and each column is ancontrast that will be compared.</p>
+<p>Any of the tables above can be provided to the platform.</p>
+</section>
+<section id="group-based-contrasts-short-form">
+<h2>Group-based contrasts (short form)<a class="headerlink" href="#group-based-contrasts-short-form" title="Permalink to this headline">¶</a></h2>
+<p>The group-based contrast is especially useful in datasets with large number of samples, as assigning the contrasts to each sample can be cumbersome.</p>
+<p>Following the example above, if we would like to create a contrast between the two countries,
+we will need to create a column called <strong>group</strong> in the sample file, which
+will contain the phenotypes (in this case country). To simplify, we could simply
+change the name of the column <strong>country</strong> to <strong>group</strong>.</p>
+<p>Once we have the group column in the sample file, we can assign the contrasts as in the table below.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 32%" />
-<col style="width: 21%" />
-<col style="width: 29%" />
-<col style="width: 18%" />
+<col style="width: 37%" />
+<col style="width: 63%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
-<th class="head"><p>group</p></th>
-<th class="head"><p>activated</p></th>
-<th class="head"><p>time</p></th>
+<th class="head"><p>japan_vs_switzerland</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>notact_004</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
+<tr class="row-even"><td><p>japan</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>notact_007</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
-</tr>
-<tr class="row-even"><td><p>notact_008</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
-</tr>
-<tr class="row-odd"><td><p>notact_009</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
-</tr>
-<tr class="row-even"><td><p>notact_010</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
-</tr>
-<tr class="row-odd"><td><p>notact_011</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
-</tr>
-<tr class="row-even"><td><p>notact_014</p></td>
-<td><p>notact</p></td>
-<td><p>notact</p></td>
-<td><p>0h</p></td>
-</tr>
-<tr class="row-odd"><td><p>act12h_018</p></td>
-<td><p>act12h</p></td>
-<td><p>act</p></td>
-<td><p>12h</p></td>
-</tr>
-<tr class="row-even"><td><p>act12h_019</p></td>
-<td><p>act12h</p></td>
-<td><p>act</p></td>
-<td><p>12h</p></td>
+<tr class="row-odd"><td><p>switzerland</p></td>
+<td><p>-1</p></td>
 </tr>
 </tbody>
 </table>
-<p>In the platform, we will convert that to the contrasts table. The number
-one representes the numerator of the contrast, and the number -1 represents the denominator.</p>
-<p>For example, the contrast <code class="docutils literal notranslate"><span class="pre">act12h_vs_notact</span></code> will be represented by the following table:</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 18%" />
-<col style="width: 18%" />
-<col style="width: 18%" />
-<col style="width: 18%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"></th>
-<th class="head"><p>act12h_vs_notact</p></th>
-<th class="head"><p>act24h_vs_notact</p></th>
-<th class="head"><p>act48h_vs_notact</p></th>
-<th class="head"><p>act72h_vs_notact</p></th>
-<th class="head"><p>act96h_vs_notact</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>notact</p></td>
-<td><p>-1</p></td>
-<td><p>-1</p></td>
-<td><p>-1</p></td>
-<td><p>-1</p></td>
-<td><p>-1</p></td>
-</tr>
-<tr class="row-odd"><td><p>act12h</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>act24h</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>act48h</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>act72h</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>act96h</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-<p>The samples act12 will have 1 (numerator) and noact will have -1 (denominator). That means we are calculating fold changes in 1/-1 groups.</p>
-<p>The number zero is simply ignored, it can be left empty.</p>
+<p>We will search for the group column in the samples file, and we will create the contrasts based on the groups. Samples with japan in the group column will be the numerator, and samples with switzerland in the group column will be the denominator.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>If you are familiar with R, you can think of the contrasts file as a data.frame object. The samples file from the study above can be accessed by installing playbase <code class="docutils literal notranslate"><span class="pre">devtools::install_github(&quot;bigomics/playbase&quot;)</span></code> and running <code class="docutils literal notranslate"><span class="pre">playbase::CONTRASTS</span></code>.</p>
+<p>If you are familiar with R, you can think of the contrasts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase <code class="docutils literal notranslate"><span class="pre">devtools::install_github(&quot;bigomics/playbase&quot;)</span></code> and running <code class="docutils literal notranslate"><span class="pre">playbase::CONTRASTS</span></code>.</p>
 </div>
+</section>
 </section>
 
 
