@@ -119,20 +119,42 @@
   <section id="checks-before-uploading">
 <span id="datachecks"></span><h1>Checks before uploading<a class="headerlink" href="#checks-before-uploading" title="Permalink to this headline">¶</a></h1>
 <p><strong>Check #1</strong>. Never use the special characters in the table below. The platform is based on the R programming language, so certain characters are reserved for programming purposes. As good practice, avoid using symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:</p>
-<p>We test regularly which characters are allowed or not, we will update this list accordingly. Here is the current list of characters that are not allowed:
-+————–+————–+————————+
-| Matrix       | Part         | Characters not allowed |
-+==============+==============+========================+
-| sample.csv   | columns      | &#64; , : empty spaces +   |
-+————–+————–+————————+
-| sample.csv   | phenotypes   | &#64; , : empty spaces     |
-+————–+————–+————————+
-| sample.csv   | rows (names) | &#64; , : empty spaces     |
-+————–+————–+————————+
-| contrast.csv | columns      | &#64; , : empty spaces +   |
-+————–+————–+————————+
-| contrast.csv | contrasts    | &#64; , : empty spaces     |
-+————–+————–+————————+</p>
+<p>We test regularly which characters are allowed or not, we will update this list accordingly. Here is the current list of characters that are not allowed:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 30%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Input file</p></th>
+<th class="head"><p>Part</p></th>
+<th class="head"><p>Characters not allowed</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sample.csv</p></td>
+<td><p>column names</p></td>
+<td><p>&#64; , : empty spaces +</p></td>
+</tr>
+<tr class="row-odd"><td><p>sample.csv</p></td>
+<td><p>row names</p></td>
+<td><p>&#64; , : empty spaces</p></td>
+</tr>
+<tr class="row-even"><td><p>sample.csv</p></td>
+<td><p>phenotype names</p></td>
+<td><p>&#64; , : empty spaces</p></td>
+</tr>
+<tr class="row-odd"><td><p>contrasts.csv</p></td>
+<td><p>column names</p></td>
+<td><p>&#64; , : empty spaces +</p></td>
+</tr>
+<tr class="row-even"><td><p>contrasts.csv</p></td>
+<td><p>contrast names</p></td>
+<td><p>&#64; , : empty spaces</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Check #2</strong> Avoid starting your sample, phenotype or contrast names with special characters like (+, -, <a href="#id1"><span class="problematic" id="id2">*</span></a>, /, %, etc..). While the platform will accept these characters, they may be converted into a standard symbol like X. For example, if we label the sample.csv country column as <cite>%country</cite>, we will see X.country in some analysis in Omics Playground.</p>
 <p><strong>Check #3</strong> Make sure you have samples, counts and contrasts in your filenames. For example, we accept experiment23_samples.csv, samples_experiment23.csv, but not experiment23.csv as sample input.</p>
 <p><strong>Check #4</strong>. Define intervals instead of using numeric phenotypes.
