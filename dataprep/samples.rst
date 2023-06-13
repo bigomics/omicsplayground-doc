@@ -19,7 +19,7 @@ seen in the ``samples.csv`` table below, the rows should be annonymized patients
 uniquely by the first column (sample1, sample2...), and the other columns would be sample metadata (hair color, country, weight, age, etc.).
 
 +---------+------------+-------------+--------+
-|         | hair color |   country   |  age   |
+|         | hair_color |   country   |  age   |
 +=========+============+=============+========+
 | sample1 |   blond    |    Japan    |  old   |
 +---------+------------+-------------+--------+
