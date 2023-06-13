@@ -7,7 +7,7 @@ Checks before uploading
 **Check #1**. Avoid special characters and empty spaces when naming your samples or phenotypes.
 The platform is based on the R programming language, so certain characters are reserved for programming purposes.
 
-As a good code of practice, never use any of these symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:
+As good practice, avoid using symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:
 
 .. figure:: ../dataprep/data_checks/p2.png
     :align: center
@@ -15,22 +15,23 @@ As a good code of practice, never use any of these symbols when naming a sample 
 
 We test regularly which characters are allowed or not, we will update this list accordingly. Here is the current list of characters that are not allowed:
 
-+--------------+--------------+------------------------+---------------------------------------------------------------+
-| Matrix       | Part         | Characters not allowed | Additional criteria                                           |
-+==============+==============+========================+===============================================================+
-| sample.csv   | columns      | @ , : empty spaces, +  | Always start the name with a letter from A to Z (recommended) |
-+--------------+--------------+------------------------+---------------------------------------------------------------+
-| sample.csv   | phenotypes   | @ , : empty spaces     | Always start the name with a letter from A to Z (recommended) |
-+--------------+--------------+------------------------+---------------------------------------------------------------+
-| sample.csv   | rows (names) | @ , : empty spaces     |                                                               |
-+--------------+--------------+------------------------+---------------------------------------------------------------+
-| contrast.csv | columns      | @ , : empty spaces +   | Always start the name with a letter from A to Z (recommended) |
-+--------------+--------------+------------------------+---------------------------------------------------------------+
-| contrast.csv | contrasts    | @ , : empty spaces     | Always start the name with a letter from A to Z (recommended) |
-+--------------+--------------+------------------------+---------------------------------------------------------------+
++--------------+--------------+------------------------+
+| Matrix       | Part         | Characters not allowed |
++==============+==============+========================+
+| sample.csv   | columns      | @ , : empty spaces +   |
++--------------+--------------+------------------------+
+| sample.csv   | phenotypes   | @ , : empty spaces     |
++--------------+--------------+------------------------+
+| sample.csv   | rows (names) | @ , : empty spaces     |
++--------------+--------------+------------------------+
+| contrast.csv | columns      | @ , : empty spaces +   |
++--------------+--------------+------------------------+
+| contrast.csv | contrasts    | @ , : empty spaces     |
++--------------+--------------+------------------------+
 
-**Check #3** Make sure you have samples, counts and contrasts in your filenames.  For example, we accept experiment23_samples.csv, samples_experiment23.csv, but not experiment23.csv as sample input.
+**Check #2** Avoid starting your sample, phenotype or contrast names with special characters like (+, -, *, /, %, etc..). While the platform will accept these characters, they may be converted into a standard symbol like X. For example, if we label the sample.csv country column as `%country`, we will see X.country in some analysis in Omics Playground.
 
+**Check #3** Make sure you have samples, counts and contrasts in your filenames. For example, we accept experiment23_samples.csv, samples_experiment23.csv, but not experiment23.csv as sample input.
 
 **Check #4**. Define intervals instead of using numeric phenotypes.
 The platform does not cope with continuous numeric variables for phenotypes yet. To avoid that, our coders added a filter that flags phenotypes names “Time” or “Age” as unacceptable. The same applies for other continuous variables, such as height, weight, length, etc.
