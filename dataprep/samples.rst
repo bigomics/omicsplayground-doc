@@ -3,9 +3,9 @@
 Samples file
 ================================================================================
 
-The samples file contains the phenotypic information of each sample. The first column contains the sample name, which must exactly match the name given in the read counts file. 
+The samples file (`samples.csv`) contains the phenotypic information of each sample. The first column contains the sample name, which should be unique, and must match the name given in the read counts file. 
 
-It is a tabular (csv) file with the samples in the rows and the phenotypic data (metadata) in the columns. Note that the platform will not accept purely numerical values.
+The samples file  is a tabular (csv) file with the samples in the rows and the phenotypic data (metadata) in the columns. Note that the platform will not accept purely numerical values as phenotypes.
 
 Below is a simple example of sample file, where each row in the column should be a sample with a unique ID. If we have duplicate IDs (two rows with sample5), these will be merged as its considered a technical replicate.
 From the second column onwards, we have the metadata (also called phenotypes, descriptors, annotation, etc..). 
