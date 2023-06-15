@@ -8,7 +8,7 @@ the groups (treatment versus controls, mutant versus wild-type, etc..)
 that will be tested against each other. The contrasts are a list of 
 comparisons between groups.
 
-There are two ways to define the contrasts: the long contrast form and the short contrast form.
+There are two ways to define the contrasts: the long contrast form and the short contrast form. The contrast name rows need to be unique, both in short and long forms.
 
 Long contrast form
 --------------------------------------------------------------------------------
