@@ -4,9 +4,12 @@
 Checks before uploading
 ================================================================================
 
-**Check #1**. Never use the special characters in the table below. The platform is based on the R programming language, so certain characters are reserved for programming purposes. As good practice, avoid using symbols when naming a sample or a phenotype. If you need to connect multiple elements, use underscore, “_” instead. Here’s an example:
+**Check #1**. Never use the special characters in your samples and contrasts, 
+as certain characters are reserved for programming purposes. 
+If you need to connect multiple elements, use underscore, “_” instead.
 
-We test regularly which characters are allowed or not, we will update this list accordingly. Here is the current list of characters that are not allowed:
+We test regularly which characters are allowed or not, we will update
+this list accordingly. The characters below are strictly forbidden.
 
 +---------------+-----------------+------------------------+
 | Input file    | Part            | Characters not allowed |
@@ -15,12 +18,15 @@ We test regularly which characters are allowed or not, we will update this list 
 +---------------+-----------------+------------------------+
 | sample.csv    | row names       | @ , : empty spaces     |
 +---------------+-----------------+------------------------+
-| sample.csv    | phenotype names | @ , : empty spaces     |
+| sample.csv    | phenotype names | @ , :                  |
 +---------------+-----------------+------------------------+
 | contrasts.csv | column names    | @ , : empty spaces +   |
 +---------------+-----------------+------------------------+
-| contrasts.csv | contrast names  | @ , : empty spaces     |
+| contrasts.csv | contrast names  | @ , :                  |
 +---------------+-----------------+------------------------+
+
+.. note::
+    We cannot garantee that special characters (+, -, *, /, %, etc..) and empty space will work in all Omics Playground modules, so we commend substituting them for underscore '_'.
 
 **Check #2** Avoid starting your sample, phenotype or contrast names with special characters like (+, -, *, /, %, etc..). While the platform will accept these characters, they may be converted into a standard symbol like X. For example, if we label the sample.csv country column as `%country`, we will see X.country in some analysis in Omics Playground.
 

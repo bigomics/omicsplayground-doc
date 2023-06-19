@@ -4,13 +4,13 @@ Counts file
 ================================================================================
 
 The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
-like the samples, the ``counts.csv`` file is in a tabular format (.csv), and each row describes the features (genes, proteins, etc..)
+like the samples, the ``counts.csv`` file is tabular (.csv), where each row describes the features (genes, proteins, etc..)
 and each column describes the samples.
 
-The rows contains gene IDs, which can be in most formats (such as HGCN or Ensembl), but not in the 
-Entrez number format. If you are using the latter, it will need to be converted through tools such as `Syngo <https://www.syngoportal.org/convert>`_.
+The rows contains gene IDs, which can be in most common formats (such as HGCN or Ensembl), but not in the 
+Entrez number format. If you are using Entrez numbers, please convert them to Ensembl IDs using tools such as `Syngo <https://www.syngoportal.org/convert>`_.
 
-The individual cells in the other columns contain the raw or normalised read counts for the dataset. The values should always be numerical, with the exception of “NA” in case of a lack of data.
+The values should always be numerical, with the exception of “NA” in case of a lack of data.
 
 Below is a simple example of how a ``counts.csv`` file should look like.
 
@@ -38,8 +38,6 @@ Below is a simple example of how a ``counts.csv`` file should look like.
 .. note::
     The formats accepted as features (genes, proteins are ENSEMB, ENSEMBLTRAN, UNIGENE, REFSEQ, ACCNUM and UNIPROT and gene SYMBOL).
     Also note that the platform will not accept transcript IDs. You will need to convert them to Gene IDs. This will result in multiple gene entries that the platform will merge.
-
-
 
 .. seealso::
     If you are familiar with R, you can think of the counts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::COUNTS``.
