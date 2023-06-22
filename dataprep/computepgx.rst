@@ -11,6 +11,31 @@ If you have many datasets (tens to hundreds), it might make sense to create the 
 We made it very easy to create a pgx object from your own data. With a few R functions, you can convert several datasets into pgx objects 
 that can be uploaded in Omics Playground.
 
+Here we check that your input files do not have problems
+
+.. code-block:: R
+
+  library(playbase)
+
+  playbase::PGX_CHECKS # These are the possible errors you can encounter
+
+  # individual file checks
+
+  SAMPLES = playbase::pgx.checkINPUT(playbase::SAMPLES, type = "SAMPLES")
+  COUNTS = playbase::pgx.checkINPUT(playbase::COUNTS, type = "COUNTS")
+  CONTRASTS = playbase::pgx.checkINPUT(playbase::SAMPLES, type = "CONTRASTS")
+
+  # Checks across input files
+
+  INPUTS_CHECKED <- pgx.crosscheckINPUT(SAMPLES, COUNTS, CONTRASTS)
+
+  SAMPLES = INPUTS_CHECKED$SAMPLES
+  COUNTS = INPUTS_CHECKED$COUNTS
+  CONTRASTS = INPUTS_CHECKED$CONTRASTS
+
+If no errors are reported (and `PASS` is `TRUE`), these new checked files SAMPLES, COUNTS 
+and CONTRASTS can be used safely in the next step.
+
 Here we create a pgx object that can be used in Omics Playground:
 
 .. code-block:: R
