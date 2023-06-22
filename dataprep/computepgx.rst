@@ -15,9 +15,16 @@ Here we check that your input files do not have problems
 
 .. code-block:: R
 
+  # install necessary packages
+
+  install.packages("devtools")
+  devtools::install_github("bigomics/playbase")
+
   library(playbase)
 
-  playbase::PGX_CHECKS # These are the possible errors you can encounter
+  # These are the possible errors you can encounter
+  
+  playbase::PGX_CHECKS
 
   # individual file checks
 
@@ -40,25 +47,23 @@ Here we create a pgx object that can be used in Omics Playground:
 
 .. code-block:: R
 
-            # step 0: install necessary packages
-            install.packages("devtools")
-            devtools::install_github("bigomics/playbase")
-            
-            # step 1: create a pgx object with your samples, counts and contrasts
-            pgx <- playbase::pgx.createPGX(
-              counts = playbase::COUNTS,
-              samples = playbase::SAMPLES,
-              contrasts = playbase::CONTRASTS
-            )
+  
+  
+  # step 1: create a pgx object with your samples, counts and contrasts
+  pgx <- playbase::pgx.createPGX(
+    counts = playbase::COUNTS,
+    samples = playbase::SAMPLES,
+    contrasts = playbase::CONTRASTS
+  )
 
-            # step 2: compute the pgx object
+  # step 2: compute the pgx object
 
-            pgx <- playbase::pgx.computePGX(
-              pgx = pgx
-            )
+  pgx <- playbase::pgx.computePGX(
+    pgx = pgx
+  )
 
-            # save the pgx object to your computer
-            save(pgx, file = "choose_a_name.pgx.")
+  # save the pgx object to your computer
+  save(pgx, file = "choose_a_name.pgx.")
             
 All you have to do is substitute ``playbase::COUNTS``, ``playbase::SAMPLES``, and ``playbase::CONTRASTS`` with your own data. You can then import the pgx object into Omics Playground.
 
