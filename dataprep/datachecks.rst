@@ -26,7 +26,7 @@ this list accordingly. The characters below are strictly forbidden.
 +---------------+-----------------+------------------------+
 
 .. note::
-    We cannot garantee that special characters (+, -, *, /, %, etc..) and empty space will work in all Omics Playground modules, so we commend substituting them for underscore '_'.
+    We cannot garantee that special characters (+, -, *, /, %, etc..) and empty space will work in all Omics Playground modules, so we recommend substituting them for underscore '_'.
 
 **Check #2** Avoid starting your sample, phenotype or contrast names with special characters like (+, -, *, /, %, etc..). While the platform will accept these characters, they may be converted into a standard symbol like X. For example, if we label the sample.csv country column as `%country`, we will see X.country in some analysis in Omics Playground.
 
