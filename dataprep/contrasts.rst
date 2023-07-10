@@ -55,7 +55,7 @@ Any of the tables above can be provided to the platform.
 Group-based contrasts (short form)
 --------------------------------------------------------------------------------
 
-The group-based contrast is especially useful in datasets with large number of samples, as assigning the contrasts to each sample can be cumbersome.
+The group-based contrast is especially useful in datasets with large number of samples, as assigning the contrasts to each sample can be cumbersome. Hoever, this approach only works if users are focusing on a single phenotype in their dataset.
 
 Following the example above, if we would like to create a contrast between the two countries Japan and Switzerland, 
 we will need to create a column called **group** in the sample file, which 
@@ -78,7 +78,7 @@ We will search for the group column in the samples file, and we will create the 
     1. The short contrast form requires a group column in the samples file. 
     2. The group column can be any column in the samples file, and it will be used to connect to the short contrasts. 
     3. The group column name must contain the word `group` (e.g. group, groups, group_name, etc..).
-    4. If multiple group columns are found, the first one will be matched.
+    4. If multiple group columns are found, only the first one will be matched. 
 
 .. seealso::
     If you are familiar with R, you can think of the contrasts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::CONTRASTS``.
