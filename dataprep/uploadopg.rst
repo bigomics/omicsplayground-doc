@@ -10,12 +10,8 @@ Uploading your data in Omics Playground
     This content needs to be expanded
 
 Users can import their data from the **Upload data** panel located under the 
-:ref:`Home` module. The platform requires the list of files as shown in the
-figure below. The format of files must be comma-separated-values (CSV) text.
-It is important to name the files exactly as shown.
-Be sure the dimensions, rownames and column names match for all files. 
-It is required to provide a unique name and brief description for the data set
-while uploading.
+:ref:`Home` module. The platform requires a file with the read counts and one with a description of the samples at the minimum. An optional file with the desired contrasts can also be provided. The format of files must be comma-separated-values (CSV) text.
+It is important to name and format the files as explained in the previous sections.
 
 .. figure:: ../modules/figures/psc1.3.png
     :align: center
