@@ -7,7 +7,7 @@ Uploading your data in Omics Playground
 
 
 ..
-    This content needs to be expanded
+    This content needs to be expanded (we need to add a section on generating contrasts through the platfrm and one on the computation option)
 
 Users can import their data from the **Upload data** panel located under the 
 :ref:`Home` module. The platform requires a file with the read counts and one with a description of the samples at the minimum. An optional file with the desired contrasts can also be provided. The format of files must be comma-separated-values (CSV) text.
