@@ -3,14 +3,14 @@
 Counts file
 ================================================================================
 
-The file counts contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
+The file 'counts' contains the measurements (genes, proteins, etc..) for each sample listed in the samples file. Just
 like the samples, the ``counts.csv`` file is tabular (.csv), where each row describes the features (genes, proteins, etc..)
 and each column describes the samples.
 
 The rows contains gene IDs, which can be in most common formats (such as HGCN or Ensembl), but not in the 
 Entrez number format. If you are using Entrez numbers, please convert them to Ensembl IDs using tools such as `Syngo <https://www.syngoportal.org/convert>`_.
 
-The values should always be numerical, with the exception of “NA” in case of a lack of data.
+The values should always be numerical, with the exception of “NA” in case of a lack of data. Failure to do so will result in an error.
 
 Below is a simple example of how a ``counts.csv`` file should look like.
 
