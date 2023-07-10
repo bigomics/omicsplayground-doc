@@ -9,7 +9,7 @@ The samples file  is a tabular (csv) file with the samples in the rows and the p
 
 
 If we are analyzing a human study (it can be applied to any study) as 
-seen in the ``samples.csv`` table below, the rows should be annonymized patients, identifyied 
+seen in the ``samples.csv`` table below, the rows should be anonymized patients, identifyied 
 uniquely by the first column (sample1, sample2...), and the other columns would be sample metadata or phenotypes (hair color, country, weight, age, etc.).
 
 +---------+------------+-------------+--------+
