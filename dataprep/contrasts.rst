@@ -21,7 +21,7 @@ For example, if you have 3 groups (A, B, C), you
 can test the following contrasts: A_vs_B, A_vs_C, B_vs_C.
 
 Here is a minimal example of how the  ``contrasts.csv`` should look like. In this case, the groups 
-will be hair color (blond vs. black) and country (Japan vs. Switzerland), and derive from the samples file.
+will be hair color (blond vs. black) and country (Japan vs. Switzerland), as derived from the samples file.
 
 +---------+----------------+----------------------+
 |         | black_vs_blond | japan_vs_switzerland |
@@ -35,7 +35,7 @@ will be hair color (blond vs. black) and country (Japan vs. Switzerland), and de
 | sample4 |     black      |     switzerland      |
 +---------+----------------+----------------------+
 
-The column names (black_vs_blond) will be used to name the comparisons. the first name (black) will be used as the numerator of the contrast, and the second name (blond) will be used as the denominator of the contrast.
+The column names (black_vs_blond) will be used to name the comparisons. The first name (black) will be used as the numerator of the contrast, and the second name (blond) will be used as the denominator of the contrast.
 Inside the platform, we will transform the contrasts table to the following table:
 
 +---------+----------------+----------------------+
@@ -72,7 +72,7 @@ Once we have the group column in the sample file, we can assign the contrasts as
 | switzerland |          -1          |
 +-------------+----------------------+
 
-We will search for the group column in the samples file, and we will create the contrasts based on the groups. Samples with japan in the group column will be the numerator, and samples with switzerland in the group column will be the denominator.
+We will search for the group column in the samples file, and we will create the contrasts based on the groups. Samples with 'japan' in the group column will be the numerator, and samples with 'switzerland' in the group column will be the denominator.
 
 ..note::
     1. The short contrast form requires a group column in the samples file. 
