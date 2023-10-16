@@ -12,12 +12,16 @@ pathway or having similar functions. GSEA is a computational
 method used to determine whether a particular gene set is 
 significantly enriched in a given dataset of gene expression.
 
-In a GMT file, each line represents a gene set and consists
+In a GMT file, the first column is the geneset name, followed by a description on the second column. Each
+subsequent column line represents a gene set and consists
 of a gene set name, and the list of genes 
 belonging to that set. The gene names are typically represented 
-using gene symbols or other identifiers. 
+using gene symbols or other identifiers. Each line in a GMT file will correspont to a different geneset.
+
+Download here an example GMT file from genes activated by the transcription factor EGFR: :download:`EGFR_TARGET_GENES.v2023.1.Hs.gmt<downloads/EGFR_TARGET_GENES.v2023.1.Hs.gmt>`
 
 .. tip::
+    .. only:: builder_html or readthedocs
     If you want to create your own genesets, the easiest way is to download our example GMT file and open it in excel as tab-separated values.
     The first column is the geneset name (EGFR_TARGET_GENES), followed by any description (can be left empty) or
     the geneset `source website <https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/EGFR_TARGET_GENES>`_ in the second column.
