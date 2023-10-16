@@ -17,11 +17,12 @@ of a gene set name, and the list of genes
 belonging to that set. The gene names are typically represented 
 using gene symbols or other identifiers. 
 
-.. seealso::
-    If you want to create your own genesets, you can follow the tutorials in R
-    `here <https://rdrr.io/cran/ActivePathways/man/GMT.html>`_ or
-    more information about the GMT format `here <https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideTEXT.htm#_Gene_Sets_File_GMT>`_. 
-
+.. tip::
+    If you want to create your own genesets, the easiest way is to download our example GMT file and open it in excel as tab-separated values.
+    The first column is the geneset name (EGFR_TARGET_GENES), followed by any description (can be left empty) or
+    the geneset `source website <https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/EGFR_TARGET_GENES>`_ in the second column.
+    Then finally the genes should be listed on the third and following columns (ABCA7, ACTB, etc.).
+    After editing, save the file as a tab-separated values file and change the extension to .gmt.
 
 In Omics playground, GMT files are the backbone of several modules, 
 where we aim to identify enriched gene sets associated with specific 
@@ -69,9 +70,6 @@ you can upload directly in the Upload module under Options.
                 pgx = pgx,
                 custom.geneset = custom.geneset
             )
-
-    Currently, we are supporting only 1 gmt file in the list, but we may implement multiple gmt files in the future.
-
     
     
     
