@@ -35,10 +35,10 @@ N.B. Some of these features are (such as the delete option) are not available on
 
 
 
-Upload data (Upload)
+Load (Upload new)
 --------------------------------------------------------------------------------
 
-Under the **Upload new** option of the **Upload data** panel users can upload their transcriptomics
+Under the **Upload new** option of the **Load** panel users can upload their transcriptomics
 and proteomics data to the platform. The platform requires three data
 files as listed below: a data file containing counts/expression
 (counts.csv), a sample information file (samples.csv) and an optional 
@@ -70,11 +70,11 @@ batch correction precedure and parameters. More information can be found under :
     :width: 100%
 
 
-Upload data (Contrasts)
+Upload new (Comparisons)
 --------------------------------------------------------------------------------
 
 Users can eschew adding a contrast file and instead generate contrasts via 
-the **Contrasts** subpanel of the **Upload data** panel.
+the **Comparisons** subpanel of the **Upload new** panel.
 Available phenotypes will appear in the "Phenotypes" box as a scrolldown menu.
 Selecting a phenotype will show the available conditions in the "Conditions" box.
 Users can then drag individual groups in the "Main group" or "Control Group" boxes.
@@ -88,12 +88,12 @@ caution when using this function as it is error-prone.
 The panel also produces a PCA/tSNE plot that users can consult as a guide for generating 
 comparisons.
 
-.. figure:: ../modules/figures/psc1.4.png
+.. figure:: figures_v3/comparisons.png
     :align: center
     :width: 100%
 
 
-Upload data (Compute)
+Upload new (Compute)
 --------------------------------------------------------------------------------
 
 The **Compute** subpanel is where users can start the computation of their data.
@@ -102,8 +102,10 @@ provide a short description. Beginners can then click on the "Compute!" button a
 let the platform run the calculations. Advanced users can click on "Advanced" to 
 access several customisation options. In particular they can de-select feature 
 filtering options, select different gene tests and enrichment methods combinations, 
-include or exclude analysis types and select developer-specific options.
+include or exclude analysis types and select developer-specific options. 
+A new advanced feature with V3 of the platform is the ability to upload 
+custom GMT files with a dataset.
 
-.. figure:: ../modules/figures/psc1.5.png
+.. figure:: figures_v3/compute.png
     :align: center
     :width: 100%
