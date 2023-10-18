@@ -1,14 +1,13 @@
 .. _Home:
 
-Home Panel
+Load Panel
 ================================================================================
 
-Selecting the dataset
+Selecting a dataset
 --------------------------------------------------------------------------------
 
-The platform starts running from the **Home** panel. This panel shows
-the available datasets within the platform. The table reports a brief
-description as well as the total number of samples, genes, 
+The **Load** panel panel shows the available datasets within the platform. 
+Each dataset contains a brief description as well as the total number of samples, genes, 
 corresponding phenotypes and the collection date.
 
 Users can select a dataset in the table and then click on the "Load dataset" button
@@ -39,7 +38,7 @@ N.B. Some of these features are (such as the delete option) are not available on
 Upload data (Upload)
 --------------------------------------------------------------------------------
 
-Under the **Upload** subpanel of the **Upload data** panel users can upload their transcriptomics
+Under the **Upload new** option of the **Upload data** panel users can upload their transcriptomics
 and proteomics data to the platform. The platform requires three data
 files as listed below: a data file containing counts/expression
 (counts.csv), a sample information file (samples.csv) and an optional 
