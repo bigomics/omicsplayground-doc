@@ -20,15 +20,19 @@ Signatures/datasets that are clustered closer together, are more similar.
     :align: center
     :width: 100%
 
+A pop-up menu is displayed when clicking on the three dots next toa dataset name.
+From this menu, users can download either a pgx object, which contains all the calculations
+and plots, or the raw input data that was used to generate the dataset. The "Reanalyse"
+option is used to perform a new analysis based on the same input files as the selected dataset.
+Users can also share a dataset with another user ( via the "Share with user" option) or 
+make a dataset public (via the "Share public" option). Finally, "Delete dataset" is used 
+to remove a dataset permanently from the platform.
 
-The ``Dataset info`` shows
-the information of the dataset of interest and users can load the data
-by clicking the ``Load`` button. There are three additional icons to 
-dwonload pgx files, download csv files and delete an entry.
+N.B. Some of these features are (such as the delete option) are not available on trial accounts.
 
-.. figure:: figures/psc1.0.png
+.. figure:: figures_v3/Home_options.png
     :align: center
-    :width: 30%
+    :width: 70%
 
 
 
