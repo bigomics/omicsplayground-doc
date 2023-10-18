@@ -11,7 +11,7 @@ the available datasets within the platform. The table reports a brief
 description as well as the total number of samples, genes, gene sets
 (or pathways), corresponding phenotypes and the collection date.
 
-.. figure:: figures_v3/home.png
+.. figure:: figures_v3/Home.png
     :align: center
     :width: 100%
 
