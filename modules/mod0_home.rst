@@ -11,11 +11,17 @@ the available datasets within the platform. The table reports a brief
 description as well as the total number of samples, genes, 
 corresponding phenotypes and the collection date.
 
+Users can select a dataset in the table and then click on the "Load dataset" button
+at the bottom left to load a dataset into the platform. On the right hand side a
+signature t-SNE plot is displayed . Each dot corresponds to a specific comparison. 
+Signatures/datasets that are clustered closer together, are more similar.
+
 .. figure:: figures_v3/Home.png
     :align: center
     :width: 100%
 
-Users can select a dataset in the table. The ``Dataset info`` shows
+
+The ``Dataset info`` shows
 the information of the dataset of interest and users can load the data
 by clicking the ``Load`` button. There are three additional icons to 
 dwonload pgx files, download csv files and delete an entry.
