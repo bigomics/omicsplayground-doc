@@ -55,7 +55,7 @@ while uploading.
 Once uploaded, the platform generates three separate plots showing some stastics
 and the structure of your input files.
 
-.. figure:: ../modules/figures/psc1.3.png
+.. figure:: figures_v3/upload.png
     :align: center
     :width: 100%
 
@@ -65,7 +65,7 @@ batch correction (low, medium or strong). Under *Advanced* users can fine-tune
 the process. This feature is still in beta and only recommended to users familiar with the 
 batch correction precedure and parameters. More information can be found under :ref:`Methods`.
 
-.. figure:: ../modules/figures/psc1.3.a.png
+.. figure:: figures_v3/batch.png
     :align: center
     :width: 100%
 
