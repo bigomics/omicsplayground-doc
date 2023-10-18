@@ -103,7 +103,7 @@ let the platform run the calculations. Advanced users can click on "Advanced" to
 access several customisation options. In particular they can de-select feature 
 filtering options, select different gene tests and enrichment methods combinations, 
 include or exclude analysis types and select developer-specific options. 
-A new advanced feature with V3 of the platform is the ability to upload 
+A new advanced feature with V3 of the platform is the ability to upload a
 custom GMT files with a dataset.
 
 .. figure:: figures_v3/compute.png
