@@ -68,7 +68,7 @@ the gene expression data using summary methods such as `GSVA
 and `ssGSEA
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__.
 
-Next to the plot configuration settings, users can select to display a dynamic or static heatmap.
+Next to the plot configuration settings, users can select between a dynamic or static heatmap.
 From the plot configuration settings on top of the plot, users can choose various options to 
 customise their heatmaps. It is possible to order the top features under ``top mode`` as follows:
 
@@ -83,7 +83,7 @@ scale. Under the ``CexCol`` and ``CexRow`` settings, it is also possible to adju
 for the column and row labels. The legend in the heatmap can be disabled by unticking the
 ``show legend`` option.
 
-.. figure:: figures/psc3.1.0.png
+.. figure:: figures_v3/heatmap_set.png
     :align: center
     :width: 30%
         
