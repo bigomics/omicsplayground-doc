@@ -211,5 +211,9 @@ the UMAP clustering of genes colored by standard-deviation of log-expression(sd.
 or standard-deviation of the fold-change (sd.FC) and using the covariance of gene expression
 as a distance metric.
 
+.. figure:: figures_v3/features_opt.png
+    :align: center
+    :width: 20%
+
 Geneset
 --------------------------------------------------------------------------------
