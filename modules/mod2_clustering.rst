@@ -203,3 +203,13 @@ if batch or tissue effects are present in the dataset,
 .. figure:: figures_v3/features_set.png
     :align: center
     :width: 20%
+
+Gene
+--------------------------------------------------------------------------------
+The **Gene** submodule contains three panels. The **Gene UMAP** panel displays 
+the UMAP clustering of genes colored by standard-deviation of log-expression(sd.X), 
+or standard-deviation of the fold-change (sd.FC) and using the covariance of gene expression
+as a distance metric.
+
+Geneset
+--------------------------------------------------------------------------------
