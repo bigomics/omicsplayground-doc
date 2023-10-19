@@ -33,7 +33,7 @@ or collapse the samples by predetermined groups in the ``Group by`` settings.
 Under *Options*, it is possible to visualize the information on a raw count level 
 or logarithmic expression level (logCPM).
 
-.. figure:: figures/psc2.0.png
+.. figure:: figures_v3/Dataview_settings.png
     :align: center
     :width: 30%
 
