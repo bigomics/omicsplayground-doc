@@ -204,19 +204,24 @@ if batch or tissue effects are present in the dataset,
     :align: center
     :width: 20%
 
+Gene and Geneset UMAP settings
+--------------------------------------------------------------------------------
+Both the **Gene UMAP** and **Geneset UMAP** panels display the same setting options, as shown below. 
+In it, users can use the ``color by`` option to select between standard-deviation of log-expression(sd.X) 
+or standard-deviation of the fold-change (sd.FC) to colour individual genes or genesets. 
+Users can also select the range of the colour intensity threshold using the ``color gamma`` option. 
+Finally, users can choose the number of gene or genesets to be labelled in the UMAP plot under ``nr labels``. 
+
+.. figure:: figures_v3/features_opt.png
+    :align: center
+    :width: 20%
+
 Gene
 --------------------------------------------------------------------------------
 The **Gene** submodule contains three panels. The **Gene UMAP** panel displays 
 the UMAP clustering of genes colored by standard-deviation of log-expression(sd.X), 
 or standard-deviation of the fold-change (sd.FC) and using the covariance of gene expression
-as a distance metric. The two clustering methods can be selected under ``color by`` 
-via the settings menu in the panel. Users can also select the range of the colour 
-intensity threshold using the ``color gamma`` option. Finally, users can also select the number
-of gene or genesets to be labelled in the UMAP plot under ``nr labels``. 
-
-.. figure:: figures_v3/features_opt.png
-    :align: center
-    :width: 20%
+as a distance metric. 
 
 Geneset
 --------------------------------------------------------------------------------
