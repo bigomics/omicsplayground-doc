@@ -8,6 +8,9 @@ After having done the QC, it is probably the first way to explore your data.
 The main purpose is to discover patterns and subgroups in the data, show correlation
 with known phenotypes, detect outliers, or investigate batch effects.
 
+The module is divided into two submodules: **Samples** and **Features**.
+
+Under the **Samples** submodule you can find classical clustering functions.
 In the **Heatmap** panel hierarchical clustering can be performed on gene level 
 or gene set level. The **PCA/tSNE** panel shows unsupervised clustering of the samples 
 in 2D/3D as obtained by PCA or tSNE algorithms. The **Parallel** panel displays the 
@@ -18,6 +21,12 @@ from the literature. The **Phenotypes** panel shows the phenotype distribution a
 on the t-SNE plot. Finally, the **Feature ranking** panel  shows a plot that ranks 
 the discriminative power of feature sets (or gene sets) as the cumulative discriminant 
 score for all phenotype variables.
+
+The **Features** submodule perferoms clustering at either the gene level (**Gene** panel)
+or at the geneset level (**Geneset** panel). For both a gene or geneset UMAP plot is
+displayed, next to a "Gene Signatures" UMAP plot, where users can visualise specific 
+phenotypes. Finally, below the plots, a table contains eithe the genes or genesets 
+in a given selected area.
 
 
 Input panel
