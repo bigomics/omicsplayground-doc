@@ -42,7 +42,7 @@ panel. It also contains main settings for the analysis, where users can select
  Furthermore, under *Options*, users can choose the level of analysis (gene or geneset) 
  and exclude genes in the X and Y chromosomes
 
-.. figure:: figures/psc3.0.png
+.. figure:: figures_v3/Clustering_set.png
     :align: center
     :width: 30%
 
