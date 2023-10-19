@@ -22,7 +22,7 @@ on the t-SNE plot. Finally, the **Feature ranking** panel  shows a plot that ran
 the discriminative power of feature sets (or gene sets) as the cumulative discriminant 
 score for all phenotype variables.
 
-The **Features** submodule perferoms clustering at either the gene level (**Gene** panel)
+The **Features** submodule performs clustering at either the gene level (**Gene** panel)
 or at the geneset level (**Geneset** panel). For both a gene or geneset UMAP plot is
 displayed, next to a "Gene Signatures" UMAP plot, where users can visualise specific 
 phenotypes. Finally, below the plots, a table contains eithe the genes or genesets 
