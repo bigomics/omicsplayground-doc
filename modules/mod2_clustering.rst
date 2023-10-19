@@ -68,7 +68,7 @@ the gene expression data using summary methods such as `GSVA
 and `ssGSEA
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__.
 
-Next to the plot configuration settings, users can select between a dynamic or static heatmap.
+Next to the plot configuration settings, users can select between a "dynamic" or "static" heatmap.
 From the plot configuration settings on top of the plot, users can choose various options to 
 customise their heatmaps. It is possible to order the top features under ``top mode`` as follows:
 
@@ -87,22 +87,21 @@ for the column and row labels. The legend in the heatmap can be disabled by unti
     :align: center
     :width: 30%
         
-The complex heatmap below is generated after tuning the options and settings. 
+The complex heatmap below is generated with the "static" option active. 
 It is a clustered heatmap showing gene expression sorted by 2-way hierarchical
 clustering. Red corresponds to overexpression, blue to underexpression of the gene.
 At the same time, gene clusters are functionally annotated in the **Annotate clusters**
 panel on the right.
 
-.. figure:: figures/psc3.1.png
+.. figure:: figures_v3/heatmap_stat.png
     :align: center
     :width: 100%
 
-The **iHeatmap** is an interactive version of the clustered heatmap
-and can be selected in the plot settings. Users are warned that for
-large datasets (such as single-cell RNA-seq data) this plot can become
+Activating the "dynamic" option generates an interactive version of the clustered heatmap. 
+Users should be aware that for large datasets (such as single-cell RNA-seq data) this plot can become
 rather slow.
 
-.. figure:: figures/psc3.2.png
+.. figure:: figures_v3/heatmap_dyn.png
     :align: center
     :width: 100%
 
@@ -114,8 +113,8 @@ selected ``top mode`` in the heatmap panel settings. For each cluster,
 the **Annotate cluster** section provides a functional annotation
 using more than 42 published reference databases, including but not
 limited to well-known databases such as `MSigDB
-<http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__, `KEGG
-<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, and `GO
+<http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__, `Wikipathways
+<https://www.wikipathways.org/>`__, and `GO
 <http://geneontology.org/>`__.  In the plot settings, users can
 specify the level and reference set to be used under the ``Reference
 level`` and ``Reference set`` settings, respectively. 
