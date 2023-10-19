@@ -55,7 +55,7 @@ mitochondrial and ribosomal genes and/or genes in the X and Y chromosomes.
 
 .. figure:: figures_v3/Clustering_set.png
     :align: center
-    :width: 20%
+    :width: 15%
 
 
 Heatmap
@@ -85,7 +85,7 @@ for the column and row labels. The legend in the heatmap can be disabled by unti
 
 .. figure:: figures_v3/heatmap_set.png
     :align: center
-    :width: 30%
+    :width: 20%
         
 The complex heatmap below is generated with the "static" option active. 
 It is a clustered heatmap showing gene expression sorted by 2-way hierarchical
@@ -131,9 +131,9 @@ correlation of the cluster with the annotation term. In the table
 below the barplots, users can view the correlation values of
 annotation features for each cluster.
 
-.. figure:: figures/psc3.4.png
+.. figure:: figures_v3/K_annotation_plot.png
     :align: center
-    :width: 100%
+    :width: 50%
 
 
 PCA/tSNE
