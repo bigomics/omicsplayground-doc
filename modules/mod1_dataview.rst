@@ -8,17 +8,17 @@ quickly lookup a gene, check the counts, or view the data tables.
 It has five panels, which are briefly explained below, followed by
 more detailed information for each panel.
 
-The **Plots** panel displays figures related to the expression level
+The **Gene Overview** panel displays figures related to the expression level
 of the selected gene, correlation, and average expression ranking
-within the dataset. In the **QC** panel, the total number of
+within the dataset. In the **Sample QC** panel, the total number of
 counts (abundance) per sample and their distribution among the samples
 are displayed. This is most useful to check the technical quality of
 the dataset, such as total read counts or abundance of ribosomal
-genes. In **Counts** panel, the exact expression values across the
+genes. In **Counts table** panel, the exact expression values across the
 samples can be looked up, where genes are ordered by the correlation
 with respect to the first gene. Gene-wise average expression of a
 phenotype sample grouping is also presented in this table. In the
-**Samples** panel, more complete information about samples can be
+**Sample Information** panel, more complete information about samples can be
 found. Finally, the **Contrasts** panel, shows information about the
 phenotype comparisons.
 
