@@ -29,6 +29,10 @@ phenotypes. Finally, below the plots, a table contains eithe the genes or genese
 in a given selected area.
 
 
+
+Samples
+*******************************************************************************
+
 Input panel
 --------------------------------------------------------------------------------
 Users can find more information by clicking ``Info`` in the input
@@ -211,3 +215,19 @@ The following plot represents the resulting feature-set ranking.
 .. figure:: figures/psc3.6.png
     :align: center
     :width: 100%
+
+Features
+*******************************************************************************
+
+Input panel
+--------------------------------------------------------------------------------
+Users can find more information by clicking ``Info`` in the input
+panel. It also contains main settings for the analysis, where users can select
+ a family of features in the ``Features`` scroll-down menu, group samples by phenotype
+ using ``Group by`` and filter and select samples with ``Filter samples``. 
+ Furthermore, under *Options*, users can choose the level of analysis (gene or geneset) 
+ and exclude genes in the X and Y chromosomes
+
+.. figure:: figures/psc3.0.png
+    :align: center
+    :width: 30%
