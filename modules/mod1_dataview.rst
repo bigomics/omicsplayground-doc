@@ -35,7 +35,7 @@ or logarithmic expression level (logCPM).
 
 .. figure:: figures_v3/Dataview_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Plots
