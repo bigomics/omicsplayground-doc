@@ -139,27 +139,28 @@ annotation features for each cluster.
 PCA/tSNE
 --------------------------------------------------------------------------------
 The **PCA/tSNE** panel visualizes unsupervised clustering obtained by the principal
-components analysis (`PCA <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__) or 
+components analysis (`PCA <https://www.ncbi.nlm.nih.gov/pubmed/19377034>`__), 
 t-distributed stochastic embedding 
-(`tSNE <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__) algorithms. 
+(`tSNE <http://jmlr.org/papers/volume15/vandermaaten14a/vandermaaten14a.pdf>`__) 
+or Uniform Manifold Approximation and Projection (`UMAP <https://arxiv.org/abs/1802.03426>__) algorithms. 
 This plot shows the relationship (or similarity) between the samples for visual 
 analytics, where similarity is visualized as proximity of the points. 
 Samples that are 'similar' will be placed close to each other.
 
-Users can customise the PCA/tSNE plot in the plot settings, including
-the ``color`` and ``shape`` of points using a phenotype class, label the points, 
-display 2D and 3D visualisation of the PCA/tSNE plot, normalize the matrix and choose
-between a t-SNE, PCA or UMAP ``layout``. The number of genes to be considered for 
-dimensionality reduction can also be altered via ``Ntop``.
+Users can customise the PCA/tSNE/UMAP plot in the plot settings, including
+the ``color/label`` and ``shape`` of points using a phenotype class, the placement
+of the plot legend at the bottom or as a group label, the inclusion of sample labels,
+the choice between a 2D/3D plot display and the normalisation of the plot matrix.
 
-.. figure:: figures/psc3.3.0.png
+.. figure:: figures_v3/PCA_set.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-Based on their configuration settings, users will obtain a similar
-PCA/tSNE plot as below.
+To the right of the PCA/tSNE/UMAP plot (labelled as *PCA/tSNE plot*) the platform also generates a group of
+plots, entitled *Phenotype distribution*, that visualise the distribution of the available phenotype data.
+The plots show the distribution of the phenotypes superposed on the t-SNE clustering.
 
-.. figure:: figures/psc3.3.png
+.. figure:: figures_v3/PCA_tSNE.png
     :align: center
     :width: 100%
 
