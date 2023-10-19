@@ -167,63 +167,18 @@ The plots show the distribution of the phenotypes superposed on the t-SNE cluste
 
 Parallel
 --------------------------------------------------------------------------------
-The **Parallel** panel visualizes the expression levels of selected genes across all conditions.
-The expression values are scaled but scaling can be removed via the plot settings.
-This interactive plot is particularly useful to users working with time series experiments, 
-as samples can be grouped by condition (i.e. time) and ordered manually, as shown below.
-A table containing average expression levels of selected genes across conditions is also generated.
+The **Parallel** panel visualizes the expression levels of selected genes across 
+all conditions in the plot labelled *Parallel coordinates*. The expression values are 
+scaled but scaling can be removed via the plot settings, where gene expression levels 
+can also be averaged by gene module. This interactive plot is particularly useful to users 
+working with time series experiments, as samples can be grouped by condition (i.e. time) and ordered manually.
+A table (named *Selected genes*) containing average expression levels of selected genes across conditions is generated
+below the plot. Finally, to the right of the *Parallel coordinates* plot, a series of histograms 
+display the overal expression of each module ( the number of which is defined by the ``K`` 
+value selected in the heatmap settings) by individual sample.
 
 
-.. figure:: figures/psc3.3B.png
-    :align: center
-    :width: 100%
-    
-
-Phenotypes
---------------------------------------------------------------------------------
-The **Phenotypes** panel visualizes the distribution of the available phenotype data. 
-It provides plots showing the distribution of the phenotypes superposed on the 
-tSNE clustering. Often, we can expect the t-SNE distribution to be driven by the
-particular phenotype that is controlled by the experimental condition or unwanted
-batch effects. Users can choose to put the group labels in the 
-figure or as separate legend in the ``Label`` setting, under the plot *Settings*.
-
-.. figure:: figures/psc3.5.0.png
-    :align: center
-    :width: 30%
-
-The output figure of the panel (phenotype distribution) is shown below. 
-    
-.. figure:: figures/psc3.5.png
-    :align: center
-    :width: 100%
-
-
-Feature ranking
---------------------------------------------------------------------------------
-The **Feature ranking** panel provides the ranked discriminant score for top feature sets.
-It ranks the discriminitive power of the feature set (genes or gene sets) as a 
-cumulative discriminant score for all phenotype variables. 
-In this way, we can find which feature set (gene or gene family/set) can explain 
-the variance in the data the best.
-
-Under the plot configuration *Settings*, users can specify the ``Method`` for 
-computing the discriminant score.
-
-.. figure:: figures/psc3.6.0.png
-    :align: center
-    :width: 30%
-
-* P-value based scoring is computed as the average negative log p-value from the ANOVA.
-* Correlation-based discriminative power is calculated as the average '(1-cor)' 
-  between the groups. Thus, a feature set is highly discriminative if the 
-  between-group correlation is low.
-* The 'meta' method combines the score of the former methods in a multiplicative manner.
- 
-
-The following plot represents the resulting feature-set ranking.
-
-.. figure:: figures/psc3.6.png
+.. figure:: figures_v3/parallel.png
     :align: center
     :width: 100%
 
