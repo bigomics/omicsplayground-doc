@@ -23,14 +23,13 @@ found. Finally, the **Contrasts** panel, shows information about the
 phenotype comparisons.
 
 
-Input panel
+Settings panel
 --------------------------------------------------------------------------------
-Users can find more information about the module by clicking the
-``Info`` button on the left side . The panel contains the main
-settings for the analysis. The analysis can be started by selecting a
-gene of interest from the ``Search gene`` settings. Users can filter and 
-select samples in the ``Filter samples`` settings, or collapse the samples 
-by predetermined groups in the ``Group by`` settings. 
+Users can find the settings panel on the right hand side. 
+The panel contains the main settings for the analysis. The analysis
+can be started by selecting a gene of interest from the ``Gene`` settings. 
+Users can filter and select samples in the ``Filter samples`` settings, 
+or collapse the samples by predetermined groups in the ``Group by`` settings. 
 Under *Options*, it is possible to visualize the information on a raw count level 
 or logarithmic expression level (logCPM).
 
