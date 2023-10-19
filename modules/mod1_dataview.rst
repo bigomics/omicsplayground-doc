@@ -18,7 +18,7 @@ genes. In **Counts table** panel, the exact expression values across the
 samples can be looked up, where genes are ordered by the correlation
 with respect to the first gene. Gene-wise average expression of a
 phenotype sample grouping is also presented in this table. In the
-**Sample Information** panel, more complete information about samples can be
+**Sample information** panel, more complete information about samples can be
 found. Finally, the **Contrasts** panel, shows information about the
 phenotype comparisons.
 
@@ -38,7 +38,7 @@ or logarithmic expression level (logCPM).
     :width: 20%
 
 
-Plots
+Gene Overview
 --------------------------------------------------------------------------------
 
 The **Gene Overview** panel displays figures related to the expression level
@@ -82,16 +82,16 @@ chart of the panel, a detailed explanation is provided below.
         `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
         Colors corresponds to "tissue clusters" as computed by unsupervised clustering.
 
-.. figure:: figures/psc2.1.png
+.. figure:: figures_v3/DV_GO.png
     :align: center
     :width: 100%
 
 
 
-QC
+Sample QC
 --------------------------------------------------------------------------------
 
-In the **QC** panel, the total number of counts (abundance) per
+In the **Sample QC** panel, the total number of counts (abundance) per
 sample and their distribution among the samples are displayed. For
 each sample, users can also see the percentage of counts in terms of
 major gene types such as ribosomal genes, heatshock proteins, or
@@ -105,7 +105,7 @@ the panel.
 
 :**b**: A boxplot of the total number of counts (abundance) for each group.
 
-:**c**: A histogram of the total number of counts (abundance) for each group.
+:**c**: A plot showing the density distribution of counts for each group.
 
 :**d**: A barplot showing the percentage of counts in terms of major gene 
         types such as CD molecules, kinanses or RNA binding motifs for 
@@ -114,14 +114,14 @@ the panel.
 :**e**: A barplot showing the average count levels of major gene types such
         as CD molecules, kinanses or RNA binding motifs for each group. 
 
-.. figure:: figures/psc2.2.png
+.. figure:: figures_v3/DV_QC.png
     :align: center
     :width: 100%
 
 
-Counts
+Counts Table
 --------------------------------------------------------------------------------
-Under the **Counts** panel, the exact expression values across the
+Under the **Counts table** panel, the exact expression values across the
 samples can be read, where genes are ordered by the correlation with
 respect to the first gene.  Gene-wise average expression of a
 phenotype sample grouping is also presented in this table.
@@ -133,15 +133,15 @@ the correlation (**rho** column) with respect to the selected gene.
 **SD** column reports the standard deviation of expression across
 *all* samples (or cells).
 
-.. figure:: figures/psc2.3.png
+.. figure:: figures_v3/DV_CT.png
     :align: center
     :width: 100%
 
 
-Samples
+Sample Information
 --------------------------------------------------------------------------------
 
-In the **Samples** panel, users can check information about samples
+In the **Sample information** panel, users can check information about samples
 and their phenotype grouping through three outputs:
 
 :**a**: A plot showing phenotype clustering. 
@@ -151,7 +151,7 @@ and their phenotype grouping through three outputs:
 
 :**c**: A table with sample information.
 
-.. figure:: figures/psc2.4.png
+.. figure:: figures_v3/DV_SI.png
     :align: center
     :width: 100%
     
@@ -165,6 +165,6 @@ belong to which groups for the different comparisons. Non-zero entries '+1' and 
 correspond to the group of interest and control group, respectively. 
 Zero or empty entries denote samples not use for that comparison.
 
-.. figure:: figures/psc2.5.png
+.. figure:: figures_v3/DV_CON.png
     :align: center
     :width: 100%
