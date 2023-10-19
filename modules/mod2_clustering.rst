@@ -33,14 +33,25 @@ in a given selected area.
 Samples
 *******************************************************************************
 
-Input panel
+Settings panel
 --------------------------------------------------------------------------------
-Users can find more information by clicking ``Info`` in the input
-panel. It also contains main settings for the analysis, where users can select
- a family of features in the ``Features`` scroll-down menu, group samples by phenotype
- using ``Group by`` and filter and select samples with ``Filter samples``. 
- Furthermore, under *Options*, users can choose the level of analysis (gene or geneset) 
- and exclude genes in the X and Y chromosomes
+The settings panel on the right displays various options to customise the plots.
+Under ``Show phenotypes`` users can choose which phenotypes will be displayed in the
+Phenotype distribution plot under the **PCA/tSNE** panel.
+The ``Split samples by`` option applies only to heatmaps. "None" is the default view, 
+"phenotypes" will redraw the heatmap based on the selected phenotype and "gene" allows
+users to split the heatmap based on the expression level of a gene that can be selected
+from a scrolldown menu. ``Filter samples`` can be used to represent only a specific
+subset of samples in the heatmaps, PCA/tSNE/UMAP plots and the parallel coordinates plot.
+Under ``Gene family`` a user can select whether the heatmap and parallel coordinates plot
+will be built based on all the genes, a specific contrast, a specific gene family 
+or alternatively a custom list of genes provided by the user that can be pasted 
+in the appropriate space. 
+Furthermore, under *Advanced options*, users can choose the layout of the clustering
+plots (PCA, tSNE or UMAP), the level of analysis (gene or geneset) and exclude
+mitochondrial and ribosomal genes and/or genes in the X and Y chromosomes.
+
+
 
 .. figure:: figures_v3/Clustering_set.png
     :align: center
