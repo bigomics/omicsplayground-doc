@@ -41,7 +41,7 @@ or logarithmic expression level (logCPM).
 Plots
 --------------------------------------------------------------------------------
 
-The **Plots** panel displays figures related to the expression level
+The **Gene Overview** panel displays figures related to the expression level
 of the selected gene, correlation to other genes, and average
 expression ranking within the dataset.  To find out more information
 from the literature, hyperlinks are provide to connect the selected
