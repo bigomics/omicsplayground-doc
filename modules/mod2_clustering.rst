@@ -185,7 +185,7 @@ value selected in the heatmap settings) by individual sample.
 Features
 *******************************************************************************
 
-Input panel
+Settings panel
 --------------------------------------------------------------------------------
 Users can find more information by clicking ``Info`` in the input
 panel. It also contains main settings for the analysis, where users can select
@@ -194,6 +194,6 @@ panel. It also contains main settings for the analysis, where users can select
  Furthermore, under *Options*, users can choose the level of analysis (gene or geneset) 
  and exclude genes in the X and Y chromosomes
 
-.. figure:: figures/psc3.0.png
+.. figure:: figures_v3/features_set.png
     :align: center
-    :width: 30%
+    :width: 20%
