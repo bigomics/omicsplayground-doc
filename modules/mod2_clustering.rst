@@ -55,7 +55,7 @@ mitochondrial and ribosomal genes and/or genes in the X and Y chromosomes.
 
 .. figure:: figures_v3/Clustering_set.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Heatmap
