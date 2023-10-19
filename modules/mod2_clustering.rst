@@ -174,8 +174,8 @@ can also be averaged by gene module. This interactive plot is particularly usefu
 working with time series experiments, as samples can be grouped by condition (i.e. time) and ordered manually.
 A table (named *Selected genes*) containing average expression levels of selected genes across conditions is generated
 below the plot. Finally, to the right of the *Parallel coordinates* plot, a series of histograms 
-display the overal expression of each module ( the number of which is defined by the ``K`` 
-value selected in the heatmap settings) by individual sample.
+are group together in the *Module expression* panel and  display the overal expression of each module 
+(the number of which is defined by the ``K`` value selected in the heatmap settings) by individual sample.
 
 .. figure:: figures_v3/parallel.png
     :align: center
