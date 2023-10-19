@@ -120,9 +120,9 @@ specify the level and reference set to be used under the ``Reference
 level`` and ``Reference set`` settings, respectively. 
 Users can also select a Fisher test weighting for gene sets.
 
-.. figure:: figures/psc3.4.0.png
+.. figure:: figures_v3/K_annotation_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 The functional annotation for the clusters are displayed below, with
 the highest ranking annotation features (by correlation) displayed for
