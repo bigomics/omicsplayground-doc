@@ -68,20 +68,20 @@ the gene expression data using summary methods such as `GSVA
 and `ssGSEA
 <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-14-7>`__.
 
-Under the plot configuration settings, usesrs can select to display a static or interactive hetmap.
-Users can also split the samples by a phenotype class (e.g., tissue, cell type, or gender) using the
- ``split`` by setting. In addition, users can specify the top N = (50, 150, 500) features to be used 
- in the heatmap.
- The ordering of top features is selected under ``top mode``. The criteria to select the top features are:
+Next to the plot configuration settings, users can select to display a dynamic or static heatmap.
+From the plot configuration settings on top of the plot, users can choose various options to 
+customise their heatmaps. It is possible to order the top features under ``top mode`` as follows:
 
-* SD - features with the highest standard deviation across all the samples,
-* specific - features that are overexpressed in each phenotype class compared to the rest, or by
+* sd - features with the highest standard deviation across all the samples,
 * PCA - by principal components.
+* marker - features that are overexpressed in each phenotype class compared to the rest
 
-The number of gene clusters to be displayed can be selected under ``K``.
-Users can also choose between 'relative' or 'absolute' expression
+In addition, users can specify the ``Top N`` (50, 150, 500) genes to be used 
+in the heatmap and the number of gene clusters to be displayed under ``K``.
+Users can also choose between 'relative', 'absolute' or 'BMC' (batch-mean centered) expression
 scale. Under the ``CexCol`` and ``CexRow`` settings, it is also possible to adjust the font sizes
-for the column and row labels.
+for the column and row labels. The legend in the heatmap can be disabled by unticking the
+``show legend`` option.
 
 .. figure:: figures/psc3.1.0.png
     :align: center
