@@ -177,7 +177,6 @@ below the plot. Finally, to the right of the *Parallel coordinates* plot, a seri
 display the overal expression of each module ( the number of which is defined by the ``K`` 
 value selected in the heatmap settings) by individual sample.
 
-
 .. figure:: figures_v3/parallel.png
     :align: center
     :width: 100%
@@ -187,12 +186,19 @@ Features
 
 Settings panel
 --------------------------------------------------------------------------------
-Users can find more information by clicking ``Info`` in the input
-panel. It also contains main settings for the analysis, where users can select
- a family of features in the ``Features`` scroll-down menu, group samples by phenotype
- using ``Group by`` and filter and select samples with ``Filter samples``. 
- Furthermore, under *Options*, users can choose the level of analysis (gene or geneset) 
- and exclude genes in the X and Y chromosomes
+Using the ``Show phenotype`` option the phenotypes that will be shown
+in the *Gene signatures* plots can be selected. Users can also select whether
+to use all genes for the *Gene UMAP* plot or instead select a combination 
+of gene families under the ``Annotate genes`` option. The ``Annotate genesets``
+option provides the same functionality for the *Geneset UMAP* plot based on the available
+geneset collections The ``Show full table`` option shows the full list of unfiltered genes
+or genesets. Under the advanced options users can select which sample group to use as
+a ``Reference`` to calculate the standard-deviation of log-expression (sd.X), 
+or standard-deviation of the fold-change (sd.FC). If none is selected, the average values
+for all samples will be used instead. The final option, ``UMAP datatype``, is used to select 
+how the UMAP plot will be computed: either using the normalised log-expression (logCPM) 
+or log-fold change matrix (logFC). logCPM is the default choice, while logFC can be used 
+if batch or tissue effects are present in the dataset,
 
 .. figure:: figures_v3/features_set.png
     :align: center
