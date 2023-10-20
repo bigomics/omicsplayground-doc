@@ -219,13 +219,13 @@ Finally, users can choose the number of gene or genesets to be labelled in the U
 Gene
 --------------------------------------------------------------------------------
 The **Gene** submodule contains three panels. The **Gene UMAP** panel displays 
-the UMAP clustering of genes colored by standard-deviation of log-expression(sd.X), 
+the UMAP clustering of genes coloured by standard-deviation of log-expression(sd.X), 
 or standard-deviation of the fold-change (sd.FC) and using the covariance of gene expression
 as a distance metric. The **Gene signatures** panel is to the right of the Gene UMAP, which
-shows the gene UMAP plots for each phenotypic group colored by relative log-expression. Red 
+shows the gene UMAP plots for each phenotypic group coloured by relative log-expression. Red 
 indicates a gene is overexpressed in a specific group, blue that it is downregulated compared 
 to the average values of all samples. The **Gene table** is located below the Gene UMAP and shows
-all the gene contained in the gene UMAP plot and their relative change in expression. 
+all the gene contained in the Gene UMAP plot and their relative change in expression. 
 The contents of this table can be subsetted by selecting (by click&drag) on the Gene UMAP plot.
 
 .. figure:: figures_v3/features_gene.png
@@ -234,3 +234,16 @@ The contents of this table can be subsetted by selecting (by click&drag) on the 
 
 Geneset
 --------------------------------------------------------------------------------
+The **Geneset** submodule contains three panels. The **Geneset UMAP** panel displays 
+the UMAP clustering of genesets coloured by standard-deviation of log-expression(sd.X), 
+or standard-deviation of the fold-change (sd.FC) and using the covariance of gene expression
+as a distance metric. The **Geneset signatures** panel is to the right of the Geneset UMAP, which
+shows the geneset UMAP plots for each phenotypic group coloured by relative log-expression. Red 
+indicates a geneset is overexpressed in a specific group, blue that it is downregulated compared 
+to the average values of all samples. The **Geneset table** is located below the Geneset UMAP and shows
+all the gene contained in the Geneset UMAP plot and their relative change in expression. 
+The contents of this table can be subsetted by selecting (by click&drag) on the Geneset UMAP plot.
+
+.. figure:: figures_v3/features_geneset.png
+    :align: center
+    :width: 100%
