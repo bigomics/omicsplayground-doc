@@ -272,9 +272,17 @@ Four panels (from left to right and top to bottom) are present under the **Featu
 
 Feature-set Ranking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-This tab consists of a single plot, the aptly named **Feature-set Ranking**, which displays the ranked discriminant score for top feature sets. The plot ranks the discriminative power of the feature set (or gene family) as a cumulative discriminant score for all phenotype variables. In this way, we can find which feature set (or gene family) can explain the variance in the data the best. Correlation-based discriminative power is calculated as the average '(1-cor)' between the groups. Thus, a feature set is highly discriminative if the between-group correlation is low. P-value based scoring is computed as the average negative log p-value from the ANOVA. The 'meta' method combines the score of the former methods in a multiplicative manner.
+This tab consists of a single plot, the aptly named **Feature-set Ranking**, which displays the ranked discriminant score for top feature sets. The plot ranks the discriminative power of the feature set (or gene family) as a cumulative discriminant score for all phenotype variables. In this way, we can find which feature set (or gene family) can explain the variance in the data the best. 
 
 
-.. figure:: figures_v3/Bio_selection.png
+.. figure:: figures_v3/Bio_rank.png
     :align: center
     :width: 100%
+
+
+Users can choose between three different methods for the calculation of the plot. P-value based scoring ('p-value') is computed as the average negative log p-value from the ANOVA test. Correlation-based discriminative power ('correlation') is calculated as the average 1-cor between the groups. Thus, a feature set is highly discriminative if the between-group correlation is low. The 'meta' method combines the scores of the two aforementioned methods in a multiplicative manner.
+
+
+.. figure:: figures_v3/Bio_rank_opts.png
+    :align: center
+    :width: 20%
