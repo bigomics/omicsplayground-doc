@@ -118,11 +118,11 @@ The **Top genes** panel shows the average expression plots across the samples fo
     :align: center
     :width: 100%
 
-The plot can be customised via the settings to remove the log scale, ungroup samples and show only samples 
+The plot can be customised via the settings to remove the log scale, group samples and show only samples 
 included in the selected contrast.
 
 
-.. figure:: figures/psc4.2.0.png
+.. figure:: figures/DE_topgenes_opts.png
     :align: center
     :width: 30%
 
