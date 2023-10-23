@@ -3,14 +3,16 @@
 Expression
 ================================================================================
 
-The **Expression** module is divided into two main panels. The **Differential Expression** 
+The **Expression** module is divided into three submodules. The **Differential Expression** 
 panel compares expression between two conditions (i.e. tumor versus control), 
 which is one of the fundamental analysis in the transcriptomics data analytics workflow. 
 For each comparison of two conditions (also called a 'contrast'), the analysis identifies 
 which genes are significantly downregulated or overexpressed in one of the groups.
 
-The **Correlation Analysis** panel computes the correlation between genes and finds 
+The **Correlation Analysis** submodule computes the correlation between genes and finds 
 coregulated modules.
+
+Finally, the **Biomarkers** submodule
 
 
 Differential expression
