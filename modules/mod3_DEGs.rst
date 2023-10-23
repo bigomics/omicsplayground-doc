@@ -29,9 +29,9 @@ logarithmic fold change (logFC) thresholds under the ``FDR`` and ``logFC thresho
 Under "Options", users can select to display all genes in the table (not only significant genes) 
 and also select different combinations of statistical methods for the analysis.
 
-.. figure:: figures/psc4.0.png
+.. figure:: figures_v3/DE_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
