@@ -211,16 +211,23 @@ Graph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Two plots are generated under the **Graph** tab:
 
-:**a**: A series of gene set enrichment analysis (GSEA) plots using the correlation as rank metric.
-        The black bars denote the genes in the gene set and their position in the sorted rank metric.
+:**Partial correlation network**: This plot shows the correlations between gene pairs. Grey edges correspond to positive correlation, 
+red edges correspond to negative correlation. The width of the edge is proportional to the absolute partial correlation value of the gene pair.
+It can be customised from the plot settings
 
-:**b**: A table containing the statistical results from the GSEA. The table displays 
-        normalised enrichment scores (NES), adjusted and non-adjusted p-values,size of the gene set 
-        and a link to gene set information.
 
-:**c**: A plot of the frequency of leading edge genes in top correlated genesets.
+.. figure:: figures_v3/COR_scat_opts.png
+    :align: center
+    :width: 20%
 
-:**d**: A table of the leading edge genes and rank statistics (rho) of the selected geneset.
+
+:**Correlation UMAP**:  UMAP plot showing the correlation between genes. Genes that are correlated are generally positioned close to each other. 
+Red corresponds to positive correlation/covariance, blue to negative.
+
+
+.. figure:: figures_v3/COR_UMAP_opts.png
+    :align: center
+    :width: 20%
 
 
 .. figure:: figures/psc4.6.png
