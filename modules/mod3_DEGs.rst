@@ -211,10 +211,10 @@ Graph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Two plots are generated under the **Graph** tab:
 
-:**Partial correlation network**: This plot shows the correlations between gene pairs. Grey edges correspond to positive correlation, red edges correspond to negative correlation. The width of the edge is proportional to the absolute partial correlation value of the gene pair. It can be customised from the plot settings
+:**Partial correlation network**: This plot shows the correlations between gene pairs. Grey edges correspond to positive correlation, red edges correspond to negative correlation. The width of the edge is proportional to the absolute partial correlation value of the gene pair. It can be customised from the plot settings, where the radius of the plot and the partial correlation threshold (``pcor threshold``) can be altered. Users can also the choose from four different layouts (Fruchterman-Reingold, Kamada-Kawai, graphopt and tree layout) under the ``Layout`` option.
 
 
-.. figure:: figures_v3/COR_scat_opts.png
+.. figure:: figures_v3/COR_PCN_opts.png
     :align: center
     :width: 20%
 
@@ -224,7 +224,9 @@ Two plots are generated under the **Graph** tab:
 
 .. figure:: figures_v3/COR_UMAP_opts.png
     :align: center
-    :width: 10%
+    :width: 15%
+
+The **Partial correlation network** is on the left, while the **Correlation UMAP** is on the right of the panel.
 
 
 .. figure:: figures_v3/COR_graph.png
