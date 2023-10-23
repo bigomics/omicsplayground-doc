@@ -12,7 +12,7 @@ which genes are significantly downregulated or overexpressed in one of the group
 The **Correlation Analysis** submodule computes the correlation between genes and finds 
 coregulated modules.
 
-Finally, the **Biomarkers** submodule is used to identify potential biomarkers for a set 
+Finally, the **Find biomarkers** submodule is used to identify potential biomarkers for a set 
 of phenotypic groups based on gene or protein expression values.
 
 
@@ -219,4 +219,18 @@ Four outputs are generated under the **Functional** tab:
     :width: 100%
 
 
+Find Biomarkers
+--------------------------------------------------------------------------------
+
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Users can find more information by clicking ``Info``. The panel contains the main settings for the analysis. 
+The analysis can be started by selecting a gene of interest from the ``Gene`` settings. 
+Under *Options*, users can filter for a specific gene family by using the ``Gene family`` setting.
+By using the ``Filter samples`` setting they con focus only on specific sample groups.
+
+
+.. figure:: figures/psc4.5.0.png
+    :align: center
+    :width: 30%
     
