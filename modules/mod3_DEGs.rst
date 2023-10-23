@@ -155,12 +155,13 @@ plots with 'higher' wings.
 Correlation analysis
 --------------------------------------------------------------------------------
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Users can find more information by clicking ``Info``. The panel contains the main settings for the analysis. 
-The analysis can be started by selecting a gene of interest from the ``Gene`` settings. 
-Under *Options*, users can filter for a specific gene family by using the ``Gene family`` setting.
-By using the ``Filter samples`` setting they con focus only on specific sample groups.
+The panel contains the main settings for the analysis. The analysis can be started 
+by selecting a gene of interest from the ``Gene`` settings. Users can 
+filter for a specific gene family by using the ``Filter genes`` setting.
+Finally, users can select the number of top genes used to compute partial correlation 
+under the homonymous setting.
 
 
 .. figure:: figures/psc4.5.0.png
