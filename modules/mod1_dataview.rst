@@ -54,31 +54,31 @@ correlation of the gene in other datasets such as `ImmProt
 cumulative correlation. Furthermore, it displays the tissue expression
 for a selected gene using the genotype-tissue expression `GTEx
 <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ dataset.  For each
-chart of the panel, a detailed explanation is provided below.
+chart of the panel (left to right, top to bottom), a detailed explanation is provided below.
 
 
-:**a**: To find out more information from the literature, hyperlinks are provide to 
+:**Gene info**: To find out more information from the literature, hyperlinks are provide to 
         connect the selected gene to public databases, 
         including `OMIM <https://www.ncbi.nlm.nih.gov/omim/>`__, 
         `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
         and `GO <http://geneontology.org/>`__.
 
-:**b**: Expression barplot of grouped samples (or cells) for the selected gene. 
+:**Gene Expression**: Expression barplot of grouped samples (or cells) for the selected gene. 
         Samples (or cells) in the barplot can 
         be ungrouped by setting the ``Group by`` under the main *Options*.
 
-:**c**: Ranking of the average expression of the selected gene.
+:**Average Rank**: Ranking of the average expression of the selected gene.
 
-:**d**: T-SNE clustering of samples (or cells) colored by an expression of the 
+:**t-SNE clustering**: T-SNE clustering of samples (or cells) colored by an expression of the 
         gene selected in the ``Search gene`` dropdown menu. The red color 
         represents an over-expression of the selected gene across samples (or cells). 
 
-:**e**: Barplot of the top positively and negatively correlated genes 
+:**Top correlated genes**: Barplot of the top positively and negatively correlated genes 
         with the selected gene. Absolute expression levels 
         of genes are colored in the barplot, where the low and high expressions 
         range between the light blue and dark blue colors, respectively.
         
-:**f**: Tissue expression for the selected gene in the tissue expression 
+:**Tissue expression (GTEX)**: Tissue expression for the selected gene in the tissue expression 
         `GTEx <https://www.ncbi.nlm.nih.gov/pubmed/23715323>`__ database. 
         Colors corresponds to "tissue clusters" as computed by unsupervised clustering.
 
@@ -97,21 +97,21 @@ each sample, users can also see the percentage of counts in terms of
 major gene types such as ribosomal genes, heatshock proteins, or
 kinases. Abnormal abundance of certain genes may indicate technical
 problems. A detailed explanation is provided below for every chart of
-the panel.
+the panel (left to right, top to bottom).
 
-:**a**: A barplot of the total number of counts (abundance) for each group. 
+:**Total counts**: A barplot of the total number of counts (abundance) for each group. 
         The samples (or cells) can be grouped/ungrouped in the ``Group by``
         setting uder the main *Options*.
 
-:**b**: A boxplot of the total number of counts (abundance) for each group.
+:**Median counts distribution**: A boxplot of the total number of counts (abundance) for each group.
 
-:**c**: A plot showing the density distribution of counts for each group.
+:**Density distribution of counts**: A plot showing the density distribution of counts for each group.
 
-:**d**: A barplot showing the percentage of counts in terms of major gene 
+:**Dataset abundance of major gene types**: A barplot showing the percentage of counts in terms of major gene 
         types such as CD molecules, kinanses or RNA binding motifs for 
         each group. 
 
-:**e**: A barplot showing the average count levels of major gene types such
+:**Abundance of major gene types per group**: A barplot showing the average count levels of major gene types such
         as CD molecules, kinanses or RNA binding motifs for each group. 
 
 .. figure:: figures_v3/DV_QC.png
@@ -142,14 +142,14 @@ Sample Information
 --------------------------------------------------------------------------------
 
 In the **Sample information** panel, users can check information about samples
-and their phenotype grouping through three outputs:
+and their phenotype grouping through three outputs (left to right, top to bottom):
 
-:**a**: A plot showing phenotype clustering. 
+:**Phenotype clustering**: A plot showing phenotype clustering. 
         Phenotypes can be unclustered via the *Settings* icon
 
-:**b**: A phenotype association matrix showing correlation between phenotypes.
+:**Phenotype association**: A phenotype association matrix showing correlation between phenotypes.
 
-:**c**: A table with sample information.
+:**Sample information**: A table with sample information.
 
 .. figure:: figures_v3/DV_SI.png
     :align: center
