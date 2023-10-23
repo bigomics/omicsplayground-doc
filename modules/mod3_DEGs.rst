@@ -12,16 +12,17 @@ which genes are significantly downregulated or overexpressed in one of the group
 The **Correlation Analysis** submodule computes the correlation between genes and finds 
 coregulated modules.
 
-Finally, the **Biomarkers** submodule
+Finally, the **Biomarkers** submodule is used to identify potential biomarkers for a set 
+of phenotypic groups based on gene or protein expression values.
 
 
 Differential expression
 --------------------------------------------------------------------------------
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The input panel on the left contains a link to a tutorial for relevant, as well as some settings 
-for the analysis. Users can start the differntial expression (DE) analysis by selecting a contrast 
+The settings panel on the right contains some settings for the analysis. 
+Users can start the differntial expression (DE) analysis by selecting a contrast 
 of their interest in the ``Contrast`` setting and specifying a relevent gene family in the 
 ``Gene family`` setting. It is possible to set the false discovery rate (FDR) and the 
 logarithmic fold change (logFC) thresholds under the ``FDR`` and ``logFC threshold`` settings, respectively. 
