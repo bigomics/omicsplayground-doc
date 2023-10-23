@@ -58,7 +58,7 @@ in the selected contrast. Selecting a specific gene set from the 'Enrichment ana
 the selected gene set alone.
 
 
-.. figure:: figures/psc5.2.png
+.. figure:: figures_v3/GE_enrichment_1.png
     :align: center
     :width: 100%
 
@@ -68,7 +68,7 @@ Frequency in top gene sets
 This panel shows the number of times a gene is present in the top-N genesets sorted by frequency. Genes that are frequently shared among the top enriched gene sets may suggest driver genes.
 
 
-.. figure:: figures/psc5.2.png
+.. figure:: figures_v3/GE_enrichment_2.png
     :align: center
     :width: 100%
 
@@ -76,7 +76,7 @@ This panel shows the number of times a gene is present in the top-N genesets sor
 The settings icon open the settings menu from which users can select the ``Number of top gene sets``, 
 whether to weight by geneset size (``Weight by geneset size``) and whether to weight by fold-change (``Weight by FC``).
 
-.. figure:: figures/psc6.0.png
+.. figure:: figures_v3/GE_freq_opts.png
     :align: center
     :width: 20%
 
