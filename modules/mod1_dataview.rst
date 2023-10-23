@@ -170,8 +170,8 @@ Zero or empty entries denote samples not use for that comparison.
     :width: 100%
 
 
-Through te settings icon on top of the plot, users can display samples individually or in groups. 
+Through the settings icon on top of the plot, users can display samples individually or in groups. 
 
-.. figure:: figures_v3/DV_contrasts_opts.png
+.. figure:: figures_v3/DV_contrast_opts.png
     :align: center
     :width: 20%
