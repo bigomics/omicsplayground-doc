@@ -20,20 +20,8 @@ and Gene Ontology (`GO <http://geneontology.org/>`__).
 Users have to specify which comparison they want to visually analyze 
 employing a certain geneset collection.
 
-The enrichment analyses results from the statistical methods are 
-displayed in **Table** panel. In the **Top enriched** panel, the top 
-differentially enriched geneses (pathways) are displayed. In the **Plots** panel,
-a volcano plot of genes contained in the selected geneset and a barplot of 
-expressions per sample group are displayed. In the **Compare** panel, users can 
-compare the differential expression status of that geneset for all other 
-comparisons. Volcano plots of genesets for all comparisons are 
-displayed under the **Volcano (all)** tab. This allows users to have an overall 
-picture across comparisons at the same time. To compare the different statistical methods, 
-the **Volcano (methods)** panel shows volcano plots of all methods. The **GeneMap** panel 
-displays the co-activation heatmap of top N = {25} enriched gene sets and their common genes.
-The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
-The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
-The **FDR table** panel reports the number of significant gene sets at different FDR thresholds for all contrasts.
+The tab consists of the settings panels as well as four results panels: **Top enriched gene sets**, 
+**Frequency in top gene sets**, a **Table** panel where users can swicth between three tables and **Genes in gene sets**.
 
 
 Settings panel
@@ -58,6 +46,53 @@ up- and down-regulated gene sets.
     :align: center
     :width: 20%
 
+
+Top enriched gene sets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This panel displays the enrichment plots of the top differentially enriched gene sets (up and down) for the selected contrast. 
+Black vertical bars indicate the rank of genes in the gene set in the sorted list metric. 
+The green curve corresponds to the enrichment score (ES). The more the green ES curve is shifted to the upper left of the graph, 
+the more the gene set is enriched in the first group. Conversely, a shift of the ES curve to the lower right, 
+corresponds to more enrichment in the second group. This panel will by default display the 12 most up-regulated genesets 
+in the selected contrast. Selecting a specific gene set from the 'Enrichment analysis' table below it will display 
+the selected gene set alone.
+
+
+.. figure:: figures/psc5.2.png
+    :align: center
+    :width: 100%
+
+
+Frequency in top gene sets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This panel shows the number of times a gene is present in the top-N genesets sorted by frequency. Genes that are frequently shared among the top enriched gene sets may suggest driver genes.
+
+
+.. figure:: figures/psc5.2.png
+    :align: center
+    :width: 100%
+
+
+The settings icon open the settings menu from which users can select the ``Number of top gene sets``, 
+whether to weight by geneset size (``Weight by geneset size``) and whether to weight by fold-change (``Weight by FC``).
+
+.. figure:: figures/psc6.0.png
+    :align: center
+    :width: 20%
+
+
+In the **Plots** panel,
+a volcano plot of genes contained in the selected geneset and a barplot of 
+expressions per sample group are displayed. In the **Compare** panel, users can 
+compare the differential expression status of that geneset for all other 
+comparisons. Volcano plots of genesets for all comparisons are 
+displayed under the **Volcano (all)** tab. This allows users to have an overall 
+picture across comparisons at the same time. To compare the different statistical methods, 
+the **Volcano (methods)** panel shows volcano plots of all methods. The **GeneMap** panel 
+displays the co-activation heatmap of top N = {25} enriched gene sets and their common genes.
+The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
+The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
+The **FDR table** panel reports the number of significant gene sets at different FDR thresholds for all contrasts.
 
 Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,33 +125,6 @@ that gene set in Table ``II``. It also reports the fold-change, statistics and
 correlation of the genes in the selected gene set. By clicking on a gene in 
 Table ``II``, under the **Plots** panel, users can check its correlation to the gene set 
 in the ``Enrichment vs. expression`` correlation scatter plot.
-
-
-Top enriched
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Top enriched** panel shows two plots:
-
-:**a**: The enrichment plots of the top differentially 
-        enriched gene sets (up and down) for the selected contrast. Black vertical bars 
-        indicate the rank of genes in the gene set in the sorted list metric. 
-        The green curve corresponds to the enrichment score (ES). The more the green 
-        ES curve is shifted to the upper left of the graph, the more the gene set 
-        is enriched in the first group. Conversely, a shift of the ES curve to the 
-        lower right, corresponds to more enrichment in the second group.
-:**b**: A gene frequency plot shows the number of times a gene is present in the top-N genesets 
-        sorted by frequency. Genes that are frequently shared among the top enriched gene sets 
-        may suggest driver genes.      
-
-.. figure:: figures/psc5.2.png
-    :align: center
-    :width: 100%
-
-The gene frequency plot can be customised via the *Settings*. Users can change the nuber of 
-top gene sets to be included and deselect weighting by fold change (FC) and gene set size.
-
-.. figure:: figures/psc5.2.0.png
-    :align: center
-    :width: 30%
 
 
 Plots
