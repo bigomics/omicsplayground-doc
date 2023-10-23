@@ -243,7 +243,8 @@ The panel contains the main settings for the analysis. Users select the phenotyp
 perform the analysis with the ``Predicted target`` setting. In the ``Filter samples`` setting users 
 can restrict the analysis to a subset of samples rather than the default choice of all samples.
 The ``Feature set`` setting will by default be set to "all", but users can restrict the calculations 
-only to a specific gene family or, alteratively, they can paste their own selection of genes.
+only to a specific gene family or, alteratively, they can paste their own selection of genes. Once all
+the settings have been assigned, clicking *Compute* will start the calculation.
 
 
 .. figure:: figures_v3/Bio_settings.png
