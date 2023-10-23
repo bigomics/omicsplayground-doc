@@ -135,7 +135,7 @@ Experimental contrasts with better statistical significance will show
 volcano plots with 'higher' wings.
 
 
-.. figure:: figures/psc4.3.png
+.. figure:: figures_v3/DE_volc_by_comp.png
     :align: center
     :width: 100%
 
