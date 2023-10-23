@@ -70,7 +70,7 @@ The **Foldchange (all)** tab reports the gene fold changes for all contrasts in 
 The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
 
 
-.. figure:: figures/psc4.1.1.png
+.. figure:: figures_v3/DE_FC_all.png
     :align: center
     :width: 100%
 
@@ -83,7 +83,7 @@ to the number of significant down-regulated genes, the right part (in red)
 correspond to the number of significant overexpressed genes.
 
 
-.. figure:: figures/psc4.1.2.png
+.. figure:: figures_v3/DE_FDR.png
     :align: center
     :width: 100%
 
