@@ -202,7 +202,7 @@ the plots under ``Layout`.
 :**Correlation table**: it shows the statistical results from correlated gene pairs. 
 
 
-.. figure:: figures/psc4.5.png
+.. figure:: figures_v3/COR_cor.png
     :align: center
     :width: 100%
 
