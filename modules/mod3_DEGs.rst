@@ -147,7 +147,7 @@ Methods showing better statistical significance will show volcano
 plots with 'higher' wings.
 
 
-.. figure:: figures/psc4.4.png
+.. figure:: figures_v3/DE_volc_met.png
     :align: center
     :width: 100%
 
