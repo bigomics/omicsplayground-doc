@@ -260,12 +260,12 @@ Four panels (from left to right and top to bottom) are present under the **Featu
 
 :**Biomarker Expression**: These boxplots shows the expression of putative biomarkers across the samples of the identified features.
 
-:*Heatmap**: Expression heatmap of top gene features according to their variable importance. By default the plot will only show the selected samples, but all samples can be displayed via the settings button on top.
+:**Heatmap**: Expression heatmap of top gene features according to their variable importance. By default the plot will only show the selected samples, but all samples can be displayed via the settings button on top.
 
 :**Decision tree**: The decision tree shows a tree solution for classification based on the top most important features. The plot provides a proportion of the samples that are defined by each biomarker in the boxes.
 
 
-.. figure:: figures_v3/COR_graph.png
+.. figure:: figures_v3/Bio_selection.png
     :align: center
     :width: 100%
 
