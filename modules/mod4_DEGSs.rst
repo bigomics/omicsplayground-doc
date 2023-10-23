@@ -1,6 +1,6 @@
 .. _Enrichment:
 
-Enrichment
+GeneSets
 ================================================================================
 
 This module is subdivided into four submodules: **Geneset enrichment**, 
@@ -36,19 +36,13 @@ The column ``fc.var`` corresponds to the variance of the fold-change across all 
 The **FDR table** panel reports the number of significant gene sets at different FDR thresholds for all contrasts.
 
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Users can find a tutorial about the module under ``Tutorial`` in the input panel.
 The enrichment analysis can be started by selecting a contrats of interest in 
 the ``Contrast`` and specifying a relevent gene set family in the ``Gene set collection``.
 It is possible to set the false discovery rate (FDR) and the logarithmic fold change 
 (logFC) thresholds under the ``FDR`` and ``logFC threshold`` settings, respectively.
-
-.. figure:: figures/psc5.0.png
-    :align: center
-    :width: 30%
-
-We allow users to show all gene sets in table ``I`` , rather than just the significant ones, under the *Options* menu.
+We allow users to show all gene sets in the``Enrichment analysis`` table , rather than just the significant ones, under the *Options* menu.
 Users can also select statistical methods for the enrichment analysis from the same menu.
 To ensure the statistical reliability, the platform performs enrichment analyses using multiple methods, including 
 `Spearman rank correlation <https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient>`__, 
@@ -57,7 +51,12 @@ To ensure the statistical reliability, the platform performs enrichment analyses
 `Fisher's exact test <https://www.jstor.org/stable/2340521?seq=1#metadata_info_tab_contents>`__, 
 `GSEA <http://software.broadinstitute.org/gsea/index.jsp>`__, 
 `camera <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3458527/>`__ and 
-`fry <https://academic.oup.com/bioinformatics/article/26/17/2176/200022>`__.
+`fry <https://academic.oup.com/bioinformatics/article/26/17/2176/200022>`__. Finally users can limit the results to only the top 10 
+up- and down-regulated gene sets.
+
+.. figure:: figures/psc5.0.png
+    :align: center
+    :width: 30%
 
 
 Table
