@@ -35,7 +35,7 @@ and also select different combinations of statistical methods for the analysis.
 
 Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Table ``I`` shows the results of the statistical tests slected in the 
+The ``Differential expression analysis`` table shows the results of the statistical tests slected in the 
 ``Statistical methods``. By default, this table reports 
 the meta (combined) results of 
 `DESeq2 <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4302049/>`__ (Wald),
@@ -50,7 +50,7 @@ by ticking ``show individual q-values`` from the table *Settings*.
     :width: 30%
     
 For a selected comparison under the ``Contrast`` setting, the results of the selected 
-methods are combined and reported in Table ``I``, where ``meta.q`` for a gene 
+methods are combined and reported in the ``Differential expression analysis`` table, where ``meta.q`` for a gene 
 represents the highest ``q`` value among the methods and the number of stars for 
 a gene indicate how many methods identified significant ``q`` values (``q < 0.05``). 
 The table is interactive (scrollable, clickable); users can sort genes by ``logFC``, 
