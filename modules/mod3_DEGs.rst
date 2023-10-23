@@ -89,7 +89,7 @@ correspond to the number of significant overexpressed genes.
 
 Overview Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Overview** panel shows on top the following plots (from left to right):
+The **Overview** tab shows on top the following plots (from left to right):
 
 :**Volcano Plot**: An interactive volcano plot for the chosen contrast. Unless a specific gene is selected 
         from the differential expression analysis table, all significant genes are highlighted in blue.
@@ -110,7 +110,7 @@ The **Overview** panel shows on top the following plots (from left to right):
 
 Top genes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Top genes** panel shows the average expression plots across the samples for the top differentially 
+The **Top genes** tab shows the average expression plots across the samples for the top differentially 
 (both positively and negatively) expressed genes for the selected comparison from the ``Contrast`` setting.
 
 
@@ -126,9 +126,9 @@ included in the selected contrast.
     :align: center
     :width: 20%
 
-Volcano (all)
+Volcano by comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **Volcano (all)** tab, the platform simultaneously displays multiple volcano plots 
+Under the **Volcano by comparison** tab, the platform simultaneously displays multiple volcano plots 
 for genes across all contrasts. By comparing multiple volcano plots, 
 the user can immediately see which comparison is statistically weak or strong.
 Experimental contrasts with better statistical significance will show 
