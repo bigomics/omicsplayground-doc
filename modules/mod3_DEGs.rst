@@ -122,9 +122,9 @@ The plot can be customised via the settings to remove the log scale, group sampl
 included in the selected contrast.
 
 
-.. figure:: figures/DE_topgenes_opts.png
+.. figure:: figures_v3/DE_topgenes_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 Volcano (all)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
