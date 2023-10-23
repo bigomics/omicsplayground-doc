@@ -207,9 +207,9 @@ the plots under ``Layout`.
     :width: 100%
 
 
-Functional
+Graph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Four outputs are generated under the **Functional** tab:
+Two plots are generated under the **Graph** tab:
 
 :**a**: A series of gene set enrichment analysis (GSEA) plots using the correlation as rank metric.
         The black bars denote the genes in the gene set and their position in the sorted rank metric.
