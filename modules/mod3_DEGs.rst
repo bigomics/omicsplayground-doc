@@ -110,11 +110,11 @@ The **Overview** panel shows on top the following plots (from left to right):
 
 Top genes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Top genes** section shows the average expression plots across the samples for the top differentially 
+The **Top genes** panel shows the average expression plots across the samples for the top differentially 
 (both positively and negatively) expressed genes for the selected comparison from the ``Contrast`` setting.
 
 
-.. figure:: figures/psc4.2.png
+.. figure:: figures_v3/DE_topgenes.png
     :align: center
     :width: 100%
 
