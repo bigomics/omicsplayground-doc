@@ -89,22 +89,22 @@ correspond to the number of significant overexpressed genes.
 
 Overview Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Overview** panel shows the following plots:
+The **Overview** panel shows on top the following plots (from left to right):
 
-:**a**: An interactive volcano plot for the chosen contrast. Unless a specific gene is selected 
+:**Volcano Plot**: An interactive volcano plot for the chosen contrast. Unless a specific gene is selected 
         from the differential expression analysis table, all significant genes are highlighted in blue.
 
-:**b**: An interactive MA plot for the chosen contrast. Unless a specific gene is selected 
+:**Bland-Altman (MA) plot**: An interactive MA plot for the chosen contrast. Unless a specific gene is selected 
         from the differential expression analysis table, all significant genes are highlighted in blue.
 
-:**c**: Differential expression boxplot for a gene that is selected from the 
+:**Differential expression**: Differential expression boxplot for a gene that is selected from the 
         differential expression analysis table. Users can customise the plot via the settings icon on top 
         to ungroup samples and change the scale to counts per million (CPM).
 
-:**d**: Fold change summary barplot across all contrasts for a gene that is selected 
+:**Gene in comparison**: Fold change summary barplot across all contrasts for a gene that is selected 
         from the differential expression analysis table.
 
-.. figure:: figures/psc4.1.3.png
+.. figure:: figures_v3/DE_overview.png
     :align: center
     :width: 100%
 
