@@ -250,4 +250,13 @@ the settings have been assigned, clicking *Compute* will start the calculation.
 .. figure:: figures_v3/Bio_settings.png
     :align: center
     :width: 20%
-    
+
+
+Feature Selection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Two plots are generated under the **Feature Selection** tab:
+
+
+Feature-set Ranking
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Two plots are generated under the **Feature-set Ranking** tab:
