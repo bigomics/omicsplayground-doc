@@ -211,9 +211,7 @@ Graph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Two plots are generated under the **Graph** tab:
 
-:**Partial correlation network**: This plot shows the correlations between gene pairs. Grey edges correspond to positive correlation, 
-red edges correspond to negative correlation. The width of the edge is proportional to the absolute partial correlation value of the gene pair.
-It can be customised from the plot settings
+:**Partial correlation network**: This plot shows the correlations between gene pairs. Grey edges correspond to positive correlation, red edges correspond to negative correlation. The width of the edge is proportional to the absolute partial correlation value of the gene pair. It can be customised from the plot settings
 
 
 .. figure:: figures_v3/COR_scat_opts.png
@@ -221,16 +219,15 @@ It can be customised from the plot settings
     :width: 20%
 
 
-:**Correlation UMAP**:  UMAP plot showing the correlation between genes. Genes that are correlated are generally positioned close to each other. 
-Red corresponds to positive correlation/covariance, blue to negative.
+:**Correlation UMAP**:  UMAP plot showing the correlation between genes. Genes that are correlated are generally positioned close to each other. Red corresponds to positive correlation/covariance, blue to negative. User can select whether to colour the genes by correlation or covariance in plot settings.
 
 
 .. figure:: figures_v3/COR_UMAP_opts.png
     :align: center
-    :width: 20%
+    :width: 10%
 
 
-.. figure:: figures/psc4.6.png
+.. figure:: figures_v3/COR_graph.png
     :align: center
     :width: 100%
 
