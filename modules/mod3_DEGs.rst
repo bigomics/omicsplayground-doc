@@ -239,13 +239,14 @@ Find Biomarkers
 
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Users can find more information by clicking ``Info``. The panel contains the main settings for the analysis. 
-The analysis can be started by selecting a gene of interest from the ``Gene`` settings. 
-Under *Options*, users can filter for a specific gene family by using the ``Gene family`` setting.
-By using the ``Filter samples`` setting they con focus only on specific sample groups.
+The panel contains the main settings for the analysis. Users select the phenotype on which to 
+perform the analysis with the ``Predicted target`` setting. In the ``Filter samples`` setting users 
+can restrict the analysis to a subset of samples rather than the default choice of all samples.
+The ``Feature set`` setting will by default be set to "all", but users can restrict the calculations 
+only to a specific gene family or, alteratively, they can paste their own selection of genes.
 
 
-.. figure:: figures/psc4.5.0.png
+.. figure:: figures_v3/Bio_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
     
