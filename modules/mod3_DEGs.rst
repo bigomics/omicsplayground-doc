@@ -87,9 +87,9 @@ correspond to the number of significant overexpressed genes.
     :align: center
     :width: 100%
 
-Plot
+Overview Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Plot** panel shows the following plots:
+The **Overview** panel shows the following plots:
 
 :**a**: An interactive volcano plot for the chosen contrast. Unless a specific gene is selected 
         from the differential expression analysis table, all significant genes are highlighted in blue.
