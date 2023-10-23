@@ -254,7 +254,20 @@ the settings have been assigned, clicking *Compute* will start the calculation.
 
 Feature Selection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Two plots are generated under the **Feature Selection** tab:
+Four panels (from left to right and top to bottom) are present under the **Feature Selection** tab:
+
+:**Variable Importance**: In this panel, a plot of the cumulative weight for proposed biomarkers is shown. An importance score for each variable is calculated using six machine learning algorithms, including LASSO, elastic nets, random forests, and extreme gradient boosting. By combining several methods, the platform aims to select the best possible biomarkers. The top features are plotted according to cumulative ranking by the algorithms. 
+
+:**Biomarker Expression**: These boxplots shows the expression of putative biomarkers across the samples of the identified features.
+
+:*Heatmap**: Expression heatmap of top gene features according to their variable importance. By default the plot will only show the selected samples, but all samples can be displayed via the settings button on top.
+
+:**Decision tree**: The decision tree shows a tree solution for classification based on the top most important features. The plot provides a proportion of the samples that are defined by each biomarker in the boxes.
+
+
+.. figure:: figures_v3/COR_graph.png
+    :align: center
+    :width: 100%
 
 
 Feature-set Ranking
