@@ -139,9 +139,9 @@ volcano plots with 'higher' wings.
     :align: center
     :width: 100%
 
-Volcano (methods)
+Volcano by method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **Volcano (methods)** tab, the platform displays the volcano plots provided by 
+Under the **Volcano by method** tab, the platform displays the volcano plots provided by 
 multiple differential expression calculation methods for the selected contrast. 
 Methods showing better statistical significance will show volcano 
 plots with 'higher' wings.
