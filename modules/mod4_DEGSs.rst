@@ -54,9 +54,9 @@ To ensure the statistical reliability, the platform performs enrichment analyses
 `fry <https://academic.oup.com/bioinformatics/article/26/17/2176/200022>`__. Finally users can limit the results to only the top 10 
 up- and down-regulated gene sets.
 
-.. figure:: figures/psc5.0.png
+.. figure:: figures_v3/GE_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Table
