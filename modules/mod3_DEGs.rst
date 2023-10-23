@@ -164,9 +164,9 @@ Finally, users can select the number of top genes used to compute partial correl
 under the homonymous setting.
 
 
-.. figure:: figures/psc4.5.0.png
+.. figure:: figures_v3/COR_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 Correllation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
