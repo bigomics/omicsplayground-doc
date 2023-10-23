@@ -226,7 +226,7 @@ Two plots are generated under the **Graph** tab:
     :align: center
     :width: 15%
 
-The **Partial correlation network** is on the left, while the **Correlation UMAP** is on the right of the panel.
+The **Partial correlation network** is on the left, while the **Correlation UMAP** is on the right of the page.
 
 
 .. figure:: figures_v3/COR_graph.png
