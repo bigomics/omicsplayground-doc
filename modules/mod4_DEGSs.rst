@@ -3,8 +3,8 @@
 Enrichment
 ================================================================================
 
-This panel is subdivided into four subpanels: **Geneset enrichment**, 
-**Pathway analysis**, **Word cloud** and **Drug connectivity**.
+This module is subdivided into four submodules: **Geneset enrichment**, 
+**Test Geneset**, **Pathway Analysis** and **Word cloud**.
 
 
 Geneset enrichment
@@ -12,10 +12,10 @@ Geneset enrichment
 Similar to the differential gene expression analysis, users can perform differential
 expression analysis on a geneset level in this page, which is also referred as 
 gene set enrichment (GSE) analysis. The platform has more than 50.000 genesets 
-(or pathways) in total that are divided into 30 geneset collections such 
+(or pathways) in total that are divided more than 30 geneset collections such 
 `Hallmark <https://www.cell.com/abstract/S0092-8674(11)00127-9>`__, 
-`MSigDB <http://software.broadinstitute.org/gsea/msigdb/index.jsp>`__,
-`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__, 
+`Reactome <https://reactome.org/>`__,
+`Wikipathways <https://www.wikipathways.org/>`__, 
 and Gene Ontology (`GO <http://geneontology.org/>`__).
 Users have to specify which comparison they want to visually analyze 
 employing a certain geneset collection.
