@@ -56,13 +56,13 @@ a gene indicate how many methods identified significant ``q`` values (``q < 0.05
 The table is interactive (scrollable, clickable); users can sort genes by ``logFC``, 
 ``meta.q``, or average expression in either conditions.
 
-.. figure:: figures/psc4.1.png
+.. figure:: figures_v3/DE_table.png
     :align: center
     :width: 100%
 
-By clicking on a gene in the Table ``I`` (highlighted in purple in the figure), 
+By clicking on a gene in the the ``Differential expression analysis`` table (highlighted in grey in the figure), 
 it is possible to see the correlation and enrichment value of gene sets that 
-contain the gene in Table ``II``.
+contain the gene in the the ``Gene sets with gene`` table.
 
 Foldchange (all)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
