@@ -29,9 +29,11 @@ logarithmic fold change (logFC) thresholds under the ``FDR`` and ``logFC thresho
 Under "Options", users can select to display all genes in the table (not only significant genes) 
 and also select different combinations of statistical methods for the analysis.
 
+
 .. figure:: figures_v3/DE_settings.png
     :align: center
     :width: 20%
+
 
 Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,10 +47,12 @@ Users can filter top N = {10} differently expressed genes in the table by
 clicking the ``top 10 genes``  and also show the q-values from individual statistical methods 
 by ticking ``show individual q-values`` from the table *Settings*.
 
+
 .. figure:: figures/psc4.1.0.png
     :align: center
     :width: 30%
-    
+
+
 For a selected comparison under the ``Contrast`` setting, the results of the selected 
 methods are combined and reported in the ``Differential expression analysis`` table, where ``meta.q`` for a gene 
 represents the highest ``q`` value among the methods and the number of stars for 
@@ -56,9 +60,11 @@ a gene indicate how many methods identified significant ``q`` values (``q < 0.05
 The table is interactive (scrollable, clickable); users can sort genes by ``logFC``, 
 ``meta.q``, or average expression in either conditions.
 
+
 .. figure:: figures_v3/DE_table.png
     :align: center
     :width: 100%
+
 
 By clicking on a gene in the the ``Differential expression analysis`` table (highlighted in grey in the figure), 
 it is possible to see the correlation and enrichment value of gene sets that 
@@ -74,6 +80,7 @@ The column ``fc.var`` corresponds to the variance of the fold-change across all 
     :align: center
     :width: 100%
 
+
 FDR table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **FDR table** tab reports the number of significant genes at different FDR thresholds for 
@@ -86,6 +93,7 @@ correspond to the number of significant overexpressed genes.
 .. figure:: figures_v3/DE_FDR.png
     :align: center
     :width: 100%
+
 
 Overview Plots
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,9 +112,11 @@ The **Overview** tab shows on top the following plots (from left to right):
 :**Gene in comparison**: Fold change summary barplot across all contrasts for a gene that is selected 
         from the differential expression analysis table.
 
+
 .. figure:: figures_v3/DE_overview.png
     :align: center
     :width: 100%
+
 
 Top genes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,6 +128,7 @@ The **Top genes** tab shows the average expression plots across the samples for 
     :align: center
     :width: 100%
 
+
 The plot can be customised via the settings to remove the log scale, group samples and show only samples 
 included in the selected contrast.
 
@@ -125,6 +136,7 @@ included in the selected contrast.
 .. figure:: figures_v3/DE_topgenes_opts.png
     :align: center
     :width: 20%
+
 
 Volcano by comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,6 +150,7 @@ volcano plots with 'higher' wings.
 .. figure:: figures_v3/DE_volc_by_comp.png
     :align: center
     :width: 100%
+
 
 Volcano by method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -168,6 +181,7 @@ under the homonymous setting.
     :align: center
     :width: 20%
 
+
 Correllation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Correlation** tab, the platform displays three different outputs:
@@ -180,17 +194,18 @@ by changing the colour of the gene pairs by phenotype using the ``Colour by`` op
 the plots under ``Layout`.
 
 
-.. figure:: figures/psc4.5.2.png
+.. figure:: figures_v3/COR_scat_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
-:**Correlation table**: Pairwise scatter plots for the expression values of the gene pairs across the samples.
+:**Correlation table**: it shows the statistical results from correlated gene pairs. 
 
 
 .. figure:: figures/psc4.5.png
     :align: center
     :width: 100%
+
 
 Functional
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
