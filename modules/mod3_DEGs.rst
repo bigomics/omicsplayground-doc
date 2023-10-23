@@ -172,19 +172,12 @@ Correllation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Correlation** tab, the platform displays three different outputs:
 
-:**a**: A plot displaying the highest correlated genes in respect to the selected gene. 
-        The plot can be customised via the settings icon on top to include no partial correlection, 
-        a fast partial correlation calculation or a calculation with all methods. 
+:**Top correlated genes**: A plot displaying the highest correlated genes in respect to the selected gene. 
 
-
-.. figure:: figures/psc4.5.1.png
-    :align: center
-    :width: 30%
-
-
-:**b**: A correlation graph centered on selected gene with top most correlated features.
-        The plot can be customised via the settings icon on top. From it users can adjust the rho value 
-        via a sliding bar and change the graph layout via ``Layout``.
+:**Correlation scatter plots**: Pairwise scatter plots for the co-expression of correlated gene pairs across the samples. 
+The straight line correspond to the (linear) regression fit. Using the settings on top, the plot can be customised 
+by changing the colour of the gene pairs by phenotype using the ``Colour by`` option. Users can also change the layout of 
+the plots under ``Layout`.
 
 
 .. figure:: figures/psc4.5.2.png
@@ -192,7 +185,7 @@ Under the **Correlation** tab, the platform displays three different outputs:
     :width: 30%
 
 
-:**c**: Pairwise scatter plots for the expression values of the gene pairs across the samples.
+:**Correlation table**: Pairwise scatter plots for the expression values of the gene pairs across the samples.
 
 
 .. figure:: figures/psc4.5.png
