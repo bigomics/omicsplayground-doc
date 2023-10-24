@@ -254,7 +254,7 @@ For positive enrichment, genes of the query signature would fall on the upper ri
 
 Enrichment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-in this tab, multiple plots show the enrichment of the query signature in all constrasts. Positive enrichment
+In this tab, multiple plots show the enrichment of the query signature in all constrasts. Positive enrichment
 means that a particular contrast shows similar expression changes as the query signature. Users can either view 
 the plots of all teh contrasts, while selecting a specific contrast in the *Enrichment by contrasts* table will 
 only display the ernichment plot for it.
@@ -267,11 +267,19 @@ only display the ernichment plot for it.
 Overlap/similarity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The vertical axis shows the overlap score of the gene set which combines the odds ratio and significance (q-value) of the Fisher's test.
 
 
-.. figure:: figures_v3/test_volc.png
+.. figure:: figures_v3/test_overlap.png
     :align: center
     :width: 100%
+
+
+From the settings icon
+
+.. figure:: figures_v3/GE_freq_opts.png
+    :align: center
+    :width: 20%
 
 Markers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
