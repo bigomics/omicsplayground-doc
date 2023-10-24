@@ -319,33 +319,32 @@ Users can specify the contrast of their interest
 in the ``Contrast`` settings. Under the main *Options*, users can
 select ``filter significant (tables)``  to keep only significant entries in the table.
 
-.. figure:: figures/psc6.0.png
+.. figure:: figures_v3/Pathway_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
-KEGG pathways
+WikiPathways
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-`KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__ is a collection
+`WikiPathways <https://www.wikipathways.org/>`__ is a public collection
 of manually curated pathways representing the current knowledge of molecular 
 interactions, reactions and relation networks as pathway maps. In the 
-**KEGG pathway** panel, each pathway is scored for the selected contrast profile
-and reported in the table. A unique feature of the platform is that it provides 
-an activation-heatmap comparing the activation levels of pathways across multiple
-contrast profiles. This facilitates to quickly see and detect the similarities 
+**WikiPathways** panel, each pathway is scored for the selected contrast profile
+and reported in the table. An activation-heatmap comparing the activation levels of pathways across multiple
+contrast profiles is generated. This facilitates the quick detect the similarities 
 between profiles in certain pathways. More detailed explaination of each output
 is provided below.
 
-:**a**: In the pathway map, genes are colored according to their upregulation 
+:**WikiPathway**: In the pathway map, genes are colored according to their upregulation 
         (red) or downregulation (blue) in the contrast profile. Each pathway 
         is scored for the selected contrast profile and reported in the table 
         below.
 
-:**b**: Enrichment table. The table is interactive; enabling user to sort on 
+:**Enrichment table**: The table is interactive; enabling user to sort on 
         different variables (kegg id, pathway, logFC and meta q-values) 
         and select a pathway by clicking on the row in the table.
 
-:**c**: The KEGG activation matrix visualizes the activation levels of pathways
+:**Activation Matrix**: The activation matrix visualizes the activation levels of pathways
         (or pathway keywords) across multiple contrast profiles. This facilitates
         to quickly see and detect the similarities of certain pathways between
         contrasts. The size of the circles correspond to their relative activation,
@@ -353,7 +352,41 @@ is provided below.
         (blue) in the contrast profile. The matrix can be normalised from the 
         *Settings*.
 
-.. figure:: figures/psc6.1.png
+.. figure:: figures_v3/Pathway_wiki.png
+    :align: center
+    :width: 100%
+
+
+Reactome
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`Reactome <https://reactome.org/>`__ is a collection
+of manually curated pathways representing the current knowledge of molecular 
+interactions, reactions and relation networks as pathway maps. In the 
+**Reactome** panel, each pathway is scored for the selected contrast profile
+and reported in the table. A unique feature of the platform is that it provides 
+an activation-heatmap comparing the activation levels of pathways across multiple
+contrast profiles. An activation-heatmap comparing the activation levels of pathways across multiple
+contrast profiles is generated.  More detailed explaination of each output
+is provided below.
+
+:**Reactome**: In the pathway map, genes are colored according to their upregulation 
+        (red) or downregulation (blue) in the contrast profile. Each pathway 
+        is scored for the selected contrast profile and reported in the table 
+        below.
+
+:**Enrichment table**: The table is interactive; enabling user to sort on 
+        different variables (kegg id, pathway, logFC and meta q-values) 
+        and select a pathway by clicking on the row in the table.
+
+:**Actovation matrix**: The activation matrix visualizes the activation levels of pathways
+        (or pathway keywords) across multiple contrast profiles. This facilitates
+        to quickly see and detect the similarities of certain pathways between
+        contrasts. The size of the circles correspond to their relative activation,
+        and are colored according to their upregulation (red) or downregulation
+        (blue) in the contrast profile. The matrix can be normalised from the 
+        *Settings*.
+
+.. figure:: figures_v3/Pathway_reactome.png
     :align: center
     :width: 100%
 
