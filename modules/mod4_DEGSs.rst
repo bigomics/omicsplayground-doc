@@ -219,7 +219,9 @@ correspond to the number of significant overexpressed gene sets.
 
 Test geneset
 --------------------------------------------------------------------------------
-
+The **Test geneset** submodule is used to test a specific user-defined geneset, or, alternatively, a geneset from 
+the KEGG or Hallmark collection or a list of genes extracted from the available pairwise comparisons, for enrichment
+in the experimental dataset. The plot contain five tabs: **Enrichment table**, **Volcano plots**, **Enrichment**, **Overlap/similarity** and **Markers**.
 
 
 Settings panel
@@ -232,6 +234,34 @@ the differentially expressed genes or proteins from one of the contrasts.
 .. figure:: figures_v3/test_settings.png
     :align: center
     :width: 20%
+
+
+Enrichment table
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This tab is shown indepently of the other four. It display two tables. The first table, *Enrichment by contrasts*, 
+shows the enrichment scores of query signature across all contrasts. The table summarizes the enrichment statistics
+of the gene list in all contrasts using the GSEA algorithm. The NES corresponds to the normalized enrichment score of the GSEA analysis.
+
+.. figure:: figures_v3/test_ET.png
+    :align: center
+    :width: 100%
+
+The second table, *Genes in signature*, is based on which pairiwse comparison is selected in *Enrichment by contrasts* and shows 
+the genes of the current signature corresponding to the selected contrast. Genes are sorted by decreasing (absolute) fold-change.
+
+.. figure:: figures_v3/test_gis.png
+    :align: center
+    :width: 100%
+
+Volcano plots
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This tab contains volcano plots showing where the genes of a test signatures fall in the experimental pairiwse comparisons.
+For positive enrichment, genes of the query signature would fall on the upper right of the volcano plot, for negative enrichment, on the upper left.
+
+
+.. figure:: figures_v3/test_volc.png
+    :align: center
+    :width: 100%
 
 
 Pathway analysis
