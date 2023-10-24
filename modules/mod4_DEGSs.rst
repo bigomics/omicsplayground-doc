@@ -224,11 +224,14 @@ Test geneset
 
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The settings panel of the **Test geneset** module consists of a box where users can paste gene lists to be queried.
+Three examples of gene lists are provided below it, namely the *apoptosis*, *cell_cycle* and *immune_chkpt* lists.
+Users can also select specific KEGG and hallmark gene sets from the *Options* in the panel, as well as using
+the differentially expressed genes or proteins from one of the contrasts.
 
-
-.. figure:: figures/psc6.0.png
+.. figure:: figures_v3/test_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Pathway analysis
