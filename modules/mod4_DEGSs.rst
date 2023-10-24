@@ -291,7 +291,7 @@ The **Markers** tab contains a series of plots (under *Markers plot*) showing th
     :width: 100%
 
 
-The plots can be sorted via the ``Sort by`` option in the settings icon by correlation (default), probability or name (``Sort by``). ``Layout`` swaps the 
+The plots can be sorted via the ``Sort by`` option in the settings icon by correlation (default), probability or name. ``Layout`` swaps the 
 layout of the plots between a 4x4 (default) and a 6x6 grid.
 
 .. figure:: figures_v3/test_markers_opts.png
