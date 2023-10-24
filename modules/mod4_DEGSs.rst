@@ -81,18 +81,6 @@ whether to weight by geneset size (``Weight by geneset size``) and whether to we
     :width: 20%
 
 
-In the **Plots** panel,
-a volcano plot of genes contained in the selected geneset and a barplot of 
-expressions per sample group are displayed. In the **Compare** panel, users can 
-compare the differential expression status of that geneset for all other 
-comparisons. Volcano plots of genesets for all comparisons are 
-displayed under the **Volcano (all)** tab. This allows users to have an overall 
-picture across comparisons at the same time. To compare the different statistical methods, 
-the **Volcano (methods)** panel shows volcano plots of all methods. The **GeneMap** panel 
-displays the co-activation heatmap of top N = {25} enriched gene sets and their common genes.
-The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
-The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
-The **FDR table** panel reports the number of significant gene sets at different FDR thresholds for all contrasts.
 
 Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -262,6 +250,53 @@ For positive enrichment, genes of the query signature would fall on the upper ri
 .. figure:: figures_v3/test_volc.png
     :align: center
     :width: 100%
+
+
+Enrichment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. figure:: figures_v3/test_volc.png
+    :align: center
+    :width: 100%
+
+Overlap/similarity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. figure:: figures_v3/test_volc.png
+    :align: center
+    :width: 100%
+
+Markers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+.. figure:: figures_v3/test_volc.png
+    :align: center
+    :width: 100%
+
+
+In the **Plots** panel,
+a volcano plot of genes contained in the selected geneset and a barplot of 
+expressions per sample group are displayed. In the **Compare** panel, users can 
+compare the differential expression status of that geneset for all other 
+comparisons. Volcano plots of genesets for all comparisons are 
+displayed under the **Volcano (all)** tab. This allows users to have an overall 
+picture across comparisons at the same time. To compare the different statistical methods, 
+the **Volcano (methods)** panel shows volcano plots of all methods. The **GeneMap** panel 
+displays the co-activation heatmap of top N = {25} enriched gene sets and their common genes.
+The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
+The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
+The **FDR table** panel reports the number of significant gene sets at different FDR thresholds for all contrasts.
+
+
+
+
+
 
 
 Pathway analysis
