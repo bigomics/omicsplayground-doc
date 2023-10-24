@@ -73,7 +73,7 @@ This panel shows the number of times a gene is present in the top-N genesets sor
     :width: 100%
 
 
-The settings icon open the settings menu from which users can select the ``Number of top gene sets``, 
+The settings icon open the settings menu from which users can select the number of top gene sets to be used (``Number of top sets``), 
 whether to weight by geneset size (``Weight by geneset size``) and whether to weight by fold-change (``Weight by FC``).
 
 .. figure:: figures_v3/GE_freq_opts.png
@@ -96,14 +96,12 @@ The **FDR table** panel reports the number of significant gene sets at different
 
 Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Table ``I`` shows the enrichment analysis results from the selected statistical methods.
-WIth default settings, this table reports the meta (combined) results of 
+This table shows the enrichment analysis results from the selected statistical methods.
+With default settings, this table reports the meta (combined) results of 
 `camera <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3458527/>`__,
 `fgsea <http://software.broadinstitute.org/gsea/index.jsp>`__, and 
 `Spearman rank correlation <https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient>`__ only.
-Users can filter top N = {10} differently enriched gene sets in the table by 
-clicking the ``top 10 gene sets`` from the table *Settings*. They can also select to display 
-individual q-values.
+Users can also display individual q-values for each of the selected analysis methods using the settings on top of the table.
 
 .. figure:: figures/psc5.1.0.png
     :align: center
