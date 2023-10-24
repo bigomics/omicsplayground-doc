@@ -341,7 +341,7 @@ is provided below.
         below.
 
 :**Enrichment table**: The table is interactive; enabling user to sort on 
-        different variables (kegg id, pathway, logFC and meta q-values) 
+        different variables (WikiPathways id, pathway, logFC and meta q-values) 
         and select a pathway by clicking on the row in the table.
 
 :**Activation matrix**: The activation matrix visualizes the activation levels of pathways
@@ -370,12 +370,12 @@ contrast profiles is generated.  More detailed explaination of each output
 is provided below.
 
 :**Reactome**: In the pathway map, genes are colored according to their upregulation 
-        (red) or downregulation (blue) in the contrast profile. Each pathway 
+        (red) or downregulation (green) in the contrast profile. Each pathway 
         is scored for the selected contrast profile and reported in the table 
         below.
 
 :**Enrichment table**: The table is interactive; enabling user to sort on 
-        different variables (kegg id, pathway, logFC and meta q-values) 
+        different variables (Reactome id, pathway, logFC and meta q-values) 
         and select a pathway by clicking on the row in the table.
 
 :**Activation matrix**: The activation matrix visualizes the activation levels of pathways
@@ -415,9 +415,9 @@ Each output chart/table of the panel is describer below in detail.
         the tree only with significant branches and ``color custers`` to 
         highlight clusters with different colors
 
-        .. figure:: figures/psc6.2.a.png
+        .. figure:: figures_v3/Pathway_GO_opts.png
             :align: center
-            :width: 35%
+            :width: 25%
 
 :**GO score table**: The scoring of a GO term is performed by considering
         the cumulative score of all terms from that term to the root node. 
@@ -431,7 +431,7 @@ Each output chart/table of the panel is describer below in detail.
         their upregulation (red) or downregulation (blue) in the contrast
         profile. The matrix can be normalised from the *Settings*.
 
-.. figure:: figures/psc6.2.png
+.. figure:: figures_v3/Pathway_GO.png
     :align: center
     :width: 100%
 
