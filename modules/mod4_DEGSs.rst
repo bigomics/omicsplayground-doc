@@ -139,12 +139,13 @@ Geneset expression
 The **Geneset expression** panel provide plots associated with the gene set 
 selected in **Table** and gene selected in **Genes in gene set**, as explained in the previous section.
 
-:**a**: Enrichment plot associated with the gene set selected from Table ``I``.  
-:**b**: Volcano-plot of genes showing the significance versus the fold-change on the y and x axes,
-        respectively. Genes in the selected gene set are highlighted in blue.
-:**c**: Barplot of the gene expression of the gene. Samples in the barplot 
-        can be ungrouped in the plot *Settings*.
-:**d**: Scatter plot of the enrichment versus the expression of the selected 
+:**Volcano Plot**: Volcano-plot of genes showing the significance versus the fold-change on the y and x axes,
+        respectively. Genes in the selected gene set are highlighted in blue.  
+:**Enrichment barplot**: Enrichment plot associated with the gene set selected from **Table**. Samples in the barplot 
+        can be ungrouped via the plot settings icon.
+:**Expression barplot**: Barplot of the gene expression of the gene. Samples in the barplot 
+        can be ungrouped via the plot settings icon.
+:**Enrichment vs. expression**: Scatter plot of the enrichment versus the expression of the selected 
         geneset and gene, on the y and x axes, respectively.
 
 .. figure:: figures/psc5.3.png
