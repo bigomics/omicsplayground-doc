@@ -148,7 +148,7 @@ selected in **Table** and gene selected in **Genes in gene set**, as explained i
 :**Enrichment vs. expression**: Scatter plot of the enrichment versus the expression of the selected 
         geneset and gene, on the y and x axes, respectively.
 
-.. figure:: figures/psc5.3.png
+.. figure:: figures_v3/GSEA_exp.png
     :align: center
     :width: 100%
 
