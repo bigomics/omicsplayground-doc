@@ -350,7 +350,7 @@ is provided below.
         contrasts. The size of the circles correspond to their relative activation,
         and are colored according to their upregulation (red) or downregulation
         (blue) in the contrast profile. The matrix can be normalised from the 
-        *Settings*.
+        *settings* icon.
 
 .. figure:: figures_v3/Pathway_wiki.png
     :align: center
@@ -384,7 +384,7 @@ is provided below.
         contrasts. The size of the circles correspond to their relative activation,
         and are colored according to their upregulation (red) or downregulation
         (blue) in the contrast profile. The matrix can be normalised from the 
-        *Settings*.
+        *settings* icon.
 
 .. figure:: figures_v3/Pathway_reactome.png
     :align: center
@@ -429,7 +429,7 @@ Each output chart/table of the panel is describer below in detail.
         that are consistently up/down across conditions. The size of the circles
         correspond to their relative activation, and are colored according to 
         their upregulation (red) or downregulation (blue) in the contrast
-        profile. The matrix can be normalised from the *Settings*.
+        profile. The matrix can be normalised from the *settings* icon.
 
 .. figure:: figures_v3/Pathway_GO.png
     :align: center
