@@ -159,7 +159,7 @@ Under the **Enrichment by comparison** panel, users can fin enrichment plots for
 set (in **Table**) across multiple contrasts. The figure allows to quickly 
 compare the enrichment of a certain gene set across all other comparisons.
 
-.. figure:: figures/psc5.4.png
+.. figure:: figures_v3/GSEA_comp.png
     :align: center
     :width: 100%
 
