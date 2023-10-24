@@ -284,7 +284,7 @@ to display (``Number of features``) and can toggle the signature names on and of
 
 Markers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Markers** tab contains a series of plots showing the expression levels of the tested genes in the dataset samples as a colored t-SNE plot in red (highly expressed) and light grey (low expressed). The first figure shows the single-sample enrichment of your signature list in red (upregulation) and blue (downregulation).
+The **Markers** tab contains a series of plots (under *Markers plot*) showing the expression levels of the tested genes in the dataset samples as a colored t-SNE plot in red (highly expressed) and light grey (low expressed). The first figure shows the single-sample enrichment of your signature list in red (upregulation) and blue (downregulation).
 
 .. figure:: figures_v3/test_markers.png
     :align: center
