@@ -174,7 +174,7 @@ can immediately see which comparison is statistically weak or strong.
 Experimental contrasts showing better statistical significance will show volcano
 plots with 'higher' wings.
 
-.. figure:: figures/psc5.5.png
+.. figure:: figures_v3/GSEA_volc_comp.png
     :align: center
     :width: 100%
 
@@ -187,7 +187,7 @@ This provides users an quick overview of the sensitivity of the statistical
 methods at once. Methods showing better statistical significance will show 
 volcano plots with 'higher' wings.
 
-.. figure:: figures/psc5.6.png
+.. figure:: figures_v3/GSEA_volc_met.png
     :align: center
     :width: 100%
 
