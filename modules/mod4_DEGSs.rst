@@ -192,23 +192,13 @@ volcano plots with 'higher' wings.
     :width: 100%
 
 
-GeneMap
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **GeneMap** panel, users can view a co-activation heatmap of the top N = {25} 
-enriched gene sets and their common genes.
-
-.. figure:: figures/psc5.9.png
-    :align: center
-    :width: 100%
-
-
-Foldchange (all)
+Enrichment (all)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-The **Foldchange (all)** provides the enrichment analysis of gene sets 
-across all contrasts. The column ``fc.var`` corresponds to the variance of 
-the fold-change across all contrasts.
+The **Enrichment (all)** table provides the enrichment scores of gene sets 
+across all contrasts. It is also possible to visualise all q-values 
+from the setting icon on top of the plot. 
 
-.. figure:: figures/psc5.7.png
+.. figure:: figures_v3/psc5.7.png
     :align: center
     :width: 100%
 
