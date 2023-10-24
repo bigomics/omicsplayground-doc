@@ -118,17 +118,26 @@ The table is interactive; users can sort it by ``logFC``, ``meta.q``, ``AveExpr0
     :align: center
     :width: 100%
 
-By clicking on a gene set in this table, it is possible to see the gene list of 
-that gene set in Table ``II``. It also reports the fold-change, statistics and 
-correlation of the genes in the selected gene set. By clicking on a gene in 
-Table ``II``, under the **Plots** panel, users can check its correlation to the gene set 
-in the ``Enrichment vs. expression`` correlation scatter plot.
 
-
-Plots
+Genes in gene set
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Plots** panel provide plots associated with the gene set 
-(selected in Table ``I``) and gene (selected in Table ``II``) under ``Table``.
+By clicking on a gene set in the **Table** above, it is possible to see the gene list of 
+that gene set under **Genes in gene set**. this table also reports the fold-change, statistics and 
+correlation of the genes in the selected gene set. By clicking on a gene in this table, users can check 
+the expression status of the gene for the selected contrast in the *Expression barplot* and its correlation to the gene set
+in the *Enrichment vs. expression* scatter plot under the **Geneset expression** tab, discussed in the next section.
+
+
+.. figure:: figures_v3/GE_enrichment_4.png
+    :align: center
+    :width: 100%
+
+
+
+Geneset expression
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Geneset expression** panel provide plots associated with the gene set 
+selected in **Table** and gene selected in **Genes in gene set**, as explained in the previous section.
 
 :**a**: Enrichment plot associated with the gene set selected from Table ``I``.  
 :**b**: Volcano-plot of genes showing the significance versus the fold-change on the y and x axes,
