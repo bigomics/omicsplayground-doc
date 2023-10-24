@@ -254,10 +254,13 @@ For positive enrichment, genes of the query signature would fall on the upper ri
 
 Enrichment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+in this tab, multiple plots show the enrichment of the query signature in all constrasts. Positive enrichment
+means that a particular contrast shows similar expression changes as the query signature. Users can either view 
+the plots of all teh contrasts, while selecting a specific contrast in the *Enrichment by contrasts* table will 
+only display the ernichment plot for it.
 
 
-
-.. figure:: figures_v3/test_volc.png
+.. figure:: figures_v3/test_enr.png
     :align: center
     :width: 100%
 
