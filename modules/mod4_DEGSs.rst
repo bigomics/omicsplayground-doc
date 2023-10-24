@@ -276,7 +276,7 @@ The *Signature overlap scores* plot is located on top. Its vertical axis shows t
 
 
 The *Signature overlap scores* plot can also be customised via the settings icon, where users can select the number of signatures 
-to display (``Number of features``) and can toggle the signature names on and off (``Show features names``)
+to display (``Number of features``) and can toggle the signature names on and off (``Show features names``).
 
 .. figure:: figures_v3/test_overlap_opts.png
     :align: center
@@ -284,31 +284,19 @@ to display (``Number of features``) and can toggle the signature names on and of
 
 Markers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Markers** tab contains a series of plots showing the expression levels of the tested genes in the dataset samples as a colored t-SNE plot in red (highly expressed) and light grey (low expressed). The first figure shows the single-sample enrichment of your signature list in red (upregulation) and blue (downregulation).
 
-
-
-.. figure:: figures_v3/test_volc.png
+.. figure:: figures_v3/test_markers.png
     :align: center
     :width: 100%
 
 
-In the **Plots** panel,
-a volcano plot of genes contained in the selected geneset and a barplot of 
-expressions per sample group are displayed. In the **Compare** panel, users can 
-compare the differential expression status of that geneset for all other 
-comparisons. Volcano plots of genesets for all comparisons are 
-displayed under the **Volcano (all)** tab. This allows users to have an overall 
-picture across comparisons at the same time. To compare the different statistical methods, 
-the **Volcano (methods)** panel shows volcano plots of all methods. The **GeneMap** panel 
-displays the co-activation heatmap of top N = {25} enriched gene sets and their common genes.
-The **Foldchange (all)** tab reports the gene fold changes for all contrasts in the selected dataset.
-The column ``fc.var`` corresponds to the variance of the fold-change across all contrasts.
-The **FDR table** panel reports the number of significant gene sets at different FDR thresholds for all contrasts.
+The plots can be sorted via the ``Sort by`` option in the settings icon by correlation (default), probability or name (``Sort by``). ``Layout`` swaps the 
+layout of the plots between a 4x4 (default) and a 6x6 grid.
 
-
-
-
-
+.. figure:: figures_v3/test_markers_opts.png
+    :align: center
+    :width: 20%
 
 
 Pathway analysis
