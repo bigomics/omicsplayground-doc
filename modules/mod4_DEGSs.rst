@@ -217,6 +217,20 @@ correspond to the number of significant overexpressed gene sets.
     :width: 100%
 
 
+Test geneset
+--------------------------------------------------------------------------------
+
+
+
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. figure:: figures/psc6.0.png
+    :align: center
+    :width: 30%
+
+
 Pathway analysis
 --------------------------------------------------------------------------------
 This module performs specialized pathway and enrichment analysis
