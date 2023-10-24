@@ -103,9 +103,9 @@ With default settings, this table reports the meta (combined) results of
 `Spearman rank correlation <https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient>`__ only.
 Users can also display individual q-values for each of the selected analysis methods using the settings on top of the table.
 
-.. figure:: figures/psc5.1.0.png
+.. figure:: figures_v3/GE_table_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
     
 The combined enrichment analysis results from the methods are displayed in Table ``I``,
 where for each geneset the ``meta.q`` corresponds to the highest ``q`` value provided
