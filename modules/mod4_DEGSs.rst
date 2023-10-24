@@ -301,19 +301,20 @@ layout of the plots between a 4x4 (default) and a 6x6 grid.
 
 Pathway analysis
 --------------------------------------------------------------------------------
-This module performs specialized pathway and enrichment analysis
-providing higher level functional and visual analysis
+This module performs specialized enrichment analysis
+providing higher level functional and visual interpretation.
 
-The **KEGG pathways** panel maps the differential fold-changes onto
-the `KEGG <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC102409/>`__
-pathway maps. Under the **GO** panel, a graph-based enrichment
+The **WikiPathways** panel maps the differential fold-changes onto
+the `WikiPathways <https://www.wikipathways.org/>`__
+pathway maps. The **Reactome** panel does the same for the
+`Reactome <https://reactome.org/>`__ pathway maps. Under the
+**GO** panel, a graph-based enrichment
 analysis is done using the Gene Ontology (`GO
 <http://geneontology.org/>`__) graph structure.
 
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A tutorial about the module can be found under ``Youtube`` in the input panel.
 Users can specify the contrast of their interest
 in the ``Contrast`` settings. Under the main *Options*, users can
 select ``filter significant (tables)``  to keep only significant entries in the table.
