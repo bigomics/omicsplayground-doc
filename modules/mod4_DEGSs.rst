@@ -107,14 +107,14 @@ Users can also display individual q-values for each of the selected analysis met
     :align: center
     :width: 20%
     
-The combined enrichment analysis results from the methods are displayed in Table ``I``,
+The combined enrichment analysis results from the methods are displayed in this table,
 where for each geneset the ``meta.q`` corresponds to the highest ``q`` value provided
 by the methods and the number of ``stars`` indicate how many methods identified
 the geneset as significant (``q < 0.05``). ``AveExpr0`` and ``AveEprx1`` refer to the average gene set expression 
 in group 0 and group 1 of the selected pairwise comparison respectively.
 The table is interactive; users can sort it by ``logFC``, ``meta.q``, ``AveExpr0``, ``AveEprx1`` and ``stars``.
 
-.. figure:: figures/psc5.1.png
+.. figure:: figures_v3/psc5.1.png
     :align: center
     :width: 100%
 
