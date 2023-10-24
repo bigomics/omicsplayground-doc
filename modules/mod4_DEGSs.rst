@@ -164,9 +164,9 @@ compare the enrichment of a certain gene set across all other comparisons.
     :width: 100%
 
 
-Volcano (all)
+Volcano by comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Volcano (all)** panel simultaneously displays volcano plots of gene sets 
+The **Volcano by comparison** panel simultaneously displays volcano plots of gene sets 
 enrichment across all contrasts, showing the enrichment score versus significance 
 on the x and y axes, respectively. This provides users an overview of the 
 statistics across all comparisons. By comparing multiple volcano plots, the user
@@ -179,9 +179,9 @@ plots with 'higher' wings.
     :width: 100%
 
 
-Volcano (methods)
+Volcano by method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **Volcano (methods)** panel, users can see the simultaneous 
+Under the **Volcano by method** panel, users can see the simultaneous 
 visualisation of volcano plots of gene sets for different enrichment methods.
 This provides users an quick overview of the sensitivity of the statistical 
 methods at once. Methods showing better statistical significance will show 
