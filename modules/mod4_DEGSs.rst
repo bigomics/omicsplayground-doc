@@ -266,18 +266,19 @@ only display the ernichment plot for it.
 
 Overlap/similarity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Under the Overlap/similarity tab, users can find the similarity of their gene list with all the gene sets and pathways in the platform, including statistics such as the total number of genes in the gene set (K), the number of intersecting genes between the list and the gene set (k), the overlapping ratio of k/K, logarithm of the odds ratio (log.OR), as well as the p and q values by the Fisher’s test for the overlap test. 
 
-The vertical axis shows the overlap score of the gene set which combines the odds ratio and significance (q-value) of the Fisher's test.
-
+The *Signature overlap scores* plot is located on top. Its vertical axis shows the overlap score of the gene set which combines the odds ratio and significance (q-value) of the Fisher's test. The*Overlap with other signatures* table is located below it and contain various statistical values.
 
 .. figure:: figures_v3/test_overlap.png
     :align: center
     :width: 100%
 
 
-From the settings icon
+The *Signature overlap scores* plot can also be customised via the settings icon, where users can select the number of signatures 
+to display (``number of features``) and can toggle the signature names on and off (``Show features names``)
 
-.. figure:: figures_v3/GE_freq_opts.png
+.. figure:: figures_v3/test_overlap_opts.png
     :align: center
     :width: 20%
 
