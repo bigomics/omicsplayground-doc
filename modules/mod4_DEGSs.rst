@@ -344,7 +344,7 @@ is provided below.
         different variables (kegg id, pathway, logFC and meta q-values) 
         and select a pathway by clicking on the row in the table.
 
-:**Activation Matrix**: The activation matrix visualizes the activation levels of pathways
+:**Activation matrix**: The activation matrix visualizes the activation levels of pathways
         (or pathway keywords) across multiple contrast profiles. This facilitates
         to quickly see and detect the similarities of certain pathways between
         contrasts. The size of the circles correspond to their relative activation,
@@ -378,7 +378,7 @@ is provided below.
         different variables (kegg id, pathway, logFC and meta q-values) 
         and select a pathway by clicking on the row in the table.
 
-:**Actovation matrix**: The activation matrix visualizes the activation levels of pathways
+:**Activation matrix**: The activation matrix visualizes the activation levels of pathways
         (or pathway keywords) across multiple contrast profiles. This facilitates
         to quickly see and detect the similarities of certain pathways between
         contrasts. The size of the circles correspond to their relative activation,
@@ -406,7 +406,7 @@ maps, an annotated graph structure provided by the GO database is potted for
 every selected gene set. 
 Each output chart/table of the panel is describer below in detail.
 
-:**a**: The structure of GO can be described in terms of a graph, where each
+:**Gene Ontology graph**: The structure of GO can be described in terms of a graph, where each
         GO term is a node, and the relationships between the terms are edges 
         between the nodes. GO is loosely hierarchical, with 'child' terms being
         more specialized than their 'parent' terms. The graph is interactive. 
@@ -419,12 +419,12 @@ Each output chart/table of the panel is describer below in detail.
             :align: center
             :width: 35%
 
-:**b**: GO score table. The scoring of a GO term is performed by considering
+:**GO score table**: The scoring of a GO term is performed by considering
         the cumulative score of all terms from that term to the root node. 
         That means that GO terms that are supported by higher level terms
         levels are preferentially scored.
 
-:**c**: The GO activation matrix visualizes the activation of GO terms
+:**Activation matrix**: The GO activation matrix visualizes the activation of GO terms
         across conditions. From this figure, you can easily detect GO terms
         that are consistently up/down across conditions. The size of the circles
         correspond to their relative activation, and are colored according to 
