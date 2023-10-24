@@ -276,7 +276,7 @@ The *Signature overlap scores* plot is located on top. Its vertical axis shows t
 
 
 The *Signature overlap scores* plot can also be customised via the settings icon, where users can select the number of signatures 
-to display (``number of features``) and can toggle the signature names on and off (``Show features names``)
+to display (``Number of features``) and can toggle the signature names on and off (``Show features names``)
 
 .. figure:: figures_v3/test_overlap_opts.png
     :align: center
