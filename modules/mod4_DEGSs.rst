@@ -198,7 +198,7 @@ The **Enrichment (all)** table provides the enrichment scores of gene sets
 across all contrasts. It is also possible to visualise all q-values 
 from the setting icon on top of the plot. 
 
-.. figure:: figures_v3/psc5.7.png
+.. figure:: figures_v3/GE_enrichment_all.png
     :align: center
     :width: 100%
 
@@ -212,7 +212,7 @@ The left part of the table (in blue) correspond
 to the number of significant down-regulated gene sets, the right part (in red) 
 correspond to the number of significant overexpressed gene sets.
 
-.. figure:: figures/psc5.8.png
+.. figure:: figures_v3/GE_enrichment_FDR.png
     :align: center
     :width: 100%
 
