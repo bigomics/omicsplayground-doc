@@ -153,10 +153,10 @@ selected in **Table** and gene selected in **Genes in gene set**, as explained i
     :width: 100%
 
 
-Compare
+Enrichment by comparison
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **Compare** panel, users can fin enrichment plots for the selected gene
-set (in Table ``I``) across multiple contrasts. The figure allows to quickly 
+Under the **Enrichment by comparison** panel, users can fin enrichment plots for the selected gene
+set (in **Table**) across multiple contrasts. The figure allows to quickly 
 compare the enrichment of a certain gene set across all other comparisons.
 
 .. figure:: figures/psc5.4.png
