@@ -114,11 +114,11 @@ the geneset as significant (``q < 0.05``). ``AveExpr0`` and ``AveEprx1`` refer t
 in group 0 and group 1 of the selected pairwise comparison respectively.
 The table is interactive; users can sort it by ``logFC``, ``meta.q``, ``AveExpr0``, ``AveEprx1`` and ``stars``.
 
-.. figure:: figures_v3/psc5.1.png
+.. figure:: figures_v3/GE_enrichment_3.png
     :align: center
     :width: 100%
 
-By clicking on a gene set in Table ``I``, it is possible to see the gene list of 
+By clicking on a gene set in this table, it is possible to see the gene list of 
 that gene set in Table ``II``. It also reports the fold-change, statistics and 
 correlation of the genes in the selected gene set. By clicking on a gene in 
 Table ``II``, under the **Plots** panel, users can check its correlation to the gene set 
