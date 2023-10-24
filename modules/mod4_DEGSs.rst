@@ -338,7 +338,7 @@ is provided below.
 :**WikiPathway**: In the pathway map, genes are colored according to their upregulation 
         (red) or downregulation (blue) in the contrast profile. Each pathway 
         is scored for the selected contrast profile and reported in the table 
-        below.
+        below the plot.
 
 :**Enrichment table**: The table is interactive; enabling user to sort on 
         different variables (WikiPathways id, pathway, logFC and meta q-values) 
@@ -372,7 +372,7 @@ is provided below.
 :**Reactome**: In the pathway map, genes are colored according to their upregulation 
         (red) or downregulation (green) in the contrast profile. Each pathway 
         is scored for the selected contrast profile and reported in the table 
-        below.
+        below the plot.
 
 :**Enrichment table**: The table is interactive; enabling user to sort on 
         different variables (Reactome id, pathway, logFC and meta q-values) 
@@ -411,7 +411,7 @@ Each output chart/table of the panel is describer below in detail.
         between the nodes. GO is loosely hierarchical, with 'child' terms being
         more specialized than their 'parent' terms. The graph is interactive. 
         You can move the graph and zoom in using the mouse.
-        Under the graph *Settings*, users can select ``Prune tree`` to prune
+        Under the graph *settings*, users can select ``Prune tree`` to prune
         the tree only with significant branches and ``color custers`` to 
         highlight clusters with different colors
 
@@ -446,12 +446,10 @@ for all contrasts. We defined the test set as the collection of
 genesets that contain the keyword in the title/description.
 
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A tutorial about the module can be found under ``Youtube`` in the input panel.
 Users can specify the contrast of their interest
-in the ``Contrast`` settings. Under the main *Options*, users can
-select ``normalize activation matrix``  to normalize the activation matrix.
+in the ``Contrast`` settings.
 
 .. figure:: figures/psc6.4.0.png
     :align: center
@@ -460,9 +458,9 @@ select ``normalize activation matrix``  to normalize the activation matrix.
 
 Main panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The main panel consists of six different outputs:
+The main panel consists of five different outputs:
         
-:**a**: The **Enrichment plots** visualize the enrichment of the
+:**Enrichment plots***: The plots visualize the enrichment of the
     selected keyword in the contrasts.  Black vertical bars
     indicate the position of gene sets that contains the *keyword*
     in the ranked list of enrichment scores. The curve in green
@@ -473,7 +471,7 @@ The main panel consists of six different outputs:
     to the lower right, corresponds to keyword enrichment in the
     second group.
 
-:**b**: The **Word cloud plot** visualizes the frequency/enrichment of
+:**Word cloud**: The word cloud plot visualizes the frequency/enrichment of
     keywords for the data set. Select a keyword in the 'Enrichment
     table'. In the plot settings, users can exclude certain words
     from the figure, or choose the color palette. The sizes of the
@@ -489,7 +487,7 @@ The main panel consists of six different outputs:
     :align: center
     :width: 30%
 
-:**c**: The **Word t-SNE** plot visualizes the similarity of the
+:**Word t-SNE**: The Word t-SNE plot visualizes the similarity of the
     keywords that were found in the title/description of gene
     sets. Keywords that are often found together in
     title/descriptions are placed close together in the t-SNE. For
@@ -504,17 +502,12 @@ The main panel consists of six different outputs:
 .. figure:: figures/psc6.4.2.png
     :align: center
     :width: 30%
-         
-:**d**: The **Activation matrix** visualizes the keywords enrichment 
-    across the conditions. The size of the circles correspond to 
-    their relative activation, and are colored according to their 
-    upregulation (red) or downregulation (blue) in the contrast profile.
 
-:**e**: The **Enrichment table** summarizes the results from the
+:**Enrichment table**: The Enrichment table summarizes the results from the
     enrichment test for the tested keywords. The NES corresponds
     to the normalized enrichment score from the GSEA analysis.
 
-:**f**: The **Leading-edge table** shows the geneset titles that have
+:**Leading-edge table**: The Leading-edge table shows the geneset titles that have
     contributed to the enrichment of the selected keyword.
 
 .. figure:: figures/psc6.4.png
