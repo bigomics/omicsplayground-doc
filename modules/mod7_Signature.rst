@@ -4,7 +4,7 @@
 Compare
 ================================================================================
 
-The **Compare** module consists of three panels: **Compare signatures**, 
+The **Compare** module consists of three submodules: **Compare signatures**, 
 **Compare datasets** and **Similar experiments**.
 
 **Compare signatures** allows users to compare experiments by intersecting 
