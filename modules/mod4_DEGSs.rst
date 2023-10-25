@@ -451,16 +451,16 @@ Settings panel
 Users can specify the contrast of their interest
 in the ``Contrast`` settings.
 
-.. figure:: figures/psc6.4.0.png
+.. figure:: figures_v3/WC_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
               
 
 Main panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The main panel consists of five different outputs:
         
-:**Enrichment plots***: The plots visualize the enrichment of the
+:**Enrichment plots**: The plots visualize the enrichment of the
     selected keyword in the contrasts.  Black vertical bars
     indicate the position of gene sets that contains the *keyword*
     in the ranked list of enrichment scores. The curve in green
@@ -482,10 +482,9 @@ The main panel consists of five different outputs:
     the 'keyword set' as the collection of genesets that contain
     that keyword in the title/description.
 
-
-.. figure:: figures/psc6.4.1.png
-    :align: center
-    :width: 30%
+        .. figure:: figures_v3/WC_wc_opts.png
+            :align: center
+            :width: 25%
 
 :**Word t-SNE**: The Word t-SNE plot visualizes the similarity of the
     keywords that were found in the title/description of gene
@@ -499,9 +498,9 @@ The main panel consists of five different outputs:
     settings, the user can choose between t-SNE and "Uniform
     Manifold Approximation and Projection" (UMAP).
 
-.. figure:: figures/psc6.4.2.png
-    :align: center
-    :width: 30%
+        .. figure:: figures_v3/WC_tsne_opts.png
+            :align: center
+            :width: 25%
 
 :**Enrichment table**: The Enrichment table summarizes the results from the
     enrichment test for the tested keywords. The NES corresponds
@@ -510,74 +509,6 @@ The main panel consists of five different outputs:
 :**Leading-edge table**: The Leading-edge table shows the geneset titles that have
     contributed to the enrichment of the selected keyword.
 
-.. figure:: figures/psc6.4.png
-    :align: center
-    :width: 100%
-
-
-
-Drug connectivity
---------------------------------------------------------------------------------
-In the **Drug Connectivity Map** panel, users can correlate their signature with
-more than 5000 known drug profiles from the 
-`L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, as well as with drug 
-sensitivity profiles from the `CTRP v2 <https://portals.broadinstitute.org/ctrp.v2.1/>`__ 
-and `GDSC <https://www.cancerrxgene.org/>`__ databases. 
-Additionally, a separate list of shRNA- and cDNA-perturebed datasets from the L1000 database 
-is also available (gene/L1000).
-
-An activation-heatmap compares drug activation profiles across multiple contrasts. 
-This facilitates to quickly see and detect the similarities between contrasts
-for certain drugs.
-
-Input panel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A tutorial about the module can be found under ``Youtube`` in the input panel.
-Users can specify the contrast of their interest
-in the ``Contrast`` settings. Under ``Analysis type`` users can select from four 
-databases.
-
-.. figure:: figures/psc6.3.0.png
-    :align: center
-    :width: 30%
-
-
-Main panel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The main panel consists of four outputs:    
-
-:**a**: The Drug Connectivity Map correlates your signature with profiles from the L1000 
-        (activity/L1000 and gene/L1000), CTRP and GDSC databases. 
-        It shows the top N=10 similar and opposite profiles by running 
-        the GSEA algorithm on the contrast-drug profile correlation space. 
-
-:**b**: Enrichment table. Enrichment is calculated by correlating
-        your signature with the profiles from the chosen
-        database. Because of multiple perturbation experiments for a
-        single small molecule, they are scored by running the GSEA algorithm on the 
-        contrast-small molecule profile correlation space. In this way, we obtain a 
-        single score for multiple profiles of a single small molecule. The table can be 
-        customised via the table *Settings* to only show annotated drugs.
-
-:**c**: This plot visualizes the mechanism of action (MOA) across the enriched
-        drug profiles. On the vertical axis, the number of drugs with the same
-        MOA are plotted. You can switch to visualize between MOA or target gene.
-        Under the plots *Settings*, users can select the plot type of MOA
-        analysis: by class description (``drug class``) or by target gene 
-        (``target gene``).
-
-        .. figure:: figures/psc6.3.c.png
-            :align: center
-            :width: 35%
-
-:**d**: The **Activation matrix** visualizes the correlation of small molecule 
-        profiles with all available pairwise comparisons. The size of the
-        circles correspond to the strength of their correlation, and are
-        colored according to their positive (red) or
-        negative (blue) correlation to the contrast profile. 
-        The matrix can be normalised from the *Settings*.
-
-
-.. figure:: figures/psc6.3.png
+.. figure:: figures_v3/WC_main.png
     :align: center
     :width: 100%
