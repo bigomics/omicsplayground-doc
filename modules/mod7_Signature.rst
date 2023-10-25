@@ -70,36 +70,32 @@ Signature clustering
 Two plots are showed in this panel:
 
 :**Foldchange heatmap**: The foldchange heatmap shows the similarity of the contrasts visualized as 
-        a clustered heatmap The scale corresponds to the Pearson correlation coefficient 
-        between contrast profiles. Red corresponds to positive correlation and 
-        blue to negative correlation. The contrast heatmap quickly highlights 
-        the similarities and differences between multiple contrasts.
-        The plot can be customised via the *Settings*. Users can select to show 
-        only the selected contrasts and alter the number of top genes for computation.
+        a clustered heatmap. Contrasts that are similar will be clustered close together.
+        The plot can be customised via the settings icon. Users can select to show 
+        only the selected contrasts (default is to show all), cluster the genes on the heatmap and 
+	change the annotation type between logFC (*boxplot*) and cumulative logFC (*barplot*).
 
-.. figure:: figures/psc7.2.a.png
-    :align: center
-    :width: 30%
+	.. figure:: figures_v3/SIG_heat_set.png
+    		:align: center
+    		:width: 30%
 
-:**Contrast correlation**: The Connectivity map shows the similarity of the contrasts profiles 
-        as a t-SNE plot. Contrasts that are similar will be clustered close 
-        together, contrasts that are different are placed farther away.
-        Under the plot settings, users can use ``Layout`` to set the plot layout 
-        and ``Top genes`` to specify the number of top genes for computations.
+:**Contrast correlation**: Contrasts that are similar will be clustered close together. The numeric value in the cells correspond to the Pearson correlation coefficient between contrast signatures. Red corresponds to positive correlation and blue to negative correlation.
+        Under the plot settings, users can use ``show all contrasts`` (default) to show all contrasts or only the selected ones and change the 
+	``number of top genes`` to specify the number of top genes for computations (default=1000).
 
-.. figure:: figures/psc7.2.b.png
-    :align: center
-    :width: 30%
+	.. figure:: figures_v3/SIG_cc_set.png
+   		:align: center
+    		:width: 30%
 
 A typical output can be seen below.
 
 
-.. figure:: figures/psc7.2.png
+.. figure:: figures_v3/SIG_cluster_.png
     :align: center
     :width: 100%
 
 
-Test Signature
+Compare datasets
 --------------------------------------------------------------------------------
 
 With this panel, users can test their gene signature by calculating an enrichment 
@@ -107,7 +103,7 @@ score. The panel consists of four separate tabs: **Enrichment**, **Volcano plots
 **Overlap/similarity**, **Markers**.
 
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For a custom signature, users can upload their own
