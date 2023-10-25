@@ -22,13 +22,13 @@ divided into two subpanels: **Pairwise scatter** and **Signature clustering**.
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can select contrasts to compare from the ``Contrast`` settings
-in the input panel on the left. Under *Options*, users can set the ``Filter`` for
-filtering the features (i.e. genes or gene sets). The ``Level`` setting allows users 
-to toggle between gene or gene set level analysis.
+in the input panel on the left. Under *Options*, the ``Level`` setting allows users 
+to toggle between gene or gene set level analysis, while users can set the ``Filter`` for
+selecting specific features (e.g. a specific gene family or gene set). 
 
-.. figure:: figures/psc7.0.png
+.. figure:: figures_v3/SIG_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Pairs
