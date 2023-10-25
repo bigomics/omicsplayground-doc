@@ -98,22 +98,12 @@ A typical output can be seen below.
 Compare datasets
 --------------------------------------------------------------------------------
 
-With this panel, users can test their gene signature by calculating an enrichment 
-score. The panel consists of four separate tabs: **Enrichment**, **Volcano plots**, 
-**Overlap/similarity**, **Markers**.
+With this panel, users can 
 
 
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For a custom signature, users can upload their own
-gene list or use one of the example gene lists provided. 
-Alternatively, users can select signatures from *Options*. 
-A contrast profile can be chosen by selecting :option:`contrast`
-as ``Signature type``, which then takes the top 100 most
-differentially expressed genes as the signature. When :option:`Hallmark` 
-or :option:`KEGG` is selected, the user is presented with a list 
-of predefined gene sets to choose from.
 
 .. figure:: figures/psc8.0.png
     :align: center
