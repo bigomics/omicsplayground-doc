@@ -31,26 +31,26 @@ selecting specific features (e.g. a specific gene family or gene set).
     :width: 20%
 
 
-Pairs
+Pairwise scatter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Pairs** panel shows three outputs:
+The **Pairwise scatter** panel shows three outputs:
 
-:**a**: The Pairs plot provides interactive pairwise scatterplots for the differential expression 
+:**Scatterplot pairs**: The Pairs plot provides interactive pairwise scatterplots for the differential expression 
         profiles corresponding to multiple contrasts. The main purpose of this panel is 
         to identify similarity or dissimilarity between selected contrasts. 
         When K>=3 contrasts are selected, the figure shows a KxK scatterplot matrix. 
         Via the *Settings*, users can disable the highlighting of genes on the plot. 
 
-:**b**: The Venn diagram visualizes the number of intersecting genes
+:**Venn diagram**: The Venn diagram visualizes the number of intersecting genes
         between the selected contrast profiles. The diagram can be customised via 
         the *Settings* by altering logFC and FDR thresholds and by selecting whether to view 
         disregulated genes jointly or separated by up- and down-regulation.
 
-.. figure:: figures/psc7.1.a.png
-    :align: center
-    :width: 30%
+	.. figure:: figures/psc7.1.a.png
+   		:align: center
+   		:width: 30%
 
-:**c**: The Cumulative fold-change plot visualizes the cumulative fold-change of genes 
+:**Leading-edge table**: The Cumulative fold-change plot visualizes the cumulative fold-change of genes 
         shared between the profiles. Users can toggle between absolute and directional
         fold change from the *Settings*. Ticking the letter boxes allows users to 
         focus only on genes within a specific section of the Venn diagram. For example, 
@@ -59,9 +59,9 @@ The **Pairs** panel shows three outputs:
         option to download a list of the selected genes and their expression changes by comparison 
         as a csv file.
 
-.. figure:: figures/psc7.1.b.png
-    :align: center
-    :width: 100%
+	.. figure:: figures/psc7.1.b.png
+    		:align: center
+    		:width: 100%
 
 A typical output can be seen below.
 
