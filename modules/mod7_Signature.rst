@@ -14,7 +14,7 @@ their signature genes. Under **Compare datasets**, users can compare pairwise co
 Compare signatures
 --------------------------------------------------------------------------------
 
-The main goal of this panel is to identify contrasts showing similar profiles and 
+The main goal of this submodule is to identify contrasts showing similar profiles and 
 find genes that are commonly up/down regulated between two contrasts. The panel is 
 divided into two subpanels: **Pairwise scatter** and **Signature clustering**.
     
@@ -98,7 +98,8 @@ A typical output can be seen below.
 Compare datasets
 --------------------------------------------------------------------------------
 
-With this panel, users can 
+With this submodule, users can compare pairwise comparisons across datasets that have been uploaded into the platform.
+The submodule is split into thee tabs: **Compare expression**, **Foldchange** and **Gene Correlation**.
 
 
 Settings panel
@@ -110,7 +111,7 @@ Settings panel
     :width: 30%
 
 
-Enrichment
+Compare expression
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 After uploading a gene list, the **Enrichment** panel performs the
 enrichment analysis of the gene list against all contrasts by
