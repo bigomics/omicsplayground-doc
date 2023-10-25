@@ -124,7 +124,7 @@ The enrichment plots show the enrichment of the query
 signature across all constrasts. Positive enrichment means that this particular
 contrast shows similar expression changes as the query signature.
 
-.. figure:: figures/psc8.1.png
+.. figure:: figures_v3/CD_exp.png
     :align: center
     :width: 100%
 
