@@ -106,9 +106,9 @@ Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. figure:: figures/psc8.0.png
+.. figure:: figures_v3/CD_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Compare expression
