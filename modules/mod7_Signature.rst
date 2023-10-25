@@ -11,7 +11,7 @@ The **Compare** module consists of three submodules: **Compare signatures**,
 their signature genes. Under **Compare datasets**, users can compare pairwise comparisons from the dataset in use and another dataset stored in the platform. Finally, with the **Similar experiments** panel, users can perform a large-scale comparison across all uploaded datasets or a pre-loaded collection of more than 6000 public dataset.
 
 
-Compare Signature
+Compare signatures
 --------------------------------------------------------------------------------
 
 The main goal of this panel is to identify contrasts showing similar profiles and 
