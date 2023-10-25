@@ -115,14 +115,7 @@ Under *Options*, users can set the ``Plot type`` (default: UMAP1) to be displaye
 
 Compare expression
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-After uploading a gene list, the **Enrichment** panel performs the
-enrichment analysis of the gene list against all contrasts by
-computing a correlation based enrichment or running the `GSEA
-<https://www.biorxiv.org/content/10.1101/060012v1.full>`__ algorithm
-and plots enrichment outputs.
-The enrichment plots show the enrichment of the query 
-signature across all constrasts. Positive enrichment means that this particular
-contrast shows similar expression changes as the query signature.
+This panel shows plots for selected pairwise comparisons from the current dataset (*Dataset1*) and a second dataset (*Dataset2*) selected from a list of uploaded experiments. The type of plot can be selected via the main submodule **Settings**. Users can select between plotting the genes or proteins as UMAP plots based on either dataset 1 or dataset 2 (UMAP1 and UMAP2), as volcano, MA plots, scatter plots or heatmaps.
 
 .. figure:: figures_v3/CD_exp.png
     :align: center
