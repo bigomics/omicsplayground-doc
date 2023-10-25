@@ -69,7 +69,7 @@ Signature clustering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Two plots are showed in this panel:
 
-:**a**: The Contrast heatmap shows the similarity of the contrasts visualized as 
+:**Foldchange heatmap**: The foldchange heatmap shows the similarity of the contrasts visualized as 
         a clustered heatmap The scale corresponds to the Pearson correlation coefficient 
         between contrast profiles. Red corresponds to positive correlation and 
         blue to negative correlation. The contrast heatmap quickly highlights 
@@ -81,7 +81,7 @@ Two plots are showed in this panel:
     :align: center
     :width: 30%
 
-:**b**: The Connectivity map shows the similarity of the contrasts profiles 
+:**Contrast correlation**: The Connectivity map shows the similarity of the contrasts profiles 
         as a t-SNE plot. Contrasts that are similar will be clustered close 
         together, contrasts that are different are placed farther away.
         Under the plot settings, users can use ``Layout`` to set the plot layout 
