@@ -1,16 +1,14 @@
 .. _Signature:
 
 
-Signature
+Compare
 ================================================================================
 
-The **Signature** module consists of three panels: **Compare signatures**, 
-**Test signatures** and **Find biomarkers**.
+The **Compare** module consists of three panels: **Compare signatures**, 
+**Compare datasets** and **Similar experiments**.
 
 **Compare signatures** allows users to compare experiments by intersecting 
-their signature genes. Under **Test signatures**, users can test their gene signature 
-by calculating an enrichment score. Finally, with the **Find biomarkers** panel, 
-users can select biomarkers that can be used for classification or prediction purposes.
+their signature genes. Under **Compare datasets**, users can compare pairwise comparisons from the dataset in use and another dataset stored in the platform. Finally, with the **Similar experiments** panel, users can perform a large-scale comparison across all uploaded datasets or a pre-loaded collection of more than 6000 public dataset.
 
 
 Compare Signature
@@ -18,10 +16,10 @@ Compare Signature
 
 The main goal of this panel is to identify contrasts showing similar profiles and 
 find genes that are commonly up/down regulated between two contrasts. The panel is 
-divided into two subpanels: **Pairs** and **Contrast heatmap**.
+divided into two subpanels: **Pairwise scatter** and **Signature clustering**.
     
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can select contrasts to compare from the ``Contrast`` settings
 in the input panel on the left. Under *Options*, users can set the ``Filter`` for
