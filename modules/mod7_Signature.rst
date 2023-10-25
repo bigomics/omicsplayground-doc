@@ -43,35 +43,29 @@ The **Pairwise scatter** panel shows three outputs:
 
 :**Venn diagram**: The Venn diagram visualizes the number of intersecting genes
         between the selected contrast profiles. The diagram can be customised via 
-        the *Settings* by altering logFC and FDR thresholds and by selecting whether to view 
-        disregulated genes jointly or separated by up- and down-regulation.
+        the settings icon by altering ``logFC`` and ``FDR`` thresholds and by selecting whether to view 
+        disregulated genes jointly or separated by up- and down-regulation under ``Counting``.
 
-	.. figure:: figures/psc7.1.a.png
+	.. figure:: figures_v3/SIG_venn_set.png
    		:align: center
-   		:width: 30%
+   		:width: 20%
 
-:**Leading-edge table**: The Cumulative fold-change plot visualizes the cumulative fold-change of genes 
-        shared between the profiles. Users can toggle between absolute and directional
-        fold change from the *Settings*. Ticking the letter boxes allows users to 
-        focus only on genes within a specific section of the Venn diagram. For example, 
-        ticking A will visualise all the genes in pairwise comparison A, while ticking A and B will 
-        show only the gene in the intersection between comparisons A and B. Users have then the 
-        option to download a list of the selected genes and their expression changes by comparison 
-        as a csv file.
+:**Leading-edge table**: Venn diagram areas can be selected via the settings icon (``Filter intersection``) and are represented by corresponding letters 
+	(e.g. 'ABC' represents the intersection of contrasts A, B and C). Contrast letter identifiers are provided in the Venn Diagram.
 
-	.. figure:: figures/psc7.1.b.png
+	.. figure:: figures_v3/SIG_le_set.png
     		:align: center
-    		:width: 100%
+    		:width: 25%
 
-A typical output can be seen below.
+The three output panels are highlighted in the figure below.
 
 
-.. figure:: figures/psc7.1.png
+.. figure:: figures_v3/SIG_scatter.png
     :align: center
     :width: 100%
         
 
-Contrast heatmap
+Signature clustering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Two plots are showed in this panel:
 
