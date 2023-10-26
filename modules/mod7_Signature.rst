@@ -163,16 +163,30 @@ With the final submodule, users can compare contrasts from different experiments
 
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Through the **Settings** panel, an experimental ``Contrast`` from the selection of available pairwise comparisons in the dataset can be set. Under ``Signature DB``, users can select from three databases: *datasets-sigdb.h5* corresponds to the datasets that have been uploaded by teh user into the platform, *sigdb-archs4.h5* correspond to a collection of more than 6000 datasets from the GEO database, while *sigdb-virome.h5* contains a selection of more than 300 viral infection GEO datasets. Under the *Advanced options*, users can choose whether to ``hide cluster contrasts`` (default) and show the absolute score (``abs.score``), which is the default choice. Under ``Select genes`` it is possible to type or paste a user-generated list of genes/proteins and also select the number of genes to be labelled (default: 50). Clicking ``Recalculate`` will then generate new plots based on the inputed gene list. 
 
-
-.. figure:: figures_v3/CD_settings.png
+.. figure:: figures_v3/SE_settings.png
     :align: center
     :width: 20%
 
 
 FC correlation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-With this tab it is possible to compare different experiments by correlating their fold-change signatures. 
+With this tab it is possible to compare different experiments by correlating their fold-change signatures. The tab consists of three panels: **FC scatter plots**, **Similarity scores** and **FC-FC scatterplot**. 
+
+:**FC scatter plots**:Scatter plots of gene expression foldchange values between two contrasts. Foldchanges that are similar show high correlation, i.e. are close to the diagonal. You can switch to enrichment type plots in the plot settings.
+
+	.. figure:: figures_v3/SE_fc_set.png
+    		:align: center
+    		:width: 30%
+
+:**Similarity score**: In this searchable table, users can check mean expression values and correlation scores of genes/proteins across the selected pairwise 		comparisons.
+
+:**FC-FC scatterplot**: Scatter plots of gene expression scatter values between two contrasts. Scatters that are similar show high correlation, i.e. are close to 	the diagonal. This plot is only available for studies with matched sample Ids and can be used to compare proteomics and transcriptomics datasets from the 	same samples. Users can select by which pairwise comparison to colour the samples via the settings icon.
+
+	.. figure:: figures_v3/CD_gc_opts.png
+    		:align: center
+    		:width: 30%
 
 FC heatmap
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
