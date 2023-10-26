@@ -155,6 +155,46 @@ The genes or proteins appearing in the **Expression** barplots and **Gene correl
     :width: 100%
 
 
+Similar experiments
+--------------------------------------------------------------------------------
+
+With the final submodule, users can compare contrasts from different experiments against a selected pairwise comparisons from the current dataset simultenously.  Rather than a pairwise analysis between two datasets, this analysis will take into accounts all uploaded datasets or, alternatively, access two databases of more than 6000 individual experiments collected from the GEO database. The submodule is split into three tabs: **FC correlation**, **FC heatmap** and **Meta-network**.
+
+
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. figure:: figures_v3/CD_settings.png
+    :align: center
+    :width: 20%
+
+
+FC correlation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+With this tab it is possible to compare different experiments by correlating their fold-change signatures. 
+
+FC heatmap
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Meta-network
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Overlap/similarity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Under the **Overlap/similarity** panel, users can compare their gene
