@@ -140,8 +140,8 @@ Gene correlation
 The **Gene Correlation** tab is used to compare the expression levels of individual genes or proteins between pairwise comparions across datasets. It can also be used for the combined analysis of proteomics and transcriptomics datasets. It contains three panels: **Expression**, **Correlation score** and **Gene correlation**.
 
 :**Expression**: Barplots of expression values for multiple comparisons in the two datasets (blue and green). Bars are labelled by pairwise comparison groups.
-:**Correlation score**: In this searchable table, users can check mean expression values and correlation scores of genes/proteins across the selected pairwise 		comparisons.
-:**Gene correlation**: Scatter plots of gene expression scatter values between two contrasts. Scatters that are similar show high correlation, i.e. are close to 	the diagonal. This plot is only available for studies with matched sample Ids and can be used to compare proteomics and transcriptomics datasets from the 	same samples. Users can select by which pairwise comparison to colour the samples via the settings icon.
+:**Correlation score**: In this searchable table, users can check mean expression values and correlation scores of genes/proteins across the selected pairwise comparisons.
+:**Gene correlation**: Scatter plots of gene expression scatter values between two contrasts. Scatters that are similar show high correlation, i.e. are close to the diagonal. This plot is only available for studies with matched sample Ids and can be used to compare proteomics and transcriptomics datasets from the 	same samples. Users can select by which pairwise comparison to colour the samples via the settings icon.
 
 	.. figure:: figures_v3/CD_gc_opts.png
     		:align: center
@@ -174,7 +174,7 @@ FC correlation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 With this tab it is possible to compare different experiments by correlating their fold-change signatures. The tab consists of three panels: **FC scatter plots**, **Similarity scores** and **FC-FC scatterplot**. 
 
-:**FC scatter plots**:Scatter plots of gene expression foldchange values between two contrasts. Foldchanges that are similar show high correlation, i.e. are close to the diagonal. You can switch to gsea or UMAP enrichment plots in the ``plot type`` option in the settings icon.
+:**FC scatter plots**: Scatter plots of gene expression foldchange values between two contrasts. Foldchanges that are similar show high correlation, i.e. are close to the diagonal. You can switch to gsea or UMAP enrichment plots in the ``plot type`` option in the settings icon.
 
 	.. figure:: figures_v3/SE_fc_set.png
     		:align: center
@@ -184,9 +184,16 @@ With this tab it is possible to compare different experiments by correlating the
 
 :**FC-FC scatterplot**: This plot provides a pairwise scatterplot of logFC fold-change profiles for the selected contrasts. The main purpose of this panel is to identify similarity or dissimilarity between selected contrasts. The scatter plot is interactive and shows information of each gene by hovering over it with the mouse. The ``logFC threshold`` can be set via the settings icon.
 
-	.. figure:: figures_v3/CD_gc_opts.png
+	.. figure:: figures_v3/SE_fc-fc_set.png
     		:align: center
     		:width: 30%
+
+
+The three panels are highlighted in the image below. 
+
+.. figure:: figures_v3/SE_FC.png
+    :align: center
+    :width: 100%
 
 FC heatmap
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
