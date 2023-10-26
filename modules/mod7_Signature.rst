@@ -197,12 +197,65 @@ The three panels are highlighted in the image below.
 
 FC heatmap
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **FC heatmap** tab provides three panels for more comparative analysis: **Connectivity map**, **Fold-change table** and **Connectivity heatmap**.
+
+:**Connectvity map**: The connectivity map plot shows the similarity of logFC signatures as a t-SNE plot. Signatures that are similar will be clustered close together, signatures that are different are placed farther away. The plot can be extensively customised via the options in the settings icon. ``Layout`` is usde to alter the layout of the plot, namely pca, tsne (default) and volcano. ``Score threshold`` thresholds the points by minimum score.``Color by`` is used to colour the samples by either score (default) or dataset. ``Color gamma`` is used for colour adjustment. Under ``Other options``, users can add lables to the plot, turn it into a 3D plot, change the background colour to black and increase the size of the dots.
+
+	.. figure:: figures_v3/SE_fc_set.png
+    		:align: center
+    		:width: 30%
+
+:**Fold-change table**: In this searchable table, gene expression fold-changes (log2FC) of similar signatures across different experiments are indicated.
+
+:**Connectivity heatmap**: The heatmap clusters contrasts that are similar close together to provide an overview of the top most correlated contrasts with th equeried pairwise comparison. Through the settings icon, users can alter the ``Number of signatures`` to be displayed (default=20), they can also ``Cluster genes`` rather than sorting them by expression (default: off), ``Use absolute foldchange`` for calculating the cumulative sum and finally can ``Reverse negative contrasts`` (default: on), so as not to consider the direction of the correlation but only its strength. 
+
+	.. figure:: figures_v3/SE_cm_set.png
+    		:align: center
+    		:width: 30%
+
+
+These plots are complementary to the plots provided by the **FC correlation** tab, to explore more in detail the nature of the correlation between contrasts.
+
+.. figure:: figures_v3/SE_heat.png
+    :align: center
+    :width: 100%
+
 
 
 Meta-network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The final tab of the **Similar experiments** submodule provides some comparative gene network analysis as well as geneset level annotation of the most frequently enriched genesets across the correlated pairwise comparisons. It consists of four panels: **Leading-edge graph**, **Cumulative foldchange**, **Enrichment graph** and **Cumulative enrichment**.
+
+:**Leading-edge graph**: This graph displays the connections between genes shared across the correlated signatures. The edge width corresponds to the number of signatures that share that pair of genes in their top differentially expressed genes. Through the settings icon, it is possible to set the ``Edge threshold``, select the number of signatures (``nr of signatures``) to be used (default=10) and select the ``Size`` parameter for the nodes (default: cumFC).
+
+	.. figure:: figures_v3/SE_fc_set.png
+    		:align: center
+    		:width: 30%
+
+:**Cumulative foldchange**: The barplot visualizes the cumulative foldchange between the top-10 most similar profiles. Genes that are frequently shared with high foldchange will show a higher cumulative score. You can choose between signed or ``Absolute foldchange`` in the options and use ``order by`` to order the plot by FC or cumulative FC (cumFC, default).
+
+	.. figure:: figures_v3/SE_fc_set.png
+    		:align: center
+    		:width: 30%
+
+:**Enrichment graph**: In this graph, the edge width corresponds to the number of signatures that share that pair of genesets in their top enriched genesets. In the plot options you can set the ``Edge threshold``, the number of similar experiments to consider (``N-neighbours``, default=10), whether to add a ``Odd ratio weighting`` (default: off) and the parameter to be used for the node ``Size`` (default: cumFC).
+
+	.. figure:: figures_v3/SE_eg_set.png
+    		:align: center
+    		:width: 30%
+
+:**Cumulative enrichment**: In this plot, gene sets that are frequently shared with high enrichment will show a higher cumulative scores. You can choose between signed or ``Absolute foldchange`` in the options and use ``order by`` to order the plot by FC or cumulative FC (cumFC, default).
+
+	.. figure:: figures_v3/SE_ce_set.png
+    		:align: center
+    		:width: 30%
 
 
+These plots are complementary to the plots provided by the **FC correlation** tab, to explore more in detail the nature of the correlation between contrasts.
+
+.. figure:: figures_v3/SE_meta.png
+    :align: center
+    :width: 100%
 
 
 
