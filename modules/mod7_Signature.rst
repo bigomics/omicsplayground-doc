@@ -122,30 +122,35 @@ This panel shows plots for selected pairwise comparisons from the current datase
     :width: 100%
 
 
-Enrichment table
+Fold change
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Enrichment statistics can be found in the tables on the right:
+This tab contains three panels: **FC correlation**, which contains the plot between the pairwise comparsions selected between two datasets and the **Cumulative foldchange** panels that show barplot highlighting the fold changes in expression for each of the selected pairwise comparisons.
 
-:**Table a**: Enrichment scores across all contrasts for the selected
-        query signature . The NES corresponds to the normalized
-        enrichment score of the GSEA analysis.
-:**Table b**: Genes in the query signature sorted by decreasing
-        (absolute) fold-change corresponding to the contrast selected
-        in Table (a).
+:**FC correlation**: Scatter plot of gene expression scatter values between two contrasts. Scatters that are similar show high correlation, i.e. are close to 		the diagonal.
+:**Cumulative foldchange** upper: Barplot showing the cumulative fold changes on dataset 1.
+:**Cumulative foldchange** lower: Barplot showing the cumulative fold changes on dataset 2.
 
-.. figure:: figures/psc8.2.png
+.. figure:: figures_v3/CD_FC.png
     :align: center
     :width: 100%
 
 
-Volcano Plots
+Gene correlation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Volcano Plots** panel produces a visualization of the query signature 
-on the volcano plots of all constrasts. For positive enrichment, genes of the 
-query signature would fall on the upper right of the volcano plot, 
-for negative enrichment, on the upper left.
+The **Gene Correlation** tab is used to compare the expression levels of individual genes or proteins between pairwise comparions across datasets. It can also be used for the combined analysis of proteomics and transcriptomics datasets. It contains three panels: **Expression**, **Correlation score** and **Gene correlation**.
 
-.. figure:: figures/psc8.3.png
+:**Expression**: Barplots of expression values for multiple comparisons in the two datasets (blue and green). Bars are labelled by pairwise comparison groups.
+:**Correlation score**: In this searchable table, users can check mean expression values and correlation scores of genes/proteins across the selected pairwise 		comparisons.
+:**Gene correlation**: Scatter plots of gene expression scatter values between two contrasts. Scatters that are similar show high correlation, i.e. are close to 	the diagonal. This plot is only available for studies with matched sample Ids and can be used to compare proteomics and transcriptomics datasets from the 	same samples. Users can select by which pairwise comparison to colour the samples via the settings icon.
+
+	.. figure:: figures_v3/CD_gc_opts.png
+    		:align: center
+    		:width: 30%
+
+The genes or proteins appearing in the **Expression** barplots and **Gene correlation** scatter plots will be determined in the **Correlation score** table.
+
+
+.. figure:: figures_v3/CD_gc.png
     :align: center
     :width: 100%
 
