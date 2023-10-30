@@ -152,8 +152,9 @@ Mapping
 The **Mapping** panel contains two panels.
 The **Cell type mapping** panel contains a plot representing the cell type mapping across all samples.
 This plot can be customised via the *Settings* menu. Through it, users can change 
-the ``plot type`` between a dotmap and a heatmap, select the ``reference`` dataset, 
-select the analysis ``method`` and use ``group by`` to group samples by phenotypes.
+the ``plot type`` between a dotmap and a heatmap and select the ``reference`` dataset, 
+select the analysis ``method``. The reference datasets and the methods available are the same as indicated in the **Cell type profiling** panel under the **Cell type** tab. 
+Users can also use ``group by`` to group samples by input phenotypes.
 
 .. figure:: figures_v3/cell_type_map_opts.png
     :align: center
