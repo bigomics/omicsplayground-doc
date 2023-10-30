@@ -69,6 +69,7 @@ There are four main panels in the **Drug enrichment** tab:
             :align: center
             :width: 25%
 
+This tab can have many applications, which include understanding the MOA of a novel compund, identifying drugs that can be repurposed for treating a disease, identifying suitable partner drugs for the tested compound or target genes for intervention.
 
 .. figure:: figures_v3/drug_main.png
     :align: center
@@ -84,39 +85,36 @@ analysis and visualization of single-cell datasets. The main
 applications are identification of immune cell types and
 visualisations of markers, phenotypes, and proportions across the cells.
 
-The **Cell type** panel infers the type of cells using computational deconvolution
+The **Cell type** tab infers the type of cells using computational deconvolution
 methods and reference datasets from the literature.
 
-The **Mapping** panel provides a visualization of the inferred cell types 
+The **Mapping** tab provides a visualization of the inferred cell types 
 matched to the phenotype variable of the data set, as well as a proportion plot 
 visualizing the interrelationships between two categorical variables 
 (so-called cross tabulation). This can be used to study the composition 
 of a sample by cell type, for example.  
 
-The **Markers** panel provides potential marker genes, which are the top genes 
+The **Markers** tab provides potential marker genes, which are the top genes 
 with the highest standard deviation within the expression data across the samples. 
 It also generates a plot mimicking the scatter plots used for gating in 
 flow cytometry analysis.
 
-The **iTALK** consists of a computational approach from the literature
-to characterize and illustrate intercellular communication signals in the 
-multicellular tumor ecosystem.
 
 
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can filter relevant samples in the ``Filter samples`` settings
 under the the main ``Options`` in the input panel. They can also
-specify to use a ``default``  (tSNE) or ``pca`` layout for the figures.
+specify the ``layout`` for the figures by chooisng between pca, tsne or umap options (default: tsne).
 
 .. figure:: figures/psc10.0.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
-Cell type
+Cell type profiling
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Cell type** profiling panel infers the type of cells using
+The **Cell type profiling** tab infers the type of cells using
 computational deconvolution methods and reference datasets from the
 literature.  In the plot settings menu, users can select the
 reference dataset and the method for the cell type prediction in the
