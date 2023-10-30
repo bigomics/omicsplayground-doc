@@ -147,28 +147,21 @@ The cell type profiling tab displays the two panels side by side.
     :width: 100%
 
 
-
-
 Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Mapping** panel contains two plots.
-To the right there is a plot representing the cell type mapping across all samples.
+The **Mapping** panel contains two panels.
+The **Cell type mapping** panel contains a plot representing the cell type mapping across all samples.
 This plot can be customised via the *Settings* menu. Through it, users can change 
 the ``plot type`` between a dotmap and a heatmap, select the ``reference`` dataset, 
 select the analysis ``method`` and use ``group by`` to group samples by phenotypes.
 
-.. figure:: figures/psc10.2.a.png
+.. figure:: figures_v3/cell_type_map_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The cell type mapping plot is shown below.
 
-.. figure:: figures/psc10.2.png
-    :align: center
-    :width: 100% 
-
-To the left, a proportion plot visualizes the overlap between two categorical variables.
-This can be useful for bulk RNA datasets, as it provides useful information about 
+The &&Proportions** panel contains a proportion plot visualizes the overlap between two categorical variables.
+This may be useful for bulk RNA datasets, as it can provide information about 
 the proportion of different cell types in the samples. From the *Settings*, users 
 can select whwther to display the <cell type> (based on the chosen reference dataset) 
 or select one of the available phenotypes on the x- and y-axes of the plot. The number
