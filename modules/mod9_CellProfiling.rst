@@ -160,7 +160,7 @@ select the analysis ``method`` and use ``group by`` to group samples by phenotyp
     :width: 20%
 
 
-The &&Proportions** panel contains a proportion plot visualizes the overlap between two categorical variables.
+The **Proportions** panel contains a proportion plot visualizes the overlap between two categorical variables.
 This may be useful for bulk RNA datasets, as it can provide information about 
 the proportion of different cell types in the samples. From the *Settings*, users 
 can select whwther to display the <cell type> (based on the chosen reference dataset) 
