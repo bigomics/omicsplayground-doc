@@ -112,9 +112,11 @@ specify the ``layout`` for the figures by chooisng between pca, tsne or umap opt
     :width: 20%
 
 
-Cell type profiling
+Cell type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Cell type profiling** tab infers the type of cells using
+The **Cell type** tab contains two panels: **Cell type profiling** and **Phenotypes**.
+
+**Cell type profiling** infers the type of cells using
 computational deconvolution methods and reference datasets from the
 literature.  In the plot settings menu, users can select the
 reference dataset and the method for the cell type prediction in the
@@ -126,33 +128,25 @@ ImmunoStates), tissue types (2 datasets: HPA and GTEx), cell lines (2
 datasets: HPA and CCLE) and cancer types (1 dataset: CCLE). Not all
 methods or databases may be available for a dataset, the availability
 depends on the pre-processing done. From the settings, users can also 
-sort plots by either probability or name and change the layout.
+sort plots by either probability or name and change the layout (``sort by``).
 
 .. figure:: figures_v3/cell_type_opts.png
     :align: center
     :width: 20%
 
-.. figure:: figures_v3/cell_type_map_opts.png
+The **Phenotypes** tab displays plots that show the distribution of the phenotypes superposed on the t-SNE clustering. Often, we can expect the t-SNE distribution to be driven by the particular phenotype that is controlled by the experimental condition or unwanted batch effects. Users can customise the plot via the settings icon, where they can ``label`` the plot groups or add a legend instead.
+
+.. figure:: figures_v3/cp_pheno_opts.png
     :align: center
     :width: 20%
 
-The cell type profiling plot is highlighted below.
+The cell type profiling tab displays the two panels side by side.
 
 .. figure:: figures_v3/cell_type.png
     :align: center
     :width: 100%
 
-It also produces phenotypes plots showing the distribution of the 
-phenotypes superimposed on the t-SNE clustering. 
-Often, we can expect the t-SNE distribution to be driven by the particular 
-phenotype that is controlled by the experimental condition or unwanted 
-batch effects. Users can select whether they want the group labels to be 
-plotted inside the figures or in a seperate legend in the``Legend`` 
-under the *Settings*.
 
-.. figure:: figures/psc10.1.1.png
-    :align: center
-    :width: 100%
 
 
 Mapping
