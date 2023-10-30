@@ -226,7 +226,7 @@ Settings panel
 WGCNA modules are selected from the **Settings** panel (``select module``) and plots can be recalcluated based on the selected module. 
 Under *Options*, the number of genes (``Number genes``, default=1000), the miinum module size (``Min. module size``, default=30), the ``Power`` (default=6), the ``deepsplit`` (default=2) and the ``Merge cut height`` *default=0.25) can be set.
 
-.. figure:: figures_v3/cp_cyto_opts.png
+.. figure:: figures_v3/WGCNA_settings.png
     :align: center
     :width: 20%
 
