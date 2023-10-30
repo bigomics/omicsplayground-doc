@@ -256,7 +256,28 @@ The **WGCNA** tab consists of fiive panels (from left to right and top to bottom
 
 Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **WGCNA** tab
+The **Modules** tab contains fuve panels (left to right, top to bottom): **Module-Trait relationships**, **Correlation network**, **Module Enrichment (plot)**, **Module genes** and **Module enrichment (table)**. **(@Mauro, @Ivo: calling two panels with the same name is very confusing, I suggest adding "plot" to the first and "table" to the second.)**
+
+:**Module-Trait relationships**: In this panel, the relationships between the various WGCNA modules and the phenotypic groups in the dataset are displayed as a heatmap, with shades of red indicating a negative correlation and shades of green indicating a positive correlation. The continuous variables can be binarised **(@Ivo, @Mauro: what does that mean at all?)** via the settings icon (``binarize continuous vars``).
+   
+    .. figure:: figures_v3/WGCNA_mtr_opts.png
+        :align: center
+        :width: 30%
+
+:**Correlation network***: A partial correlation graph centered on module eigen-gene with top most correlated features. Green edges correspond to positive (partial) correlation, red edges to negative (partial) correlation. Width of the edges is proportional to the correlation strength of the gene pair. The regularized partial correlation matrix is computed using the 'graphical lasso' (Glasso) with BIC model selection.
+
+:**Module enrichment (plot)**: A plot that displays the functional enrichment **(@Ivo, @Mauro: based on which databases is the functional ernichment analysis performed?)** of the module selected via the **Settings** panel.
+
+:**Module genes**: A table showing the genes in the WGCNA module selected via the **Settings** panel. **(@IVO, @Mauro: what does the me.rho value represent?)**
+   
+:**Module enrichment (table)**: In this table, users can check mean expression values of features across the conditions for the selected module. **(@Ivo, @Mauro: the legend in the platform says "selected genes' but I believe you meant module)**
+
+
+.. figure:: figures_v3/WGCNA_modules.png
+    :align: center
+    :width: 100%
+
+
 
 
 Eigengenes
