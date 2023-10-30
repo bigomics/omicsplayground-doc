@@ -7,7 +7,7 @@ The final module of the platform is divided into three submodules: **Drug connec
 
 Drug connectivity
 --------------------------------------------------------------------------------
-In the **Drug connectivity** panel, users can correlate their signature with
+In the **Drug connectivity** submodule, users can correlate their signature with
 more than 5000 known drug profiles from the 
 `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, as well as with drug 
 sensitivity profiles from the `CTRP v2 <https://portals.broadinstitute.org/ctrp.v2.1/>`__ 
