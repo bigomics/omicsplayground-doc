@@ -25,9 +25,9 @@ In the **Settings** panel, users can specify the contrast of their interest
 with the ``Contrast`` setting. Under ``Analysis type`` users can select from four 
 databases, including the L1000 drug connectivity map  (L1000/activity), the L1000 gene perturbation (L1000/gene) database, the CTRP v2 drug sensitivity (CTRP_v2/sensitivity) database and the GDSC drug sensitivity (GDSC/sensitivity) database (default: L1000/activity). The ``only annotated drugs`` option is used to exclude drugs without a known  mechanism of action.
 
-.. figure:: figures/psc6.3.0.png
+.. figure:: figures_v3/drug_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Drug enrichment
@@ -52,25 +52,25 @@ There are four main panels in the **Drug enrichment** tab:
         MOA are plotted. You can switch to visualize between MOA or target gene.
         Under the plots *Settings*, users can select the plot type of MOA
         analysis: by class description (``drug class``) or by target gene 
-        (``target gene``).
+        (``target gene``). They can also apply q-value weighting for NES scoe values (``q-weighting``).
 
-        .. figure:: figures/psc6.3.c.png
+        .. figure:: figures_v3/drug_cmap_moa_set.png
             :align: center
-            :width: 35%
+            :width: 25%
 
 :**Activation matrix**: The **Activation matrix** visualizes the correlation of small molecule 
         profiles with all available pairwise comparisons. The size of the
         circles correspond to the strength of their correlation, and are
         colored according to their positive (red) or
         negative (blue) correlation to the contrast profile. 
-        The matrix can be normalised from the *Settings*.
+        The matrix can be normalised via the settings icon by ticking the ``normalize activation matrix`` option.
 
-        .. figure:: figures/psc6.3.c.png
+        .. figure:: figures_v3/drug_AM_opts.png
             :align: center
-            :width: 35%
+            :width: 25%
 
 
-.. figure:: figures/psc6.3.png
+.. figure:: figures_v3/drug_main.png
     :align: center
     :width: 100%
 
