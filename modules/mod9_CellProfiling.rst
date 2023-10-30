@@ -163,61 +163,55 @@ Users can also use ``group by`` to group samples by input phenotypes.
 
 The **Proportions** panel contains a proportion plot visualizes the overlap between two categorical variables.
 This may be useful for bulk RNA datasets, as it can provide information about 
-the proportion of different cell types in the samples. From the *Settings*, users 
+the proportion of different cell types in the samples. From the settings icon, users 
 can select whwther to display the <cell type> (based on the chosen reference dataset) 
-or select one of the available phenotypes on the x- and y-axes of the plot. The number
-of counts is also displayed on top. 
-By selecting a gene with ``gene`` they can also add an expression barplot for the gene.
+or select one of the available phenotypes on the x- and y-axes of the plot. 
+By selecting a gene with ``gene`` they can also add an expression barplot that indicates the expression level (high or low) **(@Mauro, @Ivo: What is high and low based on?)** of the selected gene for each of the sample groups as well as adding the total number of read counts of the selected gene per sample group.
 
-.. figure:: figures/psc10.2.b.png
+.. figure:: figures_v3/cp_prop_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The proportion plot (including a gene expression barplot) is shown below.
+The two panels are displayed side by side in the tab.
 
-.. figure:: figures/psc10.2.1.png
+.. figure:: figures_v3/cp_mapping.png
     :align: center
     :width: 100% 
 
 Markers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Markers** panel produces two outputs. The first output consists of 36 t-SNE 
+The **Markers** tab consists of two panels: **Expression of marker genes** and **Cytometry plot**. 
+
+**Expression of marker genes** consists of 25 t-SNE 
 plots of the genes with the highest standard deviation that could represent 
 potential biomarkers. The red color shading is proportional to the (absolute) 
 expression of the gene in corresponding samples. 
-
-In the plot *Settings*, users can specify the ``Level`` of the marker analysis: 
+In the settings icon, users can specify the ``Level`` of the marker analysis: 
 gene or gene set level. They can also restrict the analysis by selecting a particular 
 functional group in the ``Feature set``, where genes are divided into 89 groups, such as 
-chemokines, transcription factors, genes involved in immune checkpoint inhibition, and so on. 
+chemokines, transcription factors, genes involved in immune checkpoint inhibition, and so on (default: CD molecules (HGNC)). 
 In addition, it is possible to filter markers by a specific keywords in the ``Filter`` setting 
-and sort them by name or intensity.
+and sort them by intensity (default) or name (``sort by``).
 
-.. figure:: figures/psc10.3.a.png
+.. figure:: figures_v3/cp_markers_opts.png
     :align: center
-    :width: 30%
-
-An example of the t-SNE plots are highlighted below.
-
-.. figure:: figures/psc10.3.png
-    :align: center
-    :width: 100%
+    :width: 20%
 
 For each gene pairs combination, the panel also generates a cytometry-like plot (**Cyto plot**) 
 of samples. The aim of this feature is to observe the distribution of samples 
 in relation to the selected gene pairs. For instance, when applied to single-cell 
 sequencing data from immunological cells, it can mimic flow cytometry analysis and distinguish 
 T helper cells from other T cells by selecting the CD4 and CD8 gene combination. 
-Under the plot *Settings*, user can select their prefered genes on the x- and y-axes 
-in the ``x-axis`` and ``y-axis``, respectively.
+Under the plot settings icon, users can select their prefered genes on the x- and y-axes 
+in the ``x-axis`` and ``y-axis``, respectively. They can also set the maximum number of bins for histgram distribution (``nbins``) (**@Mauro, @IVO more details needed...what do the histograms refer to?**).
 
-.. figure:: figures/psc10.3.b.png
+.. figure:: figures_v3/cp_cyto_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The Cyto plot is highlighted below.
+The two panels are displayed side by side in the tab.
 
-.. figure:: figures/psc10.3.1.png
+.. figure:: figures_v3/cp_markers.png
     :align: center
     :width: 100%
 
