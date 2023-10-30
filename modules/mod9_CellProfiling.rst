@@ -232,7 +232,18 @@ Under *Options*, the number of genes (``Number genes``, default=1000), the miinu
 
 WGCNA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **WGCNA** tab
+The **WGCNA** tab consists of fiive panels (from left to right and top to bottom): **Gene dendrogram and gene modules**, **Scale independence and mean connectivity**, **TOM heatmap**, **Gene clustering** and **Module graph**.
+
+In the **Gene dendrogram and gene modules** panel, gene modules are detected as branches of the resulting cluster tree using the dynamic branch cutting approach. Genes inside a given module are summarized with the module eigengene. The module eigengene of a given module is defined as the first principal component of the standardized expression profiles.
+
+In the **Scale independence and mean connectivity** panel,   the analysis of network topology for various soft-thresholding powers is displayed. The left plot shows the scale-free fit index (y-axis) as a function of the soft-thresholding power (x-axis). The right plot displays the mean connectivity (degree, y-axis) as a function of the soft-thresholding power (x-axis).
+
+The **TOM heatmap** panel displays the Topological Overlap Matrix (TOM) heatmap, which shows the correlation among gene module memberships  (**@IVO, @Mauro: more information needed. For what practical purpose is it used? How can users act on this information**).
+
+The **Gene clustering** panel contains a clustering plot of the genes coloured by module. Via the settings icon, the layout can be changed between tsne (default), pca and umap.
+.. figure:: figures_v3/WGCNA_settings.png
+    :align: center
+    :width: 20%
 
 
 Modules
