@@ -128,13 +128,17 @@ methods or databases may be available for a dataset, the availability
 depends on the pre-processing done. From the settings, users can also 
 sort plots by either probability or name and change the layout.
 
-.. figure:: figures_v3/psc10.1.0.png
+.. figure:: figures_v3/cell_type_opts.png
+    :align: center
+    :width: 20%
+
+.. figure:: figures_v3/cell_type_map_opts.png
     :align: center
     :width: 20%
 
 The cell type profiling plot is highlighted below.
 
-.. figure:: figures/psc10.1.png
+.. figure:: figures_v3/cell_type.png
     :align: center
     :width: 100%
 
