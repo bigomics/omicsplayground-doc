@@ -107,7 +107,7 @@ Users can filter relevant samples in the ``Filter samples`` settings
 under the the main ``Options`` in the input panel. They can also
 specify the ``layout`` for the figures by chooisng between pca, tsne or umap options (default: tsne).
 
-.. figure:: figures/psc10.0.png
+.. figure:: figures_v3/cp_settings.png
     :align: center
     :width: 20%
 
@@ -128,9 +128,9 @@ methods or databases may be available for a dataset, the availability
 depends on the pre-processing done. From the settings, users can also 
 sort plots by either probability or name and change the layout.
 
-.. figure:: figures/psc10.1.0.png
+.. figure:: figures_v3/psc10.1.0.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 The cell type profiling plot is highlighted below.
 
