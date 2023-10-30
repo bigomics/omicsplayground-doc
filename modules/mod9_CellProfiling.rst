@@ -217,128 +217,37 @@ The two panels are displayed side by side in the tab.
 
 
 
-WGCNA
+WGCNA (**@IVO, @Mauro: this submodule requires extensive feedback throughout)**
 --------------------------------------------------------------------------------
-
+The final submodule under **SystemsBio** is dedicated to weighted correlation network analysis (**WGCNA**), which serves the purpose of identifying clusters (modules) comprising highly correlated genes. These clusters can be summarized using either the module eigengene or an intramodular hub gene. WGCNA also facilitates the association of modules with each other and external sample traits through eigengene network methodology. Furthermore, it allows for the computation of module membership measures.
 
 Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+WGCNA modules are selected from the **Settings** panel (``select module``) and plots can be recalcluated based on the selected module. 
+Under *Options*, the number of genes (``Number genes``, default=1000), the miinum module size (``Min. module size``, default=30), the ``Power`` (default=6), the ``deepsplit`` (default=2) and the ``Merge cut height`` *default=0.25) can be set.
 
+.. figure:: figures_v3/cp_cyto_opts.png
+    :align: center
+    :width: 20%
 
-
-
-
-
-
-
-Leftovers
--------------------------------
-Overlap/similarity
+WGCNA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **Overlap/similarity** panel, users can compare their gene
-list with all the gene sets and pathways in the platform through
-overlap analysis, or also known as over-representation analysis. 
+The **WGCNA** tab
 
-The top overlapping gene sets with selected signature are displyed in the plot. 
-The vertical axis shows the overlap score of the gene set which is computed 
-as the geometric mean of the absolute logarithm of the odds ratio 
-and the q-value of the Fisher's test.
 
-Under the plot settings, users can specify the number to top features
-to show, or users can select to hide/show the feature names in the plot.
-        
-.. figure:: figures/psc8.4.a.png
-    :align: center
-    :width: 30%
-
-The table reports the :option:`score`, total number of genes in the
-gene set (:option:`K`), the number of intersecting genes between the
-list and the gene set (:option:`k`), the overlapping ratio of
-:option:`k/K`, as well as the :option:`odds.ratio` and
-:option:`q.fisher` values by the Fisher's test for the overlap test.
-
-.. figure:: figures/psc8.4.png
-    :align: center
-    :width: 100%
-	   
-
-Markers
+Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Markers** panel produces a t-SNE plot of samples for each gene
-in the signature, where the samples are colored with respect to the
-upregulation (in red) or downregulation (in blue) of the gene. For
-larger signatures, only the top most variable genes in the signature
-are given. If you want to check a particular gene not shown, you must
-reduce the number of genes in your list.
-
-.. figure:: figures/psc8.5.png
-    :align: center
-    :width: 100%
+The **WGCNA** tab
 
 
-Find Biomarkers
---------------------------------------------------------------------------------
-
-The **Find Biomarkers** panel selects biomarkers that can be
-used for classification or prediction purposes. Biomarker analysis
-might also help to better understand which genes, mutations, or gene
-sets influence the final phenotype the most.
-
-Omics Playground calculates a variable importance score for each feature using multiple state-of-the-art machine learning algorithms, including `LASSO <https://www.ncbi.nlm.nih.gov/pubmed/20808728>`__, `elastic nets
-<https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf>`__, `random forests <https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__, and
-`extreme gradient boosting <https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__. Note that we do not use the machine learning algorithms for prediction but we use them just to compute the variable importances according to the different methods. An aggregated score is then calculated as the cumulative rank of the variable importances of the different algorithms. By combining several methods, the platform aims to select the best possible predictive features. The top features are determined as the features with the highest cumulative ranks. 
-
-The module provides a heatmap of samples based on identified top features. 
-In addition, it generates a classification tree using top features and provides
-expression boxplots by phenotype classes for features present in the
-tree.
-
-
-Input panel
+Eigengenes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Users can select the target variable for biomarker selection in the
-``Predicted target`` settings from the input panel. Under ``Feature filter``  
-users can pre-filter features by selecting specific gene families or sets.
-If the user selects :option:`<custom>`, an input area appears and one can paste 
-a custom gene list to be used as initial features. Hitting the ``Run``
-button will start the biomarker computation. 
-
-.. figure:: figures/psc9.0.png
-    :align: center
-    :width: 30%
+The **WGCNA** tab
 
 
-Importance
+Intramodular
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        
-This panel provides the output of the biomarker analysis in multiple
-figures. Below we provide an short explanation for each figure:
+The **WGCNA** tab
 
-:**a**: **Variable importance plot.** A variable importance score for
-        each feature is calculated using multiple machine learning
-        algorithms, including `LASSO
-        <https://www.ncbi.nlm.nih.gov/pubmed/20808728>`__, `elastic
-        nets
-        <https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf>`__,
-        `random forests
-        <https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__,
-        and `extreme gradient boosting
-        <https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__.
-        By combining several methods, the platform aims to select the
-        best possible biomarkers. The top features are plotted
-        according to cumulative ranking by the algorithms.
-        
-:**b**: **Biomarker expression heatmap.** The heatmap shows the expression
-        distribution for the top most important features.
-                
-:**c**: **Decision tree.** The decision tree shows one (out of many
-        possible) tree solution for classification based on the top
-        most important features.
-        
-:**d**: **Expression box plots.** These boxplots shows the expression
-        of genes/samples of the identified features.
 
-.. figure:: figures/psc9.1.png
-    :align: center
-    :width: 100%
+
