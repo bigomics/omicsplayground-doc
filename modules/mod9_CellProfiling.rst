@@ -234,16 +234,24 @@ WGCNA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **WGCNA** tab consists of fiive panels (from left to right and top to bottom): **Gene dendrogram and gene modules**, **Scale independence and mean connectivity**, **TOM heatmap**, **Gene clustering** and **Module graph**.
 
-In the **Gene dendrogram and gene modules** panel, gene modules are detected as branches of the resulting cluster tree using the dynamic branch cutting approach. Genes inside a given module are summarized with the module eigengene. The module eigengene of a given module is defined as the first principal component of the standardized expression profiles.
+:**Gene dendrogram and gene modules**: In this panel, gene modules are detected as branches of the resulting cluster tree using the dynamic branch cutting approach. Genes inside a given module are summarized with the module eigengene. The module eigengene of a given module is defined as the first principal component of the standardized expression profiles.
 
-In the **Scale independence and mean connectivity** panel,   the analysis of network topology for various soft-thresholding powers is displayed. The left plot shows the scale-free fit index (y-axis) as a function of the soft-thresholding power (x-axis). The right plot displays the mean connectivity (degree, y-axis) as a function of the soft-thresholding power (x-axis).
+:**Scale independence and mean connectivity**:  This panes is used for the the analysis of network topology for various soft-thresholding powers. The left plot shows the scale-free fit index (y-axis) as a function of the soft-thresholding power (x-axis). The right plot displays the mean connectivity (degree, y-axis) as a function of the soft-thresholding power (x-axis).
 
-The **TOM heatmap** panel displays the Topological Overlap Matrix (TOM) heatmap, which shows the correlation among gene module memberships  (**@IVO, @Mauro: more information needed. For what practical purpose is it used? How can users act on this information**).
+:**TOM heatmap**: The panel displays the Topological Overlap Matrix (TOM) heatmap, which shows the correlation among gene module memberships  (**@IVO, @Mauro: more information needed. For what practical purpose is it used? How can users act on this information**).
 
-The **Gene clustering** panel contains a clustering plot of the genes coloured by module. Via the settings icon, the layout can be changed between tsne (default), pca and umap.
-.. figure:: figures_v3/WGCNA_settings.png
+:**Gene clustering**: This panel contains a clustering plot of the genes coloured by module. Via the settings icon, the layout can be changed between tsne (default), pca and umap.
+   
+    .. figure:: figures_v3/WGCNA_gc_opts.png
+        :align: center
+        :width: 30%
+
+:**Module graph**: The final panel contains the WGCNA module graph, which represents the relationship betweem of the gene modules. **(@Ivo, @Mauro: we need a better description of what actionable information it provides to users)**
+
+
+.. figure:: figures_v3/WGCNA_WGCNA.png
     :align: center
-    :width: 20%
+    :width: 100%
 
 
 Modules
