@@ -264,7 +264,7 @@ The **Modules** tab contains fuve panels (left to right, top to bottom): **Modul
         :align: center
         :width: 30%
 
-:**Correlation network***: A partial correlation graph centered on module eigen-gene with top most correlated features. Green edges correspond to positive (partial) correlation, red edges to negative (partial) correlation. Width of the edges is proportional to the correlation strength of the gene pair. The regularized partial correlation matrix is computed using the 'graphical lasso' (Glasso) with BIC model selection.
+:**Correlation network**: A partial correlation graph centered on module eigen-gene with top most correlated features. Green edges correspond to positive (partial) correlation, red edges to negative (partial) correlation. Width of the edges is proportional to the correlation strength of the gene pair. The regularized partial correlation matrix is computed using the 'graphical lasso' (Glasso) with BIC model selection.
 
 :**Module enrichment (plot)**: A plot that displays the functional enrichment **(@Ivo, @Mauro: based on which databases is the functional ernichment analysis performed?)** of the module selected via the **Settings** panel.
 
@@ -282,7 +282,20 @@ The **Modules** tab contains fuve panels (left to right, top to bottom): **Modul
 
 Eigengenes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **WGCNA** tab
+The **Eigengenes** tab contains two panels: **Eigengene clustering** and **Module membership (eigengene correlation)**.
+
+:**Eigengene clustering**: A cluster heatmap that shows the relationship between the different modules produced by the platform. **(@Ivo, @Mauro: I just made this description up. Please write down something more explanatory and statstically correct)**
+
+:**Module membership (eigengene correlation)**: This panels contains a series of plots for each one of the generated modules. For each module, we define a quantitative measure of module membership (MM) as the correlation of the module eigengene and the gene expression profile. This allows us to quantify the similarity of all genes on the array to every module. Users can also select to include the ``covariance`` for each gene (default:off). **(@Mauro, @Ivo: I have no idea what the covariance stands for, as it is explained nowhere in the platform)**
+
+    .. figure:: figures_v3/WGCNA_eigen_mm_opts.png
+        :align: center
+        :width: 30%
+
+.. figure:: figures_v3/WGCNA_eigen.png
+    :align: center
+    :width: 100%
+
 
 
 Intramodular
