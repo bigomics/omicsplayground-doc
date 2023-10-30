@@ -1,8 +1,13 @@
 .. _CellProfiling:
 
+SystemsBio
+================================================================================
+The final module of the platform is divided into three submodules: **Drug connectivity**, **Cell profiling** and **WGCNA**.
+
+
 Drug connectivity
 --------------------------------------------------------------------------------
-In the **Drug Connectivity Map** panel, users can correlate their signature with
+In the **Drug connectivity** panel, users can correlate their signature with
 more than 5000 known drug profiles from the 
 `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, as well as with drug 
 sensitivity profiles from the `CTRP v2 <https://portals.broadinstitute.org/ctrp.v2.1/>`__ 
@@ -14,28 +19,27 @@ An activation-heatmap compares drug activation profiles across multiple contrast
 This facilitates to quickly see and detect the similarities between contrasts
 for certain drugs.
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A tutorial about the module can be found under ``Youtube`` in the input panel.
-Users can specify the contrast of their interest
-in the ``Contrast`` settings. Under ``Analysis type`` users can select from four 
-databases.
+In the **Settings** panel, users can specify the contrast of their interest
+with the ``Contrast`` setting. Under ``Analysis type`` users can select from four 
+databases, including the L1000 drug connectivity map  (L1000/activity), the L1000 gene perturbation (L1000/gene) database, the CTRP v2 drug sensitivity (CTRP_v2/sensitivity) database and the GDSC drug sensitivity (GDSC/sensitivity) database (default: L1000/activity). The ``only annotated drugs`` option is used to exclude drugs without a known  mechanism of action.
 
 .. figure:: figures/psc6.3.0.png
     :align: center
     :width: 30%
 
 
-Main panel
+Drug enrichment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The main panel consists of four outputs:    
+There are four main panels in the **Drug enrichment** tab:    
 
-:**a**: The Drug Connectivity Map correlates your signature with profiles from the L1000 
+:**Drug connectivity**: The Drug Connectivity panel correlates your signature with profiles from the L1000 
         (activity/L1000 and gene/L1000), CTRP and GDSC databases. 
-        It shows the top N=10 similar and opposite profiles by running 
+        It shows the top N=12 similar and opposite profiles as GSEA plots by running 
         the GSEA algorithm on the contrast-drug profile correlation space. 
 
-:**b**: Enrichment table. Enrichment is calculated by correlating
+:**Enrichment table**: Enrichment is calculated by correlating
         your signature with the profiles from the chosen
         database. Because of multiple perturbation experiments for a
         single small molecule, they are scored by running the GSEA algorithm on the 
@@ -43,7 +47,7 @@ The main panel consists of four outputs:
         single score for multiple profiles of a single small molecule. The table can be 
         customised via the table *Settings* to only show annotated drugs.
 
-:**c**: This plot visualizes the mechanism of action (MOA) across the enriched
+:**Mechanism of action**: This plot visualizes the mechanism of action (MOA) across the enriched
         drug profiles. On the vertical axis, the number of drugs with the same
         MOA are plotted. You can switch to visualize between MOA or target gene.
         Under the plots *Settings*, users can select the plot type of MOA
@@ -54,12 +58,16 @@ The main panel consists of four outputs:
             :align: center
             :width: 35%
 
-:**d**: The **Activation matrix** visualizes the correlation of small molecule 
+:**Activation matrix**: The **Activation matrix** visualizes the correlation of small molecule 
         profiles with all available pairwise comparisons. The size of the
         circles correspond to the strength of their correlation, and are
         colored according to their positive (red) or
         negative (blue) correlation to the contrast profile. 
         The matrix can be normalised from the *Settings*.
+
+        .. figure:: figures/psc6.3.c.png
+            :align: center
+            :width: 35%
 
 
 .. figure:: figures/psc6.3.png
@@ -69,9 +77,9 @@ The main panel consists of four outputs:
 
 
 Cell Profiling
-================================================================================
+--------------------------------------------------------------------------------
 
-The **Cell Profiling** module is specifically developed for the
+The **Cell Profiling** tab is specifically developed for the
 analysis and visualization of single-cell datasets. The main
 applications are identification of immune cell types and
 visualisations of markers, phenotypes, and proportions across the cells.
@@ -95,8 +103,8 @@ to characterize and illustrate intercellular communication signals in the
 multicellular tumor ecosystem.
 
 
-Input panel
---------------------------------------------------------------------------------
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can filter relevant samples in the ``Filter samples`` settings
 under the the main ``Options`` in the input panel. They can also
 specify to use a ``default``  (tSNE) or ``pca`` layout for the figures.
@@ -107,7 +115,7 @@ specify to use a ``default``  (tSNE) or ``pca`` layout for the figures.
 
 
 Cell type
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Cell type** profiling panel infers the type of cells using
 computational deconvolution methods and reference datasets from the
 literature.  In the plot settings menu, users can select the
@@ -146,7 +154,7 @@ under the *Settings*.
 
 
 Mapping
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Mapping** panel contains two plots.
 To the right there is a plot representing the cell type mapping across all samples.
 This plot can be customised via the *Settings* menu. Through it, users can change 
@@ -182,7 +190,7 @@ The proportion plot (including a gene expression barplot) is shown below.
     :width: 100% 
 
 Markers
---------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Markers** panel produces two outputs. The first output consists of 36 t-SNE 
 plots of the genes with the highest standard deviation that could represent 
 potential biomarkers. The red color shading is proportional to the (absolute) 
@@ -224,52 +232,13 @@ The Cyto plot is highlighted below.
     :width: 100%
 
 
-iTALK
+
+WGCNA
 --------------------------------------------------------------------------------
-The **iTALK** panel implements the 
-`iTALK <https://www.biorxiv.org/content/10.1101/507871v1>`__
-package from the literature. It is designed to profile and visualize the 
-ligand-receptor mediated intercellular cross-talk signals from single-cell 
-RNA sequencing data (scRNA-seq). iTALK uses a manually curated list of 
-ligand-receptor gene pairs further classified into 4 categories based on 
-the primary function of the ligand: cytokines/chemokines, 
-immune checkpoint genes, growth factors, and others.
-Phenotype and ligand-receptor gene pairs can be selected from the 
-scrolldown menus on top of the Ligand-Receptor plot.
-
-The panel produces three plots:
-
-:**a**: The Ligand-Receptor plot visualizes the communication structure of 
-        ligand-receptor genes as a circle plot. The width of the arrow represents
-        the expression level/log fold change of the ligand; while the width of
-        arrow head represents the expression level/log fold change of the
-        receptor. Different color and the type of the arrow stands for whether
-        the ligand and/or receptor are upregulated or downregulated. 
-        Under the *Settings*, it is possible to select the number of top pairs
-        to be displayed in the ``ntop pairs``.
-
-:**b**: The heatmap visualizes the expression level/log fold change of the 
-        ligand/receptor genes. For further information, see 
-        `iTALK <https://www.biorxiv.org/content/10.1101/507871v1>`__ R package.    
-
-:**c**: The NetView plot visualizes the communication structure of ligand-receptor
-        genes as a graph. The colors represent different types of cells as a 
-        structure and the width of edges represent the strength of the communication.
-        Labels on the edges show exactly how many interactions exist between two 
-        types of cells. For further information, see 
-        `iTALK <https://www.biorxiv.org/content/10.1101/507871v1>`__ R package.
-        Users can set the number of top genes to be plotted in the figure in the
-        ``top genes`` under the *Settings*.
 
 
-.. figure:: figures/psc10.4.png
-    :align: center
-    :width: 100%
-
-
-
-
-
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
