@@ -1,8 +1,13 @@
 .. _CellProfiling:
 
+SystemsBio
+================================================================================
+The final module of the platform is divided into three submodules: **Drug connectivity**, **Cell profiling** and **WGCNA**.
+
+
 Drug connectivity
 --------------------------------------------------------------------------------
-In the **Drug Connectivity Map** panel, users can correlate their signature with
+In the **Drug connectivity** submodule, users can correlate their signature with
 more than 5000 known drug profiles from the 
 `L1000 <https://www.ncbi.nlm.nih.gov/pubmed/29195078>`__ database, as well as with drug 
 sensitivity profiles from the `CTRP v2 <https://portals.broadinstitute.org/ctrp.v2.1/>`__ 
@@ -14,28 +19,27 @@ An activation-heatmap compares drug activation profiles across multiple contrast
 This facilitates to quickly see and detect the similarities between contrasts
 for certain drugs.
 
-Input panel
+Settings panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-A tutorial about the module can be found under ``Youtube`` in the input panel.
-Users can specify the contrast of their interest
-in the ``Contrast`` settings. Under ``Analysis type`` users can select from four 
-databases.
+In the **Settings** panel, users can specify the contrast of their interest
+with the ``Contrast`` setting. Under ``Analysis type`` users can select from four 
+databases, including the L1000 drug connectivity map  (L1000/activity), the L1000 gene perturbation (L1000/gene) database, the CTRP v2 drug sensitivity (CTRP_v2/sensitivity) database and the GDSC drug sensitivity (GDSC/sensitivity) database (default: L1000/activity). The ``only annotated drugs`` option is used to exclude drugs without a known  mechanism of action.
 
-.. figure:: figures/psc6.3.0.png
+.. figure:: figures_v3/drug_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
-Main panel
+Drug enrichment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The main panel consists of four outputs:    
+There are four main panels in the **Drug enrichment** tab:    
 
-:**a**: The Drug Connectivity Map correlates your signature with profiles from the L1000 
+:**Drug connectivity**: The Drug Connectivity panel correlates your signature with profiles from the L1000 
         (activity/L1000 and gene/L1000), CTRP and GDSC databases. 
-        It shows the top N=10 similar and opposite profiles by running 
+        It shows the top N=12 similar and opposite profiles as GSEA plots by running 
         the GSEA algorithm on the contrast-drug profile correlation space. 
 
-:**b**: Enrichment table. Enrichment is calculated by correlating
+:**Enrichment table**: Enrichment is calculated by correlating
         your signature with the profiles from the chosen
         database. Because of multiple perturbation experiments for a
         single small molecule, they are scored by running the GSEA algorithm on the 
@@ -43,72 +47,76 @@ The main panel consists of four outputs:
         single score for multiple profiles of a single small molecule. The table can be 
         customised via the table *Settings* to only show annotated drugs.
 
-:**c**: This plot visualizes the mechanism of action (MOA) across the enriched
+:**Mechanism of action**: This plot visualizes the mechanism of action (MOA) across the enriched
         drug profiles. On the vertical axis, the number of drugs with the same
         MOA are plotted. You can switch to visualize between MOA or target gene.
         Under the plots *Settings*, users can select the plot type of MOA
         analysis: by class description (``drug class``) or by target gene 
-        (``target gene``).
+        (``target gene``). They can also apply q-value weighting for NES scoe values (``q-weighting``).
 
-        .. figure:: figures/psc6.3.c.png
+        .. figure:: figures_v3/drug_cmap_moa_set.png
             :align: center
-            :width: 35%
+            :width: 25%
 
-:**d**: The **Activation matrix** visualizes the correlation of small molecule 
+:**Activation matrix**: The **Activation matrix** visualizes the correlation of small molecule 
         profiles with all available pairwise comparisons. The size of the
         circles correspond to the strength of their correlation, and are
         colored according to their positive (red) or
         negative (blue) correlation to the contrast profile. 
-        The matrix can be normalised from the *Settings*.
+        The matrix can be normalised via the settings icon by ticking the ``normalize activation matrix`` option.
 
+        .. figure:: figures_v3/drug_AM_opts.png
+            :align: center
+            :width: 25%
 
-.. figure:: figures/psc6.3.png
+This tab can have many applications, which include understanding the MOA of a novel compund, identifying drugs that can be repurposed for treating a disease, identifying suitable partner drugs for the tested compound or target genes for intervention.
+
+.. figure:: figures_v3/drug_main.png
     :align: center
     :width: 100%
 
 
 
 Cell Profiling
-================================================================================
+--------------------------------------------------------------------------------
 
-The **Cell Profiling** module is specifically developed for the
+The **Cell Profiling** tab is specifically developed for the
 analysis and visualization of single-cell datasets. The main
 applications are identification of immune cell types and
 visualisations of markers, phenotypes, and proportions across the cells.
 
-The **Cell type** panel infers the type of cells using computational deconvolution
+The **Cell type** tab infers the type of cells using computational deconvolution
 methods and reference datasets from the literature.
 
-The **Mapping** panel provides a visualization of the inferred cell types 
+The **Mapping** tab provides a visualization of the inferred cell types 
 matched to the phenotype variable of the data set, as well as a proportion plot 
 visualizing the interrelationships between two categorical variables 
 (so-called cross tabulation). This can be used to study the composition 
 of a sample by cell type, for example.  
 
-The **Markers** panel provides potential marker genes, which are the top genes 
+The **Markers** tab provides potential marker genes, which are the top genes 
 with the highest standard deviation within the expression data across the samples. 
 It also generates a plot mimicking the scatter plots used for gating in 
 flow cytometry analysis.
 
-The **iTALK** consists of a computational approach from the literature
-to characterize and illustrate intercellular communication signals in the 
-multicellular tumor ecosystem.
 
 
-Input panel
---------------------------------------------------------------------------------
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Users can filter relevant samples in the ``Filter samples`` settings
 under the the main ``Options`` in the input panel. They can also
-specify to use a ``default``  (tSNE) or ``pca`` layout for the figures.
+specify the ``layout`` for the figures by chooisng between pca, tsne or umap options (default: tsne).
 
-.. figure:: figures/psc10.0.png
+.. figure:: figures_v3/cp_settings.png
     :align: center
-    :width: 30%
+    :width: 20%
 
 
 Cell type
---------------------------------------------------------------------------------
-The **Cell type** profiling panel infers the type of cells using
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Cell type** tab contains two panels: **Cell type profiling** and **Phenotypes**.
+
+**Cell type profiling** infers the type of cells using
 computational deconvolution methods and reference datasets from the
 literature.  In the plot settings menu, users can select the
 reference dataset and the method for the cell type prediction in the
@@ -120,272 +128,191 @@ ImmunoStates), tissue types (2 datasets: HPA and GTEx), cell lines (2
 datasets: HPA and CCLE) and cancer types (1 dataset: CCLE). Not all
 methods or databases may be available for a dataset, the availability
 depends on the pre-processing done. From the settings, users can also 
-sort plots by either probability or name and change the layout.
+sort plots by either probability or name and change the layout (``sort by``).
 
-.. figure:: figures/psc10.1.0.png
+.. figure:: figures_v3/cell_type_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The cell type profiling plot is highlighted below.
+The **Phenotypes** tab displays plots that show the distribution of the phenotypes superposed on the t-SNE clustering. Often, we can expect the t-SNE distribution to be driven by the particular phenotype that is controlled by the experimental condition or unwanted batch effects. Users can customise the plot via the settings icon, where they can ``label`` the plot groups or add a legend instead.
 
-.. figure:: figures/psc10.1.png
+.. figure:: figures_v3/cp_pheno_opts.png
     :align: center
-    :width: 100%
+    :width: 20%
 
-It also produces phenotypes plots showing the distribution of the 
-phenotypes superimposed on the t-SNE clustering. 
-Often, we can expect the t-SNE distribution to be driven by the particular 
-phenotype that is controlled by the experimental condition or unwanted 
-batch effects. Users can select whether they want the group labels to be 
-plotted inside the figures or in a seperate legend in the``Legend`` 
-under the *Settings*.
+The cell type profiling tab displays the two panels side by side.
 
-.. figure:: figures/psc10.1.1.png
+.. figure:: figures_v3/cell_type.png
     :align: center
     :width: 100%
 
 
 Mapping
---------------------------------------------------------------------------------
-The **Mapping** panel contains two plots.
-To the right there is a plot representing the cell type mapping across all samples.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Mapping** panel contains two panels.
+The **Cell type mapping** panel contains a plot representing the cell type mapping across all samples.
 This plot can be customised via the *Settings* menu. Through it, users can change 
-the ``plot type`` between a dotmap and a heatmap, select the ``reference`` dataset, 
-select the analysis ``method`` and use ``group by`` to group samples by phenotypes.
+the ``plot type`` between a dotmap and a heatmap and select the ``reference`` dataset, 
+select the analysis ``method``. The reference datasets and the methods available are the same as indicated in the **Cell type profiling** panel under the **Cell type** tab. 
+Users can also use ``group by`` to group samples by input phenotypes.
 
-.. figure:: figures/psc10.2.a.png
+.. figure:: figures_v3/cell_type_map_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The cell type mapping plot is shown below.
 
-.. figure:: figures/psc10.2.png
-    :align: center
-    :width: 100% 
-
-To the left, a proportion plot visualizes the overlap between two categorical variables.
-This can be useful for bulk RNA datasets, as it provides useful information about 
-the proportion of different cell types in the samples. From the *Settings*, users 
+The **Proportions** panel contains a proportion plot visualizes the overlap between two categorical variables.
+This may be useful for bulk RNA datasets, as it can provide information about 
+the proportion of different cell types in the samples. From the settings icon, users 
 can select whwther to display the <cell type> (based on the chosen reference dataset) 
-or select one of the available phenotypes on the x- and y-axes of the plot. The number
-of counts is also displayed on top. 
-By selecting a gene with ``gene`` they can also add an expression barplot for the gene.
+or select one of the available phenotypes on the x- and y-axes of the plot. 
+By selecting a gene with ``gene`` they can also add an expression barplot that indicates the expression level (high or low) **(@Mauro, @Ivo: What is high and low based on?)** of the selected gene for each of the sample groups as well as adding the total number of read counts of the selected gene per sample group.
 
-.. figure:: figures/psc10.2.b.png
+.. figure:: figures_v3/cp_prop_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The proportion plot (including a gene expression barplot) is shown below.
+The two panels are displayed side by side in the tab.
 
-.. figure:: figures/psc10.2.1.png
+.. figure:: figures_v3/cp_mapping.png
     :align: center
     :width: 100% 
 
 Markers
---------------------------------------------------------------------------------
-The **Markers** panel produces two outputs. The first output consists of 36 t-SNE 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Markers** tab consists of two panels: **Expression of marker genes** and **Cytometry plot**. 
+
+**Expression of marker genes** consists of 25 t-SNE 
 plots of the genes with the highest standard deviation that could represent 
 potential biomarkers. The red color shading is proportional to the (absolute) 
 expression of the gene in corresponding samples. 
-
-In the plot *Settings*, users can specify the ``Level`` of the marker analysis: 
+In the settings icon, users can specify the ``Level`` of the marker analysis: 
 gene or gene set level. They can also restrict the analysis by selecting a particular 
 functional group in the ``Feature set``, where genes are divided into 89 groups, such as 
-chemokines, transcription factors, genes involved in immune checkpoint inhibition, and so on. 
+chemokines, transcription factors, genes involved in immune checkpoint inhibition, and so on (default: CD molecules (HGNC)). 
 In addition, it is possible to filter markers by a specific keywords in the ``Filter`` setting 
-and sort them by name or intensity.
+and sort them by intensity (default) or name (``sort by``).
 
-.. figure:: figures/psc10.3.a.png
+.. figure:: figures_v3/cp_markers_opts.png
     :align: center
-    :width: 30%
-
-An example of the t-SNE plots are highlighted below.
-
-.. figure:: figures/psc10.3.png
-    :align: center
-    :width: 100%
+    :width: 20%
 
 For each gene pairs combination, the panel also generates a cytometry-like plot (**Cyto plot**) 
 of samples. The aim of this feature is to observe the distribution of samples 
 in relation to the selected gene pairs. For instance, when applied to single-cell 
 sequencing data from immunological cells, it can mimic flow cytometry analysis and distinguish 
 T helper cells from other T cells by selecting the CD4 and CD8 gene combination. 
-Under the plot *Settings*, user can select their prefered genes on the x- and y-axes 
-in the ``x-axis`` and ``y-axis``, respectively.
+Under the plot settings icon, users can select their prefered genes on the x- and y-axes 
+in the ``x-axis`` and ``y-axis``, respectively. They can also set the maximum number of bins for histgram distribution (``nbins``) (**@Mauro, @IVO more details needed...what do the histograms refer to?**).
 
-.. figure:: figures/psc10.3.b.png
+.. figure:: figures_v3/cp_cyto_opts.png
     :align: center
-    :width: 30%
+    :width: 20%
 
-The Cyto plot is highlighted below.
+The two panels are displayed side by side in the tab.
 
-.. figure:: figures/psc10.3.1.png
+.. figure:: figures_v3/cp_markers.png
     :align: center
     :width: 100%
 
 
-iTALK
+
+WGCNA (**@IVO, @Mauro: this submodule requires extensive feedback throughout)**
 --------------------------------------------------------------------------------
-The **iTALK** panel implements the 
-`iTALK <https://www.biorxiv.org/content/10.1101/507871v1>`__
-package from the literature. It is designed to profile and visualize the 
-ligand-receptor mediated intercellular cross-talk signals from single-cell 
-RNA sequencing data (scRNA-seq). iTALK uses a manually curated list of 
-ligand-receptor gene pairs further classified into 4 categories based on 
-the primary function of the ligand: cytokines/chemokines, 
-immune checkpoint genes, growth factors, and others.
-Phenotype and ligand-receptor gene pairs can be selected from the 
-scrolldown menus on top of the Ligand-Receptor plot.
+The final submodule under **SystemsBio** is dedicated to weighted correlation network analysis (**WGCNA**), which serves the purpose of identifying clusters (modules) comprising highly correlated genes. These clusters can be summarized using either the module eigengene or an intramodular hub gene. WGCNA also facilitates the association of modules with each other and external sample traits through eigengene network methodology. Furthermore, it allows for the computation of module membership measures.
 
-The panel produces three plots:
+Settings panel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+WGCNA modules are selected from the **Settings** panel (``select module``) and plots can be recalcluated based on the selected module. 
+Under *Options*, the number of genes (``Number genes``, default=1000), the miinum module size (``Min. module size``, default=30), the ``Power`` (default=6), the ``deepsplit`` (default=2) and the ``Merge cut height``, default=0.25) can be set.
 
-:**a**: The Ligand-Receptor plot visualizes the communication structure of 
-        ligand-receptor genes as a circle plot. The width of the arrow represents
-        the expression level/log fold change of the ligand; while the width of
-        arrow head represents the expression level/log fold change of the
-        receptor. Different color and the type of the arrow stands for whether
-        the ligand and/or receptor are upregulated or downregulated. 
-        Under the *Settings*, it is possible to select the number of top pairs
-        to be displayed in the ``ntop pairs``.
+.. figure:: figures_v3/WGCNA_settings.png
+    :align: center
+    :width: 20%
 
-:**b**: The heatmap visualizes the expression level/log fold change of the 
-        ligand/receptor genes. For further information, see 
-        `iTALK <https://www.biorxiv.org/content/10.1101/507871v1>`__ R package.    
-
-:**c**: The NetView plot visualizes the communication structure of ligand-receptor
-        genes as a graph. The colors represent different types of cells as a 
-        structure and the width of edges represent the strength of the communication.
-        Labels on the edges show exactly how many interactions exist between two 
-        types of cells. For further information, see 
-        `iTALK <https://www.biorxiv.org/content/10.1101/507871v1>`__ R package.
-        Users can set the number of top genes to be plotted in the figure in the
-        ``top genes`` under the *Settings*.
+WGCNA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **WGCNA** tab consists of fiive panels (from left to right and top to bottom): **Gene dendrogram and gene modules**, **Scale independence and mean connectivity**, **TOM heatmap**, **Gene clustering** and **Module graph**.
 
 
-.. figure:: figures/psc10.4.png
+:**Gene dendrogram and gene modules**: In this panel, gene modules are detected as branches of the resulting cluster tree using the dynamic branch cutting approach. Genes inside a given module are summarized with the module eigengene. The module eigengene of a given module is defined as the first principal component of the standardized expression profiles.
+
+:**Scale independence and mean connectivity**:  This panel is used for the the analysis of network topology for various soft-thresholding powers. The left plot shows the scale-free fit index (y-axis) as a function of the soft-thresholding power (x-axis). The right plot displays the mean connectivity (degree, y-axis) as a function of the soft-thresholding power (x-axis). 
+
+:**TOM heatmap**: The panel displays the Topological Overlap Matrix (TOM) as a heatmap, which shows the correlation among gene module memberships  (**@IVO, @Mauro: more information needed. For what practical purpose is it used? How can users act on this information?**).
+
+:**Gene clustering**: Dimensionality reduction maps colored by WGCNA module. Via the settings icon, the layout can be changed between tsne (default), pca and umap.
+   
+    .. figure:: figures_v3/WGCNA_gc_opts.png
+        :align: center
+        :width: 30%
+
+:**Module graph**: The final panel contains the raph network of WGCNA modules, which represents the relationship betweem of the gene modules. **(@Ivo, @Mauro: we need a better description of what actionable information it provides to users)**
+
+
+.. figure:: figures_v3/WGCNA_WGCNA.png
+    :align: center
+    :width: 100%
+
+
+Modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Modules** tab contains fuve panels (left to right, top to bottom): **Module-Trait relationships**, **Correlation network**, **Module Enrichment (plot)**, **Module genes** and **Module enrichment (table)**. **(@Mauro, @Ivo: calling two panels with the same name is very confusing, I suggest adding "plot" to the first and "table" to the second.)**
+
+:**Module-Trait relationships**: Module-trait analysis identifies modules that are significantly associated with the measured clinical traits by quantifying the association as the correlation of the eigengenes with external traits. The relationships between the various WGCNA modules and the phenotypic groups in the dataset are displayed as a heatmap, with shades of red indicating a negative correlation and shades of green indicating a positive correlation. The continuous variables can be binarised **(@Ivo, @Mauro: what does that mean at all?)** via the settings icon (``binarize continuous vars``).
+   
+    .. figure:: figures_v3/WGCNA_mtr_opts.png
+        :align: center
+        :width: 30%
+
+:**Correlation network**: A partial correlation graph centered on module eigengene with top most correlated features. Green edges correspond to positive (partial) correlation, red edges to negative (partial) correlation. Width of the edges is proportional to the correlation strength of the gene pair. The regularized partial correlation matrix is computed using the 'graphical lasso' (Glasso) with BIC model selection.
+
+:**Module enrichment (plot)**: A plot that displays the functional enrichment of top most enriched genesets.**(@Ivo, @Mauro: based on which databases is the functional ernichment analysis performed?)** of the module selected via the **Settings** panel.
+
+:**Module genes**: A table showing the genes in the WGCNA module selected via the **Settings** panel. **(@IVO, @Mauro: what does the me.rho value represent?)**
+   
+:**Module enrichment (table)**:  Functional enrichment of the module calculated using Fisher's exact test. In this table, users can check mean expression values of features across the conditions for the selected module. **(@Ivo, @Mauro: the legend in the platform says "selected genes' but I believe you meant module)**
+
+
+.. figure:: figures_v3/WGCNA_modules.png
     :align: center
     :width: 100%
 
 
 
 
-
-
-
-
-
-
-
-
-
-Leftovers
--------------------------------
-Overlap/similarity
+Eigengenes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Under the **Overlap/similarity** panel, users can compare their gene
-list with all the gene sets and pathways in the platform through
-overlap analysis, or also known as over-representation analysis. 
+The **Eigengenes** tab is used to visualise the network of eigengenes and study the relationships among the found modules. One can use the eigengenes as represetative profiles and quantify module similarity by eigengene correlation. For each module, we also define a quantitative measure of 'module membership' (MM) as the correlation of the module eigengene and the gene expression profile. This allows us to quantify the similarity of all genes to every module.
 
-The top overlapping gene sets with selected signature are displyed in the plot. 
-The vertical axis shows the overlap score of the gene set which is computed 
-as the geometric mean of the absolute logarithm of the odds ratio 
-and the q-value of the Fisher's test.
+The tab contains two panels: **Eigengene clustering** and **Module membership (eigengene correlation)**.
 
-Under the plot settings, users can specify the number to top features
-to show, or users can select to hide/show the feature names in the plot.
-        
-.. figure:: figures/psc8.4.a.png
-    :align: center
-    :width: 30%
+:**Eigengene clustering**: A cluster heatmap that shows the relationship between the different modules produced by the platform. **(@Ivo, @Mauro: I just made this description up. Please write down something more explanatory and statstically correct)**
 
-The table reports the :option:`score`, total number of genes in the
-gene set (:option:`K`), the number of intersecting genes between the
-list and the gene set (:option:`k`), the overlapping ratio of
-:option:`k/K`, as well as the :option:`odds.ratio` and
-:option:`q.fisher` values by the Fisher's test for the overlap test.
+:**Module membership (eigengene correlation)**: This panels contains a series of plots for each one of the generated modules. For each module, we define a quantitative measure of module membership (MM) as the correlation of the module eigengene and the gene expression profile. This allows us to quantify the similarity of all genes on the array to every module. Users can also select to include the ``covariance`` for each gene (default:off). **(@Mauro, @Ivo: I have no idea what the covariance stands for, as it is explained nowhere in the platform)**
 
-.. figure:: figures/psc8.4.png
-    :align: center
-    :width: 100%
-	   
+    .. figure:: figures_v3/WGCNA_eigen_mm_opts.png
+        :align: center
+        :width: 30%
 
-Markers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Markers** panel produces a t-SNE plot of samples for each gene
-in the signature, where the samples are colored with respect to the
-upregulation (in red) or downregulation (in blue) of the gene. For
-larger signatures, only the top most variable genes in the signature
-are given. If you want to check a particular gene not shown, you must
-reduce the number of genes in your list.
-
-.. figure:: figures/psc8.5.png
+.. figure:: figures_v3/WGCNA_eigen.png
     :align: center
     :width: 100%
 
 
-Find Biomarkers
---------------------------------------------------------------------------------
 
-The **Find Biomarkers** panel selects biomarkers that can be
-used for classification or prediction purposes. Biomarker analysis
-might also help to better understand which genes, mutations, or gene
-sets influence the final phenotype the most.
-
-Omics Playground calculates a variable importance score for each feature using multiple state-of-the-art machine learning algorithms, including `LASSO <https://www.ncbi.nlm.nih.gov/pubmed/20808728>`__, `elastic nets
-<https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf>`__, `random forests <https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__, and
-`extreme gradient boosting <https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__. Note that we do not use the machine learning algorithms for prediction but we use them just to compute the variable importances according to the different methods. An aggregated score is then calculated as the cumulative rank of the variable importances of the different algorithms. By combining several methods, the platform aims to select the best possible predictive features. The top features are determined as the features with the highest cumulative ranks. 
-
-The module provides a heatmap of samples based on identified top features. 
-In addition, it generates a classification tree using top features and provides
-expression boxplots by phenotype classes for features present in the
-tree.
-
-
-Input panel
+Intramodular
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Intramodular** tab is used to quantify associations of individual genes with the trait of interest (weight) by defining Gene Significance (GS) as (the absolute value of) the correlation between the gene and the trait. For each module,  a quantitative measure of module membership (MM) as the correlation of the module eigengene and the gene expression profile is also defined. Using the GS and MM measures, users can identify genes that have a high significance for weight as well as high module membership in interesting modules. 
 
-Users can select the target variable for biomarker selection in the
-``Predicted target`` settings from the input panel. Under ``Feature filter``  
-users can pre-filter features by selecting specific gene families or sets.
-If the user selects :option:`<custom>`, an input area appears and one can paste 
-a custom gene list to be used as initial features. Hitting the ``Run``
-button will start the biomarker computation. 
+The tab contains two panels: **Membership-trait heatmap** and **Membership vs. trait correlation**.
 
-.. figure:: figures/psc9.0.png
-    :align: center
-    :width: 30%
+:**Membership-trait heatmap**:  For each module,  a quantitative measure of module membership (MM) as the correlation of the module eigengene and the gene expression profile is defined. This allows us to quantify the similarity of all genes on the array to every module and represent them as a heatmap. **(@ Ivo, @Mauro: The covarince option under the settings icon seems to be inactive. Also both this panel and the one below have exactly the same legend!)**
 
-
-Importance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        
-This panel provides the output of the biomarker analysis in multiple
-figures. Below we provide an short explanation for each figure:
-
-:**a**: **Variable importance plot.** A variable importance score for
-        each feature is calculated using multiple machine learning
-        algorithms, including `LASSO
-        <https://www.ncbi.nlm.nih.gov/pubmed/20808728>`__, `elastic
-        nets
-        <https://statweb.stanford.edu/~candes/papers/DantzigSelector.pdf>`__,
-        `random forests
-        <https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf>`__,
-        and `extreme gradient boosting
-        <https://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf>`__.
-        By combining several methods, the platform aims to select the
-        best possible biomarkers. The top features are plotted
-        according to cumulative ranking by the algorithms.
-        
-:**b**: **Biomarker expression heatmap.** The heatmap shows the expression
-        distribution for the top most important features.
-                
-:**c**: **Decision tree.** The decision tree shows one (out of many
-        possible) tree solution for classification based on the top
-        most important features.
-        
-:**d**: **Expression box plots.** These boxplots shows the expression
-        of genes/samples of the identified features.
-
-.. figure:: figures/psc9.1.png
+:**Membership vs. trait correlation**: In this panel, the MM and trai correlations are represented as a series of scatterplots **(@ Ivo, @Mauro: I had to make this up, as the legend is the same as the panel above and does not describe what is going on!)**
+   
+.. figure:: figures_v3/WGCNA_intra.png
     :align: center
     :width: 100%
+
+
