@@ -234,19 +234,20 @@ WGCNA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **WGCNA** tab consists of fiive panels (from left to right and top to bottom): **Gene dendrogram and gene modules**, **Scale independence and mean connectivity**, **TOM heatmap**, **Gene clustering** and **Module graph**.
 
+
 :**Gene dendrogram and gene modules**: In this panel, gene modules are detected as branches of the resulting cluster tree using the dynamic branch cutting approach. Genes inside a given module are summarized with the module eigengene. The module eigengene of a given module is defined as the first principal component of the standardized expression profiles.
 
-:**Scale independence and mean connectivity**:  This panes is used for the the analysis of network topology for various soft-thresholding powers. The left plot shows the scale-free fit index (y-axis) as a function of the soft-thresholding power (x-axis). The right plot displays the mean connectivity (degree, y-axis) as a function of the soft-thresholding power (x-axis).
+:**Scale independence and mean connectivity**:  This panel is used for the the analysis of network topology for various soft-thresholding powers. The left plot shows the scale-free fit index (y-axis) as a function of the soft-thresholding power (x-axis). The right plot displays the mean connectivity (degree, y-axis) as a function of the soft-thresholding power (x-axis). 
 
-:**TOM heatmap**: The panel displays the Topological Overlap Matrix (TOM) heatmap, which shows the correlation among gene module memberships  (**@IVO, @Mauro: more information needed. For what practical purpose is it used? How can users act on this information**).
+:**TOM heatmap**: The panel displays the Topological Overlap Matrix (TOM) as a heatmap, which shows the correlation among gene module memberships  (**@IVO, @Mauro: more information needed. For what practical purpose is it used? How can users act on this information?**).
 
-:**Gene clustering**: This panel contains a clustering plot of the genes coloured by module. Via the settings icon, the layout can be changed between tsne (default), pca and umap.
+:**Gene clustering**: Dimensionality reduction maps colored by WGCNA module. Via the settings icon, the layout can be changed between tsne (default), pca and umap.
    
     .. figure:: figures_v3/WGCNA_gc_opts.png
         :align: center
         :width: 30%
 
-:**Module graph**: The final panel contains the WGCNA module graph, which represents the relationship betweem of the gene modules. **(@Ivo, @Mauro: we need a better description of what actionable information it provides to users)**
+:**Module graph**: The final panel contains the raph network of WGCNA modules, which represents the relationship betweem of the gene modules. **(@Ivo, @Mauro: we need a better description of what actionable information it provides to users)**
 
 
 .. figure:: figures_v3/WGCNA_WGCNA.png
@@ -258,19 +259,19 @@ Modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The **Modules** tab contains fuve panels (left to right, top to bottom): **Module-Trait relationships**, **Correlation network**, **Module Enrichment (plot)**, **Module genes** and **Module enrichment (table)**. **(@Mauro, @Ivo: calling two panels with the same name is very confusing, I suggest adding "plot" to the first and "table" to the second.)**
 
-:**Module-Trait relationships**: In this panel, the relationships between the various WGCNA modules and the phenotypic groups in the dataset are displayed as a heatmap, with shades of red indicating a negative correlation and shades of green indicating a positive correlation. The continuous variables can be binarised **(@Ivo, @Mauro: what does that mean at all?)** via the settings icon (``binarize continuous vars``).
+:**Module-Trait relationships**: Module-trait analysis identifies modules that are significantly associated with the measured clinical traits by quantifying the association as the correlation of the eigengenes with external traits. The relationships between the various WGCNA modules and the phenotypic groups in the dataset are displayed as a heatmap, with shades of red indicating a negative correlation and shades of green indicating a positive correlation. The continuous variables can be binarised **(@Ivo, @Mauro: what does that mean at all?)** via the settings icon (``binarize continuous vars``).
    
     .. figure:: figures_v3/WGCNA_mtr_opts.png
         :align: center
         :width: 30%
 
-:**Correlation network**: A partial correlation graph centered on module eigen-gene with top most correlated features. Green edges correspond to positive (partial) correlation, red edges to negative (partial) correlation. Width of the edges is proportional to the correlation strength of the gene pair. The regularized partial correlation matrix is computed using the 'graphical lasso' (Glasso) with BIC model selection.
+:**Correlation network**: A partial correlation graph centered on module eigengene with top most correlated features. Green edges correspond to positive (partial) correlation, red edges to negative (partial) correlation. Width of the edges is proportional to the correlation strength of the gene pair. The regularized partial correlation matrix is computed using the 'graphical lasso' (Glasso) with BIC model selection.
 
-:**Module enrichment (plot)**: A plot that displays the functional enrichment **(@Ivo, @Mauro: based on which databases is the functional ernichment analysis performed?)** of the module selected via the **Settings** panel.
+:**Module enrichment (plot)**: A plot that displays the functional enrichment of top most enriched genesets.**(@Ivo, @Mauro: based on which databases is the functional ernichment analysis performed?)** of the module selected via the **Settings** panel.
 
 :**Module genes**: A table showing the genes in the WGCNA module selected via the **Settings** panel. **(@IVO, @Mauro: what does the me.rho value represent?)**
    
-:**Module enrichment (table)**: In this table, users can check mean expression values of features across the conditions for the selected module. **(@Ivo, @Mauro: the legend in the platform says "selected genes' but I believe you meant module)**
+:**Module enrichment (table)**:  Functional enrichment of the module calculated using Fisher's exact test. In this table, users can check mean expression values of features across the conditions for the selected module. **(@Ivo, @Mauro: the legend in the platform says "selected genes' but I believe you meant module)**
 
 
 .. figure:: figures_v3/WGCNA_modules.png
@@ -282,7 +283,9 @@ The **Modules** tab contains fuve panels (left to right, top to bottom): **Modul
 
 Eigengenes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **Eigengenes** tab contains two panels: **Eigengene clustering** and **Module membership (eigengene correlation)**.
+The **Eigengenes** tab is used to visualise the network of eigengenes and study the relationships among the found modules. One can use the eigengenes as represetative profiles and quantify module similarity by eigengene correlation. For each module, we also define a quantitative measure of 'module membership' (MM) as the correlation of the module eigengene and the gene expression profile. This allows us to quantify the similarity of all genes to every module.
+
+The tab contains two panels: **Eigengene clustering** and **Module membership (eigengene correlation)**.
 
 :**Eigengene clustering**: A cluster heatmap that shows the relationship between the different modules produced by the platform. **(@Ivo, @Mauro: I just made this description up. Please write down something more explanatory and statstically correct)**
 
@@ -300,7 +303,16 @@ The **Eigengenes** tab contains two panels: **Eigengene clustering** and **Modul
 
 Intramodular
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The **WGCNA** tab
+The **Intramodular** tab is used to quantify associations of individual genes with the trait of interest (weight) by defining Gene Significance (GS) as (the absolute value of) the correlation between the gene and the trait. For each module,  a quantitative measure of module membership (MM) as the correlation of the module eigengene and the gene expression profile is also defined. Using the GS and MM measures, users can identify genes that have a high significance for weight as well as high module membership in interesting modules. 
 
+The tab contains two panels: **Membership-trait heatmap** and **Membership vs. trait correlation**.
+
+:**Membership-trait heatmap**:  For each module,  a quantitative measure of module membership (MM) as the correlation of the module eigengene and the gene expression profile is defined. This allows us to quantify the similarity of all genes on the array to every module and represent them as a heatmap. **(@ Ivo, @Mauro: The covarince option under the settings icon seems to be inactive. Also both this panel and the one below have exactly the same legend!)**
+
+:**Membership vs. trait correlation**: In this panel, the MM and trai correlations are represented as a series of scatterplots **(@ Ivo, @Mauro: I had to make this up, as the legend is the same as the panel above and does not describe what is going on!)**
+   
+.. figure:: figures_v3/WGCNA_intra.png
+    :align: center
+    :width: 100%
 
 
