@@ -55,7 +55,7 @@ Three panels are found under **Resource info**: **Timings**, **PGX slot sizes** 
 
 :**R object sizes**: This table provides size details about R objects.
 
-.. figure:: figures_v3/resource.png
+.. figure:: figures_v3/resources.png
     :align: center
     :width: 100%
 
