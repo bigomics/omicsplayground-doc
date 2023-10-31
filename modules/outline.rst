@@ -35,9 +35,9 @@ The **User** menu is located on the top right hand corner, right next to the **H
     :align: center
     :width: 25%
 
-Clicking "App settings" will take the user to a new page with two tabs: **App settings & News** and ** Resource info**.
+Clicking "App settings" will take the user to a new page with two tabs: **App settings & News** and **Resource info**.
 
-There are two panels under the **App settings & News** tab: **Application options** and **new features**.
+There are two panels under the **App settings & News** tab: **Application options** and **New features**.
 
 :**Application options**: Through this panel, users can enable beta features, disable alerts and enable captions for the plots.
 
@@ -55,7 +55,7 @@ Three panels are found under **Resource info**: **Timings**, **PGX slot sizes** 
 
 :**R object sizes**: This table provides size details about R objects.
 
-.. figure:: figures_v3/resource.png
+.. figure:: figures_v3/resources.png
     :align: center
     :width: 100%
 
