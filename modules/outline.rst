@@ -10,15 +10,41 @@ Using the main menu on top, you can navigate through the different
 analysis modules. Generally you want to start from top to bottom, from specific gene-wise to the more higher-level functional
 analysis modules. Some users prefer the other way around.
 
-By default, the following menu items are present, namely :ref:`Home`,
+By default, the following menu items are present, namely :ref:`Load`,
 :ref:`DataView`, :ref:`Clustering`, :ref:`Expression`,
-:ref:`Enrichment` and :ref:`Signature`, while :ref:`CellProfiling` is
-an optional choice. The last menu item :ref:`User` (with user icon)
-contains user settings, a help submenu and logout buttons.
+:ref:`Genesets`, :ref:`Compare` and :ref:`SystemsBio`.
 
-.. figure:: figures_v3/topmenu.png
+.. figure:: figures_v3/new_topmenu.png
     :align: center
-    :width: 75%
+    :width: 25%
+
+
+Help menu
+--------------------------------------------------------------------------------
+The **Help** menu is located on the top right hand corner. The menu links to the online platform documentation (the page you are currently viewing), a collection of video tutorials on youtube, the community forum of the platform, the Github webpage, where busg can be reported, and a collection of case studies based on Omics Playground.
+
+.. figure:: figures_v3/help.png
+    :align: center
+    :width: 25%
+
+User menu
+--------------------------------------------------------------------------------
+The **User** menu is located on the top right hand corner, right next to the **Help** menu. It links to the user profile, where information on the usage of the platform can be found, the app settings, the "About" pop-up that shows information about the version of the platform currently deployed and finally the "Logout" option to disconnect from the platform.
+
+.. figure:: figures_v3/user.png
+    :align: center
+    :width: 25%
+
+Clicking "App settings" will take the user to a new page with two tabs: **App settings & News** and ** Resource info**.
+
+Under **App settings & News**, users can enable beta features, disable alerts and enable captions for the plots. Users can also view the new features implemented with each new update.
+
+.. figure:: figures_v3/app_settings.png
+    :align: center
+    :width: 100%
+
+Three panels are found under **Resource info**: **Timings**, **PGX slot sizes** and **R object sizes**.
+
 
 
 Figure & table tags
