@@ -7,8 +7,7 @@ Main menu
 --------------------------------------------------------------------------------
 
 Using the main menu on top, you can navigate through the different
-analysis modules. Generally you want to start from the left to the
-right, from specific gene-wise to the more higher-level functional
+analysis modules. Generally you want to start from top to bottom, from specific gene-wise to the more higher-level functional
 analysis modules. Some users prefer the other way around.
 
 By default, the following menu items are present, namely :ref:`Home`,
@@ -17,7 +16,7 @@ By default, the following menu items are present, namely :ref:`Home`,
 an optional choice. The last menu item :ref:`User` (with user icon)
 contains user settings, a help submenu and logout buttons.
 
-.. figure:: figures/topmenu.png
+.. figure:: figures_v3/topmenu.png
     :align: center
     :width: 75%
 
