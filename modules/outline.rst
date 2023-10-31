@@ -37,7 +37,11 @@ The **User** menu is located on the top right hand corner, right next to the **H
 
 Clicking "App settings" will take the user to a new page with two tabs: **App settings & News** and ** Resource info**.
 
-Under **App settings & News**, users can enable beta features, disable alerts and enable captions for the plots. Users can also view the new features implemented with each new update.
+There are two panels under the **App settings & News** tab: **Application options** and **new features**.
+
+:**Application options**: Through this panel, users can enable beta features, disable alerts and enable captions for the plots.
+
+:**New features**: This panel provides a list of new features implemented with each new update of the platform.
 
 .. figure:: figures_v3/app_settings.png
     :align: center
@@ -45,7 +49,15 @@ Under **App settings & News**, users can enable beta features, disable alerts an
 
 Three panels are found under **Resource info**: **Timings**, **PGX slot sizes** and **R object sizes**.
 
+:**Timings**: The timings table reports more detailed information about the object dimensions, object sizes and execution times of the methods.
 
+:**PGX slot sizes**: This table provides details about the pgx object.
+
+:**R object sizes**: This table provides size details about R objects.
+
+.. figure:: figures_v3/resource.png
+    :align: center
+    :width: 100%
 
 Figure & table tags
 --------------------------------------------------------------------------------
