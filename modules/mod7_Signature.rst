@@ -1,4 +1,4 @@
-.. _Signature:
+.. _Compare:
 
 
 Compare
