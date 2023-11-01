@@ -203,7 +203,8 @@ in relation to the selected gene pairs. For instance, when applied to single-cel
 sequencing data from immunological cells, it can mimic flow cytometry analysis and distinguish 
 T helper cells from other T cells by selecting the CD4 and CD8 gene combination. 
 Under the plot settings icon, users can select their prefered genes on the x- and y-axes 
-in the ``x-axis`` and ``y-axis``, respectively. They can also set the maximum number of bins for histgram distribution (``nbins``) (**@Mauro, @IVO more details needed...what do the histograms refer to?**).
+in the ``x-axis`` and ``y-axis``, respectively. They can also set the maximum number of bins for histgram distribution (``nbins``).
+This will be used to calculate the density distribution of the gene pairs selected in the ``x-axis`` and ``y-axis``.
 
 .. figure:: figures_v3/cp_cyto_opts.png
     :align: center
