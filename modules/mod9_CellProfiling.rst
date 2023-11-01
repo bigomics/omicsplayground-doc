@@ -166,7 +166,7 @@ This may be useful for bulk RNA datasets, as it can provide information about
 the proportion of different cell types in the samples. From the settings icon, users 
 can select whwther to display the <cell type> (based on the chosen reference dataset) 
 or select one of the available phenotypes on the x- and y-axes of the plot. 
-By selecting a gene with ``gene`` they can also add an expression barplot that indicates the expression level (high or low baed on average sample expression for the gene) of the selected gene for each of the sample groups as well as adding the total number of read counts of the selected gene per sample group.
+By selecting a gene with ``gene`` they can also add an expression barplot that indicates the expression level (high or low is based on average sample expression for the gene) of the selected gene for each of the sample groups as well as adding the total number of read counts of the selected gene per sample group.
 
 .. figure:: figures_v3/cp_prop_opts.png
     :align: center
