@@ -17,11 +17,13 @@ uniquely by the first column (sample1, sample2...), and the other columns would 
 +=========+============+=============+========+
 | sample1 |   blond    |    Japan    |  old   |
 +---------+------------+-------------+--------+
-| sample2 |   black    | Switzerland | young  |
+| sample2 |   dark     | Switzerland | young  |
 +---------+------------+-------------+--------+
 | sample3 |   blond    |     USA     | young  |
 +---------+------------+-------------+--------+
-| sample4 |   black    | Switzerland |  old   |
+| sample4 |   dark     | Switzerland |  old   |
++---------+------------+-------------+--------+
+| sample5 |   dark     |     USA     |  old   |
 +---------+------------+-------------+--------+
 
 As mentioned above, the age was converted from numeric (12, 52, 87) to young and old, since the platform currently does not support continuous values.

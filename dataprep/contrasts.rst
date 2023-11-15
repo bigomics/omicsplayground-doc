@@ -21,36 +21,40 @@ For example, if you have 3 groups (A, B, C), you
 can test the following contrasts: A_vs_B, A_vs_C, B_vs_C.
 
 Here is a minimal example of how the  ``contrasts.csv`` should look like. In this case, the groups 
-will be hair color (blond vs. black) and country (Japan vs. Switzerland), as derived from the samples file.
+will be hair color (blond vs. dark) and country (Japan vs. Switzerland), as derived from the samples file.
 
 +---------+----------------+----------------------+
-|         | black_vs_blond | japan_vs_switzerland |
+|         | dark_vs_blond  | japan_vs_switzerland |
 +=========+================+======================+
 | sample1 |     blond      |        japan         |
 +---------+----------------+----------------------+
-| sample2 |     black      |     switzerland      |
+| sample2 |     dark       |     switzerland      |
 +---------+----------------+----------------------+
 | sample3 |     blond      |        japan         |
 +---------+----------------+----------------------+
-| sample4 |     black      |     switzerland      |
+| sample4 |     dark       |     switzerland      |
++---------+----------------+----------------------+
+| sample5 |     dark       |         USA          |
 +---------+----------------+----------------------+
 
-The column names (black_vs_blond) will be used to name the comparisons. The first name (black) will be used as the numerator of the contrast, and the second name (blond) will be used as the denominator of the contrast.
+The column names (dark_vs_blond) will be used to name the comparisons. The first name (dark) will be used as the numerator of the contrast, and the second name (blond) will be used as the denominator of the contrast.
 Inside the platform, we will transform the contrasts table to the following table:
 
 +---------+----------------+----------------------+
-|         | black_vs_blond | japan_vs_switzerland |
+|         | dark_vs_blond  | japan_vs_switzerland |
 +=========+================+======================+
-| sample1 |       -1       |          1           |
+| sample1 |      -1        |          1           |
 +---------+----------------+----------------------+
-| sample2 |       1        |          -1          |
+| sample2 |       1        |         -1           |
 +---------+----------------+----------------------+
-| sample3 |       -1       |          0           |
+| sample3 |      -1        |          1           |
 +---------+----------------+----------------------+
-| sample4 |       1        |          -1          |
+| sample4 |       1        |         -1           |
++---------+----------------+----------------------+
+| sample5 |       1        |          0           |
 +---------+----------------+----------------------+
 
-Any of the tables above can be provided to the platform.
+Any of the tables above can be provided to the platform. The zero means the sample5 will not be include in the comparison of javan_vs_switzerland.
     
 Group-based contrasts (short form)
 --------------------------------------------------------------------------------
