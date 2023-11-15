@@ -62,26 +62,24 @@ Any of the tables above can be provided to the platform. The zero means the samp
 Group-wise contrasts (short form)
 --------------------------------------------------------------------------------
 
-Group-based contrasts are especially useful in datasets with large number of samples, as assigning the contrasts to each sample can be cumbersome. However, this approach only works if users are focusing on a single phenotype in their dataset.
+Sample-wise contrasts, as introduced in the previous paragraph, become tedious in datasets with large number of samples, as assigning the contrasts to each sample can be cumbersome. Instead, you can specify group-wise contrasts (or short form). However, this approach only works best if users are focusing on a single phenotype in their dataset.
 
 Following the example above, if we would like to create a contrast between the two countries Japan and Switzerland, 
-we will need to create a column called **group** in the sample file, which 
-will contain the phenotypes (in this case country). To simplify, we could simply 
-change the name of the column **country** to **group**.
+we will need to create a column called **group** in the sample file, which will contain the phenotypes (in this case country). To simplify, we could simply change the name of the column **country** to **group**.
 
 Once we have the group column in the sample file, we can assign the contrasts as in the table below.
 
-+-------------+----------------------+----------------------+
-|             | japan_vs_switzerland |   USA_vs_switzerland |
-+=============+======================+======================+
-|    japan    |          1           |          0           |
-+-------------+----------------------+----------------------+
-|    USA      |          0           |          1           |
-+-------------+----------------------+----------------------+
-| switzerland |          -1          |          -1          | 
-+-------------+----------------------+----------------------+
++-------------+----------------------+----------------------+----------------------+
+|             | japan_vs_switzerland |   USA_vs_switzerland |   all_vs_switzerland |
++=============+======================+======================+======================+
+|    japan    |          1           |          0           |         1            |
++-------------+----------------------+----------------------+----------------------+
+|    USA      |          0           |          1           |         1            |
++-------------+----------------------+----------------------+----------------------+
+| switzerland |          -1          |          -1          |        -1            |
++-------------+----------------------+----------------------+----------------------+
 
-We will search for the group column in the samples file, and we will create the contrasts based on the groups. For the first comparison, samples with 'japan' in the group column will be the numerator, and samples with 'switzerland' in the group column will be the denominator. For the second comparison sample with 'USA' (as main group) will be compared to the samples with 'switzerland' (as reference group)
+We will search for the group column in the samples file, and we will create the contrasts based on the groups. For the first comparison, samples with 'japan' in the group column will be the numerator, and samples with 'switzerland' in the group column will be the denominator. For the second comparison sample with 'USA' (as main group) will be compared to the samples with 'switzerland' (as reference group). The third comparison specifies both Japan and USA (together as one group) to be compared to Switzerland.
 
 ..note::
     1. The short contrast form requires a **group** column in the samples file. 
