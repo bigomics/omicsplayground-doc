@@ -82,7 +82,7 @@ Once we have the group column in the sample file, we can assign the contrasts as
 We will search for the group column in the samples file, and we will create the contrasts based on the groups. For the first comparison, samples with 'japan' in the group column will be the numerator, and samples with 'switzerland' in the group column will be the denominator. For the second comparison sample with 'USA' (as main group) will be compared to the samples with 'switzerland' (as reference group). The third comparison specifies both Japan and USA (together as one group) to be compared to Switzerland.
 
 ..note::
-    1. The short contrast form requires a **group** column in the samples file. 
+    1. Group-wise contrasts require a **group** column in the samples file. 
     2. The group column name must contain the word `group` (e.g. group, groups, group_name, etc..).
     3. If multiple group columns are found, only the first one will be matched. 
 
