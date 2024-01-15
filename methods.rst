@@ -22,15 +22,14 @@ than the variable of interest. Batch effects were also visually
 assessed (before and after correction) using annotated heatmaps and
 t-SNE plots colored by variables.
 
-[Setting: 'low'] Batch correction was performed for explicit batch
+Batch correction was performed for explicit batch
 variables or unwanted covariates. Parameters with a correlation r>0.3
 with any of variables of interest (i.e. the model parameters) were
 omitted from the regression. Correction was performed by regressing
 out the covariate using the 'removeBatchEffect' function in the limma
 R/Bioconductor package.
 
-[Setting: 'medium'] Additional batch correction was performed for for
-intrinsic technical parameters such as library size (i.e. total
+Technical correction was performed for intrinsic technical parameters such as library size (i.e. total
 counts), mitochondrial and ribosomal proportions, cell cycle and
 gender. These parameters were estimated from the data. The cell cycle
 was estimated using the Seurat R/Bioconductor package. Gender (if not
@@ -41,7 +40,7 @@ the regression. Correction was performed by regressing out the
 covariate using the 'removeBatchEffect' function in the limma
 R/Bioconductor package.
 
-[Setting: 'high'] Unsupervised batch correction was performed using
+Unsupervised batch correction was performed using
 'surrogate variable analysis' (SVA) (Leek 2007) by estimating the
 latent surrogate variables and regressing out using the
 'removeBatchEffect' function in the limma R/Bioconductor package.
@@ -114,6 +113,37 @@ multiple contrasts as a heatmap.
 
 KEGG pathway visualization was performed using the Pathview
 R/Bioconductor package using the foldchange as node color.
+
+Cell type profiling
+--------------------
+
+Cell type profiling was performed using the LM22 signature matrix as
+reference data set (Chen 2019). We have evaluated a total of 6 computational deconvolution
+methods: DeconRNAseq (Gong 2013), DCQ (Altboum 2014), I-NNLS (Abbas
+2009), NNLM (Lin 2020), rank-correlation and a meta-method. For NNLM,
+we repeated NNLM for non-logarithmic (NNLM.lin) and ranked signals
+(NNLM.rnk). The latter meta-methods, meta and meta.prod, summarize the
+predictions of all the other methods as the mean and/or geometric mean
+of the normalized prediction probabilities, respectively.
+
+Gong T, Szustakowski JD. DeconRNASeq: a statistical framework for
+deconvolution of heterogeneous tissue samples based on mRNA-Seq
+data. Bioinformatics. 2013. 
+
+Altboum Z, et al. Digital cell quantification identifies global immune
+cell dynamics during influenza infection. Mol Syst Biol. 2014 Feb
+28;10(2):720. 
+
+Abbas A, et al. Deconvolution of Blood Microarray Data Identifies
+Cellular Activation Patterns in Systemic Lupus Erythematosus, PLOS
+One, 2009. 
+
+Lin X, Boutros PC. Optimization and expansion of non-negative matrix
+factorization. BMC Bioinformatics. 2020.
+
+Chen B, et al. Profiling Tumor Infiltrating Immune Cells with
+CIBERSORT. Methods Mol Biol. 2018.
+
 
 
 
