@@ -126,22 +126,22 @@ we repeated NNLM for non-logarithmic (NNLM.lin) and ranked signals
 predictions of all the other methods as the mean and/or geometric mean
 of the normalized prediction probabilities, respectively.
 
-1. Gong T, Szustakowski JD. DeconRNASeq: a statistical framework for
+[1] Gong T, Szustakowski JD. DeconRNASeq: a statistical framework for
 deconvolution of heterogeneous tissue samples based on mRNA-Seq
 data. Bioinformatics. 2013. 
 
-2. Altboum Z, et al. Digital cell quantification identifies global immune
+[2] Altboum Z, et al. Digital cell quantification identifies global immune
 cell dynamics during influenza infection. Mol Syst Biol. 2014 Feb
 28;10(2):720. 
 
-3. Abbas A, et al. Deconvolution of Blood Microarray Data Identifies
+[3] Abbas A, et al. Deconvolution of Blood Microarray Data Identifies
 Cellular Activation Patterns in Systemic Lupus Erythematosus, PLOS
 One, 2009. 
 
-4. Lin X, Boutros PC. Optimization and expansion of non-negative matrix
+[4] Lin X, Boutros PC. Optimization and expansion of non-negative matrix
 factorization. BMC Bioinformatics. 2020.
 
-5. Chen B, et al. Profiling Tumor Infiltrating Immune Cells with
+[5] Chen B, et al. Profiling Tumor Infiltrating Immune Cells with
 CIBERSORT. Methods Mol Biol. 2018.
 
 
