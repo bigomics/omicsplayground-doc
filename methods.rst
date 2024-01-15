@@ -118,7 +118,7 @@ Cell type profiling
 --------------------
 
 Cell type profiling was performed using the LM22 signature matrix as
-reference data set (Chen 2019). We have evaluated a total of 6 computational deconvolution
+reference data set (Chen 2018). We have evaluated a total of 6 computational deconvolution
 methods: DeconRNAseq (Gong 2013), DCQ (Altboum 2014), I-NNLS (Abbas
 2009), NNLM (Lin 2020), rank-correlation and a meta-method. For NNLM,
 we repeated NNLM for non-logarithmic (NNLM.lin) and ranked signals
