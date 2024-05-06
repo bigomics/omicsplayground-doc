@@ -58,7 +58,7 @@ T-distributed stochastic neighbor embedding (t-SNE) was computed using
 the top 1000 most varying genes, then reduced to 50 PCA dimensions
 before computing the t-SNE embedding. The perplexity heuristically set
 to 25% of the sample size or 30 at maximum, and 2 at
-minimum. Calculation was performed using the `Rtsne` R package.
+minimum. Calculation was performed using the `Rtsne` R package. az: Expand
 
 Uniform Manifold Approximation and Projection (UMAP) was computed
 using the top 1000 most varying genes, then reduced to 50 PCA
