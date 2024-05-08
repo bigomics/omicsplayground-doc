@@ -5,9 +5,7 @@ Methods
 ================================================================================
 
 
-Below are snippets that you can use to describe the methods when using
-the Omics Playground. These are just examples and you need to extract
-and modify the parts you used and need.
+Here, we provide descriptions of the bioinformatic techniques and methods used in Omics Playground. You may want to use these information to describe the methods when using the Omics Playground. You can always access the R code (on github) to check exactly all steps implemented, or you can contact the bioinformatic staff at BigOmics Analytics should you have questions. 
 
 
 Batch correction 
