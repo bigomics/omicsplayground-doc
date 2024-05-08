@@ -14,44 +14,24 @@ Measurements in datasets generated in multiple centers are typically affected by
 
 **ComBat**: ComBat employs empirical Bayesian method to adjust the data for the known batch vector. It assumes that BEs have similar impact on many genes. Information across features is gathered within each batch to estimate batch-specific mean and variance. These BEs parameters are then shrunk toward the global BEs average and used to adjust for the BEs on each gene. The output is a batch-corrected data matrix that can be used for downstream analyses.
 
-**Limma RemoveBatchEffects**: RemoveBatchEffects employs linear modeling to adjust batch effects and additional covariates if specified. In most  cases it is employed to adjust batch effects only. If multiple numeric covariates are also added, they are assumed to have additive effects on the data. The output is a batch-corrected data matrix that can be used for downstream analyses.
-Surrogate Variable Analysis (SVA): SVA (Leek et al., 2007) aims to define surrogate variables (SVs) that consistently capture latent sources of variation in the data. It does so by employing singular value decomposition (SVD) on the batch uncorrected data, without the need for prior information on latent variables affecting the data. In order to preserve the biological effects of interest on the data, the SVs need to capture variation uncorrelated with the primary variable of interest. The SVs are then regressed out from the gene expression data to generated a batch-corrected data matrix that can be used for downstream analyses.
-Remove Unwanted Variation (RUV): Remove Unwanted Variation (RUV) is a method for correcting batch effects in microbiome and gene expression data. It works by estimating and removing unwanted variation based on negative control variables and technical sample replicates that capture batch variation. The RUV method assumes the existence of a set of negative control genes or samples whose expression is not influenced by the biological factors of interest. It then performs factor analysis on these control genes or samples to identify the factors representing unwanted variation, such as batch effects. RUV uses empirical control genes to identify the unwanted factors. It allows for gene-specific nuisance effects. RUVs uses replicate samples as negative controls. It only accounts for variation within replicates. Perform factor analysis (e.g. SVD) on the control genes/samples to estimate the unwanted factors. Regress the expression of all genes on the estimated unwanted factors to gene gene-specific coefficients. Use the gene-specific coefficients to adjust the expression of all genes for the unwanted variation. In summary, RUV leverages negative control variables to estimate and remove unwanted technical variation, such as batch effects, while preserving the biological signal of interest.
+**Limma RemoveBatchEffects**: RemoveBatchEffects employs linear modeling to adjust BEs and additional covariates if specified. In most  cases it is employed to adjust BEs only. Multiple numeric covariates, if specified, are assumed to have additive effects. The output is a batch-corrected data matrix that can be used for downstream analyses.
 
+**Surrogate Variable Analysis (SVA)**: SVA aims to define surrogate variables (SVs) that consistently capture latent sources of variation in the data. It employs singular value decomposition (SVD) on the batch uncorrected data, without the need for prior information on latent variables affecting the data. To preserve the biological effects of interest, the SVs need to capture variation uncorrelated with the primary variable of interest. The SVs are then regressed out from the gene expression data to generate a batch-corrected data matrix suitable for downstream analyses.
 
+**Remove Unwanted Variation (RUV)**: RUV estimates and removes known and unknown unwanted variation based on negative control variables and technical sample replicates that capture batch variation. It assumes the existence of negative control variables whose expression levels is robust to changes in the biological factors of interest. Factor analysis (e.g., SVD) on these controls is then used to estimate the factors representing unwanted variation, such as BEs. The expression of all features is then adjusted for the unwanted variation to get a batch-corrected dataset. 
 
+Current methods for BE correction mostly rely on specific assumptions or complex models, and may not detect and adjust BEs adequately, impacting downstream analysis and discovery power. To address these challenges we developed [NPmatch] (https://www.biorxiv.org/content/10.1101/2024.04.29.591524v1). NPmatch is a nearest-neighbor matching-based method that adjusts BEs satisfactorily and outperforms current methods in a wide range of datasets 
 
-Batch effects, or contamination by unwanted variables, was identified
-by an F-test for the first three principal components. Continuous
-variables were dichotomized into high/low before testing. Highly
-confounding variables would appear as having high relative
-contribution in the first or second principal component, often higher
-than the variable of interest. Batch effects were also visually
-assessed (before and after correction) using annotated heatmaps and
-t-SNE plots colored by variables.
+**Nearest-Pair Matching (NPmatch)**: NPmatch is a batch correction method designed at BigOmics Analytics. Our method was inspired by principles of the statistical matching theory. It relies on distance-based matching to deterministically search for nearest neighbors with opposite labels, so-called “nearest-pair”, among samples. NPmatch requires knowledge of the phenotypes but not of the batch assignment. Differently to many other algorithms, NPmatch does not rely on specific models or underlying distribution. It does not require special experimental designs, randomized controlled experiments, control genes or batch information. NPmatch is based on the simple rationale that samples should empirically pair based on distance in biological profiles, such as transcriptomics profiles. The NPmatch algorithm initially selects the top variable features (genes). The features are feature-centered and then further centered per condition group. Inter-sample similarities are then determined by either computing the Pearson correlation matrix Dn x n (default) or Euclidean distance. The Pearson correlation matrix Dn x n is subsequently decomposed into the c phenotypic/condition groups. For each sample, a k nearest-neighbor like search is conducted to identify the closest k-nearest samples across each c phenotypic/condition group. The process results into a matrix Xn x (k x c) where for each sample, k-nearest samples are identified per each c condition. The Xn x (k x c) matrix is then used to derive a (i) vector of length L=n x k x c, storing all the computed pairs; (ii) a fully paired dataset Xp x L. As pairing may per-se imply duplication of correlated signals (which is a BE-like effect), Limma ‘RemoveBatchEffect’ is used to correct for the ‘pairing effects’ through linear regression (Ritchie et al., 2005). The batch-corrected X1 p x L matrix is finally condensed into its original p x n size by computing, per each feature, the average values across duplicated samples. Thus, the X1p x n matrix represents the batch-corrected dataset which can be used for further downstream analyses.
 
-Batch correction was performed for explicit batch
-variables or unwanted covariates. Parameters with a correlation r>0.3
-with any of variables of interest (i.e. the model parameters) were
-omitted from the regression. Correction was performed by regressing
-out the covariate using the 'removeBatchEffect' function in the limma
-R/Bioconductor package.
+In OPG, batch effects, or contamination by unwanted variables, was identified by an F-test for the first three principal components. Continuous
+variables were dichotomized into high/low before testing. Highly confounding variables would appear as having high relative contribution in the first or second principal component, often higher than the variable of interest. Batch effects were also visually assessed (before and after correction) using annotated heatmaps and t-SNE plots colored by variables.
 
-Technical correction was performed for intrinsic technical parameters such as library size (i.e. total
-counts), mitochondrial and ribosomal proportions, cell cycle and
-gender. These parameters were estimated from the data. The cell cycle
-was estimated using the Seurat R/Bioconductor package. Gender (if not
-given) was estimated by checking the absence/presence of expression of
-gender specific genes on the X/Y chromosome. Parameters with a
-correlation r>0.3 with any of the model parameters were omitted from
-the regression. Correction was performed by regressing out the
-covariate using the 'removeBatchEffect' function in the limma
-R/Bioconductor package.
+Batch correction was performed for explicit batch variables or unwanted covariates. Parameters with a correlation r>0.3 with any of variables of interest (i.e. the model parameters) were omitted from the regression. Correction was performed by regressing out the covariate using the 'removeBatchEffect' function in the limma R/Bioconductor package.
 
-Unsupervised batch correction was performed using
-'surrogate variable analysis' (SVA) (Leek 2007) by estimating the
-latent surrogate variables and regressing out using the
-'removeBatchEffect' function in the limma R/Bioconductor package.
+Technical correction was performed for intrinsic technical parameters such as library size (i.e. total counts), mitochondrial and ribosomal proportions, cell cycle and gender. These parameters were estimated from the data. The cell cycle was estimated using the Seurat R/Bioconductor package. Gender (if not given) was estimated by checking the absence/presence of expression of gender specific genes on the X/Y chromosome. Parameters with a correlation r>0.3 with any of the model parameters were omitted from the regression. Correction was performed by regressing out the covariate using the 'removeBatchEffect' function in the limma R/Bioconductor package.
+
+Unsupervised batch correction was performed using SVA by estimating the latent surrogate variables and regressing out using the 'removeBatchEffect' function in the limma R/Bioconductor package.
 
 
 Clustering
