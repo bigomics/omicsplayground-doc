@@ -46,7 +46,7 @@ T-distributed stochastic neighbor embedding (t-SNE) is a non-linear dimensionali
 
 Uniform Manifold Approximation and Projection (UMAP) is another non-linear dimensionality reduction method that enables visualization of high-dimensional data in a low-dimensional space, typically 2D or 3D. Similarly to t-SNE, UMAP can effectively separate data that is not linearly separable. When compared to t-SNE, UMAP tends to more clearly separate groups of similar categories from each other. Generally, UMAP can also preserve the global structure more than t-SNE. UMAP computation is also generally faster than t-SNE. To construct the initial high-dimensional graph, UMAP builds a weighted graph with edge weights representing the likelihood that two points are connected. Connectedness is inferred through radii outwards from each point. Smaller radii result to small, isolated clusters. Larger radii result to overconnection. To reduce these potential issues, each radius is chosen locally, based on the between each point and its nearest neighbor. UMAP then makes the graph "fuzzy" by decreasing the likelihood of connection as the radius grows. UMAP then projects the data into lower dimensions through a force-directed graph layout algorithm in a similar way than t-SNE. By ensuring that each point is connected to at least its closest neighbor, UMAP enables preservation of the local structure with respect to the global structure. In the OPG, UMAP was computed using the top 1000 most varying genes, then reduced to 50 PCA dimensions before computing the UMAP embedding. The number of neighbours was heuristically set to 25% of the sample size or 30 at maximum, and 2 at minimum. Calculation w as performed using the `uwot` R package.
 
-Principal Component Analysis (PCA) is an unsupervised learning technique for dimensionality reduction. It is used to explain the variance–covariance structure of a set of variables through linear combinations of the variables. Principal components (PCs) are variables constructed as linear combinations of the initial variables. The PCs are uncorrelated and the greatest variation in the data is captured within the first PCs. The PCs represent the directions of the data that explain a maximal amount of variance. Though 10-dimensional data gives you 10 PCs, PCA put maximum possible information in the first component, followed by the second component, and so forth, under the constraint that each component is uncorrelated with the previous component. PCA can be performed through singular-value decomposition (SVD). [AZ: to-expand]. In OPG, PCA is performed using the `irlba` R package which
+Principal Component Analysis (PCA) is an unsupervised learning technique for dimensionality reduction. It is used to explain the variance–covariance structure of a set of variables through linear combinations of the variables. Principal components (PCs) are variables constructed as linear combinations of the initial variables. The PCs are uncorrelated and the greatest variation in the data is captured within the first PCs. The PCs represent the directions of the data that explain a maximal amount of variance. Though 10-dimensional data gives you 10 PCs, PCA put maximum possible information in the first component, followed by the second component, and so forth, under the constraint that each component is uncorrelated with the previous component. PCA can be performed through singular-value decomposition (SVD). [AZ: to-expand]. In OPG, PCA is performed using the `irlba` R package.
 
 
 Statistical testing
@@ -75,8 +75,21 @@ various public databases including: MSigDB (Subramanian 2005; Liberzon
 and Genomes (KEGG) (Kanehisa 2000).
 
 
-Functional analysis
+Functional analyses
 ---------------------------
+Here below the describe the Gene Set Enrichment methods in OPG:
+
+CAMERA (Correlation Adjusted MEan RAnk gene set test) (Wu et al., Nucleic Acids Research, 2012):  Most competitive gene set tests assume that genes are independent units and rely on gene permutation of gene labels. However inter-gene correlation exist and may inflate discovery of false positives. CAMERA was develop to address the problem of correlated genes in the test set.  It is centered on the idea of using the variance inflaction factor of inter-gene correlation structure to adjust the parametric or rank-based gene set test statistics. This procedure has been shown detect differential gene representations while controlling the FDR even in datasets with a small number of biological replicates, regardless of inter-gene correlations.
+
+
+
+
+
+
+
+
+
+
 
 Graph-weighted GO analysis. The enrichment score of a GO term was
 defined as the sum of q-weighted average fold-changes, (1-q)*logFC, of
