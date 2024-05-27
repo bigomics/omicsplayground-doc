@@ -7,6 +7,11 @@ Methods
 
 Here, we provide descriptions of the bioinformatic techniques and methods used in Omics Playground. You may want to use these information to describe the methods when using the Omics Playground. You can always access the R code (on github) to check exactly all steps implemented, or you can contact the bioinformatic staff at BigOmics Analytics should you have questions. 
 
+Correlation analyses 
+---------------------
+.....
+......
+......
 
 Batch correction 
 -----------------
