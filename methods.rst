@@ -9,11 +9,14 @@ Here, we provide descriptions of the bioinformatic techniques and methods used i
 
 Correlation analyses 
 ---------------------
-.....
-......
-......
+**Correlation** is a statistical technique used to measure the strength and direction of the relationship between two variables.  It determines whether a relationship exists between two variables and its strength. The most used correlation types are Pearson's correlation (for linear relationships between normally distributed variables), Spearman's rank correlation (for ordinal or non-normal data), and Kendall's tau correlation (for ranked pairings). The correlation coefficient ranges from -1 to 1. -1 is a perfect negative correlation, and 1 is a perfect positive correlation.
+A value of 0 means no correlation. Correlation does not imply causation. It only measures the degree of association between two variables. Pearson & Sperman correlations are by far the most used in biological research. A distict assessment concerns partial correlation, as discussed below.
 
-Batch correction 
+****: the Pearson correlation coefficient is a statistical measure that evaluates the strength and direction of the linear relationship between two continuous variables. Ideally, Pearson correlation should be used when the following assumptions are met: (i) the variables have a linear relationship each other; (ii) both variables are continuous and quantitative; (iii) the variables are normally distributed; (iv): no significant outliers populate the data. Typically, if any of these assumptions are unmet, **Spearman correlation** should be employed.
+
+**Partial correlation**:  partial correlation measures the degree of association between two variables, while controlling for the effect of one or more additional factors/variables. It may determine if the relationship between two variables (e.g. X and Y) remains significant after accounting for the influence of a third ("controlling") variable (Z) on both X and Y. In other words, it estimates the correlation between X and Y after removing the variance that each shares with Z. In principle, partial correlation may reveal cases where an observed correlation between X and Y is due to their mutual association with a third variable Z, rather than a direct relationship between X and Y. The values of the partial correlation coefficient ranges from -1 to 1, similar to the regular correlation coefficient.
+
+Batch correction
 -----------------
 Measurements in datasets generated in multiple centers are typically affected by multiple sources of technical variation, collectively known as ‘Batch Effects’ (BEs). BEs may also arise within a single laboratory, due to distinct sequencing runs, depths, use of different sample donors, or when processing occurs in separate days. BEs are predominant, unwanted source of noise that impact mean and variance and may confound real biological signal, altering false positive and false negative rates. BE correction methods can be categorized into supervised, such as ComBat and Limma RemoveBatchEffects, and unsupervised methods such as SVA and RUV. Supervised methods use linear models to adjust known batch effects, while unsupervised methods measure potential sources of variation without requiring prior knowledge of the batch vector.
 
