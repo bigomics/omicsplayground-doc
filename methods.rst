@@ -63,7 +63,7 @@ The Food and Drug Administration (FDA) defines a biomarker as ‘a defined chara
 
 **Glmnet**:  The glmnet package in R provides extensive functionalities to identify putative biomarkers and construct predictive models for distinct biological outcome variables, such as prognosis, risk to disease, response to treatment. It supports binary (through logistic regression), continuous (through linear regression), as well as survival (through Cox-regression) variables. Glmnet offers procedures for fitting LASSO and/or elastic-net regularization in linear, logistic, and multinominal regression. Typically, and similarly to other ML techniques, Glmnet requires a response variable, a predictor variables and a regularization type with regularization strength. It employs L1 and L2 regularizations, which are LASSO and ridge penalties, respectively. While the ridge penalty shrinks the coefficients of correlated predictors towards each other, the lasso penalty picks one and discard the others. The elastic net penalty is a combination of LASSO and ridge penalty. Generally, these regularizations help preventing overfitting by adding a penalty term to the objective function. Importantly, Glmnet also provides approaches to perform cross-validation (CV) analyses. CV enables assessment of models performance and generability of the predicted features. Glmnet is also computational-efficient for large dataset. In summary, Glmnet provides tools for the implementation of regularized regression models, enabling building predictive models.
 
-
+**Random Forest (RF)**: .... ......
 
 
 Statistical testing
