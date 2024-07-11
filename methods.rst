@@ -65,7 +65,7 @@ Omics Playground is equipped with 9 distinct differential gene expression (DGE) 
 
 **EdgeR likelihood ratio / quasi-likelihood F test**: EdgeR employs negative binomial models with estimation of dispersion parameters to model variability on the read counts. It also employs empirical Bayes methods to moderately estimate the gene-specific dispersions. DGE can be assessed in edgeR using and exact test, GLM likelihood ratio (LRT), or the quasi-likelihood F-test. In the exact test, EdgeR uses the negative binomial distribution and is useful for small to moderate sample size datasets. On the other hand, the GLM frameworks are particularly useful for the analysis of complex experimental designs with multiple variables to be accounted for. Compared to the GLM LRT test, the quasi-likelihood F-test may offer a better solution fot example when experiments results into small counts.
 
-**Limma trend / voom**: It employs ordinary linear models with T and F test to measure gene expression differences between groups. Precision weights are calculated upon normalization, and linear models employed to measure DGE between groups.
+**Limma trend / voom**: It employs ordinary linear models with T and F test to measure gene expression differences between groups. Precision weights are calculated upon normalization, and linear models employed to measure DGE between groups. [AZ: EXPAND]
 
 
 Biomarker analysis
