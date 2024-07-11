@@ -55,6 +55,19 @@ to rank the genes for the reduced heatmaps.
 **Principal Component Analysis (PCA)**: PCA is an unsupervised learning technique for dimensionality reduction. It is used to explain the variance–covariance structure of a set of variables through linear combinations of the variables. Principal components (PCs) are variables constructed as linear combinations of the initial variables. The PCs are uncorrelated and the greatest variation in the data is captured within the first PCs. The PCs represent the directions of the data that explain a maximal amount of variance. Though 10-dimensional data gives you 10 PCs, PCA put maximum possible information in the first component, followed by the second component, and so forth, under the constraint that each component is uncorrelated with the previous component. PCA can be performed through singular-value decomposition (SVD). [AZ: to-expand]. In OPG, PCA is performed using the `irlba` R package.
 
 
+Differential gene expression testing
+--------------------------------------------
+Omics Playground is equipped with 9 distinct differential gene expression (DGE) testing methods, aiming to cover the most disparate experimental conditions. It‘s our priority to offer researchers of any background a vast range of choice to study in detail their data, in the fastest possible time, and without requiring any coding. Researchers may evaluate different methods to select the appropriate one based on their needs. Our DGE workflow is paralleled with extensive visualizations including volcano plots, box plots, bar plots, heatmaps, and functional enrichment testing of biological pathways. Here below we provide a description of the DGE algorithms available in the OPG:
+
+**Student's t-test / Welch's t-test**: The t-test is the simplest statistics that can be used to compare two groups based on their average gene expression levels.
+
+**DESeq2 Likelihood / Wald test**: It employs negative binomial generalized linear models to assess variability in gene expression profiles and significant changes between groups using the likelihood ratio or Wald test.
+
+**EdgeR likelihood ratio / quasi-likelihood F test**: It employs negative binomial models with estimation of dispersion parameters, and assesses DGE using likelihood ratio or quasi-likelihood F-test.
+
+**Limma trend / voom**: It employs ordinary linear models with T and F test to measure gene expression differences between groups. Precision weights are calculated upon normalization, and linear models employed to measure DGE between groups.
+
+
 Biomarker analysis
 ---------------------------
 The Food and Drug Administration (FDA) defines a biomarker as ‘a defined characteristic that is measured as an indicator of normal biological processes, pathogenic processes, or responses to an exposure or intervention, including therapeutic interventions. A biomarker could be almost any objective and quantifiable functional, physiological, biochemical, or molecular measurement. Examples of molecular biomarkers include the presence of proteins in the blood, such as prostate-specific antigen (PSA) used in the diagnosis of prostate cancer, or the presence of mutations in tumor suppressor genes, like those in BRCA1 or BRCA2, predictive of breast cancer risk. Therefore, novel biomarker discovery is crucial to many areas, including clinical diagnostics and drug development.Bioinformatics has revolutionized biomarker discovery by integrating computational tools with high-throughput data analysis from genomics, proteomics, transcriptomics, and metabolomics. Researchers can now efficiently identify and analyze potential biomarkers, leading to cost-effective and accelerated research outcomes. On the Omics Playground, we have made available to all users state-of-the-art machine learning (ML) methods.
