@@ -111,6 +111,8 @@ and Genomes (KEGG) (Kanehisa 2000).
 3. It assumes fixed marginal totals (row and column sums), which is appropriate for many experimental designs.
 However, the test has limitations such as being computationally intensive for larger tables, and not providing an estimate of the strength or direction of association.
 
+**Kruskal-Wallis test**: The Kruskal-Wallis (KW) test is a non-parametric statistical test. It is generally used to assess significant differences between three (or more) groups of an independent variable. It is non-parametric because it does not assume an underlying normal distribution. It considered to be an extension of the non-parametric Mann-Whitney U-test / Wilcoxon Rank-Sum test to allow testing of more than two independent groups. Similarly to these tests, KW test is also based on rank place sums. The KW test is also considered as the non-parametric alternative of the one-way ANOVA test. The KW test relies on the assumptions that the groups are independent and have similar distribution. that The null hypothesis (Ho) of the KW test is that there are no differences between groups, specifically that the medians of the groups are equal. The KW test Ho is rejected if the median of at least 1 group differs from the other groups' median. 
+
 
 Functional analyses
 ---------------------------
