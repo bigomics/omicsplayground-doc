@@ -39,6 +39,17 @@ Technical correction was performed for intrinsic technical parameters such as li
 
 Unsupervised batch correction was performed using SVA by estimating the latent surrogate variables and regressing out using the 'removeBatchEffect' function in the limma R/Bioconductor package.
 
+Normalization 
+---------------------
+**Counts per million (CPM)**: CPM mapped reads are the number of raw reads mapped to a transcript, scaled by the number of sequencing reads in your sample, multiplied by a million. We employ a log2CPM: specifically, The data are then added a pseudocount of 1 to enable log2-transformation and avoid negative values, and also make data distribution closer to normal. Thus, log2CPM is a within sample normalization approach. It normalizes RNA-seq data for sequencing depth and so it also facilitates comparisons betweeen samples. However, a stronger cross-sample normalization method is often needed. That why in the OPG we have implemented log2CPM + Quantile normalization.
+
+**Quantile normalization**: The quantile method aims to make the distribution of gene expression levels the same for each sample in a dataset (Bolstad et al., 2003). It assumes that the global differences in distributions between samples are all due to technical variation. Any remaining differences are likely actual biological effects. In quantile normalization, the genes are first ranked within each sample. An average value is calculated across all samples for genes of the same rank. This average value then replaces the original value of all genes in that rank. The genes are then placed in their original order. Therefore, quantile normalization makes the distribution of gene expression levels the same for each sample in a dataset, a pattern typically observed in boxplots. This makes quantile normalization a highly robust way to achieve cross-sample normalization.
+
+**Max median normalization (MaxMedian)**: MaxMedian normalization is more often adopted in proteomics data. It aims to normalize the samples by the maximum median value. Specifically, it first calculates the median value in each sample. The maximum median value is identified. Each data point in each sample is then divided by the sample's median value and multiplied by the maximum median value. In OPG, we then perform log2 transformation.
+
+**Max sum normalization (MaxSum)**: MaxSum normalization is also more often adopted in proteomics data. It aims to normalize the samples by the maximum value of total intensity. Specifically, it first calculates the total intensity in each sample. The maximum total intensity value is identified. Each data point in each sample is then divided by the sample's total intensity and multiplied by the maximum total intensity value. In OPG, we then perform log2 transformation.
+
+**Reference normalization (reference)**: This type of normalization aims to normalize the data by a user-selected feature. Simply, it divides each data point in each sample by the value of the reference features in that sample. 
 
 Clustering
 ---------------------------
