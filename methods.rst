@@ -49,7 +49,7 @@ Normalization
 
 **Max sum normalization (MaxSum)**: MaxSum normalization is also more often adopted in proteomics data. It aims to normalize the samples by the maximum value of total intensity. Specifically, it first calculates the total intensity in each sample. The maximum total intensity value is identified. Each data point in each sample is then divided by the sample's total intensity and multiplied by the maximum total intensity value. In OPG, we then perform log2 transformation.
 
-**Reference normalization (reference)**: This type of normalization aims to normalize the data by a user-selected feature. Simply, it divides each data point in each sample by the value of the reference features in that sample. 
+**Reference normalization (reference)**: This type of normalization aims to normalize the data by a user-selected feature. Simply, it divides each data point in each sample by the value of the reference features in that sample. In OPG, we then perform log2 transformation.
 
 Clustering
 ---------------------------
