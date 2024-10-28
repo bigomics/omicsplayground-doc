@@ -209,7 +209,7 @@ REFERENCES
 Akhmedov M, Martinelli A, Geiger R and Kwee I. Omics Playground: A
 comprehensive self-service platform forvisualization, analytics and
 exploration of Big Omics Data. NAR Genomics and Bioinformatics, Volume
-2, Issue 1, March 2020,
+2, Issue 1, March 2020.
 
 Ashburner et al. Gene ontology: tool for the unification of
 biology. Nat Genet. May 2000;25(1):25-9.
