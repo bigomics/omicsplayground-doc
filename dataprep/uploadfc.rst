@@ -25,7 +25,7 @@ Once the CSV file is prepared with the correct column names, you can upload it d
 1. Select "custom" in the gene test dropdown menu
 2. An upload field will appear where you can select your CSV file with custom FC/P-values
 
-.. figure:: figures/custom_gene_test.png
+.. figure:: ../figures/custom_gene_test.png
     :align: center
     :width: 65%
     :alt: Custom gene test selection in compute stage
@@ -37,7 +37,7 @@ You have two options when uploading custom values:
 
 If you choose to compute both custom and platform values, an additional "FC-FC Plot" tab will appear in the DEGs module, allowing you to compare the fold changes between methods:
 
-.. figure:: figures/uploadfc/fcfc_plot.png
+.. figure:: ../figures/uploadfc/fcfc_plot.png
     :align: center  
     :width: 65%
     :alt: FC-FC plot comparing custom vs platform fold changes
