@@ -27,7 +27,7 @@ Once the CSV file is prepared with the correct column names, you can upload it d
 
 .. figure:: ../figures/custom_gene_test.png
     :align: center
-    :width: 65%
+    :width: 95%
     :alt: Custom gene test selection in compute stage
 
 You have two options when uploading custom values:
@@ -37,9 +37,9 @@ You have two options when uploading custom values:
 
 If you choose to compute both custom and platform values, an additional "FC-FC Plot" tab will appear in the DEGs module, allowing you to compare the fold changes between methods:
 
-.. figure:: ../figures/uploadfc/fcfc_plot.png
+.. figure:: ../figures/fcfc_plot.png
     :align: center  
-    :width: 65%
+    :width: 95%
     :alt: FC-FC plot comparing custom vs platform fold changes
 
 
