@@ -27,6 +27,7 @@
     dataprep/computepgx
     dataprep/dataprep_example
     dataprep/geneset
+    dataprep/uploadfc
     dataprep/dataprocess
     
 .. toctree::
