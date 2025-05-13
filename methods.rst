@@ -219,13 +219,6 @@ The learned MOFA factors provide a low-dimensional representation of the data. A
 **Deep Learning with Multi-Omics Supervised Auto-Encoder**: Deep learning models, example of which are autoencoders (AE) and variational autoencoders (VAEs), learn compressed, meaningful latent representations from each omics layer, capturing both shared and unique biological signals. These latent spaces facilitate integration by aligning different data types into a common framework for downstream analysis. Deep learning has emerged as a powerful approach for integrating multi-omics data, addressing the challenges posed by high dimensionality, heterogeneity, and missing values across different omics layers. OPG offers deep learning via Semi-supervised auto-encoder (SAE) to integrate multi-omics data. SAE is performed using functionalities from the torch R package, including feature selection, SAE models, training/validation splitting, training with distinct optimizers, prediction and later feature extraction.
 Specifically, the multi-omics, log2-transformed and normalized data matrix is first imputed if missing values are detected. Optionally, each data type can be 10x augmented. Data augmentation is conducted by (i) computing average feature standard deviation; (ii) expanding the matrix (by samples) 10 times the original size; (iii) adding to the expanded matrix random noise corresponding to the product between the original average feature standard deviation and random values drawn from a Gaussian distribution. To expand the breadth of features used in the SAE, genesets from gene set enrichment analysis can be optionally added. Noise can also be optionally added by checking the box. Adding noise triggers marginal increase in feature variations without altering the biological patterns in the data and its latent space. Noise is added as the product between average feature standard deviation and random values drawn from a Gaussian distribution. Multi-omics SAE is then performed using R6 class functionalities provided in the R torch R package. A GLU activation/gating mechanism can be optionally added. MultiBlockMultiTargetSAE ('MT') model is used to handle matrices of distinct features and predict multiple target variables at once. The SAE neural network is used to learn representations and make feature predictions. Internally, the model is organized into modules: (i) initialization, which converts data into torch sensors and split into training and validation; (ii) training, which sets the optimizer, defines the loss function, trains the model, and stores training and validation loss values; (iii) prediction, which runs the trained model to predict target probabilities; (iv) latent representation extraction, which returns the learned latent (encoded) representations for each view and the integrated multi-omics data; (v) feature importance by gradient, which computes feature importance for each input feature by analyzing how small changes (perturbations or gradients) may affect the output; (vi) model architecture dimensions, which returns the dimensions of encoder, decoder, and predictor layers in the model. To assess the performance of the classification SAE model, OPG also computes the confusion matrix by comparing the model’s predicted labels with the actual (ground truth) labels for a given phenotype.
 
-REFERENCES:
-mixOmics: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005752
-MOFA: https://www.embopress.org/doi/full/10.15252/msb.20178124
-DIABLO: https://pubmed.ncbi.nlm.nih.gov/30657866/
-MCIA: https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-15-162
-RGCCA: https://pubmed.ncbi.nlm.nih.gov/28536930/
-
 
 Scripting and visualization
 ---------------------------
@@ -271,4 +264,13 @@ expression data.” Bioinformatics, 26(1), 139-140.
 
 Wang B, Mezlini A, Demir F, Fiume M, Zu T, Brudno M, Haibe-Kains B, Goldenberg A (2014). “Similarity Network Fusion: a fast and effective method to aggregate multiple data types on a genome wide scale.” Nature Methods. https://www.nature.com/articles/nmeth.2810
 
+Rohart F, Gautier B, Singh A, Lê Ca K (2017). "omixOmics: An R package for ‘omics feature selection and multiple data integration". https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005752
+
+Argelaguet R, Velten B, Arnol D, Dietrich S, Zenz T, Marioni JC, Buettner F, Huber W, Stegle O (2018). "Multi‐Omics Factor Analysis—a framework for unsupervised integration of multi‐omics data sets". Mol Syst Biol(2018) 14: e8124; https://www.embopress.org/doi/full/10.15252/msb.20178124
+
+Singh A, Shannon CP, Gautier B, Rohart F, Vacher M, Tebbutt SJ, Kim-Anh Lê Cao K (2019). "DIABLO: an integrative approach for identifying key molecular drivers from multi-omics assays". Bioinformatics, Sep 1;35(17):3055-3062; https://pubmed.ncbi.nlm.nih.gov/30657866/
+
+Meng C, Kuster B, Culhane AC & Gholami AM  (2014). "A multivariate approach to the integration of multi-omics datasets". BMC Bioinformatics, 15:162; https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-15-162
+
+Tenenhaus M, Tenenhaus A, Groenen PFJ (2017). "Regularized Generalized Canonical Correlation Analysis: A Framework for Sequential Multiblock Component Methods". Psychometrika; https://pubmed.ncbi.nlm.nih.gov/28536930/
 
