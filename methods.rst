@@ -111,7 +111,6 @@ Robinson 2010; Ritchie 2015). The maximum q-value of the three methods
 was taken as aggregate q-value, which corresponds to taking the
 intersection of significant genes from all three tests.
 
-
 Statistical testing of differential enrichment of genesets was
 performed using an aggregation of multiple statistical methods:
 Fisher's exact test, fGSEA (Korotkevich 2019), Camera (Wu 2012) and
@@ -200,27 +199,13 @@ factorization. BMC Bioinformatics. 2020.
 CIBERSORT. Methods Mol Biol. 2018.
 
 
-Scripting and visualization
----------------------------
-Data preprocessing was performed using bespoke scripts using R (R Core Team 2013) and packages from Bioconductor (Huber 2015). Statistical computation and visualization are all performed using latest playbase and Omics Playground version.
-
-
 Multi-omics data analysis
 ---------------------------
 In Bioinformatics, multi-omics data analysis comprises integrative approaches aimed to leverage distinct molecular data types ('views') to unravel complex biological systems, discover biomarkers, and advance precision medicine. Its success relies on robust integration of multiple layers of biological data -such as genomics, transcriptomics, proteomics, metabolomics, and epigenomics- to translate big data into actionable biological insights. The rationale underlying multi-omics data analysis is that integration would uncover relationships and patterns that are not detectable when analyzing each omics layer in isolation. Importantly, emerging research works show that complex phenotypes, such as ageing and complex diseases, are driven by concomitant alteration in multiple biological layers, including the transcriptomes, the epigenome, and the proteome. Therefore, to achieve a deep understanding of the molecular processes underlying a certain condition, integrated analysis of multiple data types is essential. Multi-omics analysis is also powerful to aid development of precision medicine approaches as it may facilitate the association of distinct molecular patterns with patient-specific clinical outcomes. Bioinformatically, data integration -i.e., combining heterogeneous data types- presents important technical challenges. First, reconciling different data types is impacted by the distinct statistical distributions and noise profiles between data types, requiring preprocessing, including normalization and transformation, often tailored to the data type. Second, in most cases specific technologies and protocols are employed, in most cases unique to a datatype. This would inevitably triggers variable degree of intra- and inter-experimental variations (e.g., batch effects) across datatypes, which may need tailored adjustments.Third, certain data types, such as proteomics and metabolomics data measured by mass spectrometry, typically suffer of missing (undetected) values due to technical limitations in measuring the signal. While missing values may hinder data integration methods, imputing features (i.e., recovering a numerical entity from a missing value) without introducing bias is challenging but critical. Last but not least, each omics layer (e.g., genomics, proteomics) can involve thousands of features (genes, proteins), leading to the curse of dimensionality when combined. This increases computational costs, risks overfitting models, and necessitates dimension-reduction strategies. At present, no universal framework exists for multi-omics integration. Current methods and algorithms may perform differently depending on data types and data characteristics, with no one-size-fits-all solution. In OPG, we employ multiple, state-of-the-art methods for multi-omics data integration. We describe these methods below.
 
-**SNF (Similarity Network Fusion)**:  SNF fuses multiple views (data types) together to construct an overall integrated matrix. The heatmaps display sample correlation of pairwise Euclidean distances and the final integrated affinity matrix. The learned matrix can then be used for multiple analyses, including clustering, and classification.
-Methods
-Prior to SNF, missing values (if any) are imputed using SVD2. For each data type, pairwise Pearson correlation distances are computed between all pairs of data points. Affinity matrices are then calculated from these distance matrices, using number of neighbors K=10-30 and hyperparameter alpha=0.5. Similarity Network Fusion then fuses the matrices together to construct an overall integrated matrix.
-
+**SNF (Similarity Network Fusion)**:  SNF fuses multiple views (data types) together to construct an overall integrated matrix. Rather than merging raw measurements directly, SNF constructs a sample-similarity network for each omics dataset, where nodes represent samples (e.g., patients or biological specimens) and edges encode the similarity between samples which can be inferred by Euclidean or similar distance kernels. The SNF algorithm computes a matrix that quantifies pairwise similarities between samples within each data type. The datatype-specific matrices are then fused using a non-linear process to generate a unified similarity network emerges. This fused network captures complementary information from all omics layers. After fusion, spectral clustering can be applied to the integrated network to identify subgroups of samples, such as disease subtypes or phenotypic clusters. SNF is particularly valued for its ability to reveal robust sample groupings and potential biomarkers by capturing each omics' influence. Specifically, in OPG, prior to SNF, missing values (if any) are imputed using SVD2. For each data type, pairwise Pearson correlation distances are computed between all pairs of data points. Affinity matrices are then calculated from these distance matrices, using number of neighbors K=10-30 and hyperparameter alpha=0.5. Similarity Network Fusion then fuses the matrices together to construct an overall integrated matrix. OPG also performs clustering of SNF-integrated multi-omics data and generates an heatmap of normalized multi-omics data. In the heatmap, the SNF clusters capture multi-omic features exhibiting similar behavior, enabling assessment of samples' clustering driven by multiple data types/modalities.
 
 **MOFA (Multi‐Omics Factor Analysis)**: MOFA is a factorization-based framework for multi‐omics data integration. The inferred latent 'factors' (or 'modules') represent the underlying principal axes of heterogeneity across the samples.
-
-
-
-
-
-
 Variance per factor and type: Amount of variance explained by each factor in each omic type. A trained MOFA model is used to infer the proportion of variance explained (i.e. the coefficient of determinations (R^2)) by the MOFA factors across the different views. Higher variance suggests stronger effect. In MOFA, 'views' refer to features from non-overlapping set of omic types. MOFA 'factors' are low-dimensional representations of multi-omic data. A factor is a latent variable that captures a source of variation across the integrated data. Each factor captures a different source and dimension of heterogeneity in the integrated data, and thus represents an independent source of variation. Note that the interpretation of factors is analogous to the interpretation of the principal components in PCA. Factors with higher explained variance are typically considered more important for understanding the underlying structure and patterns in a multi-omics dataset. They may correspond to significant biological processes, cellular states, or experimental conditions that have a broader impact across multiple data modalities.
 
 Factor response analysis: Associations of factors with our trait of interest are quantified by the correlation between factor and trait vectors. Factors with high (absolute) factor-trait correlation show large differences between phenotype conditions. 
@@ -246,9 +231,13 @@ Methods
 For the selected phenotype, as chosen by the {Select phenotype} option, the difference between the average expression in the phenotype classes is computed for each feature. Gene sets as inferred in the gene set enrichment analysis are also included as 'feature set'. The gradient matrices, one for each omics view, is extracted from the SAE model. For each available feature per datatype, a scatter plot of log2FC vs gradient is displayed. Feature with lowest and highest FC and gradient are coloured in blue and red, respectively.
 
 
+Scripting and visualization
+---------------------------
+Data preprocessing was performed using bespoke scripts using R (R Core Team 2013) and packages from Bioconductor (Huber 2015). Statistical computation and visualization are all performed using latest playbase and Omics Playground version.
+
+
 REFERENCES 
 ---------------------------
-
 Akhmedov M, Martinelli A, Geiger R and Kwee I. Omics Playground: A
 comprehensive self-service platform forvisualization, analytics and
 exploration of Big Omics Data. NAR Genomics and Bioinformatics, Volume
