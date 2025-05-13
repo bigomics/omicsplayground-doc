@@ -227,40 +227,25 @@ Data preprocessing was performed using bespoke scripts using R (R Core Team 2013
 
 REFERENCES 
 ---------------------------
-Akhmedov M, Martinelli A, Geiger R and Kwee I. Omics Playground: A
-comprehensive self-service platform forvisualization, analytics and
-exploration of Big Omics Data. NAR Genomics and Bioinformatics, Volume
-2, Issue 1, March 2020.
+Akhmedov M, Martinelli A, Geiger R and Kwee I (2020). "Omics Playground: A comprehensive self-service platform for visualization, analytics and exploration of Big Omics Data". NAR Genomics and Bioinformatics, Volume 2, Issue 1, March 2020; https://pubmed.ncbi.nlm.nih.gov/33575569/
 
-Ashburner et al. Gene ontology: tool for the unification of
-biology. Nat Genet. May 2000;25(1):25-9.
+Ashburner et al (2000). "Gene ontology: tool for the unification of biology." Nat Genet. May 2000;25(1):25-9; https://www.nature.com/articles/ng0500_25
 
-Huber W, et al. (2015) Orchestrating high-throughput genomic analysis
-with Bioconductor. Nature Methods 12:115-121; doi:10.1038/nmeth.3252
+Huber W, et al. (2015) Orchestrating high-throughput genomic analysis with Bioconductor. Nature Methods 12:115-121; https://www.nature.com/articles/nmeth.3252
 
-Kanehisa, M. and Goto, S.; KEGG: Kyoto Encyclopedia of Genes and
-Genomes. Nucleic Acids Res. 28, 27-30 (2000).
+Kanehisa, M. and Goto, S (2000). "KEGG: Kyoto Encyclopedia of Genes and Genomes." Nucleic Acids Res. 28, 27-30; https://www.genome.jp/kegg/
 
-Leek J., Storey J. Capturing heterogeneity in gene expression studies
-by ‘surrogate variable analysis’ PLoS Genet. 2007
+Leek J., Storey J. Capturing heterogeneity in gene expression studies by ‘surrogate variable analysis’ PLoS Genet. 2007; https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161
 
-Love MI, Huber W, Anders S (2014). “Moderated estimation of fold
-change and dispersion for RNA-seq data with DESeq2.” Genome Biology,
-15, 550.
+Love MI, Huber W, Anders S (2014). “Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2.” Genome Biology, 15, 550; https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8
 
-Zito A, Martinelli A, Masiero M, Akhmedov M, Kwee I. "NPM: latent batch effects correction of omics data by nearest-pair matching." Bioinformatics,  Volume 41, Issue 3, 2025
+Zito A, Martinelli A, Masiero M, Akhmedov M, Kwee I. "NPM: latent batch effects correction of omics data by nearest-pair matching." Bioinformatics,  Volume 41, Issue 3, 2025; https://academic.oup.com/bioinformatics/article/41/3/btaf084/8042340
 
-R Core Team (2013). R: A language and environment for statistical
-computing. R Foundation for Statistical Computing, Vienna, Austria.
-URL http://www.R-project.org/.
+R Core Team (2013). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria; http://www.R-project.org/.
 
-Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W, Smyth GK
-(2015). “limma powers differential expression analyses for
-RNA-sequencing and microarray studies.” Nucleic Acids Research, 43(7)
+Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W, Smyth GK (2015). “limma powers differential expression analyses for RNA-sequencing and microarray studies.” Nucleic Acids Research, 43(7); https://pmc.ncbi.nlm.nih.gov/articles/PMC4402510/
 
-Robinson MD, McCarthy DJ, Smyth GK (2010). “edgeR: a Bioconductor
-package for differential expression analysis of digital gene
-expression data.” Bioinformatics, 26(1), 139-140.
+Robinson MD, McCarthy DJ, Smyth GK (2010). “edgeR: a Bioconductor package for differential expression analysis of digital gene expression data.” Bioinformatics, 26(1), 139-140; https://academic.oup.com/bioinformatics/article/26/1/139/182458
 
 Wang B, Mezlini A, Demir F, Fiume M, Zu T, Brudno M, Haibe-Kains B, Goldenberg A (2014). “Similarity Network Fusion: a fast and effective method to aggregate multiple data types on a genome wide scale.” Nature Methods. https://www.nature.com/articles/nmeth.2810
 
