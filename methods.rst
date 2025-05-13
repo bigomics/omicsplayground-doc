@@ -202,14 +202,46 @@ CIBERSORT. Methods Mol Biol. 2018.
 
 Scripting and visualization
 ---------------------------
-Data preprocessing was performed using bespoke scripts using R (R Core
-Team 2013) and packages from Bioconductor (Huber 2015). Statistical
-computation and visualization have been performed using the Omics
-Playground version vX.X.X (Akhmedov 2020).
+Data preprocessing was performed using bespoke scripts using R (R Core Team 2013) and packages from Bioconductor (Huber 2015). Statistical computation and visualization are all performed using latest playbase and Omics Playground version.
 
 
 Multi-omics data analysis
 ---------------------------
+In Bioinformatics, multi-omics data analysis comprises integrative approaches aimed to leverage distinct molecular data types ('views') to unravel complex biological systems, discover biomarkers, and advance precision medicine. Its success relies on robust integration of multiple layers of biological data -such as genomics, transcriptomics, proteomics, metabolomics, and epigenomics- to translate big data into actionable biological insights. The rationale underlying multi-omics data analysis is that integration would uncover relationships and patterns that are not detectable when analyzing each omics layer in isolation. Importantly, emerging research works show that complex phenotypes, such as ageing and complex diseases, are driven by concomitant alteration in multiple biological layers, including the transcriptomes, the epigenome, and the proteome. Therefore, to achieve a deep understanding of the molecular processes underlying a certain condition, integrated analysis of multiple data types is essential. Multi-omics analysis is also powerful to aid development of precision medicine approaches as it may facilitate the association of distinct molecular patterns with patient-specific clinical outcomes. Bioinformatically, data integration -i.e., combining heterogeneous data types- presents important technical challenges. 
+
+Multi-omics datasets vary in data types (e.g., genomic sequences vs. protein abundance), measurement scales (counts, concentrations, etc.), and platforms (microarrays, mass spectrometry). Reconciling these disparities requires advanced normalization and transformation techniques to ensure compatibility. For example, transcriptomic data (RNA-seq) and metabolomic data (LC-MS) have distinct statistical distributions and noise profiles.
+
+2. High Dimensionality and Computational Demands
+Each omics layer (e.g., genomics, proteomics) can involve thousands of features (genes, proteins), leading to the curse of dimensionality when combined. This increases computational costs, risks overfitting models, and necessitates dimension-reduction strategies. For instance, integrating 20,000 genes with 1,000 proteins creates a 21,000-dimensional space, demanding robust algorithms.
+
+3. Missing Data
+Missing values arise from experimental limitations (e.g., undetected metabolites) or technical errors. Imputing missing data without introducing bias is critical, as incomplete datasets can skew downstream analyses like clustering or predictive modeling. Techniques such as matrix factorization or Bayesian methods are often employed but remain imperfect.
+
+4. Data Quality and Variability
+Intra- and inter-experimental variability (e.g., batch effects, protocol differences) compromise data consistency. For example, proteomic data from two labs using different extraction methods may show systematic biases, complicating integration. Robust quality control pipelines are essential but challenging to standardize across omics layers.
+
+5. Integration Frameworks and Model Selection
+No universal framework exists for multi-omics integration, forcing researchers to choose among horizontal (same data type across studies), vertical (different data types on the same samples), or mosaic (mixed integration) approaches. Additionally, selecting optimal machine learning models (e.g., deep learning vs. network analysis) depends on data characteristics, with no one-size-fits-all solution.
+
+6. Scalability and Algorithm Efficiency
+Large-scale datasets (e.g., single-cell multi-omics) strain computational resources. Methods like BIDIFAC+ for bi-dimensional integration may take days to converge on high-dimensional data, limiting practicality. Efficient parallel computing and optimized algorithms are ongoing needs.
+
+7. Biological Interpretability
+Transforming integrated data into actionable insights requires preserving biological relevance. For example, correlating gene expression with metabolite levels must account for regulatory networks rather than treating them as independent variables. Tools like pathway enrichment analysis help but often oversimplify complex interactions.
+
+8. Incorporating Non-Omics Data
+Integrating clinical, imaging, or epidemiological data with omics layers introduces heterogeneity in scale and format (e.g., categorical clinical variables vs. continuous proteomic data). Aligning these datasets while avoiding confounding factors (e.g., patient subphenotypes) remains a hurdle.
+
+These challenges underscore the need for standardized workflows, improved computational tools, and collaborative efforts to advance multi-omics integration in biomedical research
+
+
+
+
+
+In OPG, we employ multiple, state-of-the-art methods for multi-omics data integration.
+
+[ADD references of each method].
+
 MOFA: 'Multi‐Omics Factor Analysis'. MOFA is a factorization-based framework for multi‐omics data integration. The inferred latent 'factors' (or 'modules') represent the underlying principal axes of heterogeneity across the samples.
 
 Variance per factor and type: Amount of variance explained by each factor in each omic type. A trained MOFA model is used to infer the proportion of variance explained (i.e. the coefficient of determinations (R^2)) by the MOFA factors across the different views. Higher variance suggests stronger effect. In MOFA, 'views' refer to features from non-overlapping set of omic types. MOFA 'factors' are low-dimensional representations of multi-omic data. A factor is a latent variable that captures a source of variation across the integrated data. Each factor captures a different source and dimension of heterogeneity in the integrated data, and thus represents an independent source of variation. Note that the interpretation of factors is analogous to the interpretation of the principal components in PCA. Factors with higher explained variance are typically considered more important for understanding the underlying structure and patterns in a multi-omics dataset. They may correspond to significant biological processes, cellular states, or experimental conditions that have a broader impact across multiple data modalities.
@@ -230,10 +262,8 @@ Methods
 A confusion matrix for each phenotype as selected by {Select phenotype}, is computed from the SAE-model and returned using the train or test data as selected by the plot option {Show set}. For each phenotype, the best predicted class is extracted. The true labels are then compared to the predicted labels and shown in a confusion.
 
 Scatter plot of feature fold-change vs. feature SAE gradient per datatype.
-
 Methods
 For the selected phenotype, as chosen by the {Select phenotype} option, the difference between the average expression in the phenotype classes is computed for each feature. Gene sets as inferred in the gene set enrichment analysis are also included as 'feature set'. The gradient matrices, one for each omics view, is extracted from the SAE model. For each available feature per datatype, a scatter plot of log2FC vs gradient is displayed. Feature with lowest and highest FC and gradient are coloured in blue and red, respectively.
-
 
 
 REFERENCES 
