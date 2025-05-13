@@ -207,47 +207,27 @@ Data preprocessing was performed using bespoke scripts using R (R Core Team 2013
 
 Multi-omics data analysis
 ---------------------------
-In Bioinformatics, multi-omics data analysis comprises integrative approaches aimed to leverage distinct molecular data types ('views') to unravel complex biological systems, discover biomarkers, and advance precision medicine. Its success relies on robust integration of multiple layers of biological data -such as genomics, transcriptomics, proteomics, metabolomics, and epigenomics- to translate big data into actionable biological insights. The rationale underlying multi-omics data analysis is that integration would uncover relationships and patterns that are not detectable when analyzing each omics layer in isolation. Importantly, emerging research works show that complex phenotypes, such as ageing and complex diseases, are driven by concomitant alteration in multiple biological layers, including the transcriptomes, the epigenome, and the proteome. Therefore, to achieve a deep understanding of the molecular processes underlying a certain condition, integrated analysis of multiple data types is essential. Multi-omics analysis is also powerful to aid development of precision medicine approaches as it may facilitate the association of distinct molecular patterns with patient-specific clinical outcomes. Bioinformatically, data integration -i.e., combining heterogeneous data types- presents important technical challenges. 
+In Bioinformatics, multi-omics data analysis comprises integrative approaches aimed to leverage distinct molecular data types ('views') to unravel complex biological systems, discover biomarkers, and advance precision medicine. Its success relies on robust integration of multiple layers of biological data -such as genomics, transcriptomics, proteomics, metabolomics, and epigenomics- to translate big data into actionable biological insights. The rationale underlying multi-omics data analysis is that integration would uncover relationships and patterns that are not detectable when analyzing each omics layer in isolation. Importantly, emerging research works show that complex phenotypes, such as ageing and complex diseases, are driven by concomitant alteration in multiple biological layers, including the transcriptomes, the epigenome, and the proteome. Therefore, to achieve a deep understanding of the molecular processes underlying a certain condition, integrated analysis of multiple data types is essential. Multi-omics analysis is also powerful to aid development of precision medicine approaches as it may facilitate the association of distinct molecular patterns with patient-specific clinical outcomes. Bioinformatically, data integration -i.e., combining heterogeneous data types- presents important technical challenges. First, reconciling different data types is impacted by the distinct statistical distributions and noise profiles between data types, requiring preprocessing, including normalization and transformation, often tailored to the data type. Second, in most cases specific technologies and protocols are employed, in most cases unique to a datatype. This would inevitably triggers variable degree of intra- and inter-experimental variations (e.g., batch effects) across datatypes, which may need tailored adjustments.Third, certain data types, such as proteomics and metabolomics data measured by mass spectrometry, typically suffer of missing (undetected) values due to technical limitations in measuring the signal. While missing values may hinder data integration methods, imputing features (i.e., recovering a numerical entity from a missing value) without introducing bias is challenging but critical. Last but not least, each omics layer (e.g., genomics, proteomics) can involve thousands of features (genes, proteins), leading to the curse of dimensionality when combined. This increases computational costs, risks overfitting models, and necessitates dimension-reduction strategies. At present, no universal framework exists for multi-omics integration. Current methods and algorithms may perform differently depending on data types and data characteristics, with no one-size-fits-all solution. In OPG, we employ multiple, state-of-the-art methods for multi-omics data integration. We describe these methods below.
 
-Multi-omics datasets vary in data types (e.g., genomic sequences vs. protein abundance), measurement scales (counts, concentrations, etc.), and platforms (microarrays, mass spectrometry). Reconciling these disparities requires advanced normalization and transformation techniques to ensure compatibility. For example, transcriptomic data (RNA-seq) and metabolomic data (LC-MS) have distinct statistical distributions and noise profiles.
+**SNF (Similarity Network Fusion)**:  SNF fuses multiple views (data types) together to construct an overall integrated matrix. The heatmaps display sample correlation of pairwise Euclidean distances and the final integrated affinity matrix. The learned matrix can then be used for multiple analyses, including clustering, and classification.
+Methods
+Prior to SNF, missing values (if any) are imputed using SVD2. For each data type, pairwise Pearson correlation distances are computed between all pairs of data points. Affinity matrices are then calculated from these distance matrices, using number of neighbors K=10-30 and hyperparameter alpha=0.5. Similarity Network Fusion then fuses the matrices together to construct an overall integrated matrix.
 
-2. High Dimensionality and Computational Demands
-Each omics layer (e.g., genomics, proteomics) can involve thousands of features (genes, proteins), leading to the curse of dimensionality when combined. This increases computational costs, risks overfitting models, and necessitates dimension-reduction strategies. For instance, integrating 20,000 genes with 1,000 proteins creates a 21,000-dimensional space, demanding robust algorithms.
 
-3. Missing Data
-Missing values arise from experimental limitations (e.g., undetected metabolites) or technical errors. Imputing missing data without introducing bias is critical, as incomplete datasets can skew downstream analyses like clustering or predictive modeling. Techniques such as matrix factorization or Bayesian methods are often employed but remain imperfect.
-
-4. Data Quality and Variability
-Intra- and inter-experimental variability (e.g., batch effects, protocol differences) compromise data consistency. For example, proteomic data from two labs using different extraction methods may show systematic biases, complicating integration. Robust quality control pipelines are essential but challenging to standardize across omics layers.
-
-5. Integration Frameworks and Model Selection
-No universal framework exists for multi-omics integration, forcing researchers to choose among horizontal (same data type across studies), vertical (different data types on the same samples), or mosaic (mixed integration) approaches. Additionally, selecting optimal machine learning models (e.g., deep learning vs. network analysis) depends on data characteristics, with no one-size-fits-all solution.
-
-6. Scalability and Algorithm Efficiency
-Large-scale datasets (e.g., single-cell multi-omics) strain computational resources. Methods like BIDIFAC+ for bi-dimensional integration may take days to converge on high-dimensional data, limiting practicality. Efficient parallel computing and optimized algorithms are ongoing needs.
-
-7. Biological Interpretability
-Transforming integrated data into actionable insights requires preserving biological relevance. For example, correlating gene expression with metabolite levels must account for regulatory networks rather than treating them as independent variables. Tools like pathway enrichment analysis help but often oversimplify complex interactions.
-
-8. Incorporating Non-Omics Data
-Integrating clinical, imaging, or epidemiological data with omics layers introduces heterogeneity in scale and format (e.g., categorical clinical variables vs. continuous proteomic data). Aligning these datasets while avoiding confounding factors (e.g., patient subphenotypes) remains a hurdle.
-
-These challenges underscore the need for standardized workflows, improved computational tools, and collaborative efforts to advance multi-omics integration in biomedical research
+**MOFA (Multi‐Omics Factor Analysis)**: MOFA is a factorization-based framework for multi‐omics data integration. The inferred latent 'factors' (or 'modules') represent the underlying principal axes of heterogeneity across the samples.
 
 
 
 
 
-In OPG, we employ multiple, state-of-the-art methods for multi-omics data integration.
-
-[ADD references of each method].
-
-MOFA: 'Multi‐Omics Factor Analysis'. MOFA is a factorization-based framework for multi‐omics data integration. The inferred latent 'factors' (or 'modules') represent the underlying principal axes of heterogeneity across the samples.
 
 Variance per factor and type: Amount of variance explained by each factor in each omic type. A trained MOFA model is used to infer the proportion of variance explained (i.e. the coefficient of determinations (R^2)) by the MOFA factors across the different views. Higher variance suggests stronger effect. In MOFA, 'views' refer to features from non-overlapping set of omic types. MOFA 'factors' are low-dimensional representations of multi-omic data. A factor is a latent variable that captures a source of variation across the integrated data. Each factor captures a different source and dimension of heterogeneity in the integrated data, and thus represents an independent source of variation. Note that the interpretation of factors is analogous to the interpretation of the principal components in PCA. Factors with higher explained variance are typically considered more important for understanding the underlying structure and patterns in a multi-omics dataset. They may correspond to significant biological processes, cellular states, or experimental conditions that have a broader impact across multiple data modalities.
 
 Factor response analysis: Associations of factors with our trait of interest are quantified by the correlation between factor and trait vectors. Factors with high (absolute) factor-trait correlation show large differences between phenotype conditions. 
 Correlation between MOFA factors and traits. Correlation between each MOFA factor (y-axis) and each available variable in your metadata (x-axis). The metadata variables shown correspond to those provided in your uploaded samples.csv file. Covariates may include the phenotype(s) of interest. Correlations are pairwise Pearson's correlation coefficients. The colors in the heatmap indicate the strength and direction of the correlation. The correlation values range from -1 to +1. Stronger, positive correlations will approach darker red. Stronger, negative correlations will approach darker blue. Each MOFA factor captures a source of variation across the integrated data types. Therefore, the heatmap helps identification of dominant sources of variation in the data -which may be driven by biological processes- associated with a trait or condition.
+
+
+[ADD references of each method].
 
 
 Multi-Omics Supervised Auto-Encoder.
@@ -300,7 +280,10 @@ Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W, Smyth GK
 (2015). “limma powers differential expression analyses for
 RNA-sequencing and microarray studies.” Nucleic Acids Research, 43(7)
 
-
 Robinson MD, McCarthy DJ, Smyth GK (2010). “edgeR: a Bioconductor
 package for differential expression analysis of digital gene
 expression data.” Bioinformatics, 26(1), 139-140.
+
+Wang B, Mezlini A, Demir F, Fiume M, Zu T, Brudno M, Haibe-Kains B, Goldenberg A (2014). “Similarity Network Fusion: a fast and effective method to aggregate multiple data types on a genome wide scale.” Nature Methods. https://www.nature.com/articles/nmeth.2810
+
+
