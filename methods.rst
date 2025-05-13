@@ -59,7 +59,6 @@ Normalization
 
 Clustering
 ---------------------------
-
 Heatmaps were generated using the ComplexHeatmap R/Bioconductor
 package (Gu 2016) on scaled log-expression values (z-score) using
 euclidean distance and Ward linkage. The standard deviation was used
@@ -85,6 +84,12 @@ Omics Playground is equipped with 9 distinct differential gene expression (DGE) 
 **Limma trend / voom**: It employs ordinary linear models with T and F test to measure gene expression differences between groups. These approaches aim to robustly estimate the mean-variance relationship non-parametrically. Using log-counts per million (log-cpm) normalized for sequencig depth, the mean-variance is fitted to the gene-wise standard deviations of the log-cpm as a function of average log-count. To incorporate the mean-variance relationship, limma-trend modifies limma’s empirical Bayes procedure to incorporate a mean-variance trend. A mean-variance trend across all genes aims to model the relationship between a gene's average expression and its variance. Limma-voom incorporates the mean-variance trend of the log-counts into a precision weight for each individual normalized observation. Limma-voom and limma-trend both fit non-parametric curves. They both estimate the relationship between abundance and variance by fitting a lowess/loess curve. Because parameters are estimated from the whole data set (not for individual genes), neither method results to over-fitting. Typically, limma-voom fits a slightly smoother curve than limma-trend. When sequencing depths are similar across samples, limma-trend and limma-voom perform very similarly. Limma-voom performs better than limma-trend when sequencing depths are highly variable across samples.
 
 
+Timeseries (Longitudinal) data analysis
+---------------------------------------
+.....
+.....
+
+
 Biomarker analysis
 ---------------------------
 The Food and Drug Administration (FDA) defines a biomarker as ‘a defined characteristic that is measured as an indicator of normal biological processes, pathogenic processes, or responses to an exposure or intervention, including therapeutic interventions. A biomarker could be almost any objective and quantifiable functional, physiological, biochemical, or molecular measurement. Examples of molecular biomarkers include the presence of proteins in the blood, such as prostate-specific antigen (PSA) used in the diagnosis of prostate cancer, or the presence of mutations in tumor suppressor genes, like those in BRCA1 or BRCA2, predictive of breast cancer risk. Therefore, novel biomarker discovery is crucial to many areas, including clinical diagnostics and drug development.Bioinformatics has revolutionized biomarker discovery by integrating computational tools with high-throughput data analysis from genomics, proteomics, transcriptomics, and metabolomics. Researchers can now efficiently identify and analyze potential biomarkers, leading to cost-effective and accelerated research outcomes. On the Omics Playground, we have made available to all users state-of-the-art machine learning (ML) methods.
@@ -101,7 +106,6 @@ The Food and Drug Administration (FDA) defines a biomarker as ‘a defined chara
 
 Statistical testing
 ---------------------------
-
 Multi-method statistical testing. For gene-level testing, statistical
 significance was assessed using three independent statistical methods:
 DESeq2 (Wald test), edgeR (QLF test) and limma-trend (Love 2014;
@@ -170,7 +174,6 @@ To determine modules, hierarchical clustering is performed on the gene correlati
 
 Cell type profiling
 --------------------
-
 Cell type profiling was performed using the LM22 signature matrix as
 reference data set (Chen 2018). We have evaluated a total of 6 computational deconvolution
 methods: DeconRNAseq (Gong 2013), DCQ (Altboum 2014), I-NNLS (Abbas
@@ -201,7 +204,6 @@ CIBERSORT. Methods Mol Biol. 2018.
 
 Scripting and visualization
 ---------------------------
-
 Data preprocessing was performed using bespoke scripts using R (R Core
 Team 2013) and packages from Bioconductor (Huber 2015). Statistical
 computation and visualization have been performed using the Omics
@@ -210,7 +212,6 @@ Playground version vX.X.X (Akhmedov 2020).
 
 Multi-omics data analysis
 ---------------------------
-
 MOFA: 'Multi‐Omics Factor Analysis'. MOFA is a factorization-based framework for multi‐omics data integration. The inferred latent 'factors' (or 'modules') represent the underlying principal axes of heterogeneity across the samples.
 
 Variance per factor and type: Amount of variance explained by each factor in each omic type. A trained MOFA model is used to infer the proportion of variance explained (i.e. the coefficient of determinations (R^2)) by the MOFA factors across the different views. Higher variance suggests stronger effect. In MOFA, 'views' refer to features from non-overlapping set of omic types. MOFA 'factors' are low-dimensional representations of multi-omic data. A factor is a latent variable that captures a source of variation across the integrated data. Each factor captures a different source and dimension of heterogeneity in the integrated data, and thus represents an independent source of variation. Note that the interpretation of factors is analogous to the interpretation of the principal components in PCA. Factors with higher explained variance are typically considered more important for understanding the underlying structure and patterns in a multi-omics dataset. They may correspond to significant biological processes, cellular states, or experimental conditions that have a broader impact across multiple data modalities.
