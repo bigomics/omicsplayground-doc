@@ -208,6 +208,8 @@ computation and visualization have been performed using the Omics
 Playground version vX.X.X (Akhmedov 2020).
 
 
+Scripting and visualization
+---------------------------
 
 REFERENCES 
 ---------------------------
@@ -219,7 +221,6 @@ exploration of Big Omics Data. NAR Genomics and Bioinformatics, Volume
 
 Ashburner et al. Gene ontology: tool for the unification of
 biology. Nat Genet. May 2000;25(1):25-9.
-
 
 Huber W, et al. (2015) Orchestrating high-throughput genomic analysis
 with Bioconductor. Nature Methods 12:115-121; doi:10.1038/nmeth.3252
@@ -233,6 +234,8 @@ by ‘surrogate variable analysis’ PLoS Genet. 2007
 Love MI, Huber W, Anders S (2014). “Moderated estimation of fold
 change and dispersion for RNA-seq data with DESeq2.” Genome Biology,
 15, 550.
+
+Zito A, Martinelli A, Masiero M, Akhmedov M, Kwee I. "NPM: latent batch effects correction of omics data by nearest-pair matching." Bioinformatics,  Volume 41, Issue 3, 2025
 
 R Core Team (2013). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
