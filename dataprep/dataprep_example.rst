@@ -25,7 +25,7 @@ illustrate how to prepare an input data:
 ..
     this needs to be updated, what and where are these script? playbase?
 All the necessary scripts for data cleaning and preprocessing examples can be
-found under the ``scripts/`` folder.
+found under the ``scripts/`` `folder <https://github.com/bigomics/omicsplayground/tree/master/tools/scripts>`__.
 
 
 From FASTQ files
