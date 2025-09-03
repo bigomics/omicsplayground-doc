@@ -232,30 +232,32 @@ Homo sapiens
 
 Mus musculus
 
-
 Rattus norvegicus  
-
 
 Acanthochromis polyacanthus  
 
-
 Acanthophacelus reticulata
-
 
 Acyrthosiphon pisum
 
-
 Aedes aegypti
 
-
 Aedes albopictus
+
 Ailuropoda melanoleuca
+
 Aleurodes tabaci
+
 Amborella trichopoda
+
 Amphimedon queenslandica
+
 Amphiprion ocellaris
+
 Amphiprion testudineus
+
 Amygdalus communis
+
 Amygdalus persica
 Ananas comosus
 Anas boschas
