@@ -225,6 +225,13 @@ Scripting and visualization
 Data preprocessing was performed using bespoke scripts using R (R Core Team 2013) and packages from Bioconductor (Huber 2015). Statistical computation and visualization are all performed using latest playbase and Omics Playground version.
 
 
+Supported species
+---------------------------
+Below is the list of species supported by OmicsPlayground. The list is in continuous update, and more species will be available soon.
+
+
+
+
 REFERENCES 
 ---------------------------
 Akhmedov M, Martinelli A, Geiger R and Kwee I (2020). "Omics Playground: A comprehensive self-service platform for visualization, analytics and exploration of Big Omics Data". NAR Genomics and Bioinformatics, Volume 2, Issue 1, March 2020; https://pubmed.ncbi.nlm.nih.gov/33575569/
