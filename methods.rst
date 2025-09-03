@@ -230,30 +230,18 @@ Supported species
 Below is the list of species supported by OmicsPlayground. The list is in continuous update, and more species will be available soon.
 Homo sapiens
 
-Mus musculus
-
-Rattus norvegicus
-
-Acanthochromis polyacanthus
-
+Mus musculus<br>
+Rattus norvegicus<br>
+Acanthochromis polyacanthus<br>
 Acanthophacelus reticulata
-
 Acyrthosiphon pisum
-
 Aedes aegypti
-
 Aedes albopictus
-
 Ailuropoda melanoleuca
-
 Aleurodes tabaci
-
 Amborella trichopoda
-
 Amphimedon queenslandica
-
 Amphiprion ocellaris
-
 Amphiprion testudineus
 Amygdalus communis
 Amygdalus persica
