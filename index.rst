@@ -7,6 +7,7 @@
     :caption: Getting Started
 
     overview
+    supported_species
     
 .. toctree::
     :maxdepth: 3
