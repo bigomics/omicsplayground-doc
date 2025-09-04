@@ -6,8 +6,8 @@ Omics Playground is a user-friendly and interactive web-based platform
 for the analysis and visualization of transcriptomics and proteomics
 data.  Currently the platform handles any kind of transcriptomics and proteomics 
 data annotated at the gene/protein level, as well as metabolomics and lipidomics data, 
-supporting more than 300 species. Moreoever, the platform supports combinations of the
-afotermentioned data types in the form of multi-omics data.
+supporting more than 300 species. Moreover, the platform supports combinations of the
+aforementioned data types in the form of multi-omics data.
 
 The overview of the platform is shown in the figure below. It consists of
 two main components. The first component addresses the data
