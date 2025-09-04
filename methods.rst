@@ -228,6 +228,7 @@ Data preprocessing was performed using bespoke scripts using R (R Core Team 2013
 Supported species
 ---------------------------
 Below is the list of species supported by OmicsPlayground. The list is in continuous update, and more species will be available soon.
+
 Homo sapiens
 
 Mus musculus
