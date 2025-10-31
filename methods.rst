@@ -155,6 +155,7 @@ Graph-weighted GO analysis. The enrichment score of a GO term was defined as the
 
 KEGG pathway visualization was performed using the Pathview R/Bioconductor package using the foldchange as node color.
 
+
 Weighted Gene Co-expression Network Analysis
 ------------------------------------------
 Weighted gene co-expression network analysis (WGCNA) is a powerful all-in-one analysis method that allows biologists to understand the transcriptome-wide relationships of all genes in a system rather than each gene in isolation. WGCNA enables the identification of clusters (modules) of features that exhibit correlated patterns and the assessment of the relationship between distinct clusters. Importantly, WGCNA also provides data on the association between modules and external traits, such as recorded sample phenotypes. Identification of gene correlation networks has high biological relevance as genes within the same module could share regulatory mechanisms and be functionally related within a molecular pathway at the cellular and inter-cellular level. WGCNA could inform on candidate biomarkers and druggable features for therapeutics. Although WGCNA has mostly been applied to transcriptomic data, its principles are suited to other omics, such as methylation data. WGCNA can be split into four main sequential analytical components: (1) construction of weighted gene correlation networks;  (2) identification of coexpression modules;  (3) association of genes with sample traits; (4) Inference of intramodular hub genes as candidate drivers of phenotypes. Outcomes are inferred by pairwise correlations between genes or modules in a guilty-by-association approach, where information about a gene is gained from its close neighbors in the network. 
@@ -168,46 +169,28 @@ To determine modules, hierarchical clustering is performed on the gene correlati
 
 **4. Identify potential driver genes:** from the identified modules of interest, genes that might be key factors for a particular trait or could influence other genes in that module could be identified. Each module may contain many genes; it is essential to identify so-called ‘hub genes’ that can be ideal candidates for further study. Hub genes are identified as the most highly connected genes within a module and, expectedly, the most strongly correlated with the phenotype of interest. The expression of a gene is also used to calculate the ‘module membership, which measures the degree to which a gene’s expression profile with a particular module within the expression network. Module membership is therefore a useful tool for prioritizing genes for further study. If the correlation is high, the gene is likely representative of the overall expression of the module as a whole and is well connected in the network. Similarly, the high correlation of this gene to the trait of interest further strengthens its likelihood as an important driver in that module.
 
+Here below, we discuss about consensus WGCNA and preservation WGCNA, two specialized WGCNA applications offering unique insights to biologists.
+
+** Consensus WGCNA
+Consensus WGCNA is a specialized extension of the standard WGCNA framework. It is designed to identify co-expression modules exhibiting consensus, ie. concordant direction and sign across datatypes, datasets, experimental conditions, or traits. Consensus WGCNA combines information from multiple biological profiles (e.g., gene expression or proteomics datasets) to construct a consensus network, representing shared patterns of biological signal. Consensus WGCNA modules would not be driven by dataset-specific effects, or trait-specific effects. For instance, a WGCNA module that is robustly detected, with consistent effect across both female and male samples is said not to be sex-specific. Consensus modules are hypothesized to reflect true underlying biology rather than dataset-specific signal. Algorithmically, consensus WGCNA largely relies on standard WGCNA functions. Specific to consensus WGCNA, separate adjacency or topological overlap matrices (TOMs) are calculated for each datatype, dataset or phenotype and these are then merged or averaged to create a single consensus TOM. The resulting network highlights feature pairs (e.g., genes, proteins or metabolite pairs) that consistently show significant relationship in co-expression profiles and effect direction across all datasets being compared. Modules (clusters of highly co-expressed features) are then identified from the consensus network using hierarchical clustering and dynamic tree cutting. This last is also a key step in standard WGCNA. Since consensus WGCNA modules represent co-expression patterns stably modulated across datasets, species, or conditions, this special WGCNA application is well versed for studies aimed for identification of shared or concurrrently regulated effects on biological samples and cross-study validation. For instance, scientists often use consensus WGCNA to compare transcriptomic data from different tissues, disease cohorts, to uncover core molecular pathways involved in shared biological processes. While consensus WGCNA aims to shed light on robustly maintained networks, it also complements well analyses of preserved WGCNA modules, which, as described below, is another specialized WGCNA application to identify modules whose entity is preserved from a reference and a test dataset.
+
+
+** Preservation WGCNA
+Preservation WGCNA is another specialized extension of the standard WGCNA framework. It is designed to assess whether genes, proteins or metabolites co-expression modules identified in one dataset (the reference network) are preserved in another dataset (the test network). The goal is to evaluate the stability and reproducibility of identified modules across independent datasets, biological conditions, or experimental groups. Preservation WGCNA might provide insights into how gene regulatory relationships are maintained or disrupted between different biological contexts. Compared to consensus WGCNA, tests whether modules defined in one dataset remain *structurally conserved* in another.For this reason, it may be well positioned for for validating the robustness and reproducibility WGCNA modules identified by standard or consensus WGCNA analyses. Consensus and preservation WGCNA complement each other: one builds cross-dataset modules, and the other validates their stability and biological relevance across independent conditions or studies. In preservation analysis, WGCNA modules are first defined in a reference dataset using standard WGCNA procedures (network construction, module detection, eigengene calculation). Topological properties of the reference WGCNA modules are then compared to those in the test dataset. This comparison allows to determine whether the same features (genes, proteins, metabolites) are connected into similar networks between reference and test dataset. In fact, the preservation analysis relies on specific module preservation statistics, including Z-summary and medianRank. The Z-summary value combines multiple preservation metrics (such as density and connectivity preservation) into a single composite score that reflects how similar the module structure in the test dataset is to that in the reference dataset. A high Z-summary (e.g., >10) indicates strong preservation. A low Z-summary indicate a lowly/weakly preserved network. Notably, caution is advised when intepreting the Z-summary as it is sensitive to module size: larger modules tend to have higher Z-scores compared to small modules. The MedianRank is a rank-based measure of module preservation, derived by ranking all modules based on their preservation statistics (like connectivity and density). Different to the Z-summary, the MedianRank is significantly more robust to variation in module size. Altogether, Z-summary and medianRank summarize how well each module’s structure and connectivity patterns are maintained between the reference and the test dataset. In summary, preservation WGCNA helps identify modules that are not condition-specific or perturbed in disease, development, or treatment states. For this reaason, preservation WGCNA is often used in comparative transcriptomics analyses across tissues, diseases, and species.
+
 
 Cell type profiling
 --------------------
-Cell type profiling was performed using the LM22 signature matrix as
-reference data set (Chen 2018). We have evaluated a total of 6 computational deconvolution
-methods: DeconRNAseq (Gong 2013), DCQ (Altboum 2014), I-NNLS (Abbas
-2009), NNLM (Lin 2020), rank-correlation and a meta-method. For NNLM,
-we repeated NNLM for non-logarithmic (NNLM.lin) and ranked signals
-(NNLM.rnk). The latter meta-methods, meta and meta.prod, summarize the
-predictions of all the other methods as the mean and/or geometric mean
-of the normalized prediction probabilities, respectively.
+Cell type profiling was performed using the LM22 signature matrix as reference data set (Chen 2018). We have evaluated a total of 6 computational deconvolution methods: DeconRNAseq (Gong 2013), DCQ (Altboum 2014), I-NNLS (Abbas 2009), NNLM (Lin 2020), rank-correlation and a meta-method. For NNLM,
+we repeated NNLM for non-logarithmic (NNLM.lin) and ranked signals (NNLM.rnk). The latter meta-methods, meta and meta.prod, summarize the predictions of all the other methods as the mean and/or geometric mean of the normalized prediction probabilities, respectively.
 
-[1] Gong T, Szustakowski JD. DeconRNASeq: a statistical framework for
-deconvolution of heterogeneous tissue samples based on mRNA-Seq
-data. Bioinformatics. 2013. 
+[1] Gong T, Szustakowski JD. DeconRNASeq: a statistical framework for deconvolution of heterogeneous tissue samples based on mRNA-Seq data. Bioinformatics. 2013. 
 
-[2] Altboum Z, et al. Digital cell quantification identifies global immune
-cell dynamics during influenza infection. Mol Syst Biol. 2014 Feb
-28;10(2):720. 
+[2] Altboum Z, et al. Digital cell quantification identifies global immune cell dynamics during influenza infection. Mol Syst Biol. 2014 Feb 28;10(2):720. 
 
-[3] Abbas A, et al. Deconvolution of Blood Microarray Data Identifies
-Cellular Activation Patterns in Systemic Lupus Erythematosus, PLOS
-One, 2009. 
+[3] Abbas A, et al. Deconvolution of Blood Microarray Data Identifies Cellular Activation Patterns in Systemic Lupus Erythematosus, PLOS One, 2009. 
 
-[4] Lin X, Boutros PC. Optimization and expansion of non-negative matrix
-factorization. BMC Bioinformatics. 2020.
-
-
-Consensus WGCNA
-----------------
-
-
-Preservation WGCNA
--------------------
-
-
-Multi-omics WGCNA
------------------
-Multi-omics WGCNA (multiWGCNA), ....
-
+[4] Lin X, Boutros PC. Optimization and expansion of non-negative matrix factorization. BMC Bioinformatics. 2020.
 
 
 Multi-omics data analysis
@@ -231,6 +214,12 @@ The learned MOFA factors provide a low-dimensional representation of the data. A
 Specifically, the multi-omics, log2-transformed and normalized data matrix is first imputed if missing values are detected. Optionally, each data type can be 10x augmented. Data augmentation is conducted by (i) computing average feature standard deviation; (ii) expanding the matrix (by samples) 10 times the original size; (iii) adding to the expanded matrix random noise corresponding to the product between the original average feature standard deviation and random values drawn from a Gaussian distribution. To expand the breadth of features used in the SAE, genesets from gene set enrichment analysis can be optionally added. Noise can also be optionally added by checking the box. Adding noise triggers marginal increase in feature variations without altering the biological patterns in the data and its latent space. Noise is added as the product between average feature standard deviation and random values drawn from a Gaussian distribution. Multi-omics SAE is then performed using R6 class functionalities provided in the R torch R package. A GLU activation/gating mechanism can be optionally added. MultiBlockMultiTargetSAE ('MT') model is used to handle matrices of distinct features and predict multiple target variables at once. The SAE neural network is used to learn representations and make feature predictions. Internally, the model is organized into modules: (i) initialization, which converts data into torch sensors and split into training and validation; (ii) training, which sets the optimizer, defines the loss function, trains the model, and stores training and validation loss values; (iii) prediction, which runs the trained model to predict target probabilities; (iv) latent representation extraction, which returns the learned latent (encoded) representations for each view and the integrated multi-omics data; (v) feature importance by gradient, which computes feature importance for each input feature by analyzing how small changes (perturbations or gradients) may affect the output; (vi) model architecture dimensions, which returns the dimensions of encoder, decoder, and predictor layers in the model. To assess the performance of the classification SAE model, OPG also computes the confusion matrix by comparing the model’s predicted labels with the actual (ground truth) labels for a given phenotype.
 
 
+** Multi-omics WGCNA
+-----------------
+Multi-omics WGCNA (multiWGCNA), ....
+
+
+
 Scripting and visualization
 ---------------------------
 Data preprocessing was performed using bespoke scripts using R (R Core Team 2013) and packages from Bioconductor (Huber 2015). Statistical computation and visualization are all performed using latest playbase and Omics Playground version.
@@ -242,9 +231,7 @@ Akhmedov M, Martinelli A, Geiger R and Kwee I (2020). "Omics Playground: A compr
 
 Antonino Zito, Axel Martinelli, Mauro Masiero, Murodzhon Akhmedov, Ivo Kwee (2024). "NPM: latent batch effects correction of omics data by nearest-pair matching". Bioinformatics, Volume 41, Issue 3, March 2025, btaf084; https://academic.oup.com/bioinformatics/article/41/3/btaf084/8042340
 
-Antonino Zito, Xavier Escribà Montagut, Gabriela Scorici, Axel Martinelli, Murodzhon Akhmedov, Ivo Kwee. "PLAID: ultrafast single-sample gene set enrichment scoring"; Accepted in Bioinformatics; https://www.biorxiv.org/content/10.1101/2025.06.14.659661v1
-
-Akhmedov M, Martinelli A, Geiger R and Kwee I (2020). "Omics Playground: A comprehensive self-service platform for visualization, analytics and exploration of Big Omics Data". NAR Genomics and Bioinformatics, Volume 2, Issue 1, March 2020; https://pubmed.ncbi.nlm.nih.gov/33575569/
+Antonino Zito, Xavier Escribà Montagut, Gabriela Scorici, Axel Martinelli, Murodzhon Akhmedov, Ivo Kwee (2025). "PLAID: ultrafast single-sample gene set enrichment scoring"; Accepted in Bioinformatics; https://www.biorxiv.org/content/10.1101/2025.06.14.659661v1
 
 Ashburner et al (2000). "Gene ontology: tool for the unification of biology." Nat Genet. May 2000;25(1):25-9; https://www.nature.com/articles/ng0500_25
 
