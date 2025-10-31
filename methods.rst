@@ -195,8 +195,19 @@ One, 2009.
 [4] Lin X, Boutros PC. Optimization and expansion of non-negative matrix
 factorization. BMC Bioinformatics. 2020.
 
-[5] Chen B, et al. Profiling Tumor Infiltrating Immune Cells with
-CIBERSORT. Methods Mol Biol. 2018.
+
+Consensus WGCNA
+----------------
+
+
+Preservation WGCNA
+-------------------
+
+
+Multi-omics WGCNA
+-----------------
+Multi-omics WGCNA (multiWGCNA), ....
+
 
 
 Multi-omics data analysis
@@ -227,6 +238,12 @@ Data preprocessing was performed using bespoke scripts using R (R Core Team 2013
 
 REFERENCES 
 ---------------------------
+Akhmedov M, Martinelli A, Geiger R and Kwee I (2020). "Omics Playground: A comprehensive self-service platform for visualization, analytics and exploration of Big Omics Data". NAR Genomics and Bioinformatics, Volume 2, Issue 1, March 2020; https://pubmed.ncbi.nlm.nih.gov/33575569/
+
+Antonino Zito, Axel Martinelli, Mauro Masiero, Murodzhon Akhmedov, Ivo Kwee (2024). "NPM: latent batch effects correction of omics data by nearest-pair matching". Bioinformatics, Volume 41, Issue 3, March 2025, btaf084; https://academic.oup.com/bioinformatics/article/41/3/btaf084/8042340
+
+Antonino Zito, Xavier Escribà Montagut, Gabriela Scorici, Axel Martinelli, Murodzhon Akhmedov, Ivo Kwee. "PLAID: ultrafast single-sample gene set enrichment scoring"; Accepted in Bioinformatics; https://www.biorxiv.org/content/10.1101/2025.06.14.659661v1
+
 Akhmedov M, Martinelli A, Geiger R and Kwee I (2020). "Omics Playground: A comprehensive self-service platform for visualization, analytics and exploration of Big Omics Data". NAR Genomics and Bioinformatics, Volume 2, Issue 1, March 2020; https://pubmed.ncbi.nlm.nih.gov/33575569/
 
 Ashburner et al (2000). "Gene ontology: tool for the unification of biology." Nat Genet. May 2000;25(1):25-9; https://www.nature.com/articles/ng0500_25
