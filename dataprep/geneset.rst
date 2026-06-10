@@ -18,7 +18,7 @@ of a gene set name, and the list of genes
 belonging to that set. The gene names are typically represented 
 using gene symbols or other identifiers. Each line in a GMT file will correspont to a different geneset.
 
-Download here an example GMT file from genes activated by the transcription factor EGFR: :download:`EGFR_TARGET_GENES.v2023.1.Hs.gmt<downloads/EGFR_TARGET_GENES.v2023.1.Hs.gmt>`
+Download here an example GMT file from genes activated by the transcription factor EGFR: :download:`EGFR_TARGET_GENES.v2023.1.Hs.gmt</downloads/EGFR_TARGET_GENES.v2023.1.Hs.gmt>`
 
 .. tip::
     .. only:: builder_html or readthedocs
