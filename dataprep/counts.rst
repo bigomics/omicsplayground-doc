@@ -41,3 +41,57 @@ Below is a simple example of how a ``counts.csv`` file should look like.
 
 .. seealso::
     If you are familiar with R, you can think of the counts file as a data.frame object. We provide an example samples file that can be accessed by installing playbase ``devtools::install_github("bigomics/playbase")`` and running ``playbase::COUNTS``.
+
+
+Single-cell RNA-seq counts
+--------------------------------------------------------------------------------
+
+.. _sc_counts:
+
+When you select **scRNA-seq** as the data type, the counts file must be a
+**genes x cells** matrix: one column per individual *cell*, not per sample.
+Columns are cell barcodes, rows are gene symbols, and the values are **raw
+integer UMI counts** — not normalized, not log-transformed, and not aggregated.
+
++--------+------------------+------------------+------------------+
+|        | AAACATACAACCAC.1 | AAACATTGAGCTAC.1 | AAACATTGATCAGC.1 |
++========+==================+==================+==================+
+| CD3E   | 0                | 0                | 3                |
++--------+------------------+------------------+------------------+
+| MS4A1  | 0                | 12               | 0                |
++--------+------------------+------------------+------------------+
+| LYZ    | 41               | 0                | 0                |
++--------+------------------+------------------+------------------+
+| NKG7   | 0                | 0                | 0                |
++--------+------------------+------------------+------------------+
+
+The ``samples.csv`` and ``contrasts.csv`` files must be keyed by the same cell
+barcodes, so that each row describes one cell rather than one biological sample.
+Your experimental grouping (treatment, condition, donor) becomes a column in
+``samples.csv`` that is repeated across all cells belonging to that group.
+
+Single-cell data has a characteristic profile, and the platform expects to see
+it. As a reference, our example PBMC dataset of 14,053 genes x 1,000 cells has:
+
+* between 783 and 6,628 UMIs per cell (median 1,636),
+* between 501 and 1,687 detected genes per cell,
+* about 95% zero values,
+* clear marker gene separation (``MS4A1`` at 755 CPM in B cells versus 0 in T cells).
+
+We recommend at least 1,000 cells. Cell type annotation uses Azimuth label
+transfer, which needs enough distinct cells to find reference anchors; with only
+a few hundred cells the annotation step will fail.
+
+.. warning::
+    A matrix whose columns are samples or sample-by-celltype groups (for example
+    ``Sample001__NK_cells``, ``Sample001__Monocytes``, ...) is **pseudobulk**, not
+    single-cell data, even if it was originally derived from a single-cell
+    experiment. Such a matrix typically has only tens or hundreds of columns,
+    uniform library sizes, 10,000+ detected genes per column and far fewer zeros.
+    Upload it as **RNA-seq**, not scRNA-seq.
+
+.. note::
+    Use one gene ID format consistently for all rows. A file that mixes gene
+    symbols with Ensembl IDs cannot be annotated reliably: the platform detects a
+    single ID type from the majority of rows, and the remaining rows are
+    mis-mapped or dropped.
